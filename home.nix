@@ -175,16 +175,16 @@ in
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
 
   # Install and enable gpg package and change homedir to $HOME/.local/share/gnupg
-  programs.gpg = {
-    enable = true;
-    homedir = "${config.xdg.dataHome}/gnupg";
-  };
+  #programs.gpg = {
+  #  enable = true;
+  #  homedir = "${config.xdg.dataHome}/gnupg";
+  #};
 
   # Install and enable ssh with forwardAgent enabled for password entry
-  programs.ssh = {
-    enable = true;
-    forwardAgent = true;
-  };
+  #programs.ssh = {
+  #  enable = true;
+  #  forwardAgent = true;
+  #};
 
   # Install and enable git package and settings management
   #programs.git = {
