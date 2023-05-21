@@ -69,12 +69,12 @@ in
 
     # Nix Package Manager shortcuts
 
-    home_manager_update="nix-channel --update && home-manager switch";
+    home_manager_update="nix-channel --update && home-manager switch -b bak";
     nix_clean="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
     nix_usage="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
 
     pull-home-manager-nix="cp -rpfv $HOME/Documents/Private/Linux/nixos/home.nix $HOME/.config/home-manager/";
-    push-home-manager-nix="cp -rpfv $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/";
+    push-home-manager-nix="cp -rpfv $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/ ; cd $HOME/.config/home-manager";
     delta-home-manager-nix="delta $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/home.nix";
     clean-home-manager-nix="rmtrash -rfv $HOME/.config/home-manager/home.nix~* ; exa -al $HOME/.config/home-manager/";
 
@@ -189,8 +189,8 @@ in
   # Install and enable git package and settings management
   #programs.git = {
   #  enable = true;
-  #  userName  = "bayazidbh";
-  #  userEmail = "bayazid.bustami.halim@gmail.com";
+  #  userName  = "";
+  #  userEmail = "";
   #  extraConfig = {
   #    init = {
   #      defaultBranch = "main";
