@@ -6,7 +6,7 @@ let
 
   #pkgsUnstable = import <nixpkgs-unstable> {};
   nix-gaming = import (builtins.fetchTarball "https://github.com/fufexan/nix-gaming/archive/master.tar.gz");
-  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
+  # aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
 
   #chaotic-nix = import (builtins.fetchGit {
   #  url = "https://github.com/chaotic-cx/nyx";
@@ -70,8 +70,8 @@ in
     # Nix Package Manager shortcuts
 
     home_manager_update="nix-channel --update && home-manager switch -b bak";
-    nix_clean="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
-    nix_usage="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
+    clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
+    du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
 
     pull-home-manager-nix="cp -rpfv $HOME/Documents/Private/Linux/nixos/home.nix $HOME/.config/home-manager/";
     push-home-manager-nix="cp -rpfv $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/ ; cd $HOME/.config/home-manager";
@@ -108,16 +108,16 @@ in
     flathub-list="flatpak list --user --app --columns=application,origin | grep flathub | awk '{print \$1}'";
 
     # Compares the lists of installed and uninstalled flatpak apps, and highlights the differences
-    list-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nFlatpak Apps Future:\n' ; bat -P $HOME/Documents/Private/Linux/flatpak-apps.txt ; echo '\nFlatpak Apps Past:\n' ; bat -P $HOME/.var/log/flatpak/flatpak-apps.txt ; echo '\nFlatpak Apps Present:\n' ; bat -P <(flathub-list) ; echo '\nNot yet installed:\n' ; grep -vxFf <(flathub-list) $HOME/Documents/Private/Linux/flatpak-apps.txt ; echo '\nNot yet removed:\n' ; grep -vxFf $HOME/Documents/Private/Linux/flatpak-apps.txt <(flathub-list)";
+    list-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nFlatpak Runtimes:\n' ; bat -P $HOME/.config/home-manager/flatpak-runtimes.txt ; echo '\nFlatpak Apps Future:\n' ; bat -P $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nFlatpak Apps Past:\n' ; bat -P $HOME/.var/log/flatpak/flatpak-apps.txt ; echo '\nFlatpak Apps Present:\n' ; bat -P <(flathub-list) ; echo '\nNot yet installed:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nNot yet removed:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt <(flathub-list)";
 
-    # Displays the current synced and installed flatpak apps, highlights the apps being added and removed, moves the log file to a new location with a timestamp, and updates the flatpak app lists
-    push-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nCurrent Synced:\n' ; bat -P $HOME/Documents/Private/Linux/flatpak-apps.txt ; echo '\nCurrent Installed:\n' ; bat -P <(flathub-list) ; echo '\nAdding:\n' ; grep -vxFf $HOME/Documents/Private/Linux/flatpak-apps.txt <(flathub-list) ; echo '\nRemoving:\n' ; grep -vxFf <(flathub-list) $HOME/Documents/Private/Linux/flatpak-apps.txt ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/Documents/Private/Linux/flatpak-apps.txt ; flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt";
+    # Displays the current synced and installed flatpak apps, highlights the apps being added and removed, moves the log file to a new location with a timestamp, and updates the flatpak app and runtime lists
+    push-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nCurrent Synced:\n' ; bat -P $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nCurrent Installed:\n' ; bat -P <(flathub-list) ; echo '\nAdding:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt <(flathub-list) ; echo '\nRemoving:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak-apps.txt ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.config/home-manager/flatpak-apps.txt ; flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; echo 'runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08\ncom.valvesoftware.Steam.Utility.gamescope' > $HOME/.config/home-manager/flatpak-runtimes.txt";
 
     # Moves the existing log file to a new location, updates the log file with the current list of flatpak apps. Installs the apps that are present in the source file but not in the log file, and uninstalls the apps that are present in the log file but not in the source file. Then make sure everything else is updated.
-    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.local/share/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; flatpak install --user -y $(grep -vxFf $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/Documents/Private/Linux/flatpak-apps.txt) ; flatpak uninstall --user -y $(grep -vxFf $HOME/Documents/Private/Linux/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps.txt) ; upgrade-flatpak";
+    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.local/share/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; flatpak install --user -y $(grep -vxFf $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.config/home-manager/flatpak-apps.txt) ; flatpak install --user -y $(cat $HOME/.config/home-manager/flatpak-runtimes.txt) ; flatpak uninstall --user -y $(grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps.txt) ; upgrade-flatpak";
 
     # Other flatpak management
-    edit-flatpak="nano $HOME/Documents/Private/Linux/flatpak-apps.txt ; list-flatpak";
+    edit-flatpak="nano $HOME/.config/home-manager/flatpak-apps.txt ; list-flatpak";
     upgrade-flatpak="mkdir -p $HOME/.var/log/flatpak ; flatpak upgrade -y >> $HOME/.var/log/flatpak/flatpak-upgrade-$(date '+%Y-%m-%d').log";
     list-overrides-flatpak="bat -P --style=header,numbers,snip ~/.local/share/flatpak/overrides/* ~/Documents/Private/Linux/flatpak/overrides/*";
     push-overrides-flatpak="cp -rfpv ~/.local/share/flatpak/overrides ~/Documents/Private/Linux/flatpak ";
@@ -168,7 +168,7 @@ in
     # gamescope libdisplay-info libliftoff jsoncpp openvr seatd wlroots libdrm vulkan-extension-layer vulkan-loader vulkan-headers wineWowPackages.stagingFull wineWowPackages.waylandFull
     nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg dxvk wineWowPackages.fonts winetricks # wine packages
     gamemode protontricks steamtinkerlaunch protonup-qt protonup-ng steam-rom-manager ludusavi # scanmem heroic-unwrapped # other gaming tools
-    aagl-gtk-on-nix.an-anime-game-launcher aagl-gtk-on-nix.the-honkers-railway-launcher aagl-gtk-on-nix.honkers-launcher
+    # aagl-gtk-on-nix.an-anime-game-launcher aagl-gtk-on-nix.the-honkers-railway-launcher aagl-gtk-on-nix.honkers-launcher
   ];
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
