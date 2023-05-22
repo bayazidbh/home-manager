@@ -114,7 +114,7 @@ in
     push-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nCurrent Synced:\n' ; bat -P $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nCurrent Installed:\n' ; bat -P <(flathub-list) ; echo '\nAdding:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt <(flathub-list) ; echo '\nRemoving:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak-apps.txt ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.config/home-manager/flatpak-apps.txt ; flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; echo 'runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08\ncom.valvesoftware.Steam.Utility.gamescope' > $HOME/.config/home-manager/flatpak-runtimes.txt";
 
     # Moves the existing log file to a new location, updates the log file with the current list of flatpak apps. Installs the apps that are present in the source file but not in the log file, and uninstalls the apps that are present in the log file but not in the source file. Then make sure everything else is updated.
-    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.local/share/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; flatpak install --user -y $(grep -vxFf $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.config/home-manager/flatpak-apps.txt) ; flatpak install --user -y $(cat $HOME/.config/home-manager/flatpak-runtimes.txt) ; flatpak uninstall --user -y $(grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps.txt) ; upgrade-flatpak";
+    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.local/share/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; flatpak install --user -y $(grep -vxFf $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.config/home-manager/flatpak-apps.txt) ; flatpak uninstall --user -y $(grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps.txt) ; flatpak install --user -y $(cat $HOME/.config/home-manager/flatpak-runtimes.txt) ; upgrade-flatpak";
 
     # Other flatpak management
     edit-flatpak="nano $HOME/.config/home-manager/flatpak-apps.txt ; list-flatpak";
@@ -249,8 +249,6 @@ in
     interactiveShellInit = ''
       set fish_greeting
       set sponge_purge_only_on_exit true
-      alias batch-zip-subfolders 'for i in */; zip -9 -r "$i".zip "$i"; end; wait'
-      alias batch-cbz-subfolders 'for i in */; zip -9 -r "$i".cbz "$i"; end; wait'
     ''; # Disable greeting, sponge only purge on exit
     plugins = [
      { name = "tide"; src = pkgs.fishPlugins.tide.src; } # p10k-like theme for fish

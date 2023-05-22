@@ -1,4 +1,3 @@
-com.github.micahflee.torbrowser-launcher
 com.github.tchx84.Flatseal
 com.microsoft.EdgeDev
 com.steamgriddb.SGDBoop
@@ -11,5 +10,4 @@ io.github.aandrew_me.ytdn
 io.wavebox.Wavebox
 net.codeindustry.MasterPDFEditor
 net.cozic.joplin_desktop
-org.ferdium.Ferdium
 org.upscayl.Upscayl
