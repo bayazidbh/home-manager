@@ -4,6 +4,7 @@ com.steamgriddb.SGDBoop
 com.stremio.Stremio
 com.usebottles.bottles
 com.wps.Office
+info.smplayer.SMPlayer
 io.github.Foldex.AdwSteamGtk
 io.github.Soundux
 io.github.aandrew_me.ytdn
