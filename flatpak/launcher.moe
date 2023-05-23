@@ -1,0 +1,5 @@
+#! /bin/bash
+
+flatpak remote-add --if-not-exists --user launcher.moe https://gol.launcher.moe/gol.launcher.moe.flatpakrepo
+flatpak install --user --or-update  --noninteractive moe.launcher.the-honkers-railway-launcher
+flatpak uninstall --noninteractive moe.launcher.an-anime-game-launcher moe.launcher.honkers-launcher

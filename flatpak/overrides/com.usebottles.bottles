@@ -1,0 +1,5 @@
+[Context]
+sockets=fallback-x11
+devices=dri
+features=bluetooth
+filesystems=xdg-documents;home

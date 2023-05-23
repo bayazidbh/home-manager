@@ -74,7 +74,7 @@ in
     du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
 
     pull-home-manager-nix="cp -rpfv $HOME/Documents/Private/Linux/nixos/home.nix $HOME/.config/home-manager/";
-    push-home-manager-nix="cp -rpfv $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/ ; cd $HOME/.config/home-manager";
+    push-home-manager-nix="cp -rpfv $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/ ; cp -rpfv $HOME/.config/home-manager/home.nix $HOME/.var/log/nix/home.nix-$(date '+%Y%m%d_%H%M%S').txt ; cd $HOME/.config/home-manager";
     delta-home-manager-nix="delta $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/home.nix";
     clean-home-manager-nix="rmtrash -rfv $HOME/.config/home-manager/home.nix~* ; exa -al $HOME/.config/home-manager/";
 
@@ -108,16 +108,16 @@ in
     flathub-list="flatpak list --user --app --columns=application,origin | grep flathub | awk '{print \$1}'";
 
     # Compares the lists of installed and uninstalled flatpak apps, and highlights the differences
-    list-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nFlatpak Runtimes:\n' ; bat -P $HOME/.config/home-manager/flatpak-runtimes.txt ; echo '\nFlatpak Apps Future:\n' ; bat -P $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nFlatpak Apps Past:\n' ; bat -P $HOME/.var/log/flatpak/flatpak-apps.txt ; echo '\nFlatpak Apps Present:\n' ; bat -P <(flathub-list) ; echo '\nNot yet installed:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nNot yet removed:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt <(flathub-list)";
+    list-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nFlatpak Runtimes:\n' ; bat -P $HOME/.config/home-manager/flatpak/runtimes.txt ; echo '\nFlatpak Apps Future:\n' ; bat -P $HOME/.config/home-manager/flatpak/flathub-apps.txt ; echo '\nFlatpak Apps Past:\n' ; bat -P $HOME/.var/log/flatpak/flathub-apps.txt ; echo '\nFlatpak Apps Present:\n' ; bat -P <(flathub-list) ; echo '\nNot yet installed:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak/flathub-apps.txt ; echo '\nNot yet removed:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak/flathub-apps.txt <(flathub-list)";
 
-    # Displays the current synced and installed flatpak apps, highlights the apps being added and removed, moves the log file to a new location with a timestamp, and updates the flatpak app and runtime lists
-    push-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nCurrent Synced:\n' ; bat -P $HOME/.config/home-manager/flatpak-apps.txt ; echo '\nCurrent Installed:\n' ; bat -P <(flathub-list) ; echo '\nAdding:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt <(flathub-list) ; echo '\nRemoving:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak-apps.txt ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.config/home-manager/flatpak-apps.txt ; flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; echo 'runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08\ncom.valvesoftware.Steam.Utility.gamescope' > $HOME/.config/home-manager/flatpak-runtimes.txt";
+    # Displays the current synced and installed flatpak apps, highlights the apps being added and removed, moves the log file to a new location with a timestamp, and updates the flatpak app and runtime lists. Then restore the flatpak overrides.
+    push-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nCurrent Synced:\n' ; bat -P $HOME/.config/home-manager/flatpak/flathub-apps.txt ; echo '\nCurrent Installed:\n' ; bat -P <(flathub-list) ; echo '\nAdding:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak/flathub-apps.txt <(flathub-list) ; echo '\nRemoving:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak/flathub-apps.txt ; mv $HOME/.var/log/flatpak/flathub-apps.txt $HOME/.var/log/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.config/home-manager/flatpak/flathub-apps.txt ; flathub-list > $HOME/.var/log/flatpak/flathub-apps.txt ; cp -rfpv ~/.local/share/flatpak/overrides/* ~/.config/home-manager/flatpak/overrides";
 
-    # Moves the existing log file to a new location, updates the log file with the current list of flatpak apps. Installs the apps that are present in the source file but not in the log file, and uninstalls the apps that are present in the log file but not in the source file. Then make sure everything else is updated.
-    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.local/share/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.var/log/flatpak/flatpak-apps.txt ; flatpak install --user -y $(grep -vxFf $HOME/.var/log/flatpak/flatpak-apps.txt $HOME/.config/home-manager/flatpak-apps.txt) ; flatpak uninstall --user -y $(grep -vxFf $HOME/.config/home-manager/flatpak-apps.txt $HOME/.var/log/flatpak/flatpak-apps.txt) ; flatpak install --user -y $(cat $HOME/.config/home-manager/flatpak-runtimes.txt) ; upgrade-flatpak";
+    # Moves the existing log file to a new location, updates the log file with the current list of flatpak apps. Installs the apps that are present in the source file but not in the log file, and uninstalls the apps that are present in the log file but not in the source file. Then make sure everything else is updated and flatpak overrides are backed up.
+    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flathub-apps.txt $HOME/.var/log/flatpak/flathub-apps-$(date '+%Y%m%d_%H%M%S').txt ; flathub-list > $HOME/.var/log/flatpak/flathub-apps.txt ; flatpak install --user --app --or-update --noninteractive $(grep -vxFf $HOME/.var/log/flatpak/flathub-apps.txt $HOME/.config/home-manager/flatpak/flathub-apps.txt) ; flatpak uninstall --user --app --noninteractive $(grep -vxFf $HOME/.config/home-manager/flatpak/flathub-apps.txt $HOME/.var/log/flatpak/flathub-apps.txt) ; flatpak install --user --runtime --or-update --noninteractive $(cat $HOME/.config/home-manager/flatpak/runtimes.txt) ; ~/.config/home-manager/flatpak/launcher.moe ; cp -rfpv ~/.config/home-manager/flatpak/overrides/* ~/.local/share/flatpak/overrides";
 
     # Other flatpak management
-    edit-flatpak="nano $HOME/.config/home-manager/flatpak-apps.txt ; list-flatpak";
+    edit-flatpak="nano $HOME/.config/home-manager/flatpak/flathub-apps.txt ; list-flatpak";
     upgrade-flatpak="mkdir -p $HOME/.var/log/flatpak ; flatpak upgrade -y >> $HOME/.var/log/flatpak/flatpak-upgrade-$(date '+%Y-%m-%d').log";
     list-overrides-flatpak="bat -P --style=header,numbers,snip ~/.local/share/flatpak/overrides/* ~/Documents/Private/Linux/flatpak/overrides/*";
     push-overrides-flatpak="cp -rfpv ~/.local/share/flatpak/overrides ~/Documents/Private/Linux/flatpak ";
@@ -173,36 +173,6 @@ in
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
-
-  # Install and enable gpg package and change homedir to $HOME/.local/share/gnupg
-  #programs.gpg = {
-  #  enable = true;
-  #  homedir = "${config.xdg.dataHome}/gnupg";
-  #};
-
-  # Install and enable ssh with forwardAgent enabled for password entry
-  #programs.ssh = {
-  #  enable = true;
-  #  forwardAgent = true;
-  #};
-
-  # Install and enable git package and settings management
-  #programs.git = {
-  #  enable = true;
-  #  userName  = "";
-  #  userEmail = "";
-  #  extraConfig = {
-  #    init = {
-  #      defaultBranch = "main";
-  #    };
-  #    pull = {
-  #      rebase = true;
-  #    };
-  #    rebase = {
-  #      autostash = true;
-  #    };
-  #  };
-  #};
 
   #programs.gh.enable = true; # Install and enable GitHub CLI tool
 
@@ -282,27 +252,4 @@ in
       trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=
       '';
   };
-
-  # home.activation = {
-  #   linkDesktopApplications = {
-  #     after = [ "writeBoundary" "createXdgUserDirectories" ];
-  #     before = [ ];
-  #     data = "/usr/bin/sudo /usr/bin/update-desktop-database";
-  #     };
-  # };
-
-  #home.activation = {
-  # do an upgrade of installed flatpak apps
-  #  flatpakUpgrade = {
-  #    after = [ "writeBoundary" "createXdgUserDirectories" ];
-  #    before = [ "flatpakPkgs" ];
-  #    data = "/usr/bin/flatpak upgrade -y >> $HOME/.var/log/flatpak-upgrade-$(date '+%Y-%m-%d').log";
-  #    };
-    # recreate flatpak overrides
-    #flatpakOverrideFolders = {
-  #    after = [ "writeBoundary" "createXdgUserDirectories" ];
-  #    before = [ ];
-  #    data = "/usr/bin/mkdir -m 666 -p $HOME/.local/share/flatpak/overrides && /usr/bin/echo -e '[Context]\ndevices=dri\nfeatures=bluetooth\nfilesystems=xdg-documents;xdg-download' > $HOME/.local/share/flatpak/overrides/com.github.Eloston.UngoogledChromium && /usr/bin/echo -e '[Context]\nsockets=fallback-x11\ndevices=dri\nfeatures=bluetooth\nfilesystems=xdg-documents;home' > $HOME/.local/share/flatpak/overrides/com.usebottles.bottles && /usr/bin/echo -e '[Context]\nfilesystems=xdg-data/fonts:ro' > $HOME/.local/share/flatpak/overrides/com.wps.Office && /usr/bin/echo -e '[Context]\nfilesystems=xdg-config/MangoHud:ro;$HOME/Storage:rw;$HOME/.themes:ro;$HOME/.icons:ro;xdg-data/icons:ro;xdg-config/gtk-4.0:ro;xdg-config/gtk-3.0:ro;xdg-config/gtk-2.0:ro;xdg-config/gtkrc-2.0:ro;xdg-config/gtkrc:ro\n\n[Environment]\nGTK_THEME=WhiteSur-Dark-solid\nGTK_THEME_VARIANT=dark\n\n[Session Bus Policy]\norg.kde.kconfig.notify=talk\norg.kde.StatusNotifierWatcher=talk\norg.kde.KGlobalSettings=talk\ncom.canonical.AppMenu.Registrar=talk\ncom.feralinteractive.GameMode=talk' > $HOME/.local/share/flatpak/overrides/global && /usr/bin/echo -e '[Context]\nfilesystems=xdg-download;xdg-videos' > $HOME/.local/share/flatpak/overrides/io.github.aandrew_me.ytdn && /usr/bin/echo -e '[Context]\nfilesystems=xdg-documents' > $HOME/.local/share/flatpak/overrides/org.ferdium.Ferdium && /usr/bin/chmod 666 $HOME/.local/share/flatpak/overrides/*";
-  #    };
-  #};
 }

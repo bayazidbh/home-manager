@@ -8,6 +8,7 @@ info.smplayer.SMPlayer
 io.github.Foldex.AdwSteamGtk
 io.github.Soundux
 io.github.aandrew_me.ytdn
+io.github.dbchoco.muezzin
 io.wavebox.Wavebox
 net.codeindustry.MasterPDFEditor
 net.cozic.joplin_desktop

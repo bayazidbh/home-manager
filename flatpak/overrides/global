@@ -1,0 +1,13 @@
+[Context]
+filesystems=xdg-config/MangoHud:ro;~/Storage:rw;~/.themes:ro;~/.icons:ro;xdg-data/icons:ro;xdg-config/gtk-4.0:ro;xdg-config/gtk-3.0:ro;xdg-config/gtk-2.0:ro;xdg-config/gtkrc-2.0:ro;xdg-config/gtkrc:ro
+
+[Environment]
+GTK_THEME=WhiteSur-Dark-solid
+GTK_THEME_VARIANT=dark
+
+[Session Bus Policy]
+org.kde.kconfig.notify=talk
+org.kde.StatusNotifierWatcher=talk
+org.kde.KGlobalSettings=talk
+com.canonical.AppMenu.Registrar=talk
+com.feralinteractive.GameMode=talk

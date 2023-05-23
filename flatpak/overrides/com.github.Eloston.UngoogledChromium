@@ -1,0 +1,4 @@
+[Context]
+devices=dri
+features=bluetooth
+filesystems=xdg-documents;xdg-download
