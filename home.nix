@@ -150,7 +150,6 @@ in
     # glibcLocalesUtf8
     gawk yad # toybox unzip xdotool xorg.xprop xorg.xrandr # steamtinkerlaunch deps
     ibm-plex meslo-lgs-nf corefonts noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
-    # wayland wayland-utils wayland-protocols xwayland libsForQt5.plasma-wayland-protocols libsForQt5.qt5.qtwayland libsForQt5.kwayland-integration libsForQt5.kwayland
     inxi neofetch grc highlight rmtrash squashfs-tools-ng dwarfs libwebp # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex bandwhich bottom fd # rust CLIs
     rsync grsync zsync resilio-sync  # file management
@@ -165,7 +164,7 @@ in
     discord discord-rpc betterdiscordctl # discord-screenaudio # discord and related
     mpv-unwrapped gimp-with-plugins mcomix # downonspot spotify-qt # media viewers
     mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
-    # gamescope libdisplay-info libliftoff jsoncpp openvr seatd wlroots libdrm vulkan-extension-layer vulkan-loader vulkan-headers wineWowPackages.stagingFull wineWowPackages.waylandFull
+    # gamescope wineWowPackages.stagingFull wineWowPackages.waylandFull
     nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg dxvk wineWowPackages.fonts winetricks # wine packages
     gamemode protontricks steamtinkerlaunch protonup-qt protonup-ng steam-rom-manager ludusavi # scanmem heroic-unwrapped # other gaming tools
     # aagl-gtk-on-nix.an-anime-game-launcher aagl-gtk-on-nix.the-honkers-railway-launcher aagl-gtk-on-nix.honkers-launcher
