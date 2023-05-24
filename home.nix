@@ -146,7 +146,7 @@ in
   # Ensure that the following packages are installed
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    git gh cachix
+    git gh github-desktop cachix
     # glibcLocalesUtf8
     gawk yad # toybox unzip xdotool xorg.xprop xorg.xrandr # steamtinkerlaunch deps
     ibm-plex meslo-lgs-nf corefonts noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
