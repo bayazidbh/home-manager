@@ -157,9 +157,9 @@ in
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons # libsForQt5.applet-window-buttons # breeze dependencies
     sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
-    du-dust qdirstat czkawka metadata-cleaner nix-du graphviz # disk usage management tools
+    du-dust qdirstat czkawka  metadata-cleaner nix-du graphviz # disk usage management tools
     ani-cli manga-cli mov-cli # CLI-based media downloader
-    junction krename fsearch # extra file management tools
+    fsearch junction krename szyszka # extra file management tools
     distrobox podman podman-compose podman-desktop # containers stuff
     discord discord-rpc betterdiscordctl # discord-screenaudio # discord and related
     mpv-unwrapped gimp-with-plugins mcomix # downonspot spotify-qt # media viewers
