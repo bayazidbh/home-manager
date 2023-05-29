@@ -146,27 +146,25 @@ in
   # Ensure that the following packages are installed
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    git gh github-desktop cachix
-    # glibcLocalesUtf8
-    gawk yad # toybox unzip xdotool xorg.xprop xorg.xrandr # steamtinkerlaunch deps
+    git gh git-lfs cachix # build tools
     ibm-plex meslo-lgs-nf corefonts noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
-    inxi neofetch grc highlight rmtrash squashfs-tools-ng dwarfs libwebp # clipboard-jh # CLI utils
-    erdtree ripgrep-all delta grex bandwhich bottom fd # rust CLIs
-    rsync grsync zsync resilio-sync  # file management
+    inxi neofetch grc highlight rmtrash libwebp # clipboard-jh # CLI utils
+    erdtree ripgrep-all delta grex fd # bottom # rust CLIs
+    rsync zsync resilio-sync  # file management
+    zerotierone activitywatch # web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
-    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons # libsForQt5.applet-window-buttons # breeze dependencies
-    sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
+    # libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
+    sassc # whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
-    du-dust qdirstat czkawka  metadata-cleaner nix-du graphviz # disk usage management tools
+    du-dust nix-du graphviz # disk usage management tools
     ani-cli manga-cli mov-cli # CLI-based media downloader
-    fsearch junction krename szyszka sqlitebrowser # extra file management tools
-    zerotierone distrobox podman podman-compose podman-desktop # containers stuff
-    discord discord-rpc betterdiscordctl # discord-screenaudio # discord and related
-    mpv-unwrapped gimp-with-plugins mcomix # downonspot spotify-qt # media viewers
+    fsearch junction krename  # extra file management tools
+    distrobox podman podman-compose podman-desktop # containers stuff
+    # downonspot spotify-qt # media viewers
     mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
-    # gamescope wineWowPackages.stagingFull wineWowPackages.waylandFull
     nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg dxvk wineWowPackages.fonts winetricks # wine packages
-    gamemode protontricks steamtinkerlaunch protonup-qt protonup-ng steam-rom-manager ludusavi # scanmem heroic-unwrapped # other gaming tools
+    gamemode steamtinkerlaunch protonup-ng ludusavi # gamescope scanmem # other gaming tools
+    gawk yad # steamtinkerlaunch deps
     # aagl-gtk-on-nix.an-anime-game-launcher aagl-gtk-on-nix.the-honkers-railway-launcher aagl-gtk-on-nix.honkers-launcher
   ];
 

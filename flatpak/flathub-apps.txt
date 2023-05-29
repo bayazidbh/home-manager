@@ -12,4 +12,6 @@ io.github.dbchoco.muezzin
 io.wavebox.Wavebox
 net.codeindustry.MasterPDFEditor
 net.cozic.joplin_desktop
+net.sourceforge.mcomix
+org.libretro.RetroArch
 org.upscayl.Upscayl
