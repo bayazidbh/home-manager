@@ -231,6 +231,7 @@ in
   programs.hstr.enable = true; # Install and enable hstr Bash And Zsh shell history suggest box
   programs.mangohud.enable = true; # Install and enable mangohud
   services.mpd-discord-rpc.enable = true; # Install service for sharing current music info to discord
+  programs.ripgrep.enable = true; # Install and enable ripgrep - rust rebuild of grep
 
   # Rebuild .desktop file database for app launcher menus
   xdg.mime.enable = true;
