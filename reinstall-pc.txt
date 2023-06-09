@@ -1,0 +1,89 @@
+!# /bin/bash
+
+# Setup nix and home-manager
+
+echo "substituters = https://cache.nixos.org https://nix-gaming.cachix.org https://chaotic-nyx.cachix.org https://ezkea.cachix.org \ntrusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" > ~/.config/nix/nix.conf
+
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager && nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs-unstable && nix-channel --update
+export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
+nix-shell '<home-manager>' -A install
+cp ./home.nix ~/.config/home-manager/
+home-manager switch
+
+# Link HDD to SSD
+
+ln -siv ~/Storage/Data/Applications ~/Applications
+ln -siv ~/Storage/Data/Media/Games ~/Games
+ln -siv ~/Storage/Data/Documents ~/Documents/Storage
+ln -siv ~/Storage/Data/Downloads ~/Downloads/Storage
+ln -siv ~/Storage/Data/Media ~/Documents/Media
+ln -siv ~/Storage/Data/Pictures/Archive ~/Pictures/Storage
+ln -siv ~/Storage/Data/Pictures/DCIM ~/Pictures/DCIM
+ln -siv ~/Storage/Data/Music/ ~/Music/Storage
+ln -siv ~/Storage/Data/Videos/ ~/Videos/Storage
+cp -rfv ~/Storage/Data/Documents/Work ~/Documents/Work
+cp -rfv ~/Storage/Data/Documents/Private ~/Documents/Private
+
+# restore input-remapper settings
+
+mkdir -p "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
+cp -rfv "$HOME/Documents/Private/Apps/Linux/config/input-remapper-2/presets/USB Gaming Mouse/*" "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
+
+# install flatpak-user apps
+
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --user -y com.github.Eloston.UngoogledChromium com.github.joseexposito.touche com.github.micahflee.torbrowser-launcher com.github.tchx84.Flatseal com.microsoft.Edge com.steamgriddb.SGDBoop com.stremio.Stremio com.usebottles.bottles com.wps.Office io.github.Foldex.AdwSteamGtk io.github.aandrew_me.ytdn net.codeindustry.MasterPDFEditor net.cozic.joplin_desktop org.ferdium.Ferdium
+
+# create flatpak overrides
+
+mkdir -p $HOME/.local/share/flatpak/overrides
+echo -e "[Context]\nfilesystems=xdg-config/MangoHud:ro;~/Storage:rw;~/.themes:ro;~/.icons:ro;xdg-data/icons:ro;xdg-config/gtk-4.0:ro;xdg-config/gtk-3.0:ro;xdg-config/gtk-2.0:ro;xdg-config/gtkrc-2.0:ro;xdg-config/gtkrc:ro\n\n[Environment]\nGTK_THEME=WhiteSur-Dark-solid\nGTK_THEME_VARIANT=dark\n\n[Session Bus Policy]\norg.kde.kconfig.notify=talk\norg.kde.StatusNotifierWatcher=talk\norg.kde.KGlobalSettings=talk\ncom.canonical.AppMenu.Registrar=talk\ncom.feralinteractive.GameMode=talk" > $HOME/.local/share/flatpak/overrides/global
+echo -e "[Context]\nsockets=fallback-x11\ndevices=dri\nfeatures=bluetooth\nfilesystems=xdg-documents;xdg-download;!home" > $HOME/.local/share/flatpak/overrides/com.github.Eloston.UngoogledChromium
+echo -e "[Context]\nsockets=fallback-x11\ndevices=dri\nfeatures=bluetooth\nfilesystems=xdg-documents;home" > $HOME/.local/share/flatpak/overrides/com.usebottles.bottles
+echo -e "[Context]\nfilesystems=xdg-data/fonts:ro" > $HOME/.local/share/flatpak/overrides/com.wps.Office
+echo -e "[Context]\nfilesystems=xdg-download;xdg-videos" > $HOME/.local/share/flatpak/overrides/io.github.aandrew_me.ytdn
+echo -e "[Context]\nfilesystems=xdg-documents" > $HOME/.local/share/flatpak/overrides/org.ferdium.Ferdium
+
+# Make resilio-sync config
+
+mkdir -p $HOME/.config/.config/rslsync
+cp -v ~/Documents/Private/Apps/Linux/config/rslsync.conf $HOME/.config/.config/rslsync
+sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config/.config/rslsync/rslsync.conf
+
+# create container home folders
+
+mkdir -p ~/Documents/container/arch/
+ln -siv $HOME/Documents/Private/Apps/Linux/config/ArchiSteamFarm-config ~/Documents/container/arch/
+mkdir -p ~/Documents/container/conty/
+
+# Link Emulator Path to default xdg paths
+
+ln -siv $HOME/Games/Emulation/Nintendo/emu/yuzu/config $HOME/.config/yuzu
+ln -siv $HOME/Games/Emulation/Nintendo/emu/yuzu/data $HOME/.local/share/yuzu
+ln -siv $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config $HOME/.config/Ryujinx
+ln -siv $HOME/Games/Emulation/Nintendo/emu/citra-emu/config $HOME/.config/citra-emu
+ln -siv $HOME/Games/Emulation/Nintendo/emu/citra-emu/data $HOME/.local/share/citra-emu
+ln -siv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config $HOME/.config/dolphin-emu
+ln -siv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data $HOME/.local/share/dolphin-emu
+ln -siv $HOME/Games/Emulation/Sony/emu/PCSX2/config $HOME/.config/PCSX2
+ln -siv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/.config/rpcs3
+ln -siv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/.config/ppsspp
+
+# schedule maintenance tasks with crontab
+
+mkdir -p $HOME/.var/log/flatpak ; mkdir -p $HOME/.var/log/nix
+
+( crontab -l ; echo -e "# Check for kdeconnect devices\n*/2 * * * *     /usr/bin/kdeconnect-cli --refresh\n\n# Update flatpak, output log to ~/.var/log/flatpak\n15 17 * * *     /usr/bin/flatpak upgrade -y >> /home/fenglengshun/.var/log/flatpak/flatpak-upgrade-\$(date \"+%Y-%m-%d\").log\n\n# Update nix-channel and home-manager\n0 17 * * 5      /nix/var/nix/profiles/default/bin/nix-channel  --update ; /home/fenglengshun/.nix-profile/bin/home-manager switch >> /home/fenglengshun/.var/log/nix/nix-home-upgrade\$(date \"+%Y-%m-%d\").log\n\n# Clean-up Nix and home-manager\n0 12 * * 6 /nix/var/nix/profiles/default/bin/nix-env --delete-generations old  >> /home/fenglengshun/.var/log/nix/nix-home-cleanup\$(date \"+%Y-%m-%d\").log ; /nix/var/nix/profiles/default/bin/nix-store --gc  >> /home/fenglengshun/.var/log/nix/nix-home-cleanup\$(date \"+%Y-%m-%d\").log ; /nix/var/nix/profiles/default/bin/nix-collect-garbage -d >> /home/fenglengshun/.var/log/nix/nix-home-cleanup\$(date \"+%Y-%m-%d\").log" ) | crontab -
+
+# block MiHoYo telemetry in /etc/hosts
+
+echo -e "\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
+
+# create horizontal mangohud bar
+
+mkdir -p /home/fenglengshun/.config/MangoHud/ && echo -e "horizontal\nlegacy_layout=0\nhud_no_margin\nfont_size=25\ntable_columns=28\nbackground_alpha=0.5\ntime=1\ntime_format=%I:%M %p\ngpu_stats\ngpu_temp\ncpu_stats\ncpu_temp\nram\nvram\nfps\nframe_timing\nframetime\ntoggle_hud=F8\nresolution\nversion\nvulkan_driver" | tee ~/.config/MangoHud/MangoHud.conf
+
+# create plasma-restarter
+
+mkdir -p ~/.local/bin/ && echo '#! /bin/bash\n\nkillall plasmashell & kwin --replace & kstart plasmashell & exit' | tee ~/.local/bin/restart-plasma && chmod +x ~/.local/bin/restart-plasma
