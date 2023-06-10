@@ -542,8 +542,11 @@ curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main
   
 </p></details>
 
+https://julianhofer.eu/blog/01-silverblue-nix/
+
 ```
 echo "trusted-users = root fenglengshun" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
+export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 nix-shell '<home-manager>' -A install
