@@ -175,6 +175,7 @@ in
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
 
   #programs.gh.enable = true; # Install and enable GitHub CLI tool
+  #programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
 
   # enable fcitx5 as input method, with mozc for Japanese IME
   i18n.inputMethod = {
@@ -241,6 +242,8 @@ in
   programs.mangohud.enable = true; # Install and enable mangohud
   services.mpd-discord-rpc.enable = true; # Install service for sharing current music info to discord
   programs.ripgrep.enable = true; # Install and enable ripgrep - rust rebuild of grep
+
+  # programs.boxxy = { enable = true;} # Boxes in badly behaving applications https://github.com/queer/boxxy
 
   # Rebuild .desktop file database for app launcher menus
   xdg.mime.enable = true;
