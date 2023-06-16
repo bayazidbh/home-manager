@@ -161,7 +161,7 @@ in
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     ani-cli manga-cli mov-cli # CLI-based media downloader
-    fsearch junction krename  # extra file management tools
+    fsearch junction krename imagemagick # extra file management tools
     distrobox podman podman-compose podman-desktop # containers stuff
     # downonspot spotify-qt # media viewers
     mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
