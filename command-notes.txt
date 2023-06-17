@@ -1,0 +1,215 @@
+# Commands
+
+## Quick Commands
+
+```
+pkill -KILL -u $USER
+sudo apt-mark auto $package_name
+
+# git clone and then immediately cd to the folder
+git clone git@github.com:Kron4ek/Conty.git && cd ${${_%%.git*}##*/}
+
+# gnome remove window decoration
+xprop -format _MOTIF_WM_HINTS 32i -set _MOTIF_WM_HINTS 2
+
+# Append " (Conty)" to lines matching regex pattern "Name="
+for file in *.txt; do sed -i -r 's/^Name=(.+)$/Name=\1 (Conty)/' "$file"; done
+
+# replace string between "" after device name with current hostname
+sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' rslsync.conf
+sed "s/\"[a-zA-Z0-9_-]*\"/\"$(hostname)\"/g" input.txt > output.txt
+
+# replace string "Exec=" with "Exec=$HOME/.local/bin/conty.sh"
+find . -type f -name '*.desktop' -exec sed -i 's/Exec=/Exec=$HOME\/.local\/bin\/conty.sh/g' {} +
+sudo sed -i 's/Exec=smplayer/Exec=env QT_QPA_PLATFORM=xcb smplayer/g' /home/fenglengshun/.nix-profile/share/applications/smplayer*
+
+# use ffmpeg to convert video_file to .webp or .gif
+ffmpeg -i video_file -loop 0 output.webp
+ffmpeg -i video_file -loop 0 output.gif
+
+# use libwebp to convert between webp and gif
+dwebp input.webp -o output.gif
+cwebp input.gif -o output.webp
+
+# zip all subfolders into their own zip file, with level-9 compression
+for i in */; do zip -9 -r "${i%/}.zip" "$i" & done; wait
+
+# unzip file.zip assuming SHIFT-JIS encoding for the files
+unzip -O SHIFT-JIS file.zip
+
+# unzip file.zip assuming CP936/GBK/GB2312/Simplified Chinese encoding for the files
+unzip -O CP936 file.zip
+
+# batch convert files in directory to pdf
+soffice --headless --norestore --convert-to pdf --outdir {OUT_DIR} {FILE}
+libreoffice --headless --convert-to pdf *.xlsx
+flatpak run org.libreoffice.LibreOffice --headless --convert-to pdf *.docx
+
+# use imagemagick to appends the images vertically
+convert -append in-*.jpg out.jpg
+# use imagemagick to appends the images horizontally
+convert in-1.jpg in-5.jpg in-N.jpg +append out.jpg
+
+# Force x11
+env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11
+
+# Force use portals (for file-picker)
+env GTK_USE GDK_DEBUG=portals GTK_USE_PORTAL=1
+
+# Kate backup suffix
+~%{Date:yyyyMMdd}_%{Time:hhmmss}.kate-bak
+
+LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 WINEFSYNC=1 WINEDLLOVERRIDES=“d3d9=;d3d11=” wine ./Game.exe
+
+ip addr show
+
+## check port 53 for dns
+netstat -nlp | grep 53
+sudo netstat -nlp | grep 53
+sudo lsof -i :53
+
+gpg --recv-key $KEYID
+sudo pacman-key -r $KEYID
+```
+
+## Steam
+
+```
+steam -nochatui -nofriendsui -silent
+
+1920x1080 (16:9):
+{960, 640}, // 16:9 - 'FSR 1080p Performance'
+{1129, 635}, // 16:9 - 'FSR 1080p Balanced'
+{1280, 720}, // 16:9 - 'FSR 1080p Quality'
+{1477, 831}, // 16:9 - 'FSR 1080p Ultra Quality'
+```
+
+## Others
+
+```
+FRAMEBUFFER=y is set in /etc/initramfs-tools/conf.d/splash (should make the boot screen appear earlier on supported hardware)
+DefaultTimeoutStopSec=40s is set in /etc/systemd/system (should make most SystemD Services take less time to stop meaning shutdown speeds are faster)
+TapToClick is enabled on libinput globally in /etc/X11/xorg.conf.d/30-touchpad.conf
+```
+
+## Kernel Options
+
+```
+amdgpu.runpm=0 radeon.dpm=0 amd_iommu=on iommu=pt amdgpu.ppfeaturemask=0xffffffff
+
+amdgpu.runpm=0 -- prevents the dGPU from being powered down dynamically at runtime,in case of issues with power management / dynamic re-activation of a discrete amdgpu graphics card
+
+radeon.dpm=0 -- deactivate the dynamic power management feature to the open-source AMD Linux graphics driver that is capable of boosting the performance of Radeon GPUs by being able to properly re-clock from their boot frequencies. Dynamic power management also leads to reduced heat output and lower power usage when the graphics processor is idle.
+
+amdgpu.ppfeaturemask=0xffffffff
+```
+
+## Other Configs
+
+```
+gtk-decoration-layout=:menu,appmenu,icon
+gtk-shell-shows-menubar=1
+gtk-toolbar-style=3
+sudo chattr +i  ~/.config/gtk-3.0/settings.ini
+export GTK_MODULES=colorreload-gtk-module:appmenu-gtk-module:unity-gtk-module
+
+# Qt Style Override
+export QT_STYLE_OVERRIDE=
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+~/.config/khotkeysrc
+qdbus org.kde.kglobalaccel /component/khotkeys shortcutNames | sort
+qdbus org.kde.kglobalaccel /component/khotkeys invokeShortcut {insert-shortcut}
+qdbus org.kde.KWin /KWin reconfigure
+
+"wine reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics" /v DisableHWAcceleration /t REG_DWORD /d 1 /f"
+
+# ffmpeg check hardware acceleration
+ffmpeg -hwaccels
+watch -n 1 vainfo
+ffmpeg -vcodec h264_amf -i input.mp4 -f null -
+
+# ffmpeg compress video
+ffmpeg -hwaccel vaapi -hwaccel_output_format vaapi -i input.mp4 -c:v h264_vaapi -b:v 2M -c:a copy output.mp4
+ffmpeg -i input_video.mp4 -c:v libx265 -crf 25 -preset fast -c:a copy output_video.mp4
+ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4
+ffmpeg -hwaccel amf -i input.mp4 -c:v h264_amf -b:v 5M -maxrate:v 6M -bufsize:v 8M -c:a copy output.mp4
+```
+
+## Flatpak Overrides
+
+```
+
+> filesystems (list)
+List of filesystem subsets to make available to the application. Possible values:
+
+> home
+The entire home directory. Available since 0.3.
+
+> home/path
+Alias for ~/path Available since 1.10. For better compatibility with older Flatpak versions, prefer to write this as ~/path.
+
+> host
+The entire host file system, except for directories that are handled specially by Flatpak. In particular, this shares /home, /media, /opt, /run/media and /srv if they exist.
+
+/dev is not shared: use devices=all; instead.
+
+Parts of /sys are always shared. This option does not make additional files in /sys available.
+
+Additionally, this keyword provides all of the same directories in /run/host as the host-os and host-etc keywords. If this keyword is used in conjunction with one of the host- keywords, whichever access level is higher (more permissive) will be used for the directories in /run/host: for example, host:rw;host-os:ro; is equivalent to host:rw;.
+
+These other reserved directories are currently excluded: /app, /bin, /boot, /etc, /lib, /lib32, /lib64, /proc, /root, /run, /sbin, /tmp, /usr, /var.
+
+Available since 0.3.
+
+> host-os
+The host operating system's libraries, executables and static data from /usr and the related directories /bin, /lib, /lib32, /lib64, /sbin. Additionally, this keyword provides access to a subset of /etc that is associated with packaged libraries and executables, even if the host-etc keyword was not used: /etc/ld.so.cache, (used by the dynamic linker) and /etc/alternatives (on operating systems that use it, such as Debian).
+
+To avoid conflicting with the Flatpak runtime, these are mounted in the sandbox at /run/host/usr, /run/host/etc/ld.so.cache and so on.
+
+Available since 1.7.
+
+> host-etc
+The host operating system's configuration from /etc.
+
+To avoid conflicting with the Flatpak runtime, this is mounted in the sandbox at /run/host/etc.
+
+Available since 1.7.
+
+> xdg-desktop, xdg-documents, xdg-download, xdg-music, xdg-pictures, xdg-public-share, xdg-videos, xdg-templates
+freedesktop.org special directories. Available since 0.3.
+
+> xdg-desktop/path, xdg-documents/path, etc.
+Subdirectories of freedesktop.org special directories. Available since 0.4.13.
+
+> xdg-cache, xdg-config, xdg-data
+Directories defined by the freedesktop.org Base Directory Specification. Available since 0.6.14.
+
+> xdg-cache/path, xdg-config/path, xdg-data/path
+Subdirectories of directories defined by the freedesktop.org Base Directory Specification. Available since 0.6.14.
+
+> xdg-run/path
+Subdirectories of the XDG_RUNTIME_DIR defined by the freedesktop.org Base Directory Specification. Note that xdg-run on its own is not supported. Available since 0.4.13.
+
+> /path
+An arbitrary absolute path. Available since 0.3.
+
+> ~/path
+An arbitrary path relative to the home directory. Available since 0.3.
+
+> ~
+The same as home. Available since 1.10. For better compatibility with older Flatpak versions, prefer to write this as home.
+
+> One of the above followed by :ro
+Make the given directory available read-only.
+
+> One of the above followed by :rw
+Make the given directory available read/write. This is the default.
+
+> One of the above followed by :create
+Make the given directory available read/write, and create it if it does not already exist.
+```
+
+Zorin Pro: https://promowp.link/Babiato-ZorinPro https://app.koofr.net/links/a8bdbf53-729d-4c39-7ea0-1d2699c8d96b
+- First password: G7.WO7+LC7qp@B6ev}0R
+- Second password: 883697

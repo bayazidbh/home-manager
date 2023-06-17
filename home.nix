@@ -29,11 +29,6 @@ in
   xdg.enable = true;
   home.sessionPath = [ "$HOME/.local/bin" ];
   home.sessionVariables = {
-    #XDG_DATA_HOME="$HOME/.local/share";
-    #XDG_CONFIG_HOME="$HOME/.config";
-    #XDG_STATE_HOME="$HOME/fenglengshun/.local/state";
-    #XDG_CACHE_HOME="$HOME/.cache";
-    #DOCKER_CONFIG="$HOME/.config/docker";
     CARGO_HOME="$HOME/.local/share/cargo";
     NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc";
     GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc";
@@ -47,7 +42,7 @@ in
 
     # Environment shortcuts
 
-    my_alias="sed -n '/home.shellAliases = {/,/}/ { //!p }' ~/.config/home-manager/home.nix | highlight --syntax=ini --out-format=ansi";
+    my_alias="bat -r 46:122 ~/.config/home-manager/home.nix";
     update_desktop_files ="update-desktop-database ~/.local/share/applications ~/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
 
     force-x11="QT_QPA_PLATFORM=xcb GDK_BACKEND=x11";

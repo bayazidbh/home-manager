@@ -1,6 +1,8 @@
 # home-manager files and quick device setup
 
-
+```
+git clone git@github.com:bayazidbh/home-manager.git && cd ${${_%%.git*}##*/}
+```
 
 # Nix Setup
 
@@ -8,10 +10,10 @@
 <details><summary>determinate-installer</summary><p>
 
 https://github.com/DeterminateSystems/nix-installer
-
+https://raw.githubusercontent.com/DeterminateSystems/nix-installer/main/README.md
 https://github.com/DeterminateSystems/nix-installer/commits/main/README.md.atom
 
-## The Determinate Nix Installer
+# The Determinate Nix Installer
 
 [![Crates.io](https://img.shields.io/crates/v/nix-installer)](https://crates.io/crates/nix-installer)
 [![Docs.rs](https://img.shields.io/docsrs/nix-installer)](https://docs.rs/nix-installer/latest/nix_installer/)
@@ -465,8 +467,15 @@ You can read the full privacy policy for [Determinate Systems][detsys], the crea
 <details><summary>nix-installer-scripts</summary><p>
 
 https://github.com/dnkmmr69420/nix-installer-scripts
-
+https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/README.md
 https://github.com/dnkmmr69420/nix-installer-scripts/commits/main/README.md.atom
+
+## nix-installer-scripts
+Various scripts to install the nix package manager
+
+This may break if something other than bash is not the default login shell so have bash be the default shell. It will be better to make a profile on your terminal application and have a different shell instance that way. If the commands itself give some sort of error, use bash as a shell. Type `bash` into the terminal to get to bash.
+
+[Read This](https://github.com/dnkmmr69420/nix-installer-scripts/tree/main/nix-out-of-default)
 
 ## Installers
 
@@ -539,46 +548,225 @@ curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main
 ```bash
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/uninstaller-scripts/silverblue-nix-uninstaller.sh | bash
 ```
-  
+
+## Other useful docs
+
+[Extra Scripts](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/extra-scripts.md)
+
+[Nix with selinux manual install guide](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/selinux-nix-manual-install-guide.md)
+
+[Old github repos that this repo has replaced list](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/my-old-nix-github-repos.md)
+
+[Compile from source](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/compile-from-source.md)
+
+[Common Issues](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/common-issues.md)
+
+## Some useful nix tools
+
+Fleek: [Github-page](https://github.com/ublue-os/fleek) [Website](https://getfleek.dev/)
+
+Nix Portable: [Main-Page](https://github.com/DavHau/nix-portable) [My-nix-portable-utilities](https://github.com/dnkmmr69420/nix-portable-utils)
+
+Devbox: [Website](https://www.jetpack.io/devbox) [Github](https://github.com/jetpack-io/devbox)
+
+## Shorten link
+
+https://tinyurl.com/nxscrpts
+
 </p></details>
 
 https://julianhofer.eu/blog/01-silverblue-nix/
 
 ```
 echo "trusted-users = root fenglengshun" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
+echo "substituters = https://cache.nixos.org https://nix-gaming.cachix.org https://chaotic-nyx.cachix.org https://ezkea.cachix.org \ntrusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" > ~/.config/nix/nix.conf
+
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 nix-shell '<home-manager>' -A install
+
 EDITOR=kwrite home-manager edit
 home-manager switch -b bak
+
+nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d
+nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png
 ```
 
 # Setup Scripts
 
+## All
+
+<details><summary>All</summary><p>
+
+### create container home folders
+
+```
+mkdir -p ~/Documents/container/conty
+mkdir -p ~/Documents/container/arch
+ln -sifv $HOME/Documents/Private/Apps/Linux/config/ArchiSteamFarm-config ~/Documents/container/arch/
+```
+
+### link emulator paths to default xdg paths
+
+```
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/config $HOME/.config/yuzu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/data $HOME/.local/share/yuzu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config $HOME/.config/Ryujinx
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/config $HOME/.config/citra-emu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/data $HOME/.local/share/citra-emu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config $HOME/.config/dolphin-emu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data $HOME/.local/share/dolphin-emu
+ln -sifv $HOME/Games/Emulation/Sony/emu/PCSX2/config $HOME/.config/PCSX2
+ln -sifv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/.config/rpcs3
+ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/.config/ppsspp
+
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/config $HOME/Documents/container/conty/.config/yuzu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/data $HOME/Documents/container/conty/.local/share/yuzu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config $HOME/Documents/container/conty/.config/Ryujinx
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/config $HOME/Documents/container/conty/.config/citra-emu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/data $HOME/Documents/container/conty/.local/share/citra-emu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config $HOME/Documents/container/conty/.config/dolphin-emu
+ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data $HOME/Documents/container/conty/.local/share/dolphin-emu
+ln -sifv $HOME/Games/Emulation/Sony/emu/PCSX2/config $HOME/Documents/container/conty/.config/PCSX2
+ln -sifv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/Documents/container/conty/.config/rpcs3
+ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/Documents/container/conty/.config/ppsspp
+```
+
+### Make resilio-sync config
+
+```
+mkdir -p $HOME/.config/.config/rslsync
+cp -v ~/Documents/Private/Apps/Linux/config/rslsync.conf $HOME/.config/.config/rslsync
+sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config/.config/rslsync/rslsync.conf
+```
+
+### block MiHoYo telemetry in /etc/hosts
+
+```
+echo -e "\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
+```
+
+### create horizontal mangohud bar
+
+```
+mkdir -p /home/fenglengshun/.config/MangoHud/ && echo -e "horizontal\nlegacy_layout=0\nhud_no_margin\nfont_size=25\ntable_columns=28\nbackground_alpha=0.5\ntime=1\ntime_format=%I:%M %p\ngpu_stats\ngpu_temp\ncpu_stats\ncpu_temp\nram\nvram\nfps\nframe_timing\nframetime\ntoggle_hud=F8\nresolution\nwine\nvulkan_driver" | tee ~/.config/MangoHud/MangoHud.conf
+```
+
+### create plasma-restarter
+
+```
+mkdir -p ~/.local/bin/ && echo '#! /bin/bash\n\nkillall plasmashell & kwin --replace & kstart plasmashell & exit' | tee ~/.local/bin/restart-plasma && chmod +x ~/.local/bin/restart-plasma
+```
+
+</p></details>
+
 ## PC
 
-https://github.com/bayazidbh/home-manager/blob/main/reinstall-pc.txt
+<details><summary>PC</summary><p>
+
+### Link HDD to SSD
+
+```
+ln -sifv ~/Storage/Data/Applications ~/Applications
+ln -sifv ~/Storage/Data/Media/Games ~/Games
+ln -sifv ~/Storage/Data/Documents ~/Documents/Storage
+ln -sifv ~/Storage/Data/Downloads ~/Downloads/Storage
+ln -sifv ~/Storage/Data/Media ~/Documents/Media
+ln -sifv ~/Storage/Data/Pictures/Archive ~/Pictures/Storage
+ln -sifv ~/Storage/Data/Pictures/DCIM ~/Pictures/DCIM
+ln -sifv ~/Storage/Data/Music/ ~/Music/Storage
+ln -sifv ~/Storage/Data/Videos/ ~/Videos/Storage
+```
+
+### Copy backed up Documents
+
+```
+cp -rfpv ~/Storage/Data/Documents/Work ~/Documents/Work
+cp -rfpv ~/Storage/Data/Documents/Private ~/Documents/Private
+```
+
+### restore input-remapper settings
+
+```
+mkdir -p "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
+cp -rfpv "$HOME/Documents/Private/Apps/Linux/config/input-remapper-2/presets/USB Gaming Mouse/*" "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
+```
+
+</p></details>
 
 ## Laptop
 
-https://github.com/bayazidbh/home-manager/blob/main/reinstall-laptop.txt
+<details><summary>Laptop</summary><p>
+
+### autocheck for kdeconnect devices
+
+```
+crontab -e
+( crontab -l ; echo -e "# Check for kdeconnect devices\n*/2 * * * *     /usr/bin/kdeconnect-cli --refresh" ) | crontab -
+```
+
+</p></details>
+
+# Distro specific
+
+## Debian / Ubuntu
+
+```
+libdbusmenu-qt5-2　libdbusmenu-gtk4 appmenu-gtk3-module appmenu-gtk2-module libdbusmenu-gtk3-4　locales-all
+
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get && deb-get install quickemu quickgui teamviewer
+
+sudo apt-get install python3 python3-pip python3-yaml python3-dateutil python3-pyqt5 python3-packaging python3-requests && sudo pip3 install bauh
+```
+
+## Fedora
+
+```
+sudo dnf install --allowerasing --best zsh @Virtualization fish kio-admin icoutils applet-window-buttons nmap wsdd samba python3-input-remapper gtk3-classic avif-pixbuf-loader heif-pixbuf-loader qt-heif-image-plugin libheif libheif-freeworld libheif-tools
+
+sudo dnf install https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+```
+
+## Arch
+
+```
+pacman -Syyu paru
+
+paru -Syyu plasma5-applets-window-title applet-window-appmenu-git applet-window-buttons-git topgrade brave-bin spotify spotify-adblock-git python-spotdl freedownloadmanager teamviewer steamtinkerlaunch heroic-games-launcher-bin krename gtk3-classic virt-manager gameconqueror qtscrcpy soundux corectrl appmenu-gtk-module discover ttf-ibm-plex icoextract ttf-meslo-nerd-font-powerlevel10k icoutils unicode-emoji python-emoji noto-fonts-emoji-flag-git noto-color-emoji-fontconfig sunshine hunspell-en_us
+
+paru -Syu --skipreview --noconfirm  applet-window-appmenu-git applet-window-buttons-git archisteamfarm-bin btrfs-compress btrfs-du discord-screenaudio plasma-hud-git libspeedhack-git nwjs-bin nwjs-ffmpeg-codecs-bin ceserver rmtrash sgdboop-bin
+
+sudo pacman -S $(pacman -Qsq "^linux" | grep "^linux[0-9]*[-rt]*$" | awk '{print $1"-headers"}' ORS=' ')
+
+performance tweaks: ananicy-cpp memavaild preload nohang uresourced prelockd irqbalance
+
+gaming: noisetorch fancontrol-gui input-remapper droidcam steamtinkerlaunch mangohud gamemode goverlay replay-sorcery gamescope nyrna fastgame gameconqueror
+``````
 
 # Other Setups
 
 <details><summary>Distrobox</summary><p>
 
+## Distrobox
+
 ```
-env SHELL=/home/fenglengshun/.nix-profile/bin/fish distrobox create --image archlinux:latest --name arch --home $XDG_DATA_HOME/container/arch
+env SHELL=/bin/fish distrobox create --image archlinux:latest --name arch --home ~/Documents/container/arch
 
 pacman-key --init && pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com && pacman-key --lsign-key FBA220DFC880C036 && pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' && echo '[chaotic-aur]' >> /etc/pacman.conf && echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf && echo 'en_SG.UTF-8 UTF-8' >> /etc/locale.gen && echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && echo 'ja_JP.UTF-8 UTF-8' >> /etc/locale.gen && echo 'id_ID.UTF-8 UTF-8' >> /etc/locale.gen && pacman -Syu --noconfirm glibc base-devel nano paru pipewire-jack pipewire-pulse pipewire-alsa
 
 paru -Syu --skipreview --noconfirm nwjs-bin nwjs-ffmpeg-codecs-bin archisteamfarm-bin
 
+---
+
+env SHELL=/bin/bash distrobox create --image ubuntu:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
 env SHELL=/home/fenglengshun/.nix-profile/bin/zsh distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name tumbleweed --home $XDG_DATA_HOME/distrobox/tumbleweed
 ```
-  
+
 </p></details>
+
+
+<details><summary>Fish-ified ZSH</summary><p>
 
 ## Fish-ified ZSH
 
@@ -592,6 +780,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 source ~/.zshrc
 ```
+
+</p></details>
+
+<details><summary>WhiteSur</summary><p>
 
 ## WhiteSur
 
@@ -642,3 +834,19 @@ git clone git@github.com:bayazidbh/WhiteSur-gtk-theme.git ; git clone git@github
 ```
 /tmp/whitesur/WhiteSur-gtk-theme/tweaks --dash-to-dock -c dark ; sudo /tmp/whitesur/WhiteSur-gtk-theme/tweaks.sh -g --gdm-no-darken --no-blur -b default ;
 ```
+
+</p></details>
+
+## Others
+
+<details><summary>AppImage</summary><p>
+
+- [Bauh](https://github.com/vinifmor/bauh#installation)
+- [ScreenTranslator](https://github.com/OneMoreGres/ScreenTranslator/releases)
+
+```
+aria2c https://raw.githubusercontent.com/vinifmor/bauh/master/bauh/desktop/bauh.desktop
+aria2c https://raw.githubusercontent.com/vinifmor/bauh-files/master/pictures/logo.svg
+```
+
+</p></details>
