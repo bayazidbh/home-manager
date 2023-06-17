@@ -712,6 +712,8 @@ crontab -e
 
 ## Debian / Ubuntu
 
+<details><summary>Debian / Ubuntu</summary><p>
+
 ```
 libdbusmenu-qt5-2　libdbusmenu-gtk4 appmenu-gtk3-module appmenu-gtk2-module libdbusmenu-gtk3-4　locales-all
 
@@ -719,8 +721,12 @@ curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | su
 
 sudo apt-get install python3 python3-pip python3-yaml python3-dateutil python3-pyqt5 python3-packaging python3-requests && sudo pip3 install bauh
 ```
+</p></details>
+
 
 ## Fedora
+
+<details><summary>Fedora</summary><p>
 
 ```
 sudo dnf install --allowerasing --best zsh @Virtualization fish kio-admin icoutils applet-window-buttons nmap wsdd samba python3-input-remapper gtk3-classic avif-pixbuf-loader heif-pixbuf-loader qt-heif-image-plugin libheif libheif-freeworld libheif-tools
@@ -728,7 +734,11 @@ sudo dnf install --allowerasing --best zsh @Virtualization fish kio-admin icouti
 sudo dnf install https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
 ```
 
+</p></details>
+
 ## Arch
+
+<details><summary>Arch</summary><p>
 
 ```
 pacman -Syyu paru
@@ -743,6 +753,7 @@ performance tweaks: ananicy-cpp memavaild preload nohang uresourced prelockd irq
 
 gaming: noisetorch fancontrol-gui input-remapper droidcam steamtinkerlaunch mangohud gamemode goverlay replay-sorcery gamescope nyrna fastgame gameconqueror
 ``````
+</p></details>
 
 # Other Setups
 
