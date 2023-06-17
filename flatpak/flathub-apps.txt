@@ -13,11 +13,11 @@ com.wps.Office
 de.shorsh.discord-screenaudio
 fr.handbrake.ghb
 info.smplayer.SMPlayer
+io.github.Bavarder.Bavarder
 io.github.Foldex.AdwSteamGtk
 io.github.Soundux
 io.github.aandrew_me.ytdn
 io.github.dbchoco.muezzin
-io.github.shiftey.Desktop
 io.github.trigg.discover_overlay
 io.wavebox.Wavebox
 net.codeindustry.MasterPDFEditor
@@ -38,4 +38,4 @@ org.soundconverter.SoundConverter
 org.upscayl.Upscayl
 org.videolan.VLC
 org.yuzu_emu.yuzu
-
+page.codeberg.Imaginer.Imaginer

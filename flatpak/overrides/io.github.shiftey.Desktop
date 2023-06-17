@@ -1,0 +1,5 @@
+[Context]
+sockets=system-bus;session-bus
+
+[Session Bus Policy]
+org.kde.*=talk
