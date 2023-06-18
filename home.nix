@@ -6,7 +6,7 @@ let
 
   #pkgsUnstable = import <nixpkgs-unstable> {};
   nix-gaming = import (builtins.fetchTarball "https://github.com/fufexan/nix-gaming/archive/master.tar.gz");
-  # nixgl = import (builtins.fetchTarball "https://github.com/guibou/nixGL/archive/main.tar.gz");
+  nixgl = import <nixgl> {};
   # aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
 
   #revpkgs = import (builtins.fetchGit {
@@ -159,7 +159,7 @@ in
     fsearch junction krename imagemagick # extra file management tools
     distrobox podman podman-compose podman-desktop # containers stuff
     # downonspot spotify-qt # media viewers
-    mesa amdvlk driversi686Linux.amdvlk # nixgl.auto.nixGLDefault # wine graphics dependencies
+    mesa amdvlk driversi686Linux.amdvlk nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
     nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg dxvk wineWowPackages.fonts winetricks # wine packages
     gamemode steamtinkerlaunch protonup-ng ludusavi # gamescope scanmem # other gaming tools
     gawk yad # steamtinkerlaunch deps
