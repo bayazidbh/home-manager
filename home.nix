@@ -238,7 +238,9 @@ in
   services.mpd-discord-rpc.enable = true; # Install service for sharing current music info to discord
   programs.ripgrep.enable = true; # Install and enable ripgrep - rust rebuild of grep
 
-  programs.boxxy = { enable = true;} # Boxes in badly behaving applications https://github.com/queer/boxxy
+  programs.boxxy = {
+    enable = true;
+  }; # Boxes in badly behaving applications https://github.com/queer/boxxy
 
   # programs.anime-game-launcher.enable = true;
   # programs.honkers-railway-launcher.enable = true;
