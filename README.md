@@ -587,6 +587,8 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 
 EDITOR=kwrite home-manager edit
+nix-shell -p cachix --run "cachix use ezkea"
+cachix use nix-gaming
 home-manager switch -b bak
 
 nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d
