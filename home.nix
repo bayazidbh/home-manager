@@ -6,12 +6,8 @@ let
 
   #pkgsUnstable = import <nixpkgs-unstable> {};
   nix-gaming = import (builtins.fetchTarball "https://github.com/fufexan/nix-gaming/archive/master.tar.gz");
+  # nixgl = import (builtins.fetchTarball "https://github.com/guibou/nixGL/archive/main.tar.gz");
   # aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
-
-  #chaotic-nix = import (builtins.fetchGit {
-  #  url = "https://github.com/chaotic-cx/nyx";
-  #  ref = "nyxpkgs-unstable";
-  #});
 
   #revpkgs = import (builtins.fetchGit {
   #  url = "https://github.com/NixOS/nixpkgs/";
@@ -37,6 +33,10 @@ in
     GTK_THEME="WhiteSur-Dark-solid";
     GTK_THEME_VARIANT="dark";
     };
+
+  # imports = [
+  #   aagl-gtk-on-nix.module
+  # ];
 
   home.shellAliases = {
 
@@ -159,7 +159,7 @@ in
     fsearch junction krename imagemagick # extra file management tools
     distrobox podman podman-compose podman-desktop # containers stuff
     # downonspot spotify-qt # media viewers
-    mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
+    mesa amdvlk driversi686Linux.amdvlk # nixgl.auto.nixGLDefault # wine graphics dependencies
     nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg dxvk wineWowPackages.fonts winetricks # wine packages
     gamemode steamtinkerlaunch protonup-ng ludusavi # gamescope scanmem # other gaming tools
     gawk yad # steamtinkerlaunch deps
@@ -238,7 +238,11 @@ in
   services.mpd-discord-rpc.enable = true; # Install service for sharing current music info to discord
   programs.ripgrep.enable = true; # Install and enable ripgrep - rust rebuild of grep
 
-  # programs.boxxy = { enable = true;} # Boxes in badly behaving applications https://github.com/queer/boxxy
+  programs.boxxy = { enable = true;} # Boxes in badly behaving applications https://github.com/queer/boxxy
+
+  # programs.anime-game-launcher.enable = true;
+  # programs.honkers-railway-launcher.enable = true;
+  # programs.honkers-launcher.enable = true;
 
   # Rebuild .desktop file database for app launcher menus
   xdg.mime.enable = true;
