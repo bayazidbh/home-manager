@@ -68,11 +68,6 @@ in
     clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
     du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
 
-    pull-home-manager-nix="cp -rpfv $HOME/Documents/Private/Linux/nixos/home.nix $HOME/.config/home-manager/";
-    push-home-manager-nix="cp -rpfv $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/ ; cp -rpfv $HOME/.config/home-manager/home.nix $HOME/.var/log/nix/home.nix-$(date '+%Y%m%d_%H%M%S').txt ; cd $HOME/.config/home-manager";
-    delta-home-manager-nix="delta $HOME/.config/home-manager/home.nix $HOME/Documents/Private/Linux/nixos/home.nix";
-    clean-home-manager-nix="rmtrash -rfv $HOME/.config/home-manager/home.nix~* ; exa -al $HOME/.config/home-manager/";
-
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
     conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
@@ -82,7 +77,8 @@ in
     conty-export-unrestrict="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh -d --bind $HOME/.steam $HOME/.steam --bind $HOME/.local/share/Steam $HOME/.local/share/Steam --bind $HOME/Games $HOME/Games --bind $HOME/.local/share $HOME/.local/share --bind $HOME/.config $HOME/.config --bind $HOME/.local/state $HOME/.local/state --bind $HOME/.cache $HOME/.cache --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
 
     contywine="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh wine ./Game.exe";
-    contywinejp="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh wine ./Game.exe";
+    contywinejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 $HOME/.local/bin/conty.sh wine";
+    contygamescope="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 -- wine";
 
     # Games
     steam-silent="steam -nochatui -nofriendsui -silent";
