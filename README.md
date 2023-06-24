@@ -4,7 +4,7 @@
 git clone git@github.com:bayazidbh/home-manager.git && cd ${${_%%.git*}##*/}
 ```
 
-# Nix Setup
+## Nix Setup
 
 
 <details><summary>determinate-installer</summary><p>
@@ -595,13 +595,13 @@ nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d
 nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png
 ```
 
-# Setup Scripts
+## Setup Scripts
 
-## All
+### All
 
 <details><summary>All</summary><p>
 
-### create container home folders
+#### create container home folders
 
 ```
 mkdir -p ~/Documents/container/conty
@@ -609,7 +609,7 @@ mkdir -p ~/Documents/container/arch
 ln -sifv $HOME/Documents/Private/Apps/Linux/config/ArchiSteamFarm-config ~/Documents/container/arch/
 ```
 
-### link emulator paths to default xdg paths
+#### link emulator paths to default xdg paths
 
 ```
 ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/config $HOME/.config/yuzu
@@ -635,7 +635,7 @@ ln -sifv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/Documents/container/c
 ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/Documents/container/conty/.config/ppsspp
 ```
 
-### Make resilio-sync config
+#### Make resilio-sync config
 
 ```
 mkdir -p $HOME/.config/.config/rslsync
@@ -643,19 +643,19 @@ cp -v ~/Documents/Private/Apps/Linux/config/rslsync.conf $HOME/.config/.config/r
 sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config/.config/rslsync/rslsync.conf
 ```
 
-### block MiHoYo telemetry in /etc/hosts
+#### block MiHoYo telemetry in /etc/hosts
 
 ```
 echo -e "\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
 ```
 
-### create horizontal mangohud bar
+#### create horizontal mangohud bar
 
 ```
 mkdir -p /home/fenglengshun/.config/MangoHud/ && echo -e "horizontal\nlegacy_layout=0\nhud_no_margin\nfont_size=25\ntable_columns=28\nbackground_alpha=0.5\ntime=1\ntime_format=%I:%M %p\ngpu_stats\ngpu_temp\ncpu_stats\ncpu_temp\nram\nvram\nfps\nframe_timing\nframetime\ntoggle_hud=F8\nresolution\nwine\nvulkan_driver" | tee ~/.config/MangoHud/MangoHud.conf
 ```
 
-### create plasma-restarter
+#### create plasma-restarter
 
 ```
 mkdir -p ~/.local/bin/ && echo '#! /bin/bash\n\nkillall plasmashell & kwin --replace & kstart plasmashell & exit' | tee ~/.local/bin/restart-plasma && chmod +x ~/.local/bin/restart-plasma
@@ -663,11 +663,11 @@ mkdir -p ~/.local/bin/ && echo '#! /bin/bash\n\nkillall plasmashell & kwin --rep
 
 </p></details>
 
-## PC
+### PC
 
 <details><summary>PC</summary><p>
 
-### Link HDD to SSD
+#### Link HDD to SSD
 
 ```
 ln -sifv ~/Storage/Data/Applications ~/Applications
@@ -681,14 +681,14 @@ ln -sifv ~/Storage/Data/Music/ ~/Music/Storage
 ln -sifv ~/Storage/Data/Videos/ ~/Videos/Storage
 ```
 
-### Copy backed up Documents
+#### Copy backed up Documents
 
 ```
 cp -rfpv ~/Storage/Data/Documents/Work ~/Documents/Work
 cp -rfpv ~/Storage/Data/Documents/Private ~/Documents/Private
 ```
 
-### restore input-remapper settings
+#### restore input-remapper settings
 
 ```
 mkdir -p "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
@@ -697,11 +697,11 @@ cp -rfpv "$HOME/Documents/Private/Apps/Linux/config/input-remapper-2/presets/USB
 
 </p></details>
 
-## Laptop
+### Laptop
 
 <details><summary>Laptop</summary><p>
 
-### autocheck for kdeconnect devices
+#### autocheck for kdeconnect devices
 
 ```
 crontab -e
@@ -710,9 +710,9 @@ crontab -e
 
 </p></details>
 
-# Distro specific
+## Distro specific
 
-## Debian / Ubuntu
+### Debian / Ubuntu
 
 <details><summary>Debian / Ubuntu</summary><p>
 
@@ -726,7 +726,7 @@ sudo apt-get install python3 python3-pip python3-yaml python3-dateutil python3-p
 </p></details>
 
 
-## Fedora
+### Fedora
 
 <details><summary>Fedora</summary><p>
 
@@ -740,7 +740,7 @@ sudo dnf install https://download.teamviewer.com/download/linux/teamviewer.x86_6
 
 </p></details>
 
-## Arch
+### Arch
 
 <details><summary>Arch</summary><p>
 
@@ -759,11 +759,11 @@ gaming: noisetorch fancontrol-gui input-remapper droidcam steamtinkerlaunch mang
 ``````
 </p></details>
 
-# Other Setups
+## Other Setups
 
 <details><summary>Distrobox</summary><p>
 
-## Distrobox
+### Distrobox
 
 ```
 env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox --name arch --home ~/Documents/container/arch
@@ -776,11 +776,12 @@ paru -Syu --skipreview --noconfirm nwjs-bin nwjs-ffmpeg-codecs-bin archisteamfar
 ---
 
 env SHELL=/bin/bash distrobox create --image ubuntu:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
-env SHELL=/home/fenglengshun/.nix-profile/bin/zsh distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name tumbleweed --home $XDG_DATA_HOME/distrobox/tumbleweed
 
-distrobox create --image fedora:latest --name fedora --home ~/Documents/container/fedora
+env SHELL=/home/fenglengshun/.nix-profile/bin/zsh distrobox create --image fedora:latest --name fedora --home ~/Documents/container/fedora
 sudo dnf install dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name tumbleweed --home $XDG_DATA_HOME/distrobox/tumbleweed
+https://github.com/89luca89/distrobox/blob/main/docs/posts/run_libvirt_in_distrobox.md
 ```
 
 </p></details>
@@ -788,7 +789,7 @@ sudo dnf install dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-r
 
 <details><summary>Fish-ified ZSH</summary><p>
 
-## Fish-ified ZSH
+### Fish-ified ZSH
 
 ```
 sudo chsh -s /bin/zsh ; chsh -s /bin/zsh ; sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -805,9 +806,9 @@ source ~/.zshrc
 
 <details><summary>WhiteSur</summary><p>
 
-## WhiteSur
+### WhiteSur
 
-### Normal Install
+#### Normal Install
 
 - https://github.com/vinceliuice/WhiteSur-gtk-theme
 - https://github.com/vinceliuice/WhiteSur-icon-theme
@@ -837,19 +838,19 @@ git clone https://github.com/vinceliuice/Monterey-kde /tmp/whitesur/Monterey-kde
 sudo /tmp/whitesur/Monterey-kde/sddm/install.sh
 ```
 
-### Icon options
+#### Icon options
 
 ```
 --icon [standard|simple|gnome|ubuntu|tux|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin]
 ```
 
-### ublue Install
+#### ublue Install
 
 ```
 git clone git@github.com:bayazidbh/WhiteSur-gtk-theme.git ; git clone git@github.com:bayazidbh/WhiteSur-icon-theme.git ; git clone git@github.com:bayazidbh/WhiteSur-kde.git ; git clone git@github.com:bayazidbh/Monterey-kde.git ; git clone git@github.com:bayazidbh/WhiteSur-cursors.git
 ```
 
-### GNOME Install
+#### GNOME Install
 
 ```
 /tmp/whitesur/WhiteSur-gtk-theme/tweaks --dash-to-dock -c dark ; sudo /tmp/whitesur/WhiteSur-gtk-theme/tweaks.sh -g --gdm-no-darken --no-blur -b default ;
@@ -857,7 +858,44 @@ git clone git@github.com:bayazidbh/WhiteSur-gtk-theme.git ; git clone git@github
 
 </p></details>
 
-## Others
+### libvirt
+
+<details><summary>xml</summary><p>
+
+```
+  <clock offset="localtime">
+    <timer name="hpet" present="yes"/>
+    <timer name="hypervclock" present="yes"/>
+  </clock>
+
+<disk type="file" device="disk">
+      <driver name="qemu" type="qcow2"/>
+      <source file="/home/fenglengshun/.local/share/libvirt/win11.qcow2"/>
+      <target dev="vda" bus="virtio"/>
+      <address type="pci" domain="0x0000" bus="0x06" slot="0x00" function="0x0"/>
+</disk>
+```
+</p></details>
+
+<details><summary>Command</summary><p>
+
+```
+$ sudo sed -i "s/#user = \"root\"/user = \"$(id -un)\"/g" /etc/libvirt/qemu.conf
+$ sudo sed -i "s/#group = \"root\"/group = \"$(id -gn)\"/g" /etc/libvirt/qemu.conf
+$ sudo usermod -a -G kvm $(id -un)
+$ sudo usermod -a -G libvirt $(id -un)
+$ sudo systemctl restart libvirtd
+
+$ sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
+
+$ sudo sed -i "s/\/usr\/libexec\/libvirt_leaseshelper m,/\/usr\/libexec\/libvirt_leaseshelper mr,/g" /etc/apparmor.d/usr.sbin.dnsmasq
+$ mkdir -p ~/.config/libvirt
+$ echo "uri_default = \"qemu:///system\"" >> ~/.config/libvirt/libvirt.conf
+```
+
+</p></details>
+
+### Others
 
 <details><summary>AppImage</summary><p>
 
