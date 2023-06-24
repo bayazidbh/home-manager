@@ -733,6 +733,8 @@ sudo apt-get install python3 python3-pip python3-yaml python3-dateutil python3-p
 ```
 sudo dnf install --allowerasing --best zsh @Virtualization fish kio-admin icoutils applet-window-buttons nmap wsdd samba python3-input-remapper gtk3-classic avif-pixbuf-loader heif-pixbuf-loader qt-heif-image-plugin libheif libheif-freeworld libheif-tools
 
+sudo dnf install dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 sudo dnf install https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
 ```
 
@@ -775,6 +777,10 @@ paru -Syu --skipreview --noconfirm nwjs-bin nwjs-ffmpeg-codecs-bin archisteamfar
 
 env SHELL=/bin/bash distrobox create --image ubuntu:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
 env SHELL=/home/fenglengshun/.nix-profile/bin/zsh distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name tumbleweed --home $XDG_DATA_HOME/distrobox/tumbleweed
+
+distrobox create --image fedora:latest --name fedora --home ~/Documents/container/fedora
+sudo dnf install dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 ```
 
 </p></details>

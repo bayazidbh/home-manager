@@ -5,7 +5,7 @@ let
   #import other sources / branch
 
   #pkgsUnstable = import <nixpkgs-unstable> {};
-  nix-gaming = import (builtins.fetchTarball "https://github.com/fufexan/nix-gaming/archive/master.tar.gz");
+  # nix-gaming = import (builtins.fetchTarball "https://github.com/fufexan/nix-gaming/archive/master.tar.gz");
   nixgl = import <nixgl> {};
   # aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
 
@@ -157,8 +157,8 @@ in
     fsearch junction krename imagemagick # extra file management tools
     distrobox podman podman-compose podman-desktop # containers stuff
     # downonspot spotify-qt # media viewers
-    mesa amdvlk driversi686Linux.amdvlk nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
-    nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg dxvk wineWowPackages.fonts winetricks # wine packages
+    nixgl.nixGLIntel nixgl.nixVulkanIntel # mesa amdvlk driversi686Linux.amdvlk  # wine graphics dependencies
+    wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg
     gamemode steamtinkerlaunch protonup-ng ludusavi # gamescope scanmem # other gaming tools
     gawk yad # steamtinkerlaunch deps
     # aagl-gtk-on-nix.an-anime-game-launcher aagl-gtk-on-nix.the-honkers-railway-launcher aagl-gtk-on-nix.honkers-launcher
