@@ -142,7 +142,7 @@ in
   ];
 
   home.packages = with pkgs; [
-    git gh git-lfs github-desktop cachix # build tools
+    git gh git-lfs github-desktop cosign cachix # build tools
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex fd # bottom # rust CLIs
