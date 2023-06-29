@@ -67,6 +67,7 @@ in
     home_manager_update="nix-channel --update && home-manager switch -b bak";
     clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
     du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
+    kdeconnect-notification="kdeconnect-cli -n SM-A145F --ping-msg";
 
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
