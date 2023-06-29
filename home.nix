@@ -199,7 +199,7 @@ in
     historySubstringSearch.enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     # source p10k theme at ZSH_CUSTOM in XDG_DATA_HOME
     initExtra = "[[ ! -f ${config.xdg.configHome}/zsh/p10k.zsh ]] || source ${config.xdg.configHome}/zsh/p10k.zsh";
     oh-my-zsh = {
