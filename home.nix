@@ -4,9 +4,10 @@ let
 
   #import other sources / branch
 
-  #pkgsUnstable = import <nixpkgs-unstable> {};
+  # pkgsUnstable = import <nixpkgs-unstable> {};
+  # nixpkgs = import (builtins.fetchTarball "https://nixos.org/channels/nixpkgs-unstable");
   # nix-gaming = import (builtins.fetchTarball "https://github.com/fufexan/nix-gaming/archive/master.tar.gz");
-  nixgl = import <nixgl> {};
+  # nixgl = import <nixgl> {};
   # aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
 
   #revpkgs = import (builtins.fetchGit {
@@ -64,7 +65,7 @@ in
 
     # Nix Package Manager shortcuts
 
-    home_manager_update="nix-channel --update && home-manager switch -b bak";
+    home_manager_update="sudo nix-channel --update ; nix-channel --update && home-manager switch -b bak";
     clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
     du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
     kdeconnect-notification="kdeconnect-cli -n SM-A145F --ping-msg";
@@ -150,15 +151,15 @@ in
     rsync zsync resilio-sync  # file management
     zerotierone activitywatch # web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
-    # libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
-    sassc # whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
+    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
+    sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     ani-cli manga-cli mov-cli # CLI-based media downloader
     fsearch junction krename imagemagick # extra file management tools
     distrobox podman podman-compose podman-desktop # containers stuff
     # downonspot spotify-qt # media viewers
-    mesa amdvlk driversi686Linux.amdvlk nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
+    mesa amdvlk driversi686Linux.amdvlk # nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
     gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
     gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
     wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg
