@@ -635,12 +635,18 @@ ln -sifv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/Documents/container/c
 ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/Documents/container/conty/.config/ppsspp
 ```
 
+#### Import gpg
+
+```
+gpg --import ~/Storage/Data/Documents/bayazidbh-gpg.gpg
+```
+
 #### Make resilio-sync config
 
 ```
-mkdir -p $HOME/.config/.config/rslsync
-cp -v ~/Documents/Private/Apps/Linux/config/rslsync.conf $HOME/.config/.config/rslsync
-sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config/.config/rslsync/rslsync.conf
+mkdir -p $HOME/.config/rslsync
+cp -v ~/Documents/Private/Apps/Linux/config/rslsync.conf $HOME/.config/rslsync
+sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config/rslsync/rslsync.conf
 ```
 
 #### block MiHoYo telemetry in /etc/hosts
@@ -691,8 +697,8 @@ cp -rfpv ~/Storage/Data/Documents/Private ~/Documents/Private
 #### restore input-remapper settings
 
 ```
-mkdir -p "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
-cp -rfpv "$HOME/Documents/Private/Apps/Linux/config/input-remapper-2/presets/USB Gaming Mouse/*" "$HOME/.config/input-remapper-2/presets/USB Gaming Mouse/"
+mkdir -p ~/.config/
+cp -rfpv ~/Storage/Data/Documents/Private/Linux/config/input-remapper-2 ~/.config/
 ```
 
 </p></details>
