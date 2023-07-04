@@ -77,7 +77,7 @@ in
     conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
     conty-unrestrict="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/.steam $HOME/.steam --bind $HOME/.local/share/Steam $HOME/.local/share/Steam --bind $HOME/Games $HOME/Games --bind $HOME/.local/share $HOME/.local/share --bind $HOME/.config $HOME/.config --bind $HOME/.local/state $HOME/.local/state --bind $HOME/.cache $HOME/.cache --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
 
-    conty-export="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
+    conty-export="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh -d --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
     conty-export-unrestrict="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh -d --bind $HOME/.steam $HOME/.steam --bind $HOME/.local/share/Steam $HOME/.local/share/Steam --bind $HOME/Games $HOME/Games --bind $HOME/.local/share $HOME/.local/share --bind $HOME/.config $HOME/.config --bind $HOME/.local/state $HOME/.local/state --bind $HOME/.cache $HOME/.cache --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
 
     contywine="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh wine";
