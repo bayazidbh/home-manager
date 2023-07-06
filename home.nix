@@ -72,7 +72,7 @@ in
 
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
-    conty-extract="unzip -o -d ~/.local/bin ~/Downloads/Conty.zip ; chmod +x ~/.local/bin/conty.sh ; exa -al ~/.local/bin ";
+    conty-extract="unzip -o -d ~/.local/bin ~/Downloads/Conty.zip ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/Downloads/Conty.zip ; exa -al ~/.local/bin ";
 
     conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
     conty-unrestrict="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/.steam $HOME/.steam --bind $HOME/.local/share/Steam $HOME/.local/share/Steam --bind $HOME/Games $HOME/Games --bind $HOME/.local/share $HOME/.local/share --bind $HOME/.config $HOME/.config --bind $HOME/.local/state $HOME/.local/state --bind $HOME/.cache $HOME/.cache --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
