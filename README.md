@@ -901,6 +901,20 @@ $ echo "uri_default = \"qemu:///system\"" >> ~/.config/libvirt/libvirt.conf
 
 </p></details>
 
+<details><summary>Docker setup</summary><p>
+
+```
+docker pull portainer/portainer
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+
+# https://hub.docker.com/r/resilio/sync/
+export DATA_FOLDER=/home/fenglengshun/rslsync
+export WEBUI_PORT=30000
+DATA_FOLDER=/home/fenglengshun/rslsync  WEBUI_PORT=30000 docker run -d --name Sync -p 30000:8888 -p 55555 -v /home/fenglengshun/rslsync:/mnt/sync -v /home/fenglengshun:/mnt/mounted_folders/fenglengshun -v /mnt/data:/mnt/mounted_folders/data --restart unless-stopped resilio/sync
+```
+
+</p></details>
+
 ### Others
 
 <details><summary>AppImage</summary><p>
