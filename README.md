@@ -652,7 +652,7 @@ sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config
 #### block MiHoYo telemetry in /etc/hosts
 
 ```
-echo -e "\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
+echo -e "# block mihoyo telemetry\n\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n0.0.0.0 dump.gamesafe.qq.com\n0.0.0.0 public-data-api.mihoyo.com\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
 ```
 
 #### create horizontal mangohud bar
