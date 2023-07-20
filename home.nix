@@ -260,7 +260,7 @@ in
     target = ".config/rslsync/rslsync.conf.test";
     text = ''
     {
-      "device_name": "neon-laptop",
+      "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
       "storage_path" : "/home/fenglengshun/.config/rslsync",
       "pid_file" : "/home/fenglengshun/.config/rslsync/resilio.pid",
       "use_upnp" : true,
