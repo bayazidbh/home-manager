@@ -251,6 +251,30 @@ in
   # Rebuild .desktop file database for app launcher menus
   xdg.mime.enable = true;
 
+  systemd.user.tmpfiles.rules = [
+  "L /home/fenglengshun/Documents/Pictures - - - - /home/fenglengshun/Pictures"
+  ];
+
+  home.file."resilio.conf" = {
+    enable = true;
+    target = ".config/rslsync/rslsync.conf.test";
+    text = ''
+    {
+      "device_name": "neon-laptop",
+      "storage_path" : "/home/fenglengshun/.config/rslsync",
+      "pid_file" : "/home/fenglengshun/.config/rslsync/resilio.pid",
+      "use_upnp" : true,
+      "download_limit" : 0,
+      "upload_limit" : 0,
+      "directory_root" : "/home",
+      "webui" :
+      {
+        "listen" : "0.0.0.0:8888"
+      }
+    }
+    '';
+  };
+
   # Add cachix access to ~/.config/nix/nix.conf
   # home.file."nix.conf" = {
   #   target = ".config/nix/nix.conf";
