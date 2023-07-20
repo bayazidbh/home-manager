@@ -1,2 +1,2 @@
 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08
-runtime/com.valvesoftware.Steam.Utility.gamescope/x86_64/stable
+runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/22.08
