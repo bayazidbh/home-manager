@@ -46,8 +46,8 @@ in
     my_alias="bat -r 46:122 ~/.config/home-manager/home.nix";
     update_desktop_files ="update-desktop-database ~/.local/share/applications ~/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
 
-    force-x11="QT_QPA_PLATFORM=xcb GDK_BACKEND=x11";
-    force-portal="GDK_DEBUG=portals GTK_USE_PORTAL=1";
+    force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
+    force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";
 
     ip-addr-show="ip addr show";
     ISO-today="echo '%{Date:yyyyMMdd}_%{Time:hhmmss}\ndate \"+%a %Y-%m-%d %H:%M:%S\"' ; date +'%a %Y-%m-%d %H:%M:%S'";
