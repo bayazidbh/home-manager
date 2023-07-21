@@ -272,6 +272,22 @@ in
     '';
   };
 
+    home.file."autostart.sh" = {
+    enable = true;
+    target = ".local/bin/autostart.sh";
+    executable = true;
+    text = ''
+    #!/usr/bin/bash
+    sleep 1m
+    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
+    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
+    $HOME/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
+    $HOME/.nix-profile/bin/aw-qt &
+    $HOME/.local/bin/conty.sh /usr/bin/steam-runtime &
+    disown
+    '';
+  };
+
   # Add cachix access to ~/.config/nix/nix.conf
   # home.file."nix.conf" = {
   #   target = ".config/nix/nix.conf";
