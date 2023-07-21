@@ -146,7 +146,7 @@ in
   home.packages = with pkgs; [
     git gh git-lfs cosign cachix github-desktop # build tools
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
-    inxi neofetch grc highlight rmtrash libwebp unrar # clipboard-jh # CLI utils
+    inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex fd # bottom # rust CLIs
     rsync zsync resilio-sync  # file management
     zerotierone activitywatch # web-ui tools
@@ -165,7 +165,6 @@ in
     wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg
     gamemode steamtinkerlaunch protonup-ng ludusavi # gamescope scanmem # other gaming tools
     gawk yad # steamtinkerlaunch deps
-    # aagl-gtk-on-nix.an-anime-game-launcher aagl-gtk-on-nix.the-honkers-railway-launcher aagl-gtk-on-nix.honkers-launcher
   ];
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
