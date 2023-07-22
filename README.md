@@ -914,6 +914,8 @@ DATA_FOLDER=/home/fenglengshun/rslsync  WEBUI_PORT=30000 docker run -d --name Sy
 
 docker pull docker.io/freshrss/freshrss
 docker run -d --restart unless-stopped --log-opt max-size=10m -p 18080:80 -e TZ=Europe/Paris -e 'CRON_MIN=1,31' -v freshrss_data:/var/www/FreshRSS/data -v freshrss_extensions:/var/www/FreshRSS/extensions --name freshrss freshrss/freshrss
+
+podman run -d --restart unless-stopped --log-opt max-size=10m -p 18080:80 -e TZ=Europe/Paris -e 'CRON_MIN=1,31' -v /home/fenglengshun/Documents/Private/Linux/config/freshrss/data:/var/www/FreshRSS/data -v /home/fenglengshun/Documents/Private/Linux/config/freshrss/extensions:/var/www/FreshRSS/extensions --name freshrss freshrss/freshrss
 ```
 
 </p></details>

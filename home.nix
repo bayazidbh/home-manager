@@ -249,7 +249,29 @@ in
   xdg.mime.enable = true;
 
   systemd.user.tmpfiles.rules = [
+  "L /home/fenglengshun/Documents/Downloads - - - - /home/fenglengshun/Downloads"
+  "L /home/fenglengshun/Documents/Music - - - - /home/fenglengshun/Music"
   "L /home/fenglengshun/Documents/Pictures - - - - /home/fenglengshun/Pictures"
+  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/config - - - - $HOME/.config/yuzu"
+  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/data - - - - $HOME/.local/share/yuzu"
+  "L $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - $HOME/.config/Ryujinx"
+  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/config - - - - $HOME/.config/citra-emu"
+  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/data - - - - $HOME/.local/share/citra-emu"
+  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - $HOME/.config/dolphin-emu"
+  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - $HOME/.local/share/dolphin-emu"
+  "L $HOME/Games/Emulation/Sony/emu/PCSX2/config - - - - $HOME/.config/PCSX2"
+  "L $HOME/Games/Emulation/Sony/emu/rpcs3/config - - - - $HOME/.config/rpcs3"
+  "L $HOME/Games/Emulation/Sony/emu/ppsspp/config - - - - $HOME/.config/ppsspp"
+  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/config - - - - $HOME/Documents/container/conty/.config/yuzu"
+  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/data - - - - $HOME/Documents/container/conty/.local/share/yuzu"
+  "L $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - $HOME/Documents/container/conty/.config/Ryujinx"
+  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/config - - - - $HOME/Documents/container/conty/.config/citra-emu"
+  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/data - - - - $HOME/Documents/container/conty/.local/share/citra-emu"
+  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - $HOME/Documents/container/conty/.config/dolphin-emu"
+  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - $HOME/Documents/container/conty/.local/share/dolphin-emu"
+  "L $HOME/Games/Emulation/Sony/emu/PCSX2/config - - - - $HOME/Documents/container/conty/.config/PCSX2"
+  "L $HOME/Games/Emulation/Sony/emu/rpcs3/config - - - - $HOME/Documents/container/conty/.config/rpcs3"
+  "L $HOME/Games/Emulation/Sony/emu/ppsspp/config - - - - $HOME/Documents/container/conty/.config/ppsspp"
   ];
 
   home.file."resilio.conf" = {
@@ -272,19 +294,17 @@ in
     '';
   };
 
-    home.file."autostart.sh" = {
+  home.file."restart-plasma" = {
     enable = true;
-    target = ".local/bin/autostart.sh";
+    target = ".local/bin/restart-plasma";
     executable = true;
     text = ''
-    #!/usr/bin/bash
-    sleep 1m
-    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
-    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
-    $HOME/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
-    $HOME/.nix-profile/bin/aw-qt &
-    $HOME/.local/bin/conty.sh /usr/bin/steam-runtime &
+    #! /bin/bash
+    killall plasmashell &
+    kwin --replace &
+    kstart plasmashell &
     disown
+    exit
     '';
   };
 
