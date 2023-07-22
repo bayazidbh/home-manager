@@ -904,13 +904,16 @@ $ echo "uri_default = \"qemu:///system\"" >> ~/.config/libvirt/libvirt.conf
 <details><summary>Docker setup</summary><p>
 
 ```
-docker pull portainer/portainer
-docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 
 # https://hub.docker.com/r/resilio/sync/
 export DATA_FOLDER=/home/fenglengshun/rslsync
 export WEBUI_PORT=30000
 DATA_FOLDER=/home/fenglengshun/rslsync  WEBUI_PORT=30000 docker run -d --name Sync -p 30000:8888 -p 55555 -v /home/fenglengshun/rslsync:/mnt/sync -v /home/fenglengshun:/mnt/mounted_folders/fenglengshun -v /mnt/data:/mnt/mounted_folders/data --restart unless-stopped resilio/sync
+
+docker pull docker.io/freshrss/freshrss
+docker run -d --restart unless-stopped --log-opt max-size=10m -p 18080:80 -e TZ=Europe/Paris -e 'CRON_MIN=1,31' -v freshrss_data:/var/www/FreshRSS/data -v freshrss_extensions:/var/www/FreshRSS/extensions --name freshrss freshrss/freshrss
 ```
 
 </p></details>
