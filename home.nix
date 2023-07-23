@@ -249,9 +249,9 @@ in
   xdg.mime.enable = true;
 
   systemd.user.tmpfiles.rules = [
-  "L /home/fenglengshun/Documents/Downloads - - - - /home/fenglengshun/Downloads"
-  "L /home/fenglengshun/Documents/Music - - - - /home/fenglengshun/Music"
-  "L /home/fenglengshun/Documents/Pictures - - - - /home/fenglengshun/Pictures"
+  "L $HOME/Documents/Downloads - - - - $HOME/Downloads"
+  "L $HOME/Documents/Music - - - - $HOME/Music"
+  "L $HOME/Documents/Pictures - - - - $HOME/Pictures"
   "L $HOME/Games/Emulation/Nintendo/emu/yuzu/config - - - - $HOME/.config/yuzu"
   "L $HOME/Games/Emulation/Nintendo/emu/yuzu/data - - - - $HOME/.local/share/yuzu"
   "L $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - $HOME/.config/Ryujinx"
@@ -274,14 +274,33 @@ in
   "L $HOME/Games/Emulation/Sony/emu/ppsspp/config - - - - $HOME/Documents/container/conty/.config/ppsspp"
   ];
 
+  home.file."autostart.sh" = {
+    enable = true;
+    target = ".local/bin/autostart.sh";
+    executable = true;
+    text = ''
+    #!/usr/bin/bash
+    sleep 1m
+    /usr/bin/flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
+    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
+    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
+    /usr/bin/env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 GDK_DEBUG=portals GTK_USE_PORTAL=1 $HOME/.nix-profile/bin/fsearch &
+    env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 HOME_DIR="/home/fenglengshun/Documents/container/conty" "$HOME/.local/bin/conty.sh" --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/fdm --hidden &
+    $HOME/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
+    $HOME/.nix-profile/bin/aw-qt &
+    $HOME/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
+    disown
+    '';
+  };
+
   home.file."resilio.conf" = {
     enable = true;
     target = ".config/rslsync/rslsync.conf.test";
     text = ''
     {
       "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
-      "storage_path" : "/home/fenglengshun/.config/rslsync",
-      "pid_file" : "/home/fenglengshun/.config/rslsync/resilio.pid",
+      "storage_path" : "$HOME/.config/rslsync",
+      "pid_file" : "$HOME/.config/rslsync/resilio.pid",
       "use_upnp" : true,
       "download_limit" : 0,
       "upload_limit" : 0,
