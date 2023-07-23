@@ -24,13 +24,13 @@ in
   home.username = "fenglengshun";
   home.homeDirectory = "/home/fenglengshun";
   xdg.enable = true;
-  home.sessionPath = [ "$HOME/.local/bin" ];
+  home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
   home.sessionVariables = {
-    CARGO_HOME="$HOME/.local/share/cargo";
-    NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc";
-    GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc";
-    LESSHISTFILE="$HOME/.local/state/less/history";
-    WINEPREFIX="$HOME/.local/share/wine";
+    CARGO_HOME="${config.home.homeDirectory}/.local/share/cargo";
+    NPM_CONFIG_USERCONFIG="${config.home.homeDirectory}/.config/npm/npmrc";
+    GTK2_RC_FILES="${config.home.homeDirectory}/.config/gtk-2.0/gtkrc";
+    LESSHISTFILE="${config.home.homeDirectory}/.local/state/less/history";
+    WINEPREFIX="${config.home.homeDirectory}/.local/share/wine";
     GTK_THEME="WhiteSur-Dark-solid";
     GTK_THEME_VARIANT="dark";
     };
@@ -249,29 +249,29 @@ in
   xdg.mime.enable = true;
 
   systemd.user.tmpfiles.rules = [
-  "L $HOME/Documents/Downloads - - - - $HOME/Downloads"
-  "L $HOME/Documents/Music - - - - $HOME/Music"
-  "L $HOME/Documents/Pictures - - - - $HOME/Pictures"
-  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/config - - - - $HOME/.config/yuzu"
-  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/data - - - - $HOME/.local/share/yuzu"
-  "L $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - $HOME/.config/Ryujinx"
-  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/config - - - - $HOME/.config/citra-emu"
-  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/data - - - - $HOME/.local/share/citra-emu"
-  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - $HOME/.config/dolphin-emu"
-  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - $HOME/.local/share/dolphin-emu"
-  "L $HOME/Games/Emulation/Sony/emu/PCSX2/config - - - - $HOME/.config/PCSX2"
-  "L $HOME/Games/Emulation/Sony/emu/rpcs3/config - - - - $HOME/.config/rpcs3"
-  "L $HOME/Games/Emulation/Sony/emu/ppsspp/config - - - - $HOME/.config/ppsspp"
-  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/config - - - - $HOME/Documents/container/conty/.config/yuzu"
-  "L $HOME/Games/Emulation/Nintendo/emu/yuzu/data - - - - $HOME/Documents/container/conty/.local/share/yuzu"
-  "L $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - $HOME/Documents/container/conty/.config/Ryujinx"
-  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/config - - - - $HOME/Documents/container/conty/.config/citra-emu"
-  "L $HOME/Games/Emulation/Nintendo/emu/citra-emu/data - - - - $HOME/Documents/container/conty/.local/share/citra-emu"
-  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - $HOME/Documents/container/conty/.config/dolphin-emu"
-  "L $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - $HOME/Documents/container/conty/.local/share/dolphin-emu"
-  "L $HOME/Games/Emulation/Sony/emu/PCSX2/config - - - - $HOME/Documents/container/conty/.config/PCSX2"
-  "L $HOME/Games/Emulation/Sony/emu/rpcs3/config - - - - $HOME/Documents/container/conty/.config/rpcs3"
-  "L $HOME/Games/Emulation/Sony/emu/ppsspp/config - - - - $HOME/Documents/container/conty/.config/ppsspp"
+  "L ${config.home.homeDirectory}/Documents/Downloads - - - - ${config.home.homeDirectory}/Downloads"
+  "L ${config.home.homeDirectory}/Documents/Music - - - - ${config.home.homeDirectory}/Music"
+  "L ${config.home.homeDirectory}/Documents/Pictures - - - - ${config.home.homeDirectory}/Pictures"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config - - - - ${config.home.homeDirectory}/.config/yuzu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data - - - - ${config.home.homeDirectory}/.local/share/yuzu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - ${config.home.homeDirectory}/.config/Ryujinx"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/config - - - - ${config.home.homeDirectory}/.config/citra-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/data - - - - ${config.home.homeDirectory}/.local/share/citra-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - ${config.home.homeDirectory}/.config/dolphin-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - ${config.home.homeDirectory}/.local/share/dolphin-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config - - - - ${config.home.homeDirectory}/.config/PCSX2"
+  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config - - - - ${config.home.homeDirectory}/.config/rpcs3"
+  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config - - - - ${config.home.homeDirectory}/.config/ppsspp"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/yuzu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data - - - - ${config.home.homeDirectory}/Documents/container/conty/.local/share/yuzu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/Ryujinx"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/citra-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/data - - - - ${config.home.homeDirectory}/Documents/container/conty/.local/share/citra-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/dolphin-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - ${config.home.homeDirectory}/Documents/container/conty/.local/share/dolphin-emu"
+  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/PCSX2"
+  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/rpcs3"
+  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/ppsspp"
   ];
 
   home.file."autostart.sh" = {
@@ -284,12 +284,27 @@ in
     /usr/bin/flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
     /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
     /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
-    /usr/bin/env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 GDK_DEBUG=portals GTK_USE_PORTAL=1 $HOME/.nix-profile/bin/fsearch &
-    env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 HOME_DIR="/home/fenglengshun/Documents/container/conty" "$HOME/.local/bin/conty.sh" --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/fdm --hidden &
-    $HOME/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
-    $HOME/.nix-profile/bin/aw-qt &
-    $HOME/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
+    /usr/bin/env GDK_DEBUG=portals GTK_USE_PORTAL=1 (home.homeDirectory)/.nix-profile/bin/fsearch &
+    /usr/bin/env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "(home.homeDirectory)/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
+    $(home.homeDirectory)/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
+    $(home.homeDirectory)/.nix-profile/bin/aw-qt &
+    $(home.homeDirectory)/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
     disown
+    '';
+  };
+
+  home.file."autostart.sh.desktop" = {
+    enable = true;
+    target = ".config/autostart/autostart.sh.desktop";
+    executable = true;
+    text = ''
+    [Desktop Entry]
+    Exec=${config.home.homeDirectory}/.local/bin/autostart.sh
+    Icon=dialog-scripts
+    Name=autostart.sh
+    Path=
+    Type=Application
+    X-KDE-AutostartScript=true
     '';
   };
 
@@ -299,8 +314,8 @@ in
     text = ''
     {
       "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
-      "storage_path" : "$HOME/.config/rslsync",
-      "pid_file" : "$HOME/.config/rslsync/resilio.pid",
+      "storage_path" : "${config.xdg.configHome}/rslsync",
+      "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
       "use_upnp" : true,
       "download_limit" : 0,
       "upload_limit" : 0,
