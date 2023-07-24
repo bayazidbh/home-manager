@@ -284,11 +284,11 @@ in
     /usr/bin/flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
     /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
     /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
-    /usr/bin/env GDK_DEBUG=portals GTK_USE_PORTAL=1 (home.homeDirectory)/.nix-profile/bin/fsearch &
-    /usr/bin/env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "(home.homeDirectory)/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
-    $(home.homeDirectory)/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
-    $(home.homeDirectory)/.nix-profile/bin/aw-qt &
-    $(home.homeDirectory)/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
+    /usr/bin/env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch &
+    /usr/bin/env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "${config.home.homeDirectory}/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
+    ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
+    ${config.home.homeDirectory}/.nix-profile/bin/aw-qt &
+    ${config.home.homeDirectory}/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
     disown
     '';
   };
