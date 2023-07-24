@@ -280,7 +280,7 @@ in
     executable = true;
     text = ''
     #!/usr/bin/bash
-    sleep 1m
+    sleep 15s
     /usr/bin/flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
     /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
     /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
