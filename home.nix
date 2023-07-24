@@ -305,6 +305,7 @@ in
     Path=
     Type=Application
     X-KDE-AutostartScript=true
+
     '';
   };
 
@@ -339,6 +340,7 @@ in
     kstart plasmashell &
     disown
     exit
+
     '';
   };
 
