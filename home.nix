@@ -155,7 +155,7 @@ in
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl ani-cli manga-cli mov-cli # CLI-based media downloader
     fsearch junction krename imagemagick # extra file management tools
-    distrobox podman podman-compose podman-desktop # containers stuff
+    distrobox podman-desktop # podman podman-compose # containers stuff
     # downonspot spotify-qt # media viewers
     mesa amdvlk driversi686Linux.amdvlk # nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
     gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
