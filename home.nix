@@ -86,8 +86,8 @@ in
     steam-silent="steam -nochatui -nofriendsui -silent";
     gamescope_run="gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 --steam --adaptive-sync --";
     winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
-    nw="LD_PRELOAD=$HOME/.local/bin/nwjs/libffmpeg.so $HOME/.local/bin/nwjs/nw";
-    nw72="LD_PRELOAD=$HOME/.local/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so $HOME/.local/bin/nwjs-v0.72.0-linux-x64/nw";
+    nw="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.78.0-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.78.0-linux-x64/nw";
+    nw72="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
 
     pull-betterdiscord="mkdir -p $HOME/.config/BetterDiscord && cp -rpfv $HOME/Documents/Private/Apps/Backups/BetterDiscord $HOME/.config/";
     push-betterdiscord="mkdir -p $HOME/Documents/Private/Apps/Backups/BetterDiscord/ && cp -rpfv $HOME/.config/BetterDiscord/* $HOME/Documents/Private/Apps/Backups/BetterDiscord/";
