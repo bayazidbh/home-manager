@@ -293,21 +293,21 @@ in
     '';
   };
 
-  home.file."autostart.sh.desktop" = {
-    enable = true;
-    target = ".config/autostart/autostart.sh.desktop";
-    executable = true;
-    text = ''
-    [Desktop Entry]
-    Exec=${config.home.homeDirectory}/.local/bin/autostart.sh
-    Icon=dialog-scripts
-    Name=autostart.sh
-    Path=
-    Type=Application
-    X-KDE-AutostartScript=true
-
-    '';
-  };
+  # home.file."autostart.sh.desktop" = {
+  #   enable = true;
+  #   target = ".config/autostart/autostart.sh.desktop";
+  #   executable = true;
+  #   text = ''
+  #   [Desktop Entry]
+  #   Exec=${config.home.homeDirectory}/.local/bin/autostart.sh
+  #   Icon=dialog-scripts
+  #   Name=autostart.sh
+  #   Path=
+  #   Type=Application
+  #   X-KDE-AutostartScript=true
+  #
+  #   '';
+  # };
 
   home.file."resilio.conf" = {
     enable = true;
