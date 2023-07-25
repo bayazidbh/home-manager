@@ -906,6 +906,7 @@ $ echo "uri_default = \"qemu:///system\"" >> ~/.config/libvirt/libvirt.conf
 ```
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+podman run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /run/user/1000/podman/podman.sock:/var/run/docker.sock -v portainer_data:/data docker.io/portainer/portainer-ce:latest
 
 # https://hub.docker.com/r/resilio/sync/
 export DATA_FOLDER=/home/fenglengshun/rslsync
