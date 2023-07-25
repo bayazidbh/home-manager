@@ -66,7 +66,7 @@ in
     # Nix Package Manager shortcuts
 
     home_manager_update="sudo nix-channel --update ; nix-channel --update && home-manager switch -b bak";
-    clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d";
+    clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d ; nix-store --optimise";
     du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
     kdeconnect-notification="kdeconnect-cli -n SM-A145F --ping-msg";
 
