@@ -1,0 +1,23 @@
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
+    # Add other inputs if needed
+  };
+
+  outputs = { self, nixpkgs, home-manager, flatpaks }: {
+    homeConfigurations = {
+      "fenglengshun" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs;
+        modules = [
+          home-manager.homeManagerModules.home
+          flatpaks.homeManagerModules.default
+        ];
+      };
+    };
+  };
+}

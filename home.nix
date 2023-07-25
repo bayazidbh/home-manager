@@ -35,10 +35,6 @@ in
     GTK_THEME_VARIANT="dark";
     };
 
-  # imports = [
-  #   aagl-gtk-on-nix.module
-  # ];
-
   home.shellAliases = {
 
     # Environment shortcuts
@@ -157,12 +153,12 @@ in
     fsearch junction krename imagemagick # extra file management tools
     distrobox podman-desktop # podman podman-compose # containers stuff
     # downonspot spotify-qt # media viewers
-    mesa amdvlk driversi686Linux.amdvlk # nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
-    gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
-    gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
-    wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg
-    gamemode steamtinkerlaunch protonup-ng ludusavi # gamescope scanmem # other gaming tools
-    gawk yad # steamtinkerlaunch deps
+    # mesa amdvlk driversi686Linux.amdvlk # nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
+    # gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
+    # gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
+    # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg
+    gamemode protonup-ng ludusavi # gamescope scanmem # other gaming tools
+    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
