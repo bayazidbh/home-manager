@@ -301,7 +301,6 @@ in
   #   Path=
   #   Type=Application
   #   X-KDE-AutostartScript=true
-  #
   #   '';
   # };
 
@@ -336,7 +335,29 @@ in
     kstart plasmashell &
     disown
     exit
+    '';
+  };
 
+  home.file."no-root-virt-manager" = {
+    enable = true;
+    target = ".local/bin/no-root-virt-manager";
+    executable = true;
+    text = ''
+      sudo sed -i "s/#user = \"root\"/user = \"$(id -un)\"/g" /etc/libvirt/qemu.conf
+      sudo sed -i "s/#group = \"root\"/group = \"    (id -gn)\"/g" /etc/libvirt/qemu.conf
+      sudo usermod -a -G kvm     (id -un)
+      sudo usermod -a -G libvirt     (id -un)
+      sudo systemctl restart libvirtd
+      sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
+      sudo sed -i "s/\/usr\/libexec\/libvirt_leaseshelper m,/\/usr\/libexec\/libvirt_leaseshelper mr,/g" /etc/apparmor.d/usr.sbin.dnsmasq
+    '';
+  };
+
+  home.file."libvirt.conf" = {
+    enable = true;
+    target = ".config/libvirt/libvirt.conf";
+    text = ''
+      uri_default = "qemu:///system"
     '';
   };
 

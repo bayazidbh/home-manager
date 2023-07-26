@@ -9,12 +9,17 @@
     # Add other inputs if needed
   };
 
-  outputs = { self, nixpkgs, home-manager, flatpaks }: {
+  outputs = { self, nixpkgs, home-manager, flatpaks }:
+  {
+    # Standalone home-manager configuration entrypoint
+    # Available through 'home-manager --flake
     homeConfigurations = {
+      # FIXME replace with your username@hostname
       "fenglengshun" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs;
+        pkgs = nixpkgs; # Home-manager requires 'pkgs' instance
+        # > Our main home-manager configuration file <
         modules = [
-          home-manager.homeManagerModules.home
+          ./home-manager/home.nix
           flatpaks.homeManagerModules.default
         ];
       };
