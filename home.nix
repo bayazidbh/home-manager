@@ -346,15 +346,14 @@ in
     target = ".local/bin/no-root-virt-manager";
     executable = true;
     text = ''
-      sudo sed -i "s/#user = \"root\"/user = \"$(id -un)\"/g" /etc/libvirt/qemu.conf
-      sudo sed -i "s/#group = \"root\"/group = \"    (id -gn)\"/g" /etc/libvirt/qemu.conf
-      sudo usermod -a -G kvm     (id -un)
-      sudo usermod -a -G libvirt     (id -un)
-      sudo systemctl restart libvirtd
+      sudo sed -i "s/#user = \"root\"/user = \"${config.home.username}\"/g" /etc/libvirt/qemu.conf
+      sudo sed -i "s/#group = \"root\"/group = \"${config.home.username}\"/g" /etc/libvirt/qemu.conf
+      sudo usermod -a -G kvm ${config.home.username}
+      sudo usermod -a -G libvirt ${config.home.username}
       sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
       sudo sed -i "s/\/usr\/libexec\/libvirt_leaseshelper m,/\/usr\/libexec\/libvirt_leaseshelper mr,/g" /etc/apparmor.d/usr.sbin.dnsmasq
     '';
-  };
+  };  # sudo systemctl restart libvirtd
 
   home.file."libvirt.conf" = {
     enable = true;
@@ -368,7 +367,7 @@ in
     getNonSteamLaunchersInstaller = {
       after = [ "writeBoundary" "createXdgUserDirectories" ];
       before = [ ];
-      data = "url=$(/usr/bin/curl -s \"https://api.github.com/repos/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/latest\" | /usr/bin/jq -r '.assets[] | select(.name == \"NonSteamLaunchers.desktop\") | .browser_download_url') && ${config.home.homeDirectory}/.nix-profile/bin/aria2c -c -o .local/bin/NonSteamLaunchers.desktop \"$url\"";
+      data = "url=$(/usr/bin/curl -s \"https://api.github.com/repos/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/latest\" | /usr/bin/jq -r '.assets[] | select(.name == \"NonSteamLaunchers.desktop\") | .browser_download_url') && ${config.home.homeDirectory}/.nix-profile/bin/aria2c -c -o .local/share/applications/NonSteamLaunchers.desktop \"$url\"";
     };
   };
 
