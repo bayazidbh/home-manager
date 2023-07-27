@@ -371,6 +371,19 @@ in
     };
   };
 
+  xdg.desktopEntries."virt-manager-win11" = {
+      name = "Windows 11 (VM)";
+      icon = "virt-manager";
+      exec = "env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect";
+      comment = "win11 VM on Virt-Manager";
+      categories = [ "System" ];
+      terminal = false;
+      type = "Application";
+      settings = {
+        Keywords = "vmm;win11;windows;";
+      };
+    };
+
   # Add cachix access to ~/.config/nix/nix.conf
   # home.file."nix.conf" = {
   #   target = ".config/nix/nix.conf";
