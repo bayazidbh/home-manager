@@ -130,8 +130,8 @@ in
   };
 
   # Ensure that the following packages are installed
-  # aloowUnfreePredicate = _: true;
   nixpkgs.config.allowUnfree = true;
+  allowUnfreePredicate = _: true;
 
   #allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
