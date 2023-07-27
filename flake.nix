@@ -17,7 +17,6 @@
       # FIXME replace with your username@hostname
       "fenglengshun" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        # > Our main home-manager configuration file <
         modules = [
           ./home.nix
           flatpaks.homeManagerModules.default

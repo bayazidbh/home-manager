@@ -131,7 +131,7 @@ in
 
   # Ensure that the following packages are installed
   nixpkgs.config.allowUnfree = true;
-  allowUnfreePredicate = _: true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
   #allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
@@ -144,7 +144,7 @@ in
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex fd # bottom # rust CLIs
     rsync zsync resilio-sync  # file management
-    zerotierone activitywatch # web-ui tools
+    activitywatch # zerotierone web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
     sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
@@ -307,25 +307,25 @@ in
   #   '';
   # };
 
-  home.file."resilio.conf" = {
-    enable = true;
-    target = ".config/rslsync/rslsync.conf.test";
-    text = ''
-    {
-      "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
-      "storage_path" : "${config.xdg.configHome}/rslsync",
-      "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
-      "use_upnp" : true,
-      "download_limit" : 0,
-      "upload_limit" : 0,
-      "directory_root" : "/home",
-      "webui" :
-      {
-        "listen" : "0.0.0.0:8888"
-      }
-    }
-    '';
-  };
+  # home.file."resilio.conf" = {
+  #   enable = true;
+  #   target = ".config/rslsync/rslsync.conf.test";
+  #   text = ''
+  #   {
+  #     "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
+  #     "storage_path" : "${config.xdg.configHome}/rslsync",
+  #     "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
+  #     "use_upnp" : true,
+  #     "download_limit" : 0,
+  #     "upload_limit" : 0,
+  #     "directory_root" : "/home",
+  #     "webui" :
+  #     {
+  #        "listen" : "0.0.0.0:8888"
+  #      }
+  #    }
+  #    '';
+  #  };
 
   home.file."restart-plasma" = {
     enable = true;
