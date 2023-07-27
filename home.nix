@@ -130,6 +130,7 @@ in
   };
 
   # Ensure that the following packages are installed
+  # aloowUnfreePredicate = _: true;
   nixpkgs.config.allowUnfree = true;
 
   #allow insecure packages
@@ -277,14 +278,16 @@ in
     text = ''
     #!/usr/bin/bash
     sleep 15s
-    /usr/bin/flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
-    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
-    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
-    /usr/bin/env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch &
-    /usr/bin/env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "${config.home.homeDirectory}/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
+    flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
+    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
+    flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
+    env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch &
+    env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "${config.home.homeDirectory}/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
     ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
     ${config.home.homeDirectory}/.nix-profile/bin/aw-qt &
     ${config.home.homeDirectory}/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
+    podman start portainer &
+    podman start freshrss &
     disown
     '';
   };
@@ -359,6 +362,14 @@ in
     text = ''
       uri_default = "qemu:///system"
     '';
+  };
+
+  home.activation = {
+    getNonSteamLaunchersInstaller = {
+      after = [ "writeBoundary" "createXdgUserDirectories" ];
+      before = [ ];
+      data = "url=$(/usr/bin/curl -s \"https://api.github.com/repos/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/latest\" | /usr/bin/jq -r '.assets[] | select(.name == \"NonSteamLaunchers.desktop\") | .browser_download_url') && ${config.home.homeDirectory}/.nix-profile/bin/aria2c -c -o .local/bin/NonSteamLaunchers.desktop \"$url\"";
+    };
   };
 
   # Add cachix access to ~/.config/nix/nix.conf
