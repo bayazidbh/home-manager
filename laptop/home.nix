@@ -26,7 +26,8 @@ in
   xdg.enable = true;
   home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
   home.sessionVariables = {
-    HOST="${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}";
+    HOST="neon-laptop";
+    HOSTNAME="neon-laptop";
     CARGO_HOME="${config.home.homeDirectory}/.local/share/cargo";
     NPM_CONFIG_USERCONFIG="${config.home.homeDirectory}/.config/npm/npmrc";
     GTK2_RC_FILES="${config.home.homeDirectory}/.config/gtk-2.0/gtkrc";
@@ -162,28 +163,6 @@ in
     gamemode protonup-ng ludusavi # gamescope scanmem # other gaming tools
     # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
-
-  services.flatpak = {
-    remotes = {
-      "flathub" = "https://flathub.org/repo/flathub.flatpakrepo";
-      "flathub-beta" = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-    };
-    packages = [
-     "flathub:com.github.tchx84.Flatseal"
-     "flathub:com.steamgriddb.SGDBoop"
-     "flathub:com.stremio.Stremio"
-     "flathub:com.usebottles.bottles"
-     "flathub:com.wps.Office"
-     "flathub:fr.handbrake.ghb"
-     "flathub:io.github.Foldex.AdwSteamGtk"
-     "flathub:io.github.aandrew_me.ytdn"
-     "flathub:io.wavebox.Wavebox"
-     "flathub:net.codeindustry.MasterPDFEditor"
-     "flathub:net.cozic.joplin_desktop"
-     "flathub:org.upscayl.Upscayl"
-     "flathub:org.videolan.VLC"
-    ];
-  };
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
@@ -330,25 +309,25 @@ in
   #   '';
   # };
 
-  # home.file."resilio.conf" = {
-  #   enable = true;
-  #   target = ".config/rslsync/rslsync.conf.test";
-  #   text = ''
-  #   {
-  #     "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
-  #     "storage_path" : "${config.xdg.configHome}/rslsync",
-  #     "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
-  #     "use_upnp" : true,
-  #     "download_limit" : 0,
-  #     "upload_limit" : 0,
-  #     "directory_root" : "/home",
-  #     "webui" :
-  #     {
-  #        "listen" : "0.0.0.0:8888"
-  #      }
-  #    }
-  #    '';
-  #  };
+  home.file."resilio.conf" = {
+    enable = true;
+    target = ".config/rslsync/rslsync.conf.test";
+    text = ''
+      {
+       "device_name": "${config.home.sessionVariables.HOST}",
+       "storage_path" : "${config.xdg.configHome}/rslsync",
+       "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
+       "use_upnp" : true,
+       "download_limit" : 0,
+       "upload_limit" : 0,
+       "directory_root" : "/home",
+       "webui" :
+       {
+       "listen" : "0.0.0.0:8888"
+       }
+      }
+    '';
+  };
 
   home.file."restart-plasma" = {
     enable = true;

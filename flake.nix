@@ -14,11 +14,17 @@
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake
     homeConfigurations = {
-      # FIXME replace with your username@hostname
-      "fenglengshun" = home-manager.lib.homeManagerConfiguration {
+      "fenglengshun@ostree-pc" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         modules = [
-          ./home.nix
+          ./pc/home.nix
+          flatpaks.homeManagerModules.default
+        ];
+      };
+      "fenglengshun@neon-laptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        modules = [
+          ./laptop/home.nix
           flatpaks.homeManagerModules.default
         ];
       };
