@@ -1,2 +1,0 @@
-runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08
-runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/22.08

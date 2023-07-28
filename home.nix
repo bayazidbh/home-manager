@@ -89,23 +89,7 @@ in
     pull-betterdiscord="mkdir -p $HOME/.config/BetterDiscord && cp -rpfv $HOME/Documents/Private/Apps/Backups/BetterDiscord $HOME/.config/";
     push-betterdiscord="mkdir -p $HOME/Documents/Private/Apps/Backups/BetterDiscord/ && cp -rpfv $HOME/.config/BetterDiscord/* $HOME/Documents/Private/Apps/Backups/BetterDiscord/";
 
-    ## declarative flatpak stuff
-
-    # list only apps (no runtime) from flathub
-    flathub-list="flatpak list --user --app --columns=application,origin | grep flathub | awk '{print \$1}'";
-
-    # Compares the lists of installed and uninstalled flatpak apps, and highlights the differences
-    list-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nFlatpak Runtimes:\n' ; bat -P $HOME/.config/home-manager/flatpak/runtimes.txt ; echo '\nFlatpak Apps Future:\n' ; bat -P $HOME/.config/home-manager/flatpak/flathub-apps.txt ; echo '\nFlatpak Apps Past:\n' ; bat -P $HOME/.var/log/flatpak/flathub-apps.txt ; echo '\nFlatpak Apps Present:\n' ; bat -P <(flathub-list) ; echo '\nNot yet installed:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak/flathub-apps.txt ; echo '\nNot yet removed:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak/flathub-apps.txt <(flathub-list)";
-
-    # Displays the current synced and installed flatpak apps, highlights the apps being added and removed, moves the log file to a new location with a timestamp, and updates the flatpak app and runtime lists. Then restore the flatpak overrides.
-    push-flatpak="mkdir -p $HOME/.var/log/flatpak ; echo '\nCurrent Synced:\n' ; bat -P $HOME/.config/home-manager/flatpak/flathub-apps.txt ; echo '\nCurrent Installed:\n' ; bat -P <(flathub-list) ; echo '\nAdding:\n' ; grep -vxFf $HOME/.config/home-manager/flatpak/flathub-apps.txt <(flathub-list) ; echo '\nRemoving:\n' ; grep -vxFf <(flathub-list) $HOME/.config/home-manager/flatpak/flathub-apps.txt ; mv $HOME/.var/log/flatpak/flathub-apps.txt $HOME/.var/log/flatpak/flatpak-apps-$(date '+%Y%m%d_%H%M%S').txt && flathub-list > $HOME/.config/home-manager/flatpak/flathub-apps.txt ; flathub-list > $HOME/.var/log/flatpak/flathub-apps.txt ; cp -rfpv ~/.local/share/flatpak/overrides/* ~/.config/home-manager/flatpak/overrides";
-
-    # Moves the existing log file to a new location, updates the log file with the current list of flatpak apps. Installs the apps that are present in the source file but not in the log file, and uninstalls the apps that are present in the log file but not in the source file. Then make sure everything else is updated and flatpak overrides are backed up.
-    pull-flatpak="mkdir -p $HOME/.var/log/flatpak ; mv $HOME/.var/log/flatpak/flathub-apps.txt $HOME/.var/log/flatpak/flathub-apps-$(date '+%Y%m%d_%H%M%S').txt ; flathub-list > $HOME/.var/log/flatpak/flathub-apps.txt ; flatpak install --user --app --or-update --noninteractive $(grep -vxFf $HOME/.var/log/flatpak/flathub-apps.txt $HOME/.config/home-manager/flatpak/flathub-apps.txt) ; flatpak uninstall --user --app --noninteractive $(grep -vxFf $HOME/.config/home-manager/flatpak/flathub-apps.txt $HOME/.var/log/flatpak/flathub-apps.txt) ; flatpak install --user --runtime --or-update --noninteractive $(cat $HOME/.config/home-manager/flatpak/runtimes.txt) ; ~/.config/home-manager/flatpak/launcher.moe ; cp -rfpv ~/.config/home-manager/flatpak/overrides/* ~/.local/share/flatpak/overrides";
-
     # Other flatpak management
-    edit-flatpak="nano $HOME/.config/home-manager/flatpak/flathub-apps.txt ; list-flatpak";
-    upgrade-flatpak="mkdir -p $HOME/.var/log/flatpak ; flatpak upgrade -y >> $HOME/.var/log/flatpak/flatpak-upgrade-$(date '+%Y-%m-%d').log";
     list-overrides-flatpak="bat -P --style=header,numbers,snip ~/.local/share/flatpak/overrides/* ~/Documents/Private/Linux/flatpak/overrides/*";
     push-overrides-flatpak="cp -rfpv ~/.local/share/flatpak/overrides ~/Documents/Private/Linux/flatpak ";
     pull-overrides-flatpak="cp -rfpv ~/Documents/Private/Linux/flatpak/overrides ~/.local/share/flatpak";
