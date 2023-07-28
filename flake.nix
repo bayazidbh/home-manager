@@ -6,11 +6,11 @@
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak, still WIP
-    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it}
     # Add other inputs if needed
   };
 
-  outputs = { self, nixpkgs, home-manager, flatpaks }:
+  outputs = { self, nixpkgs, home-manager, flatpaks, chaotic }:
   let
     # Generate a user-friendly version number.
     # version = builtins.substring 0 2 self.lastModifiedDate;
@@ -31,8 +31,10 @@
     # declare a "username" or "username@hostname" specific configuration
       "fenglengshun@ostree-pc" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = { inherit chaotic; }; # so that home-manager can correctly read chaotic.packages
         modules = [
           ./pc/home.nix # device specific home.nix
+          ./pc/chaotic.nix # separate list for chaotic.nix packages
           flatpaks.homeManagerModules.default # import declarative-flatpak module
           # chaotic.nixosModules.default # default chaotic nyx module
         ];
