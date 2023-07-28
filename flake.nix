@@ -35,6 +35,7 @@
         modules = [
           ./pc/home.nix # device specific home.nix
           ./pc/chaotic.nix # separate list for chaotic.nix packages
+          ./pc/flatpak.nix # separate list for flatpak
           flatpaks.homeManagerModules.default # import declarative-flatpak module
           # chaotic.nixosModules.default # default chaotic nyx module
         ];
