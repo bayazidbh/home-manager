@@ -164,27 +164,27 @@ in
     # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
 
-  #  services.flatpak = {
-  #    remotes = {
-  #      "flathub" = "https://flathub.org/repo/flathub.flatpakrepo";
-  #      "flathub-beta" = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-  #    };
-  #    packages = [
-  #     "flathub:app/com.github.tchx84.Flatseal/x86_64/stable"
-  #     "flathub:app/com.steamgriddb.SGDBoop/x86_64/stable"
-  #     "flathub:app/com.stremio.Stremio/x86_64/stable"
-  #     "flathub:app/com.usebottles.bottles/x86_64/stable"
-  #     "flathub:app/com.wps.Office/x86_64/stable"
-  #     "flathub:app/fr.handbrake.ghb"
-  #     "flathub:app/io.github.Foldex.AdwSteamGtk/x86_64/stable"
-  #     "flathub:app/io.github.aandrew_me.ytdn/x86_64/stable"
-  #     "flathub:app/io.wavebox.Wavebox/x86_64/stable"
-  #     "flathub:app/net.codeindustry.MasterPDFEditor/x86_64/stable"
-  #     "flathub:app/net.cozic.joplin_desktop/x86_64/stable"
-  #     "flathub:app/org.upscayl.Upscayl/x86_64/stable"
-  #     "flathub:app/org.videolan.VLC/x86_64/stable"
-  #    ];
-  #  };
+  services.flatpak = {
+    remotes = {
+      "flathub" = "https://flathub.org/repo/flathub.flatpakrepo";
+      "flathub-beta" = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+    };
+    packages = [
+     "flathub:com.github.tchx84.Flatseal/x86_64/stable"
+     "flathub:com.steamgriddb.SGDBoop/x86_64/stable"
+     "flathub:com.stremio.Stremio/x86_64/stable"
+     "flathub:com.usebottles.bottles/x86_64/stable"
+     "flathub:com.wps.Office/x86_64/stable"
+     "flathub:fr.handbrake.ghb/x86_64/stable"
+     "flathub:io.github.Foldex.AdwSteamGtk/x86_64/stable"
+     "flathub:io.github.aandrew_me.ytdn/x86_64/stable"
+     "flathub:io.wavebox.Wavebox/x86_64/stable"
+     "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
+     "flathub:net.cozic.joplin_desktop/x86_64/stable"
+     "flathub:org.upscayl.Upscayl/x86_64/stable"
+     "flathub:org.videolan.VLC/x86_64/stable"
+    ];
+  };
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
