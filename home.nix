@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 let
 
   #import other sources / branch
@@ -17,7 +16,6 @@ let
   #}) {};
 
 in
-
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -25,75 +23,6 @@ in
   home.homeDirectory = "/home/fenglengshun";
   xdg.enable = true;
   home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
-  home.sessionVariables = {
-    HOST="${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}";
-    CARGO_HOME="${config.home.homeDirectory}/.local/share/cargo";
-    NPM_CONFIG_USERCONFIG="${config.home.homeDirectory}/.config/npm/npmrc";
-    GTK2_RC_FILES="${config.home.homeDirectory}/.config/gtk-2.0/gtkrc";
-    LESSHISTFILE="${config.home.homeDirectory}/.local/state/less/history";
-    WINEPREFIX="${config.home.homeDirectory}/.local/share/wine";
-    GTK_THEME="WhiteSur-Dark-solid";
-    GTK_THEME_VARIANT="dark";
-    };
-
-  home.shellAliases = {
-
-    # Environment shortcuts
-
-    my_alias="bat -r 46:122 ~/.config/home-manager/home.nix";
-    update_desktop_files ="update-desktop-database ~/.local/share/applications ~/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
-
-    force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
-    force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";
-
-    ip-addr-show="ip addr show";
-    ISO-today="echo '%{Date:yyyyMMdd}_%{Time:hhmmss}\ndate \"+%a %Y-%m-%d %H:%M:%S\"' ; date +'%a %Y-%m-%d %H:%M:%S'";
-    kill_user="pkill -KILL -u $USER";
-
-    # General file operation shortcuts
-
-    batch-zip-subfolders = "echo 'for i in */; do zip -9 -r \"\${i%/}.zip\" \"\$i\" & done; wait'";
-    batch-cbz-subfolders = "echo 'for i in */; do zip -9 -r \"\${i%/}.cbz\" \"\$i\" & done; wait'";
-    unzip_jp="echo 'unzip -O SHIFT-JIS file.zip\nunzip -O CP936 file.zip'";
-
-    convert_to_animated_image = "echo 'ffmpeg -i video_file -loop 0 output.gif\nffmpeg -i video_file -loop 0 output.webp'";
-    append_images="echo 'appends the images vertically\nconvert -append in-*.jpg out.jpg\nappends the images horizontally\nconvert in-1.jpg in-5.jpg in-N.jpg +append out.jpg'";
-    convert_to_pdf="echo 'soffice --headless --norestore --convert-to pdf --outdir {OUT_DIR} {FILE}\nlibreoffice --headless --convert-to pdf *.xlsx\nflatpak run org.libreoffice.LibreOffice --headless --convert-to pdf *.docx'";
-
-    # Nix Package Manager shortcuts
-
-    home_manager_update="sudo nix-channel --update ; nix-channel --update && home-manager switch -b bak";
-    clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d ; nix-store --optimise";
-    du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
-    kdeconnect-notification="kdeconnect-cli -n SM-A145F --ping-msg";
-
-    # Conty Shortcuts https://github.com/Kron4ek/Conty
-
-    conty-extract="unzip -o -d ~/.local/bin ~/Downloads/Conty.zip ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/Downloads/Conty.zip ; exa -al ~/.local/bin ";
-
-    conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
-
-    conty-export="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh -d --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads && mv /home/fenglengshun/.local/share/applications/Conty /home/fenglengshun/.local/share/applications/Conty-Restricted && $HOME/.local/bin/conty.sh -d && mv /home/fenglengshun/.local/share/applications/Conty /home/fenglengshun/.local/share/applications/Conty-Unrestricted && find /home/fenglengshun/.local/share/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; find /home/fenglengshun/.local/share/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} +";
-
-    contywine="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh wine";
-    contywinejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 $HOME/.local/bin/conty.sh wine";
-    contygamescope="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 -- wine";
-
-    # Games
-    steam-silent="steam -nochatui -nofriendsui -silent";
-    gamescope_run="gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 --steam --adaptive-sync --";
-    winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
-    nw="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.78.0-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.78.0-linux-x64/nw";
-    nw72="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
-
-    pull-betterdiscord="mkdir -p $HOME/.config/BetterDiscord && cp -rpfv $HOME/Documents/Private/Apps/Backups/BetterDiscord $HOME/.config/";
-    push-betterdiscord="mkdir -p $HOME/Documents/Private/Apps/Backups/BetterDiscord/ && cp -rpfv $HOME/.config/BetterDiscord/* $HOME/Documents/Private/Apps/Backups/BetterDiscord/";
-
-    # Other flatpak management
-    list-overrides-flatpak="bat -P --style=header,numbers,snip ~/.local/share/flatpak/overrides/* ~/Documents/Private/Linux/flatpak/overrides/*";
-    push-overrides-flatpak="cp -rfpv ~/.local/share/flatpak/overrides ~/Documents/Private/Linux/flatpak ";
-    pull-overrides-flatpak="cp -rfpv ~/Documents/Private/Linux/flatpak/overrides ~/.local/share/flatpak";
-    };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -113,6 +42,8 @@ in
     enable = true;
     frequency = "weekly";
   };
+  # Rebuild .desktop file database for app launcher menus
+  xdg.mime.enable = true;
 
   # Ensure that the following packages are installed
   nixpkgs.config.allowUnfree = true;
@@ -139,7 +70,7 @@ in
     fsearch junction krename imagemagick # extra file management tools
     distrobox podman-desktop # podman podman-compose # containers stuff
     # downonspot spotify-qt # media viewers
-    # mesa amdvlk driversi686Linux.amdvlk # nixgl.nixGLIntel nixgl.nixVulkanIntel # wine graphics dependencies
+    # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
     # gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
     # gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
     # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages nix-gaming.packages.${pkgs.hostPlatform.system}.wine-tkg
@@ -147,86 +78,16 @@ in
     # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
 
-  services.flatpak = {
-    remotes = {
-      "flathub" = "https://flathub.org/repo/flathub.flatpakrepo";
-      "flathub-beta" = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-    };
-    packages = [
-     "flathub:com.github.tchx84.Flatseal"
-     "flathub:com.steamgriddb.SGDBoop"
-     "flathub:com.stremio.Stremio"
-     "flathub:com.usebottles.bottles"
-     "flathub:com.wps.Office"
-     "flathub:fr.handbrake.ghb"
-     "flathub:io.github.Foldex.AdwSteamGtk"
-     "flathub:io.github.aandrew_me.ytdn"
-     "flathub:io.wavebox.Wavebox"
-     "flathub:net.codeindustry.MasterPDFEditor"
-     "flathub:net.cozic.joplin_desktop"
-     "flathub:org.upscayl.Upscayl"
-     "flathub:org.videolan.VLC"
-    ];
-  };
-
-  # services.kdeconnect.enable = true; # Install and enable kdeconnect
-  # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
-
-  #programs.gh.enable = true; # Install and enable GitHub CLI tool
-  #programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
-
   # enable fcitx5 as input method, with mozc for Japanese IME
   i18n.inputMethod = {
     enabled = "fcitx5";
     fcitx5.addons = with pkgs; [ fcitx5-mozc ];
   };
 
-  # allows home-manager to manager bash
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    initExtra = ''
-      export PS1="\\[\\033[01;32m\\]\\u@\\h:\\w\\[\\033[00m\\]\\$ "
-      '';
-    historyFile = "${config.xdg.configHome}/bash_history";
-  };
-  # Install zsh, and allows home-manager to manage zsh configs, with plugins, and oh-my-zsh management
-  programs.zsh = {
-    enable = true;
-    dotDir = ".config/zsh";
-    autocd = true;
-    history =  {
-      path = "${config.xdg.configHome}/zsh/zsh_history";
-      expireDuplicatesFirst = true;
-    };
-    historySubstringSearch.enable = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    # source p10k theme at ZSH_CUSTOM in XDG_DATA_HOME
-    initExtra = "[[ ! -f ${config.xdg.configHome}/zsh/p10k.zsh ]] || source ${config.xdg.configHome}/zsh/p10k.zsh";
-    oh-my-zsh = {
-      enable = true;
-      custom = "${config.xdg.configHome}/zsh/custom/plugins";
-      plugins = [ "git" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" ];
-      theme = "powerlevel10k/powerlevel10k";
-    };
-  };
-  # Install fish and allows home-manager to manage fish configs
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set fish_greeting
-      set sponge_purge_only_on_exit true
-    ''; # Disable greeting, sponge only purge on exit
-    plugins = [
-     { name = "tide"; src = pkgs.fishPlugins.tide.src; } # p10k-like theme for fish
-     { name = "grc"; src = pkgs.fishPlugins.grc.src; } # grc for colorized command output
-     { name = "fzf-fish"; src = pkgs.fishPlugins.fzf-fish.src; } # PatrickF1 fzf key bindings
-     { name = "sponge"; src = pkgs.fishPlugins.sponge.src; } # clean fish history from typos automatically
-     { name = "z"; src = pkgs.fishPlugins.z.src; } # Pure-fish z directory jumping
-     ];
-    };
+  # services.kdeconnect.enable = true; # Install and enable kdeconnect
+  # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
+  # programs.gh.enable = true; # Install and enable GitHub CLI tool
+  # programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
 
   programs.aria2.enable = true; # Install and enable aria2
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
@@ -240,163 +101,12 @@ in
   programs.mangohud.enable = true; # Install and enable mangohud
   services.mpd-discord-rpc.enable = true; # Install service for sharing current music info to discord
   programs.ripgrep.enable = true; # Install and enable ripgrep - rust rebuild of grep
-
   programs.boxxy = {
     enable = true;
   }; # Boxes in badly behaving applications https://github.com/queer/boxxy
 
+
   # programs.anime-game-launcher.enable = true;
   # programs.honkers-railway-launcher.enable = true;
   # programs.honkers-launcher.enable = true;
-
-  # Rebuild .desktop file database for app launcher menus
-  xdg.mime.enable = true;
-
-  systemd.user.tmpfiles.rules = [
-  "L ${config.home.homeDirectory}/Documents/Downloads - - - - ${config.home.homeDirectory}/Downloads"
-  "L ${config.home.homeDirectory}/Documents/Music - - - - ${config.home.homeDirectory}/Music"
-  "L ${config.home.homeDirectory}/Documents/Pictures - - - - ${config.home.homeDirectory}/Pictures"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config - - - - ${config.home.homeDirectory}/.config/yuzu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data - - - - ${config.home.homeDirectory}/.local/share/yuzu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - ${config.home.homeDirectory}/.config/Ryujinx"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/config - - - - ${config.home.homeDirectory}/.config/citra-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/data - - - - ${config.home.homeDirectory}/.local/share/citra-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - ${config.home.homeDirectory}/.config/dolphin-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - ${config.home.homeDirectory}/.local/share/dolphin-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config - - - - ${config.home.homeDirectory}/.config/PCSX2"
-  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config - - - - ${config.home.homeDirectory}/.config/rpcs3"
-  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config - - - - ${config.home.homeDirectory}/.config/ppsspp"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/yuzu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data - - - - ${config.home.homeDirectory}/Documents/container/conty/.local/share/yuzu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/Ryujinx"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/citra-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/data - - - - ${config.home.homeDirectory}/Documents/container/conty/.local/share/citra-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/dolphin-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/data - - - - ${config.home.homeDirectory}/Documents/container/conty/.local/share/dolphin-emu"
-  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/PCSX2"
-  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/rpcs3"
-  "L ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config - - - - ${config.home.homeDirectory}/Documents/container/conty/.config/ppsspp"
-  ];
-
-  home.file."autostart.sh" = {
-    enable = true;
-    target = ".local/bin/autostart.sh";
-    executable = true;
-    text = ''
-    #!/usr/bin/bash
-    sleep 15s
-    flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
-    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
-    flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
-    env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch &
-    env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "${config.home.homeDirectory}/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
-    ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
-    ${config.home.homeDirectory}/.nix-profile/bin/aw-qt &
-    ${config.home.homeDirectory}/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
-    podman start portainer &
-    podman start freshrss &
-    disown
-    '';
-  };
-
-  # home.file."autostart.sh.desktop" = {
-  #   enable = true;
-  #   target = ".config/autostart/autostart.sh.desktop";
-  #   executable = true;
-  #   text = ''
-  #   [Desktop Entry]
-  #   Exec=${config.home.homeDirectory}/.local/bin/autostart.sh
-  #   Icon=dialog-scripts
-  #   Name=autostart.sh
-  #   Path=
-  #   Type=Application
-  #   X-KDE-AutostartScript=true
-  #   '';
-  # };
-
-  # home.file."resilio.conf" = {
-  #   enable = true;
-  #   target = ".config/rslsync/rslsync.conf.test";
-  #   text = ''
-  #   {
-  #     "device_name": "${builtins.replaceStrings ["\n"] [""] (builtins.readFile "/etc/hostname")}",
-  #     "storage_path" : "${config.xdg.configHome}/rslsync",
-  #     "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
-  #     "use_upnp" : true,
-  #     "download_limit" : 0,
-  #     "upload_limit" : 0,
-  #     "directory_root" : "/home",
-  #     "webui" :
-  #     {
-  #        "listen" : "0.0.0.0:8888"
-  #      }
-  #    }
-  #    '';
-  #  };
-
-  home.file."restart-plasma" = {
-    enable = true;
-    target = ".local/bin/restart-plasma";
-    executable = true;
-    text = ''
-    #! /bin/bash
-    killall plasmashell &
-    kwin --replace &
-    kstart plasmashell &
-    disown
-    exit
-    '';
-  };
-
-  home.file."no-root-virt-manager" = {
-    enable = true;
-    target = ".local/bin/no-root-virt-manager";
-    executable = true;
-    text = ''
-      sudo sed -i "s/#user = \"root\"/user = \"${config.home.username}\"/g" /etc/libvirt/qemu.conf
-      sudo sed -i "s/#group = \"root\"/group = \"${config.home.username}\"/g" /etc/libvirt/qemu.conf
-      sudo usermod -a -G kvm ${config.home.username}
-      sudo usermod -a -G libvirt ${config.home.username}
-      sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
-      sudo sed -i "s/\/usr\/libexec\/libvirt_leaseshelper m,/\/usr\/libexec\/libvirt_leaseshelper mr,/g" /etc/apparmor.d/usr.sbin.dnsmasq
-    '';
-  };  # sudo systemctl restart libvirtd
-
-  home.file."libvirt.conf" = {
-    enable = true;
-    target = ".config/libvirt/libvirt.conf";
-    text = ''
-      uri_default = "qemu:///system"
-    '';
-  };
-
-  home.activation = {
-    getNonSteamLaunchersInstaller = {
-      after = [ "writeBoundary" "createXdgUserDirectories" ];
-      before = [ ];
-      data = "url=$(/usr/bin/curl -s \"https://api.github.com/repos/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/latest\" | /usr/bin/jq -r '.assets[] | select(.name == \"NonSteamLaunchers.desktop\") | .browser_download_url') && ${config.home.homeDirectory}/.nix-profile/bin/aria2c -c -o .local/share/applications/NonSteamLaunchers.desktop \"$url\"";
-    };
-  };
-
-  xdg.desktopEntries."virt-manager-win11" = {
-      name = "Windows 11 (VM)";
-      icon = "virt-manager";
-      exec = "env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect";
-      comment = "win11 VM on Virt-Manager";
-      categories = [ "System" ];
-      terminal = false;
-      type = "Application";
-      settings = {
-        Keywords = "vmm;win11;windows;";
-      };
-    };
-
-  # Add cachix access to ~/.config/nix/nix.conf
-  # home.file."nix.conf" = {
-  #   target = ".config/nix/nix.conf";
-  #   text = ''
-  #     substituters = https://cache.nixos.org https://nix-gaming.cachix.org https://chaotic-nyx.cachix.org https://ezkea.cachix.org
-  #     trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=
-  #     '';
-  # };
 }
