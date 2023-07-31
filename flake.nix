@@ -51,8 +51,9 @@
           ./files.nix # file creation for all devices
           ./laptop/by-device.nix # device specific configs
           ./laptop/flatpak.nix # separate list for flatpak
+          ./laptop/chaotic.nix
           flatpaks.homeManagerModules.default # import declarative-flatpak module
-          # chaotic.homeManagerModules.default # chaotic nyx HM module
+          chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
     };
