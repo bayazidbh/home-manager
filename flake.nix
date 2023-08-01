@@ -6,11 +6,12 @@
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak, still WIP
+    nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it}
     # Add other inputs if needed
   };
 
-  outputs = { self, nixpkgs, home-manager, flatpaks, chaotic }:
+  outputs = { self, nixpkgs, home-manager, flatpaks, nixgl, chaotic }:
   let
 
     # System types to support.  [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];

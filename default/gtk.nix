@@ -279,4 +279,11 @@
       @define-color warning_color_insensitive_breeze #683d16;
       '';
     };
+  #  home.activation = {
+  #    getNonSteamLaunchersInstaller = {
+  #      after = [ "writeBoundary" "createXdgUserDirectories" ];
+  #      before = [ "gtk" ];
+  #      data = "svn checkout https://github.com/bayazidbh/home-manager/trunk/default/gtk-3.0 ~/.config/gtk-3.0 && svn checkout https://github.com/bayazidbh/home-manager/trunk/default/gtk-4.0 ~/.config/gtk-4.0";
+  #    };
+  #  };
 }
