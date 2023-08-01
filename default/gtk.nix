@@ -280,10 +280,10 @@
       '';
     };
   #  home.activation = {
-  #    getNonSteamLaunchersInstaller = {
+  #    getGtkThemes = {
   #      after = [ "writeBoundary" "createXdgUserDirectories" ];
-  #      before = [ "gtk" ];
-  #      data = "svn checkout https://github.com/bayazidbh/home-manager/trunk/default/gtk-3.0 ~/.config/gtk-3.0 && svn checkout https://github.com/bayazidbh/home-manager/trunk/default/gtk-4.0 ~/.config/gtk-4.0";
+  #      before = [ ];
+  #      data = "/bin/bash 'if [ ! -f "${config.xdg.configHome}/.config/gtk-4.0/gtk.css" ]; then /bin/echo 'gtk.css exists'; fi ${config.home.homeDirectory}/.nix-profile/bin/svn checkout https://github.com/bayazidbh/home-manager/trunk/default/gtk-3.0 ${config.xdg.configHome}/.config/gtk-3.0 && ${config.home.homeDirectory}/.nix-profile/bin/svn checkout https://github.com/bayazidbh/home-manager/trunk/default/gtk-4.0 ${config.xdg.configHome}/.config/gtk-4.0'";
   #    };
   #  };
 }
