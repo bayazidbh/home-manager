@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    fastfetch
-  ];
+  nix.packages = [ pkgs.fastfetch ];
 }

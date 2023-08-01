@@ -30,10 +30,10 @@
         # extraSpecialArgs = { inherit chaotic; }; # so that home-manager can correctly read chaotic.packages
         modules = [
           ./home.nix # default home.nix
-          ./shell.nix # shell config for all devices
-          ./env.nix # env-var for all devices
-          ./alias.nix # aliases for all devices
-          ./files.nix # file creation for all devices
+          ./default/shell.nix # shell config for all devices
+          ./default/env.nix # env-var for all devices
+          ./default/alias.nix # aliases for all devices
+          ./default/files.nix # file creation for all devices
           ./pc/by-device.nix # device specific configs
           ./pc/flatpak.nix # separate list for flatpak
           ./pc/chaotic.nix # separate list for chaotic.nix packages
@@ -45,17 +45,18 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         modules = [
           ./home.nix # default home.nix
-          ./shell.nix # shell config for all devices
-          ./env.nix # env-var for all devices
-          ./alias.nix # aliases for all devices
-          ./files.nix # file creation for all devices
+          ./default/shell.nix # shell config for all devices
+          ./default/env.nix # env-var for all devices
+          ./default/alias.nix # aliases for all devices
+          ./default/files.nix # file creation for all devices
           ./laptop/by-device.nix # device specific configs
           ./laptop/flatpak.nix # separate list for flatpak
-          ./laptop/chaotic.nix
+          ./laptop/chaotic.nix # separate list for chaotic.nix package
           flatpaks.homeManagerModules.default # import declarative-flatpak module
           chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
+      nix.package = nixpkgs.nix;
     };
   };
 }
