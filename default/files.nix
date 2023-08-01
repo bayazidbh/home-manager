@@ -48,6 +48,16 @@
     '';
   };
 
+  home.file."NonSteamLaunchers.sh" = {
+    enable = true;
+    target = ".local/bin/NonSteamLaunchers.sh";
+    executable = true;
+    text = ''
+      #! /bin/bash
+      /bin/bash -c 'curl -Ls https://raw.githubusercontent.com/moraroy/NonSteamLaunchers-On-Steam-Deck/main/NonSteamLaunchers.sh | nohup /bin/bash'
+    '';
+  };
+
   home.file."libvirt.conf" = {
     enable = true;
     target = ".config/libvirt/libvirt.conf";
@@ -56,13 +66,14 @@
     '';
   };
 
-  #  home.activation = {
-  #    getNonSteamLaunchersInstaller = {
-  #      after = [ "writeBoundary" "createXdgUserDirectories" ];
-  #      before = [ ];
-  #      data = "url=$(/usr/bin/curl -s \"https://api.github.com/repos/moraroy/NonSteamLaunchers-On-Steam-Deck/releases/latest\" | /usr/bin/jq -r '.assets[] | select(.name == \"NonSteamLaunchers.desktop\") | .browser_download_url') && ${config.home.homeDirectory}/.nix-profile/bin/aria2c -c -o .local/share/applications/NonSteamLaunchers.desktop \"$url\"";
-  #    };
-  #  };
+  home.file."nix.conf" = {
+    enable = false;
+    target = ".config/nix/nix.conf";
+    text = ''
+      substituters = https://cache.nixos.org https://nix-gaming.cachix.org https://chaotic-nyx.cachix.org https://ezkea.cachix.org
+      trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=
+    '';
+  };
 
   xdg.desktopEntries."virt-manager-win11" = {
       name = "Windows 11 (VM)";
@@ -76,5 +87,4 @@
         Keywords = "vmm;win11;windows;";
       };
     };
-
 }

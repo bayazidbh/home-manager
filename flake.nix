@@ -43,6 +43,7 @@
       };
       "fenglengshun@neon-laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = { inherit chaotic; }; # so that home-manager can correctly read chaotic.packages
         modules = [
           ./home.nix # default home.nix
           ./default/shell.nix # shell config for all devices
@@ -53,10 +54,8 @@
           ./laptop/flatpak.nix # separate list for flatpak
           ./laptop/chaotic.nix # separate list for chaotic.nix package
           flatpaks.homeManagerModules.default # import declarative-flatpak module
-          chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
-      nix.package = nixpkgs.nix;
     };
   };
 }

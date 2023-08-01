@@ -26,14 +26,12 @@
 
     # Nix Package Manager shortcuts
 
-    home_manager_update="sudo nix-channel --update ; nix-channel --update && home-manager switch -b bak";
     clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d ; nix-store --optimise";
     du-nix="nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png";
-    kdeconnect-notification="kdeconnect-cli -n SM-A145F --ping-msg";
 
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
-    conty-extract="unzip -o -d ~/.local/bin ~/Downloads/Conty.zip ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/Downloads/Conty.zip ; exa -al ~/.local/bin ";
+    conty-download="aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part01 && aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part02 && cat ~/.local/bin/conty.sh_part01 ~/.local/bin/conty.sh_part02 > ~/.local/bin/conty.sh ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/Downloads/conty.sh_part* ; exa -al ~/.local/bin";
 
     conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
 
@@ -47,7 +45,7 @@
     steam-silent="steam -nochatui -nofriendsui -silent";
     gamescope_run="gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 --steam --adaptive-sync --";
     winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
-    nw="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.78.1-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.78.1-linux-x64/nw";
+    nw="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-latest-linux-x64/nw";
     nw72="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
 
     # Other flatpak management
