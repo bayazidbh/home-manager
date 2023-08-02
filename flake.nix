@@ -28,7 +28,7 @@
     # declare a "username" or "username@hostname" specific configuration
       "fenglengshun@ostree-pc" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        # extraSpecialArgs = { inherit chaotic; }; # so that home-manager can correctly read chaotic.packages
+        # extraSpecialArgs = { inherit chaotic; inherit nixgl; }; # so that home-manager can correctly read chaotic.packages
         modules = [
           ./home.nix # default home.nix
           ./default/shell.nix # shell config for all devices
@@ -44,7 +44,7 @@
       };
       "fenglengshun@neon-laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = { inherit chaotic; inherit nixgl; }; # so that home-manager can correctly read chaotic.packages
+        extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read chaotic.packages
         modules = [
           ./home.nix # default home.nix
           ./default/shell.nix # shell config for all devices
@@ -56,6 +56,7 @@
           ./laptop/chaotic.nix # separate list for chaotic.nix package
           ./laptop/nixgl.nix # separate list for nixgl.nix package
           flatpaks.homeManagerModules.default # import declarative-flatpak module
+          chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
     };

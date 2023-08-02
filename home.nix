@@ -60,21 +60,21 @@ in
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex fd # bottom # rust CLIs
     rsync zsync resilio-sync  # file management
-    activitywatch # zerotierone web-ui tools
-    libdbusmenu libsForQt5.libdbusmenu # for global menu
+    activitywatch rustdesk # web-ui tools
+    plasma-hud libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
     sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl ani-cli manga-cli mov-cli # CLI-based media downloader
     fsearch junction krename imagemagick # extra file management tools
-    distrobox podman-desktop # podman podman-compose # containers stuff
+    distrobox podman podman-desktop podman-compose # containers stuff
     # downonspot spotify-qt # media viewers
     # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
     wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
     gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
     gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
-    gamemode protonup-ng ludusavi # gamescope scanmem # other gaming tools
+    gamemode protonup-ng ludusavi scanmem # gamescope other gaming tools
     # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
 

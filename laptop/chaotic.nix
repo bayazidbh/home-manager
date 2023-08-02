@@ -1,6 +1,7 @@
-{ chaotic, ... }:
+{ pkgs, ... }:
 {
-  home.packages = with chaotic.packages.x86_64-linux; [
+  nix.package = pkgs.nixVersions.unstable;
+  home.packages = with pkgs; [
     fastfetch gamescope_git
   ];
 }
