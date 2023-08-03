@@ -31,7 +31,7 @@
 
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
-    conty-download="aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part01 && aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part02 && cat ~/.local/bin/conty.sh_part01 ~/.local/bin/conty.sh_part02 > ~/.local/bin/conty.sh ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/Downloads/conty.sh_part* ; exa -al ~/.local/bin";
+    conty-download="aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part01 && aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part02 && rmtrash -v ~/.local/bin/conty.sh && cat ~/.local/bin/conty.sh_part01 ~/.local/bin/conty.sh_part02 > ~/.local/bin/conty.sh ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/.local/bin/conty.sh_part* ; exa -al ~/.local/bin";
 
     conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
 
