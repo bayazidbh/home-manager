@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
-
 {
-
   services.flatpak = {
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
@@ -26,7 +24,7 @@
      "launcher-moe:moe.launcher.honkers-launcher/x86_64/master"
      "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/22.08"
      "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08"
+     ":${./xwaylandvideobridge.flatpak}"
     ];
   };
-
 }

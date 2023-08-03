@@ -3,6 +3,8 @@
 ## Quick Commands
 
 ```
+nix build  ~/Documents/nix#homeConfigurations."$USER@$HOST".activationPackage && ./result/activate && rmtrash ./result
+
 pkill -KILL -u $USER
 sudo apt-mark auto $package_name
 

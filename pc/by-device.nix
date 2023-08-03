@@ -38,7 +38,6 @@
     text = ''
     #!/usr/bin/bash
     sleep 15s
-    flatpak run --branch=master --arch=x86_64 --command=pwbypass org.kde.xwaylandvideobridge &
     flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox @@u %U @@ &
     flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop @@u %u @@ &
     env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch &
@@ -46,8 +45,6 @@
     ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config ~/.config/rslsync/rslsync.conf &
     ${config.home.homeDirectory}/.nix-profile/bin/aw-qt &
     ${config.home.homeDirectory}/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
-    podman start portainer &
-    podman start freshrss &
     disown
     '';
   };
