@@ -24,7 +24,10 @@
      "launcher-moe:app/moe.launcher.honkers-launcher/x86_64/master"
      "flathub:runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/22.08"
      "flathub:runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08"
-     ":${./xwaylandvideobridge.flatpak}"
     ];
+
+    #preInitCommand = {
+    #${config.home.homeDirectory}/.nix-profile/bin/aria2c --allow-overwrite -d ${config.xdg.configHome}/.config/home-manager/laptop https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.2.2-x86_64.flatpak
+    #};
   };
 }

@@ -51,7 +51,7 @@ in
 
   #allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1u"
+    "openssl-1.1.1v"
   ];
 
   home.packages = with pkgs; [
