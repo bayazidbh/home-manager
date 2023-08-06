@@ -55,7 +55,7 @@ in
   ];
 
   home.packages = with pkgs; [
-    git gh git-lfs cosign cachix github-desktop subversion # build tools
+    git gh github-desktop git-lfs cosign cachix subversion # build tools
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex fd # bottom # rust CLIs
