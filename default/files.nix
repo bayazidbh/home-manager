@@ -5,19 +5,22 @@
     target = ".config/rslsync/rslsync.conf";
     text = ''
       {
-       "device_name": "${config.home.sessionVariables.HOST}",
-       "storage_path" : "${config.xdg.configHome}/rslsync",
-       "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
-       "use_upnp" : true,
-       "download_limit" : 0,
-       "upload_limit" : 0,
-       "directory_root" : "/home",
-       "webui" :
-       {
-       "listen" : "0.0.0.0:8888"
-       }
+
+        "device_name": "${config.home.sessionVariables.HOST}",
+        "storage_path" : "${config.xdg.configHome}/rslsync",
+        "pid_file" : "${config.xdg.configHome}/rslsync/resilio.pid",
+        "use_upnp" : true,
+        "download_limit" : 0,
+        "upload_limit" : 0,
+        "directory_root" : "${config.home.homeDirectory}/",
+        "webui" :
+        {
+          "listen" : "0.0.0.0:8888" // remove field to disable WebUI
+        }
+
       }
-    '';
+
+      '';
   };
 
   home.file."restart-plasma" = {
