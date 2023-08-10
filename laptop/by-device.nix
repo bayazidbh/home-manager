@@ -1,9 +1,11 @@
 { config, pkgs, ... }:
 {
   home.sessionVariables = {
-    HOST="neon-laptop";
-    HOSTNAME="neon-laptop";
+    HOST="bbh.laptop";
+    HOSTNAME="bbh.laptop";
     };
+
+  home.packages = with pkgs; [ gamescope ];
 
   systemd.user.tmpfiles.rules = [
   "L ${config.home.homeDirectory}/Documents/Downloads - - - - ${config.home.homeDirectory}/Downloads"

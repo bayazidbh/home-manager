@@ -2,7 +2,7 @@
 {
   home.file."resilio.conf" = {
     enable = true;
-    target = ".config/rslsync/rslsync.conf.test";
+    target = ".config/rslsync/rslsync.conf";
     text = ''
       {
        "device_name": "${config.home.sessionVariables.HOST}",

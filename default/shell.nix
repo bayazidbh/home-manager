@@ -25,12 +25,12 @@
     syntaxHighlighting.enable = true;
     # source p10k theme at ZSH_CUSTOM in XDG_DATA_HOME
     initExtra = "[[ ! -f ${config.xdg.configHome}/zsh/p10k.zsh ]] || source ${config.xdg.configHome}/zsh/p10k.zsh";
-    oh-my-zsh = {
-      enable = true;
-      custom = "${config.xdg.configHome}/zsh/custom/plugins";
-      plugins = [ "git" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" ];
-      theme = "powerlevel10k/powerlevel10k";
-    };
+    plugins = [
+      {name = "zsh-autosuggestions";src = pkgs.zsh-autosuggestions;}
+      {name = "zsh-history-substring-search";src = pkgs.zsh-history-substring-search;}
+      {name = "zsh-syntax-highlighting";src = pkgs.zsh-syntax-highlighting;}
+      {name = "powerlevel10k";src = pkgs.zsh-powerlevel10k;file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";}
+    ];
   };
 
   # Install fish and allows home-manager to manage fish configs

@@ -5,7 +5,7 @@
       url = "github:nix-community/home-manager"; # home-manager unstable url
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
-    flatpaks.url = "github:GermanBread/declarative-flatpak/dev"; # declarative-flatpak, still WIP
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak, still WIP
     nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it}
     # Add other inputs if needed
@@ -43,7 +43,7 @@
           chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
-      "fenglengshun@neon-laptop" = home-manager.lib.homeManagerConfiguration {
+      "fenglengshun@bbh.laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read chaotic.packages
         modules = [
@@ -54,10 +54,8 @@
           ./default/files.nix # file creation for all devices
           ./laptop/by-device.nix # device specific configs
           ./laptop/flatpak.nix # separate list for flatpak
-          ./laptop/chaotic.nix # separate list for chaotic.nix package
           ./laptop/nixgl.nix # separate list for nixgl.nix package
           flatpaks.homeManagerModules.default # import declarative-flatpak module
-          chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
       # "root" = home-manager.lib.homeManagerConfiguration {

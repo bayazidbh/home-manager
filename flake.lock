@@ -68,16 +68,16 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1691152347,
-        "narHash": "sha256-8Hth1SGz8RkAgU4TGdc8CJvGVCKU52uAy3uKcVoxY7g=",
+        "lastModified": 1690548022,
+        "narHash": "sha256-ypu+IQW+4p+D8Vnx76BSvIShsTZ8AxMNqEUCS5/kLnc=",
         "owner": "GermanBread",
         "repo": "declarative-flatpak",
-        "rev": "0751404b8723d97bb0e2611d7dded22cf92aa4c1",
+        "rev": "fb31283f55f06b489f2baf920201e8eb73c9a0d3",
         "type": "github"
       },
       "original": {
         "owner": "GermanBread",
-        "ref": "dev",
+        "ref": "stable",
         "repo": "declarative-flatpak",
         "type": "github"
       }
@@ -228,16 +228,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1690835256,
-        "narHash": "sha256-SZy/Nvwbf6CorhEsvmjqgjoYNLnRfaKVZMfSnpUDPnc=",
+        "lastModified": 1688392541,
+        "narHash": "sha256-lHrKvEkCPTUO+7tPfjIcb7Trk6k31rz18vkyqmkeJfY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b7cde1c47b7316f6138a2b36ef6627f3d16d645c",
+        "rev": "ea4c80b39be4c09702b0cb3b42eab59e2ba4f24b",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-23.05",
+        "ref": "nixos-22.11",
         "repo": "nixpkgs",
         "type": "github"
       }
