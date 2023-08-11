@@ -43,7 +43,7 @@
           chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
-      "fenglengshun@bbh.laptop" = home-manager.lib.homeManagerConfiguration {
+      "fenglengshun@bbh-laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read chaotic.packages
         modules = [

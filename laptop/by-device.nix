@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   home.sessionVariables = {
-    HOST="bbh.laptop";
-    HOSTNAME="bbh.laptop";
+    HOST="bbh-laptop";
+    HOSTNAME="bbh-laptop";
     };
 
   home.packages = with pkgs; [ gamescope ];
@@ -11,6 +11,7 @@
   "L ${config.home.homeDirectory}/Documents/Downloads - - - - ${config.home.homeDirectory}/Downloads"
   "L ${config.home.homeDirectory}/Documents/Music - - - - ${config.home.homeDirectory}/Music"
   "L ${config.home.homeDirectory}/Documents/Pictures - - - - ${config.home.homeDirectory}/Pictures"
+  "L ${config.home.homeDirectory}/Documents/Videos - - - - ${config.home.homeDirectory}/Videos"
   "L ${config.xdg.configHome}/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config"
   "L ${config.home.homeDirectory}/.local/share/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data"
   "L ${config.xdg.configHome}/Ryujinx - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config"
@@ -48,7 +49,7 @@
     ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config "$(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)" &
     ${config.home.homeDirectory}/.nix-profile/bin/aw-qt &
     ${config.home.homeDirectory}/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
-    env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect qemu:///system --show-domain-console win10 &
+    env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11 &
     podman start portainer &
     podman start freshrss &
     disown

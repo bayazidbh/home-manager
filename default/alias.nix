@@ -5,7 +5,7 @@
     # Environment shortcuts
 
     my_alias="bat -p -n --paging=never --style=header-filename /home/fenglengshun/.config/home-manager/default/alias.nix";
-    update_desktop_files ="update-desktop-database ~/.local/share/applications ~/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+    update_desktop_files ="update-desktop-database ${config.home.homeDirectory}/.local/share/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
 
     force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
     force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";
@@ -31,26 +31,26 @@
 
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
-    conty-download="aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part01 && aria2c -d ~/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part02 && rmtrash -v ~/.local/bin/conty.sh && cat ~/.local/bin/conty.sh_part01 ~/.local/bin/conty.sh_part02 > ~/.local/bin/conty.sh ; chmod +x ~/.local/bin/conty.sh ; rmtrash -rfv ~/.local/bin/conty.sh_part* ; exa -al ~/.local/bin";
+    conty-download="aria2c -d ${config.home.homeDirectory}/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part01 && aria2c -d ${config.home.homeDirectory}/.local/bin https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part02 && rmtrash -v ${config.home.homeDirectory}/.local/bin/conty.sh && cat ${config.home.homeDirectory}/.local/bin/conty.sh_part01 ${config.home.homeDirectory}/.local/bin/conty.sh_part02 > ${config.home.homeDirectory}/.local/bin/conty.sh ; chmod +x ${config.home.homeDirectory}/.local/bin/conty.sh ; rmtrash -rfv ${config.home.homeDirectory}/.local/bin/conty.sh_part* ; exa -al ${config.home.homeDirectory}/.local/bin";
 
-    conty="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads";
+    conty="HOME_DIR=${config.home.homeDirectory}/Documents/container/conty ${config.home.homeDirectory}/.local/bin/conty.sh --bind ${config.home.homeDirectory}/Games ${config.home.homeDirectory}/Games --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads";
 
-    conty-export="HOME_DIR=$HOME/Documents/container/conty $HOME/.local/bin/conty.sh -d --bind $HOME/Games $HOME/Games --bind $HOME/Storage $HOME/Storage --bind $HOME/Documents $HOME/Documents --bind $HOME/Downloads $HOME/Downloads && mv /home/fenglengshun/.local/share/applications/Conty /home/fenglengshun/.local/share/applications/Conty-Restricted && $HOME/.local/bin/conty.sh -d && mv /home/fenglengshun/.local/share/applications/Conty /home/fenglengshun/.local/share/applications/Conty-Unrestricted && find /home/fenglengshun/.local/share/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; find /home/fenglengshun/.local/share/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} +";
+    conty-export="HOME_DIR=${config.home.homeDirectory}/Documents/container/conty ${config.home.homeDirectory}/.local/bin/conty.sh -d --bind ${config.home.homeDirectory}/Games ${config.home.homeDirectory}/Games --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads && mv /home/fenglengshun/.local/share/applications/Conty /home/fenglengshun/.local/share/applications/Conty-Restricted && ${config.home.homeDirectory}/.local/bin/conty.sh -d && mv /home/fenglengshun/.local/share/applications/Conty /home/fenglengshun/.local/share/applications/Conty-Unrestricted && find /home/fenglengshun/.local/share/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; find /home/fenglengshun/.local/share/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} +";
 
-    contywine="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh wine";
-    contywinejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 $HOME/.local/bin/conty.sh wine";
-    contygamescope="WINEPREFIX=$HOME/.local/share/wineconty $HOME/.local/bin/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 -- wine";
+    contywine="WINEPREFIX=${config.home.homeDirectory}/.local/share/wineconty ${config.home.homeDirectory}/.local/bin/conty.sh wine";
+    contywinejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 ${config.home.homeDirectory}/.local/bin/conty.sh wine";
+    contygamescope="WINEPREFIX=${config.home.homeDirectory}/.local/share/wineconty ${config.home.homeDirectory}/.local/bin/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 -- wine";
 
     # Games
     steam-silent="steam -nochatui -nofriendsui -silent";
     gamescope_run="gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f --fsr-upscaling --fsr-sharpness 10 --steam --adaptive-sync --";
-    winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=$HOME/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
-    nw="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-latest-linux-x64/nw";
-    nw72="LD_PRELOAD=$HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so $HOME/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
+    winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
+    nw="LD_PRELOAD=${config.home.homeDirectory}/Documents/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so ${config.home.homeDirectory}/Documents/Private/Linux/bin/nwjs-latest-linux-x64/nw";
+    nw72="LD_PRELOAD=${config.home.homeDirectory}/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so ${config.home.homeDirectory}/Documents/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
 
     # Other flatpak management
-    list-overrides-flatpak="bat -P --style=header,numbers,snip ~/.local/share/flatpak/overrides/* ~/Documents/Private/Linux/flatpak/overrides/*";
-    push-overrides-flatpak="cp -rfpv ~/.local/share/flatpak/overrides ~/Documents/Private/Linux/flatpak ";
-    pull-overrides-flatpak="cp -rfpv ~/Documents/Private/Linux/flatpak/overrides ~/.local/share/flatpak";
+    list-overrides-flatpak="bat -P --style=header,numbers,snip ${config.home.homeDirectory}/.local/share/flatpak/overrides/* ${config.xdg.configHome}/home-manager/flatpak/overrides/*";
+    push-overrides-flatpak="cp -rfpv ${config.home.homeDirectory}/.local/share/flatpak/overrides ${config.xdg.configHome}/home-manager/flatpak/ ";
+    pull-overrides-flatpak="cp -rfpv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.home.homeDirectory}/.local/share/flatpak";
   };
 }

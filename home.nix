@@ -68,7 +68,7 @@ in
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl adl mangal mov-cli # CLI-based media downloader
     fsearch junction krename imagemagick # extra file management tools
-    distrobox podman podman-desktop podman-compose # containers stuff
+    distrobox podman podman-compose # containers stuff
     # downonspot spotify-qt # media viewers
     # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
     wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
