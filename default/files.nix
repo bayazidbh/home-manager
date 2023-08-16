@@ -42,12 +42,8 @@
     target = ".local/bin/no-root-virt-manager";
     executable = true;
     text = ''
-      cat ${config.home.homeDirectory}/.local/bin/no-root-virt-manager
       sudo usermod -a -G kvm ${config.home.username}
       sudo usermod -a -G libvirt ${config.home.username}
-      sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
-      sudo sed -i "s/\/usr\/libexec\/libvirt_leaseshelper m,/\/usr\/libexec\/libvirt_leaseshelper mr,/g" /etc/apparmor.d/usr.sbin.dnsmasq
-      # sudo systemctl restart libvirtd
     '';
   };
 
@@ -90,4 +86,19 @@
         Keywords = "vmm;win11;windows;";
       };
     };
+  # systemd.user.services =
+  # {
+  # "autostart" = {
+  #   Install = {
+  #     WantedBy = "default.target";
+  #     };
+  #   Unit = {
+  #     Description = "Autostart service";
+  #     After = "network.target";
+  #     };
+  #   Service = {
+  #     ExecStart = "${config.home.sessionVariables.XDG_BIN_HOME}/autostart.sh";
+  #     };
+  #   };
+  # };
 }

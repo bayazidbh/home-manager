@@ -21,8 +21,6 @@ in
   # paths it should manage.
   home.username = "fenglengshun";
   home.homeDirectory = "/home/fenglengshun";
-  xdg.enable = true;
-  home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -42,8 +40,6 @@ in
     enable = true;
     frequency = "weekly";
   };
-  # Rebuild .desktop file database for app launcher menus
-  xdg.mime.enable = true;
 
   # Ensure that the following packages are installed
   nixpkgs.config.allowUnfree = true;
@@ -60,7 +56,7 @@ in
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
     erdtree ripgrep-all delta grex fd # bottom # rust CLIs
     rsync zsync resilio-sync  # file management
-    activitywatch # rustdesk web-ui tools
+    # activitywatch rustdesk web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
     sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
@@ -104,7 +100,6 @@ in
   programs.boxxy = {
     enable = true;
   }; # Boxes in badly behaving applications https://github.com/queer/boxxy
-
 
   # programs.anime-game-launcher.enable = true;
   # programs.honkers-railway-launcher.enable = true;
