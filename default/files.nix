@@ -86,19 +86,18 @@
         Keywords = "vmm;win11;windows;";
       };
     };
-  # systemd.user.services =
-  # {
-  # "autostart" = {
-  #   Install = {
-  #     WantedBy = "default.target";
-  #     };
-  #   Unit = {
-  #     Description = "Autostart service";
-  #     After = "network.target";
-  #     };
-  #   Service = {
-  #     ExecStart = "${config.home.sessionVariables.XDG_BIN_HOME}/autostart.sh";
-  #     };
-  #   };
-  # };
+  systemd.user.services = {
+  "autostart.sh" = {
+    Unit = {
+      Description = "Autostart applications.";
+      After = "network.target";
+      };
+    Service = {
+      ExecStart = "${config.home.sessionVariables.XDG_BIN_HOME}/autostart.sh";
+      };
+    Install = {
+      WantedBy = [ "default.target" ];
+      };
+    };
+  };
 }
