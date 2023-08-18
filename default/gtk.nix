@@ -279,7 +279,36 @@
       @define-color warning_color_insensitive_breeze #683d16;
       '';
     };
-  #  home.activation = {
+
+  home.file = {
+    "gtk-3.0-assets" = {
+      enable = true;
+      target = ".config/gtk-3.0/assets";
+      source = "${.gtk-3.0/assets/}";
+    };
+    "gtk-4.0-assets" = {
+      enable = true;
+      target = ".config/gtk-4.0/assets";
+      source = "${.gtk-4.0/assets/}";
+    };
+    "gtk-4.0-windows-assets" = {
+      enable = true;
+      target = ".config/gtk-4.0/windows-assets";
+      source = "${.gtk-4.0/windows-assets/}";
+    };
+    "gtk-4.0-gtk.css" = {
+      enable = true;
+      target = ".config/gtk-4.0/gtk.css";
+      source = "${.gtk-4.0/gtk.css/}";
+    };
+    "gtk-4.0-gtk-dark.css" = {
+      enable = true;
+      target = ".config/gtk-4.0/gtk-dark.css";
+      source = "${.gtk-4.0/gtk-dark.css/}";
+    };
+  };
+
+    #  home.activation = {
   #    getGtkThemes = {
   #      after = [ "writeBoundary" "createXdgUserDirectories" ];
   #      before = [ ];
