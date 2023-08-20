@@ -54,7 +54,7 @@ systemd.user.services = {
       After = "network.target";
       };
     Service = {
-      ExecStart = "env HOME_DIR="${config.home.homeDirectory}/Documents/container/conty" "${config.home.homeDirectory}/.local/bin/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden";
+      ExecStart = "env HOME_DIR=${config.home.homeDirectory}/Documents/container/conty ${config.home.homeDirectory}/.local/bin/conty.sh --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden";
       };
     Install = {
       WantedBy = [ "default.target" ];
