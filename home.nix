@@ -54,7 +54,7 @@ in
     git gh github-desktop git-lfs cosign cachix subversion # build tools
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
-    erdtree delta grex fd # bottom # rust CLIs
+    erdtree ripgrep-all delta grex fd # bottom # rust CLIs
     rsync zsync resilio-sync  # file management
     # activitywatch rustdesk web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
