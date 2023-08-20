@@ -18,7 +18,7 @@ systemd.user.services = {
       Description = "Autostart FSearch";
       };
     Service = {
-      ExecStart = "env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch";
+      ExecStart = "env GDK_DEBUG=portals GTK_USE_PORTAL=1 fsearch";
       };
     Install = {
       WantedBy = [ "default.target" ];
@@ -42,7 +42,7 @@ systemd.user.services = {
       After = "network.target";
       };
     Service = {
-      ExecStart = "${config.home.homeDirectory}/.nix-profile/bin/rslsync --config '$(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)'";
+      ExecStart = "rslsync --config $(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)";
       };
     Install = {
       WantedBy = [ "default.target" ];
@@ -54,7 +54,7 @@ systemd.user.services = {
       After = "network.target";
       };
     Service = {
-      ExecStart = "env HOME_DIR=${config.home.homeDirectory}/Documents/container/conty ${config.home.homeDirectory}/.local/bin/conty.sh --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${config.home.homeDirectory}/Documents ${config.home.homeDirectory}/Documents --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden";
+      ExecStart = "env HOME_DIR=${config.xdg.userDirs.documents}/container/conty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.home.homeDirectory}/Downloads ~/Downloads /usr/bin/fdm --hidden";
       };
     Install = {
       WantedBy = [ "default.target" ];
@@ -66,7 +66,18 @@ systemd.user.services = {
       After = "network.target";
       };
     Service = {
-      ExecStart = "sleep 5 ; ${config.home.homeDirectory}/.local/bin/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent";
+      ExecStart = "${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent";
+      };
+    Install = {
+      WantedBy = [ "default.target" ];
+      };
+    };
+    "duperemover" = {
+    Unit = {
+      Description = "Autostart duperemove";
+      };
+    Service = {
+      ExecStart = "mkdir -p ${config.xdg.configHome}/duperemove/ ; duperemove -r -d --hashfile=${config.xdg.configHome}/duperemove/hashfile ${config.home.homeDirectory}/";
       };
     Install = {
       WantedBy = [ "default.target" ];

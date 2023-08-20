@@ -5,8 +5,6 @@ home.sessionVariables = {
   HOSTNAME="bbh-laptop";
   };
 
-home.packages = with pkgs; [ gamescope ];
-
 systemd.user.tmpfiles.rules = [
   "L ${config.home.homeDirectory}/Documents/Downloads - - - - ${config.home.homeDirectory}/Downloads"
   "L ${config.home.homeDirectory}/Documents/Music - - - - ${config.home.homeDirectory}/Music"

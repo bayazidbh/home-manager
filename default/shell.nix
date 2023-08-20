@@ -33,6 +33,12 @@
     ];
   };
 
+  home.file."p10k.zsh" = {
+    enable = true;
+    target = ".config/zsh/p10k.zsh";
+    source = "${config.xdg.userDirs.documents}/Private/Linux/config/p10k.zsh";
+  };
+
   # Install fish and allows home-manager to manage fish configs
   programs.fish = {
     enable = true;
