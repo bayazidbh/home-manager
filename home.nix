@@ -54,8 +54,8 @@ in
     git gh github-desktop git-lfs cosign cachix subversion # build tools
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
-    erdtree ripgrep-all delta grex fd # bottom # rust CLIs
-    rsync zsync resilio-sync  # file management
+    erdtree delta grex fd # ripgrep-all bottom # rust CLIs
+    duperemove rsync zsync resilio-sync  # file management
     # activitywatch rustdesk web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies

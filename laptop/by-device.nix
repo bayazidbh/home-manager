@@ -18,7 +18,7 @@ systemd.user.services = {
       Description = "Autostart WPS Office";
       };
     Service = {
-      ExecStart = "flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office";
+      ExecStart = "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office";
       };
     Install = {
       WantedBy = [ "default.target" ];
@@ -29,7 +29,7 @@ systemd.user.services = {
       Description = "Autostart win11 virt-manager console";
       };
     Service = {
-      ExecStart = "env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
+      ExecStart = "/usr/bin/env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
       };
     Install = {
       WantedBy = [ "default.target" ];
@@ -41,7 +41,7 @@ systemd.user.services = {
       After = "network.target";
       };
     Service = {
-      ExecStart = "podman start portainer";
+      ExecStart = "${config.home.homeDirectory}/.nix-profile/bin/podman start portainer";
       };
     Install = {
       WantedBy = [ "default.target" ];
@@ -52,7 +52,7 @@ systemd.user.services = {
       Description = "Autostart FreshRSS Container";
       };
     Service = {
-      ExecStart = "podman start freshrss";
+      ExecStart = "${config.home.homeDirectory}/.nix-profile/bin/podman start freshrss";
       };
     Install = {
       WantedBy = [ "default.target" ];
