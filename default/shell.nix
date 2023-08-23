@@ -19,7 +19,7 @@
       path = "${config.xdg.configHome}/zsh/zsh_history";
       expireDuplicatesFirst = true;
     };
-    historySubstringSearch.enable = true;
+    historySubstringSearch.enable = false;
     enableAutosuggestions = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;

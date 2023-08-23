@@ -53,7 +53,7 @@
           ./default/env.nix # env-var for all devices
           ./default/alias.nix # aliases for all devices
           ./default/files.nix # file creation for all devices
-          ./default/autostart.nix # autostart with systemctl
+          # ./default/autostart.nix # autostart with systemctl
           ./laptop/by-device.nix # device specific configs
           ./laptop/flatpak.nix # separate list for flatpak
           ./laptop/nixgl.nix # separate list for nixgl.nix package

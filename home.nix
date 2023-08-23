@@ -53,18 +53,18 @@ in
   home.packages = with pkgs; [
     git gh github-desktop git-lfs cosign cachix subversion # build tools
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
-    inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # clipboard-jh # CLI utils
+    inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd # ripgrep-all bottom # rust CLIs
     duperemove rsync zsync resilio-sync  # file management
-    # activitywatch rustdesk web-ui tools
+    # rustdesk
     libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
-    sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
+    whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # sassc # whitesur and adwaita dependencies
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl adl mangal mov-cli # CLI-based media downloader
     fsearch junction krename imagemagick # extra file management tools
-    distrobox podman podman-compose # containers stuff
+    podman-compose # distrobox podman # containers stuff
     # downonspot spotify-qt # media viewers
     # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
     # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
@@ -101,7 +101,4 @@ in
     enable = true;
   }; # Boxes in badly behaving applications https://github.com/queer/boxxy
 
-  # programs.anime-game-launcher.enable = true;
-  # programs.honkers-railway-launcher.enable = true;
-  # programs.honkers-launcher.enable = true;
 }
