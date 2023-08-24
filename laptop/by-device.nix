@@ -53,7 +53,7 @@ home.file."win11" = {
   text = ''
     #!/usr/bin/bash
 
-    /usr/bin/virt-manager --connect \"qemu:///system\" --show-domain-console \"win11\"
+    /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11
     '';
   };
 
@@ -143,9 +143,10 @@ systemd.user.services = {
     Service = {
       Type = "notify";
       Restart = "no";
+      Environment = "RESILIO_CONFIG=$(/bin/readlink -f /home/fenglengshun/.config/rslsync/rslsync.conf)";
       ExecStartPre = "/bin/sleep 5";
       ExecStart = [
-        "${config.home.sessionVariables.XDG_BIN_HOME}/resilio"
+        " ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config $RESILIO_CONFIG"
       ];
     };
     Install = {
@@ -181,9 +182,10 @@ systemd.user.services = {
     Service = {
       Type = "notify";
       Restart = "no";
+      Environment = "HOME_DIR=${config.xdg.userDirs.documents}/container/conty";
       ExecStartPre = "/bin/sleep 3";
       ExecStart = [
-        "/usr/bin/bash -c \"/usr/bin/env HOME_DIR=${config.xdg.userDirs.documents}/container/conty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.home.homeDirectory}/Downloads ~/Downloads fdm --hidden\""
+        "/usr/bin/bash -c \"${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.home.homeDirectory}/Downloads ~/Downloads fdm --hidden\""
       ];
     };
     Install = {
@@ -234,7 +236,7 @@ systemd.user.services = {
       After = "graphical-session.target";
       };
     Service = {
-      Type = "simple";
+      Type = "forking";
       Restart = "no";
       ExecStartPre = "/bin/sleep 20";
       ExecStart = "${config.home.sessionVariables.XDG_BIN_HOME}/win11";

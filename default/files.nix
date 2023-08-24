@@ -37,6 +37,67 @@
     '';
   };
 
+
+  home.file."setup-distrobox-all" = {
+    enable = true;
+    target = ".local/bin/setup-distrobox-all";
+    executable = true;
+    text = ''
+      #! /bin/bash
+
+      ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-ubuntu
+      ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-fedora
+      ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-arch
+
+    '';
+  };
+
+  home.file."setup-distrobox-ubuntu" = {
+    enable = true;
+    target = ".local/bin/setup-distrobox-ubuntu";
+    executable = true;
+    text = ''
+      #! /bin/bash
+
+      env SHELL=/bin/bash distrobox create --image ubuntu:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
+      distrobox start ubuntu-latest
+
+    '';
+  };
+
+  home.file."setup-distrobox-fedora" = {
+    enable = true;
+    target = ".local/bin/setup-distrobox-fedora";
+    executable = true;
+    text = ''
+      #! /bin/bash
+
+      env SHELL=/bin/zsh distrobox create --image fedora:latest --name fedora --home ~/Documents/container/fedora
+      distrobox enter fedora -- sudo dnf install -y dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+    '';
+  };
+
+  home.file."setup-distrobox-arch" = {
+    enable = true;
+    target = ".local/bin/setup-distrobox-arch";
+    executable = true;
+    text = ''
+    #! /bin/bash
+
+    env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox --name arch --home ~/Documents/container/arch ; \
+    distrobox enter arch -- sudo pacman -Su --noconfirm nano ; \
+    distrobox enter arch -- sudo pacman-key --init ; \
+    distrobox enter arch -- sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com ; \
+    distrobox enter arch -- sudo pacman-key --lsign-key 3056513887B78AEB ; \
+    distrobox enter arch -- sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' ; \
+    distrobox enter arch -- sh -c "echo -e '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf" ; \
+    distrobox enter arch -- sh -c "echo -e '\nen_SG.UTF-8 UTF-8\nen_US.UTF-8 UTF-8\nja_JP.UTF-8 UTF-8\nid_ID.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen"
+    distrobox enter arch -- sudo pacman -Syu --noconfirm glibc base-devel paru pipewire-jack pipewire-pulse pipewire-alsa
+
+    '';
+  };
+
   home.file."no-root-virt-manager" = {
     enable = true;
     target = ".local/bin/no-root-virt-manager";
