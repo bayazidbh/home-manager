@@ -19,7 +19,7 @@
       path = "${config.xdg.configHome}/zsh/zsh_history";
       expireDuplicatesFirst = true;
     };
-    historySubstringSearch.enable = false;
+    historySubstringSearch.enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
@@ -36,7 +36,7 @@
   home.file."p10k.zsh" = {
     enable = true;
     target = ".config/zsh/p10k.zsh";
-    source = "${config.xdg.userDirs.documents}/Private/Linux/config/p10k.zsh";
+    source = "${./p10k.zsh}";
   };
 
   # Install fish and allows home-manager to manage fish configs
