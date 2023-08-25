@@ -42,7 +42,10 @@ home.file."resilio" = {
   text = ''
     #!/usr/bin/bash
 
-    ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config $(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)
+    # Get the resolved path of autostart.sh
+    rslsync_config=$(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)
+    # Run rslsync with the resolved path as config
+    ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config $rslsync_config
     '';
   };
 
@@ -141,12 +144,9 @@ systemd.user.services = {
       After = "graphical-session.target";
     };
     Service = {
-      Type = "notify";
-      Restart = "no";
-      Environment = "RESILIO_CONFIG=$(/bin/readlink -f /home/fenglengshun/.config/rslsync/rslsync.conf)";
-      ExecStartPre = "/bin/sleep 5";
+      Type = "exec";
       ExecStart = [
-        " ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config $RESILIO_CONFIG"
+        "${config.home.sessionVariables.XDG_BIN_HOME}/resilio"
       ];
     };
     Install = {
