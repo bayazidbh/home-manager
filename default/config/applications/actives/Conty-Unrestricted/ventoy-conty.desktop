@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Icon=ventoy
+Name=Ventoy (Conty-Unrestricted)
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" ventoygui
+Terminal=false
+Hidden=false
+Categories=Utility
+Comment=Ventoy2Disk GUI

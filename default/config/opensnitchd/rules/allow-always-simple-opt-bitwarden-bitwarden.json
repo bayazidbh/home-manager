@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-06T12:23:56.649088114+07:00",
+  "updated": "2022-03-06T12:23:56.649159631+07:00",
+  "name": "allow-always-simple-opt-bitwarden-bitwarden",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/opt/Bitwarden/bitwarden",
+    "list": []
+  }
+}

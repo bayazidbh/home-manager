@@ -1,0 +1,32 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Windows Program Loader (Conty-Restricted)
+Name[ar]=منظومة واين لتشغيل برامج وندوز (Conty-Restricted)
+Name[cs]=Zavaděč programů pro Wine (Conty-Restricted)
+Name[de]=Wine Windows-Programmstarter (Conty-Restricted)
+Name[es]=Wine Cargador de programas de Windows (Conty-Restricted)
+Name[lt]=Wine Windows programų paleidyklė (Conty-Restricted)
+Name[nl]=Wine Windows programmalader (Conty-Restricted)
+Name[sv]=Wine Windows Programstartare (Conty-Restricted)
+Name[ro]=Wine - Încărcătorul de programe Windows (Conty-Restricted)
+Name[ru]=Wine - загрузчик Windows программ (Conty-Restricted)
+Name[uk]=Wine - завантажувач Windows програм (Conty-Restricted)
+Name[fr]=Wine - Chargeur de programmes Windows (Conty-Restricted)
+Name[ca]=Wine - Carregador d'aplicacions del Windows (Conty-Restricted)
+Name[pt]=Carregador de aplicativos Windows Wine (Conty-Restricted)
+Name[pt_br]=Carregador de aplicativos Windows Wine (Conty-Restricted)
+Name[it]=Wine Carica Programmi Windows (Conty-Restricted)
+Name[da]=Wine, Programstarter til Windows-programmer (Conty-Restricted)
+Name[nb]=Wine - for kjøring av Windows-programmer (Conty-Restricted)
+Name[nn]=Wine - for køyring av Windows-program (Conty-Restricted)
+Name[sr]=Wine - дизач Windows програма (Conty-Restricted)
+Name[sr@latin]=Wine - dizač Windows programa (Conty-Restricted)
+Name[tr]=Wine - Windows programı yükleyicisi (Conty-Restricted)
+Name[hr]=Wine - dizač Windows programa (Conty-Restricted)
+Name[he]=Wine — מריץ תכניות Windows (Conty-Restricted)
+Name[ja]=Wine Windowsプログラムローダー (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads wine start /unix %f
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;
+Icon=wine
+NoDisplay=true
+StartupNotify=true

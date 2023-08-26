@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=SGDBoop (Conty-Unrestricted)
+Comment=Apply Steam assets from SteamGridDB
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" SGDBoop %U
+Terminal=false
+Type=Application
+NoDisplay=false
+Icon=com.steamgriddb.SGDBoop
+MimeType=x-scheme-handler/sgdb
+Categories=Utility

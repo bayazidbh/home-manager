@@ -1,0 +1,9 @@
+[Desktop Entry]
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" protontricks-launch --no-term %f
+Name=Protontricks Launcher (Conty-Unrestricted)
+Type=Application
+Terminal=false
+NoDisplay=true
+Categories=Utility
+Icon=wine
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;

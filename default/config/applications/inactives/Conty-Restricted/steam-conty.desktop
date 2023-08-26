@@ -1,0 +1,282 @@
+[Desktop Entry]
+Name=Steam (Runtime) (Conty-Restricted)
+Comment=Application for managing and playing games on Steam
+Comment[pt_BR]=Aplicativo para jogar e gerenciar jogos no Steam
+Comment[bg]=Приложение за ръководене и пускане на игри в Steam
+Comment[cs]=Aplikace pro spravování a hraní her ve službě Steam
+Comment[da]=Applikation til at håndtere og spille spil på Steam
+Comment[nl]=Applicatie voor het beheer en het spelen van games op Steam
+Comment[fi]=Steamin pelien hallintaan ja pelaamiseen tarkoitettu sovellus
+Comment[fr]=Application de gestion et d'utilisation des jeux sur Steam
+Comment[de]=Anwendung zum Verwalten und Spielen von Spielen auf Steam
+Comment[el]=Εφαρμογή διαχείρισης παιχνιδιών στο Steam
+Comment[hu]=Alkalmazás a Steames játékok futtatásához és kezeléséhez
+Comment[it]=Applicazione per la gestione e l'esecuzione di giochi su Steam
+Comment[ja]=Steam 上でゲームを管理＆プレイするためのアプリケーション
+Comment[ko]=Steam에 있는 게임을 관리하고 플레이할 수 있는 응용 프로그램
+Comment[no]=Program for å administrere og spille spill på Steam
+Comment[pt_PT]=Aplicação para organizar e executar jogos no Steam
+Comment[pl]=Aplikacja do zarządzania i uruchamiania gier na platformie Steam
+Comment[ro]=Aplicație pentru administrarea și jucatul jocurilor pe Steam
+Comment[ru]=Приложение для игр и управления играми в Steam
+Comment[es]=Aplicación para administrar y ejecutar juegos en Steam
+Comment[sv]=Ett program för att hantera samt spela spel på Steam
+Comment[zh_CN]=管理和进行 Steam 游戏的应用程序
+Comment[zh_TW]=管理並執行 Steam 遊戲的應用程式
+Comment[th]=โปรแกรมสำหรับจัดการและเล่นเกมบน Steam
+Comment[tr]=Steam üzerinden oyun oynama ve düzenleme uygulaması
+Comment[uk]=Програма для керування іграми та запуску ігор у Steam
+Comment[vi]=Ứng dụng để quản lý và chơi trò chơi trên Steam
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/steam-runtime %U
+Icon=steam
+Terminal=false
+Type=Application
+Categories=Network;FileTransfer;Game;
+MimeType=x-scheme-handler/steam;x-scheme-handler/steamlink;
+Actions=Store;Community;Library;Servers;Screenshots;News;Settings;BigPicture;Friends;
+PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true
+
+[Desktop Action Store]
+Name=Store (Conty-Restricted)
+Name[pt_BR]=Loja (Conty-Restricted)
+Name[bg]=Магазин (Conty-Restricted)
+Name[cs]=Obchod (Conty-Restricted)
+Name[da]=Butik (Conty-Restricted)
+Name[nl]=Winkel (Conty-Restricted)
+Name[fi]=Kauppa (Conty-Restricted)
+Name[fr]=Magasin (Conty-Restricted)
+Name[de]=Shop (Conty-Restricted)
+Name[el]=ΚΑΤΑΣΤΗΜΑ (Conty-Restricted)
+Name[hu]=Áruház (Conty-Restricted)
+Name[it]=Negozio (Conty-Restricted)
+Name[ja]=ストア (Conty-Restricted)
+Name[ko]=상점 (Conty-Restricted)
+Name[no]=Butikk (Conty-Restricted)
+Name[pt_PT]=Loja (Conty-Restricted)
+Name[pl]=Sklep (Conty-Restricted)
+Name[ro]=Magazin (Conty-Restricted)
+Name[ru]=Магазин (Conty-Restricted)
+Name[es]=Tienda (Conty-Restricted)
+Name[sv]=Butik (Conty-Restricted)
+Name[zh_CN]=商店 (Conty-Restricted)
+Name[zh_TW]=商店 (Conty-Restricted)
+Name[th]=ร้านค้า (Conty-Restricted)
+Name[tr]=Mağaza (Conty-Restricted)
+Name[uk]=Крамниця (Conty-Restricted)
+Name[vi]=Cửa hàng (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://store
+
+[Desktop Action Community]
+Name=Community (Conty-Restricted)
+Name[pt_BR]=Comunidade (Conty-Restricted)
+Name[bg]=Общност (Conty-Restricted)
+Name[cs]=Komunita (Conty-Restricted)
+Name[da]=Fællesskab (Conty-Restricted)
+Name[nl]=Community (Conty-Restricted)
+Name[fi]=Yhteisö (Conty-Restricted)
+Name[fr]=Communauté (Conty-Restricted)
+Name[de]=Community (Conty-Restricted)
+Name[el]=Κοινότητα (Conty-Restricted)
+Name[hu]=Közösség (Conty-Restricted)
+Name[it]=Comunità (Conty-Restricted)
+Name[ja]=コミュニティ (Conty-Restricted)
+Name[ko]=커뮤니티 (Conty-Restricted)
+Name[no]=Samfunn (Conty-Restricted)
+Name[pt_PT]=Comunidade (Conty-Restricted)
+Name[pl]=Społeczność (Conty-Restricted)
+Name[ro]=Comunitate (Conty-Restricted)
+Name[ru]=Сообщество (Conty-Restricted)
+Name[es]=Comunidad (Conty-Restricted)
+Name[sv]=Gemenskap (Conty-Restricted)
+Name[zh_CN]=社区 (Conty-Restricted)
+Name[zh_TW]=社群 (Conty-Restricted)
+Name[th]=ชุมชน (Conty-Restricted)
+Name[tr]=Topluluk (Conty-Restricted)
+Name[uk]=Спільнота (Conty-Restricted)
+Name[vi]=Cộng đồng (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://url/SteamIDControlPage
+
+[Desktop Action Library]
+Name=Library (Conty-Restricted)
+Name[pt_BR]=Biblioteca (Conty-Restricted)
+Name[bg]=Библиотека (Conty-Restricted)
+Name[cs]=Knihovna (Conty-Restricted)
+Name[da]=Bibliotek (Conty-Restricted)
+Name[nl]=Bibliotheek (Conty-Restricted)
+Name[fi]=Kokoelma (Conty-Restricted)
+Name[fr]=Bibliothèque (Conty-Restricted)
+Name[de]=Bibliothek (Conty-Restricted)
+Name[el]=Συλλογή (Conty-Restricted)
+Name[hu]=Könyvtár (Conty-Restricted)
+Name[it]=Libreria (Conty-Restricted)
+Name[ja]=ライブラリ (Conty-Restricted)
+Name[ko]=라이브러리 (Conty-Restricted)
+Name[no]=Bibliotek (Conty-Restricted)
+Name[pt_PT]=Biblioteca (Conty-Restricted)
+Name[pl]=Biblioteka (Conty-Restricted)
+Name[ro]=Colecţie (Conty-Restricted)
+Name[ru]=Библиотека (Conty-Restricted)
+Name[es]=Biblioteca (Conty-Restricted)
+Name[sv]=Bibliotek (Conty-Restricted)
+Name[zh_CN]=库 (Conty-Restricted)
+Name[zh_TW]=收藏庫 (Conty-Restricted)
+Name[th]=คลัง (Conty-Restricted)
+Name[tr]=Kütüphane (Conty-Restricted)
+Name[uk]=Бібліотека (Conty-Restricted)
+Name[vi]=Thư viện (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/games
+
+[Desktop Action Servers]
+Name=Servers (Conty-Restricted)
+Name[pt_BR]=Servidores (Conty-Restricted)
+Name[bg]=Сървъри (Conty-Restricted)
+Name[cs]=Servery (Conty-Restricted)
+Name[da]=Servere (Conty-Restricted)
+Name[nl]=Servers (Conty-Restricted)
+Name[fi]=Palvelimet (Conty-Restricted)
+Name[fr]=Serveurs (Conty-Restricted)
+Name[de]=Server (Conty-Restricted)
+Name[el]=Διακομιστές (Conty-Restricted)
+Name[hu]=Szerverek (Conty-Restricted)
+Name[it]=Server (Conty-Restricted)
+Name[ja]=サーバー (Conty-Restricted)
+Name[ko]=서버 (Conty-Restricted)
+Name[no]=Tjenere (Conty-Restricted)
+Name[pt_PT]=Servidores (Conty-Restricted)
+Name[pl]=Serwery (Conty-Restricted)
+Name[ro]=Servere (Conty-Restricted)
+Name[ru]=Серверы (Conty-Restricted)
+Name[es]=Servidores (Conty-Restricted)
+Name[sv]=Servrar (Conty-Restricted)
+Name[zh_CN]=服务器 (Conty-Restricted)
+Name[zh_TW]=伺服器 (Conty-Restricted)
+Name[th]=เซิร์ฟเวอร์ (Conty-Restricted)
+Name[tr]=Sunucular (Conty-Restricted)
+Name[uk]=Сервери (Conty-Restricted)
+Name[vi]=Máy chủ (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/servers
+
+[Desktop Action Screenshots]
+Name=Screenshots (Conty-Restricted)
+Name[pt_BR]=Capturas de tela (Conty-Restricted)
+Name[bg]=Снимки (Conty-Restricted)
+Name[cs]=Snímky obrazovky (Conty-Restricted)
+Name[da]=Skærmbilleder (Conty-Restricted)
+Name[nl]=Screenshots (Conty-Restricted)
+Name[fi]=Kuvankaappaukset (Conty-Restricted)
+Name[fr]=Captures d'écran (Conty-Restricted)
+Name[de]=Screenshots (Conty-Restricted)
+Name[el]=Φωτογραφίες (Conty-Restricted)
+Name[hu]=Képernyőmentések (Conty-Restricted)
+Name[it]=Screenshot (Conty-Restricted)
+Name[ja]=スクリーンショット (Conty-Restricted)
+Name[ko]=스크린샷 (Conty-Restricted)
+Name[no]=Skjermbilder (Conty-Restricted)
+Name[pt_PT]=Capturas de ecrã (Conty-Restricted)
+Name[pl]=Zrzuty ekranu (Conty-Restricted)
+Name[ro]=Capturi de ecran (Conty-Restricted)
+Name[ru]=Скриншоты (Conty-Restricted)
+Name[es]=Capturas (Conty-Restricted)
+Name[sv]=Skärmdumpar (Conty-Restricted)
+Name[zh_CN]=截图 (Conty-Restricted)
+Name[zh_TW]=螢幕擷圖 (Conty-Restricted)
+Name[th]=ภาพหน้าจอ (Conty-Restricted)
+Name[tr]=Ekran Görüntüleri (Conty-Restricted)
+Name[uk]=Скріншоти (Conty-Restricted)
+Name[vi]=Ảnh chụp (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/screenshots
+
+[Desktop Action News]
+Name=News (Conty-Restricted)
+Name[pt_BR]=Notícias (Conty-Restricted)
+Name[bg]=Новини (Conty-Restricted)
+Name[cs]=Zprávy (Conty-Restricted)
+Name[da]=Nyheder (Conty-Restricted)
+Name[nl]=Nieuws (Conty-Restricted)
+Name[fi]=Uutiset (Conty-Restricted)
+Name[fr]=Actualités (Conty-Restricted)
+Name[de]=Neuigkeiten (Conty-Restricted)
+Name[el]=Νέα (Conty-Restricted)
+Name[hu]=Hírek (Conty-Restricted)
+Name[it]=Notizie (Conty-Restricted)
+Name[ja]=ニュース (Conty-Restricted)
+Name[ko]=뉴스 (Conty-Restricted)
+Name[no]=Nyheter (Conty-Restricted)
+Name[pt_PT]=Novidades (Conty-Restricted)
+Name[pl]=Aktualności (Conty-Restricted)
+Name[ro]=Știri (Conty-Restricted)
+Name[ru]=Новости (Conty-Restricted)
+Name[es]=Noticias (Conty-Restricted)
+Name[sv]=Nyheter (Conty-Restricted)
+Name[zh_CN]=新闻 (Conty-Restricted)
+Name[zh_TW]=新聞 (Conty-Restricted)
+Name[th]=ข่าวสาร (Conty-Restricted)
+Name[tr]=Haberler (Conty-Restricted)
+Name[uk]=Новини (Conty-Restricted)
+Name[vi]=Tin tức (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/news
+
+[Desktop Action Settings]
+Name=Settings (Conty-Restricted)
+Name[pt_BR]=Configurações (Conty-Restricted)
+Name[bg]=Настройки (Conty-Restricted)
+Name[cs]=Nastavení (Conty-Restricted)
+Name[da]=Indstillinger (Conty-Restricted)
+Name[nl]=Instellingen (Conty-Restricted)
+Name[fi]=Asetukset (Conty-Restricted)
+Name[fr]=Paramètres (Conty-Restricted)
+Name[de]=Einstellungen (Conty-Restricted)
+Name[el]=Ρυθμίσεις (Conty-Restricted)
+Name[hu]=Beállítások (Conty-Restricted)
+Name[it]=Impostazioni (Conty-Restricted)
+Name[ja]=設定 (Conty-Restricted)
+Name[ko]=설정 (Conty-Restricted)
+Name[no]=Innstillinger (Conty-Restricted)
+Name[pt_PT]=Definições (Conty-Restricted)
+Name[pl]=Ustawienia (Conty-Restricted)
+Name[ro]=Setări (Conty-Restricted)
+Name[ru]=Настройки (Conty-Restricted)
+Name[es]=Parámetros (Conty-Restricted)
+Name[sv]=Inställningar (Conty-Restricted)
+Name[zh_CN]=设置 (Conty-Restricted)
+Name[zh_TW]=設定 (Conty-Restricted)
+Name[th]=การตั้งค่า (Conty-Restricted)
+Name[tr]=Ayarlar (Conty-Restricted)
+Name[uk]=Налаштування (Conty-Restricted)
+Name[vi]=Thiết lập (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/settings
+
+[Desktop Action BigPicture]
+Name=Big Picture (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/bigpicture
+
+[Desktop Action Friends]
+Name=Friends (Conty-Restricted)
+Name[pt_BR]=Amigos (Conty-Restricted)
+Name[bg]=Приятели (Conty-Restricted)
+Name[cs]=Přátelé (Conty-Restricted)
+Name[da]=Venner (Conty-Restricted)
+Name[nl]=Vrienden (Conty-Restricted)
+Name[fi]=Kaverit (Conty-Restricted)
+Name[fr]=Amis (Conty-Restricted)
+Name[de]=Freunde (Conty-Restricted)
+Name[el]=Φίλοι (Conty-Restricted)
+Name[hu]=Barátok (Conty-Restricted)
+Name[it]=Amici (Conty-Restricted)
+Name[ja]=フレンド (Conty-Restricted)
+Name[ko]=친구 (Conty-Restricted)
+Name[no]=Venner (Conty-Restricted)
+Name[pt_PT]=Amigos (Conty-Restricted)
+Name[pl]=Znajomi (Conty-Restricted)
+Name[ro]=Prieteni (Conty-Restricted)
+Name[ru]=Друзья (Conty-Restricted)
+Name[es]=Amigos (Conty-Restricted)
+Name[sv]=Vänner (Conty-Restricted)
+Name[zh_CN]=好友 (Conty-Restricted)
+Name[zh_TW]=好友 (Conty-Restricted)
+Name[th]=เพื่อน (Conty-Restricted)
+Name[tr]=Arkadaşlar (Conty-Restricted)
+Name[uk]=Друзі (Conty-Restricted)
+Name[vi]=Bạn bè (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam steam://open/friends

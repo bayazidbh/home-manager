@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DuckStation (Conty-Unrestricted)
+GenericName=PlayStation 1 Emulator
+Comment=Fast PlayStation 1 emulator
+Icon=duckstation-qt
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" duckstation-qt %f
+Categories=Game;Emulator;Qt;

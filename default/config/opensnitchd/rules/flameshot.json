@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-01T11:36:09.240382526+07:00",
+  "updated": "2022-03-01T11:36:09.240409951+07:00",
+  "name": "flameshot",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/app/bin/flameshot",
+    "list": []
+  }
+}

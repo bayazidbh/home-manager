@@ -1,0 +1,115 @@
+[Desktop Entry]
+Categories=Qt;AudioVideo;Player;Video;
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" smplayer -add-to-playlist %U
+Icon=smplayer
+MimeType=audio/ac3;audio/mp4;audio/mpeg;audio/vnd.rn-realaudio;audio/vorbis;audio/x-adpcm;audio/x-matroska;audio/x-mp2;audio/x-mp3;audio/x-ms-wma;audio/x-vorbis;audio/x-wav;audio/mpegurl;audio/x-mpegurl;audio/x-pn-realaudio;audio/x-scpls;audio/aac;audio/flac;audio/ogg;video/avi;video/mp4;video/flv;video/mpeg;video/quicktime;video/vnd.rn-realvideo;video/x-matroska;video/x-ms-asf;video/x-msvideo;video/x-ms-wmv;video/x-ogm;video/x-theora;video/webm;
+Name=Enqueue in SMPlayer (Conty-Unrestricted)
+Comment=Add file(s) to the SMPlayer playlist
+Type=Application
+X-KDE-StartupNotify=false
+NoDisplay=true
+
+# Translations
+Comment[ar]=أضف ملف (ملفات) الى قائمة تشغيل SMPlayer
+Name[ar]=ضع في طابور SMPlayer (Conty-Unrestricted)
+
+Comment[bg]=Добави файл(ове) към списъка на SMPlayer
+Name[bg]=На опашка в SMPlayer (Conty-Unrestricted)
+
+Comment[cs]=Přidat soubor(y) do playlistu SMPlayeru
+Name[cs]=Zařadit do SMPlayeru (Conty-Unrestricted)
+
+Comment[da]=Føj fil(er) til SMPlayer's spilleliste
+Name[da]=Sæt i kø i SMPlayer (Conty-Unrestricted)
+
+Comment[de]=Datei(en) zur SMPlayer Wiedergabeliste hinzufügen
+Name[de]=Im SMPlayer einreihen (Conty-Unrestricted)
+
+Comment[el]=Προσθήκη του αρχείου(ων) στη λίστα αναπαραγωγής του SMPlayer
+Name[el]=Στην ουρά αναμονής του SMPlayer (Conty-Unrestricted)
+
+Comment[en_GB]=Add file(s) to the SMPlayer playlist
+Name[en_GB]=Enqueue in SMPlayer (Conty-Unrestricted)
+
+Comment[es]=Añade fichero(s) a la lista de reproducción de SMPlayer
+Name[es]=Añadir a la lista de reproducción de SMPlayer (Conty-Unrestricted)
+
+Comment[eu]=Gehitu agiria(k) SMPlayer irakur-zerrendara
+Name[eu]=Lerrokatu SMPlayer-en (Conty-Unrestricted)
+
+Comment[fa]=به لیست Smplayer فایل(ها) اضافه کنید
+Name[fa]=در نوبت قراردادن در SMPlayer (Conty-Unrestricted)
+
+Comment[fr]=Ajouter le(s) fichier(s) dans la liste de lecture de SMPlayer
+Name[fr]=En queue dans SMPlayer (Conty-Unrestricted)
+
+Comment[gl]=Engadir ficheiro(s) á lista de reprodución de SMPlayer
+Name[gl]=Poñer na cola de SMPlayer (Conty-Unrestricted)
+
+Comment[he]=הוסף קובץ אל רשימת נגינה של SMPlayer
+Name[he]=הוסף אל SMPlayer (Conty-Unrestricted)
+
+Comment[hr]=Dodaj dadoteku(e) na SMplayer popis izvođenja
+Name[hr]=Dodaj na SMPlayer popis izvođenja (Conty-Unrestricted)
+
+Comment[id]=Tambah berkas ke daftar main SMPlayer
+Name[id]=Antrikan di SMPlayer (Conty-Unrestricted)
+
+Comment[ja]=ファイルを SMPlayer のプレイリストに追加
+Name[ja]=SMPlayer でエンキュー (Conty-Unrestricted)
+
+Comment[ko]=파일을 SMPlayer 재생목록에 추가하기
+Name[ko]=SMPlayer의 재생대기열에 넣기 (Conty-Unrestricted)
+
+Comment[lt]=Pridėti failą(-us) į SMPlayer grojaraštį
+Name[lt]=Pridėti į SMPlayer (Conty-Unrestricted)
+
+Comment[sq_AL]=Shto file-in(at) tek playlist-a e SMPlayer
+Name[sq_AL]=Shto tek playlista e SMPlayer (Conty-Unrestricted)
+
+Comment[nqo]=ߞߐߕߐ (ߟߎ߬) ߝߙߊ߬ ߛߡߔߑߟߋߦߊ ߕߟߏ߲ߛߙߍߘߍ ߟߊ߫
+Name[nqo]=ߞߏ ߟߊ߫ ߛߡߔߑߟߋߦߊ ߞߣߐ߫ (Conty-Unrestricted)
+
+Comment[nl]=Voeg bestand(en) toe aan de SMPlayer-afspeellijst
+Name[nl]=Aan SMPlayer-wachtrij toevoegen (Conty-Unrestricted)
+
+Comment[pl]=Dodaj plik(i) do listy odtwarzania SMPlayera
+Name[pl]=Kolejkuj w SMPlayer (Conty-Unrestricted)
+
+Comment[pt]=Adicionar ficheiro(s) à lista de reprodução do SMPlayer
+Name[pt]=Colocar na fila do SMPlayer (Conty-Unrestricted)
+
+Comment[pt_BR]=Adicionar arquivo(s) à lista de reprodução do SMPlayer
+Name[pt_BR]=Adicionar à lista do SMPlayer (Conty-Unrestricted)
+
+Comment[ru]=Добавить файл(ы) в плейлист SMPlayer
+Name[ru]=Добавить в очередь SMPlayer (Conty-Unrestricted)
+
+Comment[sr]=Додај фајл(ове) у листу СМПлејера
+Name[sr]=Придодај у СМПлејер (Conty-Unrestricted)
+
+Comment[sv]=Lägg till fil(er) i SMPlayers spellista
+Name[sv]=Köa till SMPlayer (Conty-Unrestricted)
+
+Comment[th]=เพิ่มไฟล์สู่บัญชีการเล่นของ SMPlayer
+Name[th]=เข้าคิวใน SMPlayer (Conty-Unrestricted)
+
+Comment[tr]=Dosya(ları) SMPlayer oynatma listesine ekle
+Name[tr]=SMPlayer'da kuyruğa ekle (Conty-Unrestricted)
+
+Comment[uk]=Додати файл(и) у перелік відтворення SMPlayer
+Name[uk]=Додати в чергу SMPlayer'а (Conty-Unrestricted)
+
+Comment[vi]=Thêm tệp tin vào danh sách chơi
+Name[vi]=Thêm vào SMPlayer (Conty-Unrestricted)
+Comment[zh_CN]=添加文件到 SMPlayer 播放列表
+Name[zh_CN]=添加到 SMPlayer 队列 (Conty-Unrestricted)
+
+Comment[zh_TW]=加入檔案到 SMPlayer 的播放清單
+Name[zh_TW]=加入到 SMPlayer 佇列 (Conty-Unrestricted)
+
+Comment[ms_MY]=Tambah fail(s) ke dalam senarai main SMPlayer
+Name[ms_MY]=Baris gilir dalam SMPlayer (Conty-Unrestricted)
+
+Comment[nn_NO]=Legg til fil(er) i SMPlayer-spelelista
+Name[nn_NO]=Legg i kø i SMPlayer (Conty-Unrestricted)

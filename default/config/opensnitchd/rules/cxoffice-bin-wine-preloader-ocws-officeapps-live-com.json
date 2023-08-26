@@ -1,0 +1,31 @@
+{
+  "created": "2022-03-01T17:57:04.173362943+07:00",
+  "updated": "2022-03-01T17:57:04.173428497+07:00",
+  "name": "cxoffice-bin-wine-preloader-ocws-officeapps-live-com",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "data": "[{\"type\": \"simple\", \"operand\": \"process.path\", \"data\": \"/opt/cxoffice/bin/wine-preloader\", \"sensitive\": false}, {\"type\": \"simple\", \"operand\": \"dest.host\", \"data\": \"ocws.officeapps.live.com\", \"sensitive\": false}]",
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/opt/cxoffice/bin/wine-preloader",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.host",
+        "sensitive": false,
+        "data": "ocws.officeapps.live.com",
+        "list": null
+      }
+    ]
+  }
+}

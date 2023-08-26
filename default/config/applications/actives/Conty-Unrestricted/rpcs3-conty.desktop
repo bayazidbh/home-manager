@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=RPCS3 (Conty-Unrestricted)
+GenericName=PlayStation 3 Emulator
+Comment=An open-source PlayStation 3 emulator/debugger written in C++.
+Icon=rpcs3
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" rpcs3 %f
+Terminal=false
+Categories=Game;Emulator;
+Keywords=PS3;Playstation;
+StartupWMClass=rpcs3

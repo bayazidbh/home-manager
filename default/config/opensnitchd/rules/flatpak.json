@@ -1,0 +1,16 @@
+{
+  "created": "2022-02-21T09:45:32.72196379+07:00",
+  "updated": "2022-02-21T09:45:32.722015609+07:00",
+  "name": "flatpak",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/bin/flatpak",
+    "list": []
+  }
+}

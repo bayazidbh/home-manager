@@ -39,25 +39,6 @@ systemd.user.services = {
     };
   };
 
-  "autostart-flatpak-wps" = {
-    Unit = {
-      Description = "Autostart WPS Flatpak App";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 15";
-      ExecStart = [
-        "/usr/bin/bash -c \"/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office\""
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
-
   "autostart-nix-fsearch" = {
     Unit = {
       Description = "Autostart FSearch Nix App";
@@ -84,11 +65,9 @@ systemd.user.services = {
       After = "graphical-session.target";
     };
     Service = {
-      Type = "notify";
-      Restart = "yes";
-      ExecStartPre = "/bin/sleep 5";
+      Type = "forking";
       ExecStart = [
-        "${config.home.homeDirectory}/.nix-profile/bin/rslsync --config $(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)"
+        "${config.home.sessionVariables.XDG_BIN_HOME}/resilio"
       ];
     };
     Install = {
@@ -124,9 +103,10 @@ systemd.user.services = {
     Service = {
       Type = "notify";
       Restart = "no";
+      Environment = "HOME_DIR=${config.xdg.userDirs.documents}/container/conty";
       ExecStartPre = "/bin/sleep 3";
       ExecStart = [
-        "/usr/bin/bash -c \"/usr/bin/env HOME_DIR=${config.xdg.userDirs.documents}/container/conty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.home.homeDirectory}/Downloads ~/Downloads fdm --hidden\""
+        "/usr/bin/bash -c \"env HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads\""
       ];
     };
     Install = {
@@ -164,23 +144,6 @@ systemd.user.services = {
       Restart = "no";
       ExecStartPre = "/bin/sleep 10";
       ExecStart = "/usr/bin/dolphin";
-      };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-      };
-    };
-
-  "autostart-win11-vm-console" = {
-    Unit = {
-      Description = "Autostart Win11 virt-manager console";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-      };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 20";
-      ExecStart = "/usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
       };
     Install = {
       WantedBy = [ "graphical-session.target" ];

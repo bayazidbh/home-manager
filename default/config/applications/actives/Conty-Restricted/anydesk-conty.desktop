@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=AnyDesk (Conty-Restricted)
+GenericName=AnyDesk
+X-GNOME-FullName=AnyDesk
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/anydesk %u
+Icon=anydesk
+Terminal=false
+Categories=Network;GTK;
+MimeType=x-scheme-handler/anydesk;
+Name[de_DE]=AnyDesk (Conty-Restricted)

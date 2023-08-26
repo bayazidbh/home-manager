@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify (adblock) (Conty-Restricted)
+GenericName=Music Player
+Icon=spotify-client
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify --uri=%U
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify

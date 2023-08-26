@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Converseen (Conty-Restricted)
+GenericName=Converseen
+GenericName[en_GB]=Converseen
+GenericName[fr]=Converseen
+GenericName[it]=Converseen
+GenericName[ru]=Converseen
+GenericName[ro]=Converseen
+Comment=Batch image converter
+Comment[fr]=Convertisseur d'images par lots
+Comment[it]=Convertitore batch di immagini
+Comment[ru]=Пакетное преобразование изображений
+Comment[ro]=Batch converter pentru imagini
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads converseen
+Icon=converseen
+Terminal=false
+Categories=Qt;KDE;Graphics;

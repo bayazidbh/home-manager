@@ -1,0 +1,31 @@
+{
+  "created": "2022-03-01T11:36:33.447371853+07:00",
+  "updated": "2022-03-01T11:36:33.447474206+07:00",
+  "name": "spotify-clienttoken",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "data": "[{\"type\": \"simple\", \"operand\": \"process.path\", \"data\": \"/app/extra/share/spotify/spotify\", \"sensitive\": false}, {\"type\": \"simple\", \"operand\": \"dest.host\", \"data\": \"clienttoken.spotify.com\", \"sensitive\": false}]",
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/app/extra/share/spotify/spotify",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.host",
+        "sensitive": false,
+        "data": "clienttoken.spotify.com",
+        "list": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Steam ROM Manager (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads steam-rom-manager
+Terminal=false
+Type=Application
+Icon=steam-rom-manager
+StartupWMClass=Steam ROM Manager
+X-AppImage-Version=2.3.29
+Comment=An app for managing ROMs in Steam
+Categories=Utility;

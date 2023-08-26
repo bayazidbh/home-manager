@@ -1,0 +1,31 @@
+{
+  "created": "2022-03-01T15:37:45.443877959+07:00",
+  "updated": "2022-03-01T15:37:45.443929611+07:00",
+  "name": "cxoffice-bin-wine-preloader-mail-ptnw-co-id",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "data": "[{\"type\": \"simple\", \"operand\": \"process.path\", \"data\": \"/opt/cxoffice/bin/wine-preloader\", \"sensitive\": false}, {\"type\": \"simple\", \"operand\": \"dest.host\", \"data\": \"mail.ptnw.co.id\", \"sensitive\": false}]",
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/opt/cxoffice/bin/wine-preloader",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.host",
+        "sensitive": false,
+        "data": "mail.ptnw.co.id",
+        "list": null
+      }
+    ]
+  }
+}

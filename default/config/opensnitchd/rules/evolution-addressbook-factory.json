@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-11T14:51:41.312273304+07:00",
+  "updated": "2022-03-11T14:51:41.312301641+07:00",
+  "name": "evolution-addressbook-factory",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/libexec/evolution-addressbook-factory",
+    "list": []
+  }
+}

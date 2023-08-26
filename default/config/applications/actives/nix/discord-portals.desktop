@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=Network;InstantMessaging
+Comment[en_US]=
+Comment=
+Exec=env GDK_DEBUG=portals GTK_USE_PORTAL=1 /home/fenglengshun/.nix-profile/bin/discord
+GenericName[en_US]=All-in-one cross-platform voice and text chat for gamers
+GenericName=All-in-one cross-platform voice and text chat for gamers
+Icon=discord
+MimeType=
+Name[en_US]=Discord (Nix) (Portal)
+Name=Discord (Nix) (Portal)
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.4
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Free Download Manager (Conty-Restricted)
+Comment= FDM is a powerful modern download accelerator and organizer
+Keywords=download;manager;free;fdm;
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/fdm
+Terminal=false
+Type=Application
+Icon=freedownloadmanager
+Categories=Network;FileTransfer;P2P;GTK;
+StartupNotify=true

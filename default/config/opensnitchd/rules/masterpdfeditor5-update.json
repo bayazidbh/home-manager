@@ -1,0 +1,31 @@
+{
+  "created": "2022-03-01T15:37:09.722451648+07:00",
+  "updated": "2022-03-01T15:37:09.722508077+07:00",
+  "name": "masterpdfeditor5-update",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "data": "[{\"type\": \"simple\", \"operand\": \"process.path\", \"data\": \"/app/extra/masterpdfeditor5\", \"sensitive\": false}, {\"type\": \"simple\", \"operand\": \"dest.host\", \"data\": \"get.code-industry.net\", \"sensitive\": false}]",
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/app/extra/masterpdfeditor5",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.host",
+        "sensitive": false,
+        "data": "get.code-industry.net",
+        "list": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Steam Tinker Launch (Settings) (Conty-Unrestricted)
+Comment=steamtinkerlaunch Settings menu
+Categories=Game;
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" steamtinkerlaunch settings
+Icon=steamtinkerlaunch
+Terminal=false
+Type=Application

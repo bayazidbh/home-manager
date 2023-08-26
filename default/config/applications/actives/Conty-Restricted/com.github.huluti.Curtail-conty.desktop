@@ -1,0 +1,44 @@
+[Desktop Entry]
+Name[cs]=Curtail (Conty-Restricted)
+Name[de]=Curtail (Conty-Restricted)
+Name[es]=Curtail (Conty-Restricted)
+Name[fr]=Curtail (Conty-Restricted)
+Name[gl]=Curtail (Conty-Restricted)
+Name[hr]=Curtail (Conty-Restricted)
+Name[it]=Curtail (Conty-Restricted)
+Name[ko]=Curtail (Conty-Restricted)
+Name[nl]=Curtail (Conty-Restricted)
+Name[pl]=Curtail (Conty-Restricted)
+Name[pt_BR]=Curtail (Conty-Restricted)
+Name[ru]=Curtail (Conty-Restricted)
+Name[sv]=Curtail (Conty-Restricted)
+Name[tr]=Curtail (Conty-Restricted)
+Name=Curtail (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads curtail %U
+Comment[cs]=Komprimujte vaše obrázky
+Comment[de]=Komprimieren Ihrer Bilder
+Comment[es]=Comprima sus imágenes
+Comment[fr]=Compresser vos images
+Comment[gl]=Comprima as súas imaxes
+Comment[hr]=Komprimiraj slike
+Comment[ko]=사용자의 이미지를 압축합니다
+Comment[nl]=Pas compressie toe op uw afbeeldingen
+Comment[pl]=Kompresuj zdjęcia
+Comment[pt_BR]=Comprima suas imagens
+Comment[ru]=Сжатие изображений
+Comment[sk]=Komprimujte svoje obrázky
+Comment[sv]=Komprimera dina bilder
+Comment[tr]=Görüntülerinizi sıkıştırın
+Comment=Compress your images
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Graphics;
+# Icon name, do not translate
+Icon=com.github.huluti.Curtail
+StartupWMClass=curtail
+MimeType=image/jpeg;image/png;
+StartupNotify=true
+# Keywords, do not translate
+Keywords[es]=compress;optimize;image;photo;comprimir;optimizar;imagen;foto;
+Keywords[nl]=compressie;optimaliseren;afbeelding;foto;
+Keywords=compress;optimize;image;photo;

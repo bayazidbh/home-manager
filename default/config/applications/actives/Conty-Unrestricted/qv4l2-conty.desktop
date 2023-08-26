@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Qt V4L2 test Utility (Conty-Unrestricted)
+Name[pt]=Utilitário de teste V4L2 (Conty-Unrestricted)
+Comment=Allow testing Video4Linux devices
+Comment[pt]=Permite testar dispositivos Video4Linux
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" qv4l2
+Icon=qv4l2
+Terminal=false
+Type=Application
+Categories=AudioVideo;
+Keywords=video;grabber;V4L;

@@ -1,0 +1,16 @@
+{
+  "created": "2022-02-21T09:18:00.471126298+07:00",
+  "updated": "2022-02-21T09:18:00.471143258+07:00",
+  "name": "kdeconnectd",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/libexec/kdeconnectd",
+    "list": []
+  }
+}

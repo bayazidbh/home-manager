@@ -36,7 +36,7 @@
   home.file."p10k.zsh" = {
     enable = true;
     target = ".config/zsh/p10k.zsh";
-    source = "${./p10k.zsh}";
+    source = "${./config/p10k.zsh}";
   };
 
   # Install fish and allows home-manager to manage fish configs

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Windows 11 (VM)
+Comment=win11 VM on Virt-Manager
+Icon=virt-manager
+Exec=virt-manager --connect qemu:///system --show-domain-console win11
+Type=Application
+Terminal=false
+Keywords=vmm;win11;windows;
+Categories=System;

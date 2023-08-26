@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=LosslessCut (Conty-Unrestricted)
+Comment=GUI tool for lossless trimming/cutting of media files
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" losslesscut
+Categories=AudioVideo;
+Icon=losslesscut.svg
+StartupWMClass=losslesscut

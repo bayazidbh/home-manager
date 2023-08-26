@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Game 455712169795780630
+Exec=/home/fenglengshun/.local/bin/conty.sh /usr/bin/dolphin-emu %u
+Type=Application
+NoDisplay=true
+Categories=Discord;Games;
+MimeType=x-scheme-handler/discord-455712169795780630;

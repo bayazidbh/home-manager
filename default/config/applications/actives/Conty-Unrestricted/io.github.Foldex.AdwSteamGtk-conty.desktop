@@ -1,0 +1,24 @@
+[Desktop Entry]
+Name[de]=AdwSteamGtk (Conty-Unrestricted)
+Name[fr]=AdwSteamGtk (Conty-Unrestricted)
+Name[ru]=AdwSteamGtk (Conty-Unrestricted)
+Name[uk]=AdwSteamGtk (Conty-Unrestricted)
+Name[pt_BR]=AdwSteamGtk (Conty-Unrestricted)
+Name=AdwSteamGtk (Conty-Unrestricted)
+Comment[de]=Ein einfacher Wrapper der Adwaita for Steam installiert
+Comment[fr]=Un utilitaire simple qui installe Adwaita pour Steam
+Comment[ru]=Простое приложение для установки темы Adwaita для Steam
+Comment[uk]=Простий додаток який встановлює тему Adwaita для Steam
+Comment[pt_BR]=Um wrapper simples que instala o Adwaita para Steam
+Comment=A simple wrapper that installs Adwaita for Steam
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" adwaita-steam-gtk
+Icon=io.github.Foldex.AdwSteamGtk
+Terminal=false
+Type=Application
+Categories=GTK;Utility
+Keywords[fr]=Steam;Adwaita;Skin;
+Keywords[ru]=Steam;Adwaita;Skin;стим;скин;тема;
+Keywords[uk]=Steam;Adwaita;Skin;стім;тема;скін;
+Keywords[pt_BR]=Steam;Adwaita;Capa;
+Keywords=Steam;Adwaita;Skin;
+StartupNotify=true

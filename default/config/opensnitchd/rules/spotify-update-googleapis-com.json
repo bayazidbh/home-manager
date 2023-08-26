@@ -1,0 +1,31 @@
+{
+  "created": "2022-03-01T15:35:56.181906734+07:00",
+  "updated": "2022-03-01T15:35:56.18197882+07:00",
+  "name": "spotify-update-googleapis-com",
+  "enabled": true,
+  "precedence": false,
+  "action": "reject",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "data": "[{\"type\": \"simple\", \"operand\": \"process.path\", \"data\": \"/app/extra/share/spotify/spotify\", \"sensitive\": false}, {\"type\": \"simple\", \"operand\": \"dest.host\", \"data\": \"update.googleapis.com\", \"sensitive\": false}]",
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/app/extra/share/spotify/spotify",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.host",
+        "sensitive": false,
+        "data": "update.googleapis.com",
+        "list": null
+      }
+    ]
+  }
+}

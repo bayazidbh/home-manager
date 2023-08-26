@@ -1,0 +1,16 @@
+{
+  "created": "2022-02-21T09:18:09.66255862+07:00",
+  "updated": "2022-02-21T09:18:09.6625709+07:00",
+  "name": "chronyd",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/sbin/chronyd",
+    "list": []
+  }
+}

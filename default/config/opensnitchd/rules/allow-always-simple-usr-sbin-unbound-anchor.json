@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-06T11:45:21.38969615+07:00",
+  "updated": "2022-03-06T11:45:21.389726429+07:00",
+  "name": "allow-always-simple-usr-sbin-unbound-anchor",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/sbin/unbound-anchor",
+    "list": []
+  }
+}

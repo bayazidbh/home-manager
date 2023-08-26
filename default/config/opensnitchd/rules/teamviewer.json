@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-04T10:13:36.406055983+07:00",
+  "updated": "2022-03-04T10:13:36.406109584+07:00",
+  "name": "teamviewer",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/opt/teamviewer/tv_bin/TeamViewer",
+    "list": []
+  }
+}

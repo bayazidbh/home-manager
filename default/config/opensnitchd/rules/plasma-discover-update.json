@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-04T13:16:35.979185323+07:00",
+  "updated": "2022-03-04T13:16:35.979377685+07:00",
+  "name": "plasma-discover-update",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/bin/plasma-discover-update",
+    "list": []
+  }
+}

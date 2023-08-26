@@ -1,0 +1,16 @@
+{
+  "created": "2022-02-21T09:45:23.298897168+07:00",
+  "updated": "2022-02-21T09:45:23.298939962+07:00",
+  "name": "kf5-kioslave5",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/libexec/kf5/kioslave5",
+    "list": []
+  }
+}

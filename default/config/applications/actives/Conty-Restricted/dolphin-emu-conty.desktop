@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Icon=dolphin-emu
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads env QT_QPA_PLATFORM=xcb dolphin-emu
+Terminal=false
+Type=Application
+Categories=Game;Emulator;
+Name=Dolphin Emulator (Conty-Restricted)
+GenericName=Wii/GameCube Emulator
+Comment=A Wii/GameCube Emulator

@@ -1,0 +1,32 @@
+[Desktop Entry]
+Type=Application
+Name=Wine Windows Program Loader (Conty-Unrestricted)
+Name[ar]=منظومة واين لتشغيل برامج وندوز (Conty-Unrestricted)
+Name[cs]=Zavaděč programů pro Wine (Conty-Unrestricted)
+Name[de]=Wine Windows-Programmstarter (Conty-Unrestricted)
+Name[es]=Wine Cargador de programas de Windows (Conty-Unrestricted)
+Name[lt]=Wine Windows programų paleidyklė (Conty-Unrestricted)
+Name[nl]=Wine Windows programmalader (Conty-Unrestricted)
+Name[sv]=Wine Windows Programstartare (Conty-Unrestricted)
+Name[ro]=Wine - Încărcătorul de programe Windows (Conty-Unrestricted)
+Name[ru]=Wine - загрузчик Windows программ (Conty-Unrestricted)
+Name[uk]=Wine - завантажувач Windows програм (Conty-Unrestricted)
+Name[fr]=Wine - Chargeur de programmes Windows (Conty-Unrestricted)
+Name[ca]=Wine - Carregador d'aplicacions del Windows (Conty-Unrestricted)
+Name[pt]=Carregador de aplicativos Windows Wine (Conty-Unrestricted)
+Name[pt_br]=Carregador de aplicativos Windows Wine (Conty-Unrestricted)
+Name[it]=Wine Carica Programmi Windows (Conty-Unrestricted)
+Name[da]=Wine, Programstarter til Windows-programmer (Conty-Unrestricted)
+Name[nb]=Wine - for kjøring av Windows-programmer (Conty-Unrestricted)
+Name[nn]=Wine - for køyring av Windows-program (Conty-Unrestricted)
+Name[sr]=Wine - дизач Windows програма (Conty-Unrestricted)
+Name[sr@latin]=Wine - dizač Windows programa (Conty-Unrestricted)
+Name[tr]=Wine - Windows programı yükleyicisi (Conty-Unrestricted)
+Name[hr]=Wine - dizač Windows programa (Conty-Unrestricted)
+Name[he]=Wine — מריץ תכניות Windows (Conty-Unrestricted)
+Name[ja]=Wine Windowsプログラムローダー (Conty-Unrestricted)
+Exec=env WINEPREFIX=/home/fenglengshun/.local/share/wineconty "/var/home/fenglengshun/.local/bin/conty.sh" wine start /unix %f
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;
+Icon=wine
+NoDisplay=true
+StartupNotify=true

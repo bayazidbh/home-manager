@@ -1,0 +1,44 @@
+[Desktop Entry]
+Name[cs]=Curtail (Conty-Unrestricted)
+Name[de]=Curtail (Conty-Unrestricted)
+Name[es]=Curtail (Conty-Unrestricted)
+Name[fr]=Curtail (Conty-Unrestricted)
+Name[gl]=Curtail (Conty-Unrestricted)
+Name[hr]=Curtail (Conty-Unrestricted)
+Name[it]=Curtail (Conty-Unrestricted)
+Name[ko]=Curtail (Conty-Unrestricted)
+Name[nl]=Curtail (Conty-Unrestricted)
+Name[pl]=Curtail (Conty-Unrestricted)
+Name[pt_BR]=Curtail (Conty-Unrestricted)
+Name[ru]=Curtail (Conty-Unrestricted)
+Name[sv]=Curtail (Conty-Unrestricted)
+Name[tr]=Curtail (Conty-Unrestricted)
+Name=Curtail (Conty-Unrestricted)
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" curtail %U
+Comment[cs]=Komprimujte vaše obrázky
+Comment[de]=Komprimieren Ihrer Bilder
+Comment[es]=Comprima sus imágenes
+Comment[fr]=Compresser vos images
+Comment[gl]=Comprima as súas imaxes
+Comment[hr]=Komprimiraj slike
+Comment[ko]=사용자의 이미지를 압축합니다
+Comment[nl]=Pas compressie toe op uw afbeeldingen
+Comment[pl]=Kompresuj zdjęcia
+Comment[pt_BR]=Comprima suas imagens
+Comment[ru]=Сжатие изображений
+Comment[sk]=Komprimujte svoje obrázky
+Comment[sv]=Komprimera dina bilder
+Comment[tr]=Görüntülerinizi sıkıştırın
+Comment=Compress your images
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Graphics;
+# Icon name, do not translate
+Icon=com.github.huluti.Curtail
+StartupWMClass=curtail
+MimeType=image/jpeg;image/png;
+StartupNotify=true
+# Keywords, do not translate
+Keywords[es]=compress;optimize;image;photo;comprimir;optimizar;imagen;foto;
+Keywords[nl]=compressie;optimaliseren;afbeelding;foto;
+Keywords=compress;optimize;image;photo;

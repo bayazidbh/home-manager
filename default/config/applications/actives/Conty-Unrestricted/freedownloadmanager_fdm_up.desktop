@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=env QT_QPA_PLATFORM=xcb HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" /opt/freedownloadmanager/fdm %u
+Icon=freedownloadmanager_fdm_up
+MimeType=x-scheme-handler/fdm
+Name=Free Download Manager  (Conty)
+NoDisplay=true
+Type=Application

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Winetricks (Conty-Unrestricted)
+Comment=Work around problems and install applications under Wine
+Comment[pl]=Rozwiązuj problemy i instaluj aplikacje z użyciem Wine
+Comment[ru]=Решение проблем и установка программ с помощью Wine
+Exec=env WINEPREFIX=/home/fenglengshun/.local/share/wineconty "/var/home/fenglengshun/.local/bin/conty.sh" winetricks --gui
+Terminal=false
+Icon=winetricks
+Type=Application
+Categories=Utility;

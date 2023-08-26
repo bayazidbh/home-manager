@@ -1,0 +1,17 @@
+[MIME Cache]
+application/pdf=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+application/rdf+xml=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+application/rss+xml=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+application/xhtml+xml=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+application/xhtml_xml=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+application/xml=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+image/gif=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+image/jpeg=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+image/png=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+image/webp=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+text/html=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+text/xml=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+x-scheme-handler/ftp=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+x-scheme-handler/http=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+x-scheme-handler/https=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;
+x-scheme-handler/mailto=io.wavebox.Wavebox-dark.desktop;io.wavebox.Wavebox-wayland.desktop;

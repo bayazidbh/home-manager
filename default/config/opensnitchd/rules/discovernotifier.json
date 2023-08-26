@@ -1,0 +1,16 @@
+{
+  "created": "2022-02-21T09:17:44.435610177+07:00",
+  "updated": "2022-02-21T09:17:44.435628662+07:00",
+  "name": "discovernotifier",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/libexec/DiscoverNotifier",
+    "list": []
+  }
+}

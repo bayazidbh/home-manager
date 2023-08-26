@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Bitwarden (Conty-Restricted)
+GenericName=Password Manager
+Comment=A secure and free password manager for all of your devices.
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads bitwarden-desktop
+Terminal=false
+MimeType=x-scheme-handler/bitwarden
+Type=Application
+Icon=bitwarden
+Categories=Utility;
+StartupWMClass=Bitwarden

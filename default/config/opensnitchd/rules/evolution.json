@@ -1,0 +1,16 @@
+{
+  "created": "2022-03-01T17:56:33.7038095+07:00",
+  "updated": "2022-03-01T17:56:33.703842871+07:00",
+  "name": "evolution",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "simple",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "/usr/bin/evolution",
+    "list": []
+  }
+}

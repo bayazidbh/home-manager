@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Icon=qtscrcpy
+Name=QtScrcpy (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads qtscrcpy
+Terminal=false
+Hidden=false
+Categories=Development; Utility
+Comment=Android real-time screencast control tool

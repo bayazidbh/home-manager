@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PPSSPP (SDL) (Conty-Unrestricted)
+GenericName=PSP Emulator
+Comment=PlayStation Portable Simulator Suitable for Playing Portably
+Exec="/var/home/fenglengshun/.local/bin/conty.sh" PPSSPPSDL %f
+Icon=ppsspp
+Categories=Game
