@@ -7,7 +7,7 @@
       enable = true;
       package = pkgs.ibm-plex;
       name = "IBM Plex Sans";
-      size = 10;
+      size = 9;
     };
 
     iconTheme = {
