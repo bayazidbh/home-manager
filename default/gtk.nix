@@ -24,7 +24,6 @@
 
     # GTK 2 settings
     gtk2 = {
-      enable = true;
       extraConfig = ''
         gtk-enable-animations=1
         gtk-primary-button-warps-slider=0
@@ -37,7 +36,6 @@
 
     # GTK 3 settings
     gtk3 = {
-      enable = true;
       bookmarks = [
         "file://${config.home.homeDirectory}"
         "file://${config.xdg.userDirs.download}"
@@ -68,7 +66,6 @@
 
     # GTK 4 settings
     gtk4 = {
-      enable = true;
       extraConfig = ''
         [Settings]
         gtk-application-prefer-dark-theme=true
