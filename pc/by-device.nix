@@ -1,17 +1,26 @@
 { config, pkgs, ... }:
 {
-  home.sessionVariables = {
-    HOST="ostree-pc";
-    HOSTNAME="ostree-pc";
-    };
+home.sessionVariables = {
+  HOST="bbh-pc";
+  HOSTNAME="bbh-pc";
+  };
 
-  home.packages = with pkgs; [ activitywatch ];
+home.packages = with pkgs; [
+    distrobox podman podman-compose # distrobox podman # containers stuff
+    # downonspot spotify-qt # media viewers
+    mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
+    wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
+    gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
+    gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
+    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
+  ];
 
-  systemd.user.tmpfiles.rules = [
-  "L ${xdg.userDirs.documents}/Downloads - - - - ${xdg.userDirs.download}"
-  "L ${xdg.userDirs.documents}/Music - - - - ${xdg.userDirs.music}"
-  "L ${xdg.userDirs.documents}/Pictures - - - - ${xdg.userDirs.pictures}"
-  "L ${xdg.userDirs.documents}/Videos - - - - ${xdg.userDirs.videos}"
+systemd.user.tmpfiles.rules = [
+  "L ${config.xdg.userDirs.documents}/Storage - - - - ${config.home.homeDirectory}/Storage/Data/Documents"
+  "L ${config.xdg.userDirs.download}/Storage - - - - ${config.home.homeDirectory}/Storage/Data/Downloads"
+  "L ${config.xdg.userDirs.music}/Storage - - - - ${config.home.homeDirectory}/Storage/Data/Music"
+  "L ${config.xdg.userDirs.pictures}/Storage - - - - ${config.home.homeDirectory}/Storage/Data/Pictures"
+  "L ${config.xdg.userDirs.videos}/Storage - - - - ${config.home.homeDirectory}/Storage/Data/Videos"
   "L ${config.xdg.configHome}/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config"
   "L ${config.xdg.dataHome}yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data"
   "L ${config.xdg.configHome}/Ryujinx - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config"
@@ -22,36 +31,27 @@
   "L ${config.xdg.configHome}/PCSX2 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config"
   "L ${config.xdg.configHome}/rpcs3 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config"
   "L ${config.xdg.configHome}/ppsspp - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config"
-  "L ${xdg.userDirs.documents}/container/conty/.config/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config"
-  "L ${xdg.userDirs.documents}/container/conty/.local/share/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data"
-  "L ${xdg.userDirs.documents}/container/conty/.config/Ryujinx - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config"
-  "L ${xdg.userDirs.documents}/container/conty/.config/citra-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/config"
-  "L ${xdg.userDirs.documents}/container/conty/.local/share/citra-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/data"
-  "L ${xdg.userDirs.documents}/container/conty/.config/dolphin-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/config"
-  "L ${xdg.userDirs.documents}/container/conty/.local/share/dolphin-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/data"
-  "L ${xdg.userDirs.documents}/container/conty/.config/PCSX2 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config"
-  "L ${xdg.userDirs.documents}/container/conty/.config/rpcs3 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config"
-  "L ${xdg.userDirs.documents}/container/conty/.config/ppsspp - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.local/share/yuzu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/yuzu/data"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/Ryujinx - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/Ryujinx/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/citra-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.local/share/citra-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/citra-emu/data"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/dolphin-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.local/share/dolphin-emu - - - - ${config.home.homeDirectory}/Games/Emulation/Nintendo/emu/dolphin-emu/data"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/PCSX2 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/rpcs3 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config"
+  "L ${config.xdg.userDirs.documents}/container/conty/.config/ppsspp - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config"
+  "L ${config.xdg.configHome}/home-manager/pc/config/input-remapper-2 - - - - ${config.xdg.configHome}/input-remapper-2"
   ];
 
-  home.file."autostart.sh" = {
-    enable = true;
-    target = ".local/bin/autostart.sh";
-    executable = true;
-    text = ''
+home.file."win11" = {
+  enable = true;
+  target = ".local/bin/win11";
+  executable = true;
+  text = ''
     #!/usr/bin/bash
-    sleep 15s
-    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode &
-    flatpak run --branch=stable --arch=x86_64 --command=joplin-desktop --file-forwarding net.cozic.joplin_desktop &
-    flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office &
-    env GDK_DEBUG=portals GTK_USE_PORTAL=1 ${config.home.homeDirectory}/.nix-profile/bin/fsearch &
-    env HOME_DIR="${xdg.userDirs.documents}/container/conty" "${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh" --bind ${config.home.homeDirectory}/Storage ${config.home.homeDirectory}/Storage --bind ${xdg.userDirs.documents} ${xdg.userDirs.documents} --bind ${config.home.homeDirectory}/Downloads ${config.home.homeDirectory}/Downloads /usr/bin/fdm --hidden &
-    ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config "$(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)" &
-    ${config.home.homeDirectory}/.nix-profile/bin/aw-qt &
-    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh /usr/bin/steam-runtime -nochatui -nofriendsui -silent &
-    env QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 /usr/bin/virt-manager --connect qemu:///system --show-domain-console win10 &
-    disown
 
+    /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11
     '';
   };
 }

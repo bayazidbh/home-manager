@@ -18,13 +18,14 @@
      "flathub:net.cozic.joplin_desktop/x86_64/stable"
      "flathub:org.upscayl.Upscayl/x86_64/stable"
      "flathub:org.videolan.VLC/x86_64/stable"
+     "flathub:page.codeberg.Imaginer.Imaginer/x86_64/stable"
+     "flathub:io.github.Bavarder.Bavarder/x86_64/stable"
      "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
-     "launcher-moe:moe.launcher.an-anime-borb-launcher/x86_64/master"
-     "launcher-moe:moe.launcher.an-anime-game-launcher/x86_64/master"
-     "launcher-moe:moe.launcher.honkers-launcher/x86_64/master"
      "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/22.08"
+     "flathub:com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"
      "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08"
-     ":${./xwaylandvideobridge.flatpak}"
     ];
+    postInitCommand = "/usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/";
   };
+
 }

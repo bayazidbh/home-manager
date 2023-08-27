@@ -1,8 +1,14 @@
 { config, pkgs, ... }:
 {
+
 systemd.user.tmpfiles.rules = [
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
   "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/opensnitchd"
+  "L ${config.xdg.userDirs.documents}/Downloads - - - - ${config.xdg.userDirs.download}"
+  "L ${config.xdg.userDirs.documents}/Music - - - - ${config.xdg.userDirs.music}"
+  "L ${config.xdg.userDirs.documents}/Pictures - - - - ${config.xdg.userDirs.pictures}"
+  "L ${config.xdg.userDirs.documents}/Videos - - - - ${config.xdg.userDirs.videos}"
+
 ];
 
 home.file."resilio.conf" = {
