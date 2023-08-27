@@ -143,7 +143,7 @@ Comment[zh_CN]=将音频文件转为其他格式
 Comment[zh_TW]=將聲音檔轉換至其他格式
 Icon=soundconverter
 MimeType=application/x-ogg;application/ogg;audio/x-mp3;audio/x-scpls;audio/x-mpeg;audio/mpeg;audio/x-mpegurl;application/x-flac;audio/x-wav;audio/flac;audio/x-opus+ogg;
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads soundconverter %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads soundconverter %U
 Terminal=false
 Type=Application
 StartupNotify=true

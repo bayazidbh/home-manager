@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Discover Overlay Configure (Conty-Restricted)
 Comment=Voice chat overlay configuration
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads discover-overlay --configure
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads discover-overlay --configure
 Icon=discover-overlay
 Terminal=false
 Type=Application

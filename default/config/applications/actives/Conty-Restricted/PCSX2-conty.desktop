@@ -6,7 +6,7 @@ Name=PCSX2 (Conty-Restricted)
 StartupWMClass=PCSX2
 GenericName=PlayStation 2 Emulator
 Comment=Sony PlayStation 2 emulator
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads pcsx2-qt
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads pcsx2-qt
 Icon=PCSX2
 Keywords=game;emulator;
 Categories=Game;Emulator;

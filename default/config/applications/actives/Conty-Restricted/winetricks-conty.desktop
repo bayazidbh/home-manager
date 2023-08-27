@@ -3,7 +3,7 @@ Name=Winetricks (Conty-Restricted)
 Comment=Work around problems and install applications under Wine
 Comment[pl]=Rozwiązuj problemy i instaluj aplikacje z użyciem Wine
 Comment[ru]=Решение проблем и установка программ с помощью Wine
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads winetricks --gui
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads winetricks --gui
 Terminal=false
 Icon=winetricks
 Type=Application

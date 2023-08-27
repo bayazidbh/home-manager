@@ -3,7 +3,7 @@ Name=Qt V4L2 test Utility (Conty-Restricted)
 Name[pt]=Utilitário de teste V4L2 (Conty-Restricted)
 Comment=Allow testing Video4Linux devices
 Comment[pt]=Permite testar dispositivos Video4Linux
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads qv4l2
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads qv4l2
 Icon=qv4l2
 Terminal=false
 Type=Application

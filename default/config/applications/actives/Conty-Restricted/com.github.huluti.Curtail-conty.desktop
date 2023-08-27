@@ -14,7 +14,7 @@ Name[ru]=Curtail (Conty-Restricted)
 Name[sv]=Curtail (Conty-Restricted)
 Name[tr]=Curtail (Conty-Restricted)
 Name=Curtail (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads curtail %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads curtail %U
 Comment[cs]=Komprimujte vaše obrázky
 Comment[de]=Komprimieren Ihrer Bilder
 Comment[es]=Comprima sus imágenes

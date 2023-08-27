@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Heroic Games Launcher (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" /opt/Heroic/heroic %U
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/Heroic/heroic %U
 Terminal=false
 Type=Application
 Icon=heroic

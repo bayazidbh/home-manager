@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=ArchiSteamFarm (Conty-Unrestricted)
 Comment="C# application that allows you to farm steam cards using multiple steam accounts simultaneously."
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" /opt/ArchiSteamFarm-bin/ArchiSteamFarm
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/ArchiSteamFarm-bin/ArchiSteamFarm
 Icon=/opt/ArchiSteamFarm-bin/ArchiSteamFarm.ico
 Terminal=true
 Type=Application

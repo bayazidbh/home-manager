@@ -38,7 +38,7 @@ Name[x-test]=xxPlasma Browser Integration Hostxx (Conty-Restricted)
 Name[zh_CN]=Plasma 浏览器集成宿主程序 (Conty-Restricted)
 Name[zh_TW]=Plasma 瀏覽器整合主程式 (Conty-Restricted)
 Icon=plasma-browser-integration
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/plasma-browser-integration-host
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/plasma-browser-integration-host
 NoDisplay=true
 #X-systemd-skip=true
 X-KDE-Wayland-Interfaces=org_kde_plasma_window_management

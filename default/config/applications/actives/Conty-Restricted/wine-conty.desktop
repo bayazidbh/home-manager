@@ -25,7 +25,7 @@ Name[tr]=Wine - Windows programı yükleyicisi (Conty-Restricted)
 Name[hr]=Wine - dizač Windows programa (Conty-Restricted)
 Name[he]=Wine — מריץ תכניות Windows (Conty-Restricted)
 Name[ja]=Wine Windowsプログラムローダー (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads wine start /unix %f
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads wine start /unix %f
 MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;
 Icon=wine
 NoDisplay=true

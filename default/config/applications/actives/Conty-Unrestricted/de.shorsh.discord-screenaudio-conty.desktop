@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=discord-screenaudio (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" discord-screenaudio
+Exec="/home/fenglengshun/.local/bin/conty.sh" discord-screenaudio
 Comment=A custom discord client that supports streaming with audio on Linux.
 Icon=de.shorsh.discord-screenaudio
 Categories=Network;InstantMessaging;

@@ -108,7 +108,7 @@ Comment[tk]=Metin faýllary editle
 Comment[vi]=Soạn thảo tập tin văn bản
 Comment[wa]=Asspougnî des fitchîs tecses
 Comment[zh_TW]=編輯文字檔
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" vim %F
+Exec="/home/fenglengshun/.local/bin/conty.sh" vim %F
 Terminal=true
 Type=Application
 # Translators: Search terms to find this application. Do NOT change the semicolons! The list MUST also end with a semicolon!

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" pcmanfm-qt %U
+Exec="/home/fenglengshun/.local/bin/conty.sh" pcmanfm-qt %U
 MimeType=inode/directory;
 Icon=system-file-manager
 Categories=FileManager;Utility;Core;Qt;

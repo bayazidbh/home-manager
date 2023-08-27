@@ -2,7 +2,7 @@
 Name=The Honkers Railway Launcher (Conty-Restricted)
 Comment=An Launcher for a specific anime game with auto-patching, discord rpc and time tracking
 Icon=moe.launcher.the-honkers-railway-launcher
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/the-honkers-railway-launcher
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/the-honkers-railway-launcher
 Type=Application
 Categories=Game
 Terminal=false

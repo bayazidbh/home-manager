@@ -3,7 +3,7 @@ Version=1.0
 Name=Wavebox (X11) (Conty-Unrestricted)
 GenericName=Web Browser
 Comment=The next generation of web-desktop communication
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode %U
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode %U
 StartupNotify=true
 Terminal=false
 Icon=wavebox
@@ -14,8 +14,8 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode
 
 [Desktop Action new-private-window]
 Name=New Incognito Window
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --Incognito --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --Incognito --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode

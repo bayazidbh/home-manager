@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=PeaZip (Conty-Unrestricted)
 Comment=PeaZip archive manager
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" peazip %F
+Exec="/home/fenglengshun/.local/bin/conty.sh" peazip %F
 Icon=peazip
 Type=Application
 Terminal=false
@@ -12,19 +12,19 @@ Actions=add;extract;extracthere;extractheresmart;
 
 [Desktop Action add]
 Name=PeaZip, add to archive (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" peazip -add2archive %F
+Exec="/home/fenglengshun/.local/bin/conty.sh" peazip -add2archive %F
 Icon=peazip_add
 
 [Desktop Action extract]
 Name=PeaZip, extract archive(s) (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" peazip -ext2main %F
+Exec="/home/fenglengshun/.local/bin/conty.sh" peazip -ext2main %F
 Icon=peazip_extract
 
 [Desktop Action extracthere]
 Name=PeaZip, extract here (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" peazip -ext2here %F
+Exec="/home/fenglengshun/.local/bin/conty.sh" peazip -ext2here %F
 Icon=peazip_extract
 
 [Desktop Action extractheresmart]
 Name=PeaZip, extract here (smart new folder) (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" peazip -ext2folder %F
+Exec="/home/fenglengshun/.local/bin/conty.sh" peazip -ext2folder %F

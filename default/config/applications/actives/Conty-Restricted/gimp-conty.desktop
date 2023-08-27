@@ -249,7 +249,7 @@ Keywords[uk]=GIMP;graphic;design;illustration;painting;гімп;ґімп;гра�
 Keywords[vi]=GIMP;graphic;design;illustration;painting;đồ họa;do hoa;thiết kế;thiet ke;vẽ;ve;minh họa;minh hoa;hội họa;hoi hoa;
 Keywords[zh_CN]=GIMP;图形;设计;绘画;graphic;design;illustration;painting;
 Keywords[zh_TW]=GIMP;圖像;設計;插畫;繪畫;
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads gimp-2.10 %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads gimp-2.10 %U
 Icon=gimp
 Terminal=false
 Categories=Graphics;2DGraphics;RasterGraphics;GTK;

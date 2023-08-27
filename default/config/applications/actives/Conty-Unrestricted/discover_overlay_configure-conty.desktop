@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Discover Overlay Configure (Conty-Unrestricted)
 Comment=Voice chat overlay configuration
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" discover-overlay --configure
+Exec="/home/fenglengshun/.local/bin/conty.sh" discover-overlay --configure
 Icon=discover-overlay
 Terminal=false
 Type=Application

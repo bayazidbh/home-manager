@@ -4,6 +4,6 @@ Type=Application
 Name=PPSSPP (Qt) (Conty-Unrestricted)
 GenericName=PSP Emulator
 Comment=PlayStation Portable Simulator Suitable for Playing Portably
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" PPSSPPQt %f
+Exec="/home/fenglengshun/.local/bin/conty.sh" PPSSPPQt %f
 Icon=ppsspp
 Categories=Game

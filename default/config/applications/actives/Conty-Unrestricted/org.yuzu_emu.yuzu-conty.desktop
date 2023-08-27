@@ -8,7 +8,7 @@ Name=yuzu (Conty-Unrestricted)
 GenericName=Switch Emulator
 Comment=Nintendo Switch video game console emulator
 Icon=org.yuzu_emu.yuzu
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" yuzu %f
+Exec="/home/fenglengshun/.local/bin/conty.sh" yuzu %f
 Categories=Game;Emulator;Qt;
 MimeType=application/x-nx-nro;application/x-nx-nso;application/x-nx-nsp;application/x-nx-xci;
 Keywords=Nintendo;Switch;

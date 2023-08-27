@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Discover Overlay (Conty-Unrestricted)
 Comment=Voice chat overlay
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" discover-overlay
+Exec="/home/fenglengshun/.local/bin/conty.sh" discover-overlay
 Icon=discover-overlay
 Terminal=false
 Type=Application
@@ -11,4 +11,4 @@ Keywords=Discord
 
 [Desktop Action close]
 Name=Close (Conty-Unrestricted)
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" discover-overlay --rpc --close
+Exec="/home/fenglengshun/.local/bin/conty.sh" discover-overlay --rpc --close

@@ -3,7 +3,7 @@
 [Desktop Entry]
 Name=Hardware Locality lstopo (Conty-Unrestricted)
 Comment=Show hardware topology
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" lstopo
+Exec="/home/fenglengshun/.local/bin/conty.sh" lstopo
 Terminal=false
 Type=Application
 Categories=System;

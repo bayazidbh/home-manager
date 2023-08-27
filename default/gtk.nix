@@ -40,10 +40,10 @@
       enable = true;
       bookmarks = [
         "file://${config.home.homeDirectory}"
-        "file://${config.home.homeDirectory}/Downloads"
-        "file://${config.home.homeDirectory}/Documents"
-        "file://${config.home.homeDirectory}/Documents/Work"
-        "file://${config.home.homeDirectory}/Pictures"
+        "file://${config.xdg.userDirs.download}"
+        "file://${config.xdg.userDirs.documents}"
+        "file://${config.xdg.userDirs.documents}/Work"
+        "file://${config.xdg.userDirs.pictures}"
       ];
       extraConfig = ''
         [Settings]
@@ -99,7 +99,7 @@
       StartupMode=recent
     '';
   };
-  home.file."colors.css" = {
+  home.file."gtk-3.0-colors.css" = {
     enable = true;
     target = ".config/gtk-3.0/colors.css";
     text = ''
@@ -189,7 +189,7 @@
       @define-color warning_color_insensitive_breeze #683d16;
     '';
   };
-  home.file."colors.css" = {
+  home.file."gtk-4.0-colors.css" = {
     enable = true;
     target = ".config/gtk-4.0/colors.css";
     text = ''

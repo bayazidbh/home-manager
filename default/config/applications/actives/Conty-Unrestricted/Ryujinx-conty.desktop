@@ -3,7 +3,7 @@ Version=1.0
 Name=Ryujinx (Conty-Unrestricted)
 Type=Application
 Icon=Ryujinx
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" env DOTNET_EnableAlternateStackCheck=1 Ryujinx %f
+Exec="/home/fenglengshun/.local/bin/conty.sh" env DOTNET_EnableAlternateStackCheck=1 Ryujinx %f
 Comment=A Nintendo Switch Emulator
 GenericName=Nintendo Switch Emulator
 Terminal=false

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Wavebox (Wayland)
+Name=Wavebox (Wayland) (Flatpak)
 GenericName=Web Browser
 Comment=The next generation of web-desktop communication
 Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode @@u %U @@

@@ -2,7 +2,7 @@
 Name=melonDS (Conty-Unrestricted)
 GenericName=Nintendo DS Emulator
 Comment=A fast and accurate Nintendo DS emulator.
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" melonDS %f
+Exec="/home/fenglengshun/.local/bin/conty.sh" melonDS %f
 Type=Application
 Categories=Game;Emulator;
 Terminal=false

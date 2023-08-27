@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=An Anime Borb Launcher (Conty-Unrestricted)
 Comment=An Launcher for a specific anime game with auto-patching, discord rpc and time tracking
-Exec="/var/home/fenglengshun/.local/bin/conty.sh" an-anime-borb-launcher
+Exec="/home/fenglengshun/.local/bin/conty.sh" an-anime-borb-launcher
 Terminal=false
 Type=Application
 Icon=moe.launcher.an-anime-borb-launcher

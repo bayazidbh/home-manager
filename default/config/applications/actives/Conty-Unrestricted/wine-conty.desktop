@@ -25,7 +25,7 @@ Name[tr]=Wine - Windows programı yükleyicisi (Conty-Unrestricted)
 Name[hr]=Wine - dizač Windows programa (Conty-Unrestricted)
 Name[he]=Wine — מריץ תכניות Windows (Conty-Unrestricted)
 Name[ja]=Wine Windowsプログラムローダー (Conty-Unrestricted)
-Exec=env WINEPREFIX=/home/fenglengshun/.local/share/wineconty "/var/home/fenglengshun/.local/bin/conty.sh" wine start /unix %f
+Exec=env WINEPREFIX=/home/fenglengshun/.local/share/wineconty "/home/fenglengshun/.local/bin/conty.sh" wine start /unix %f
 MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;
 Icon=wine
 NoDisplay=true

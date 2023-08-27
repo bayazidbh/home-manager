@@ -4,7 +4,7 @@ Comment=DB Browser for SQLite is a light GUI editor for SQLite databases
 Comment[de]=DB Browser for SQLite ist ein GUI-Editor für SQLite-Datenbanken
 Comment[fr]=Un éditeur graphique léger pour les bases de données SQLite
 Comment[es]=«DB Browser for SQLite» es un editor gráfico de bases de datos SQLite
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/var/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads sqlitebrowser %f
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads sqlitebrowser %f
 Icon=sqlitebrowser
 Terminal=false
 X-MultipleArgs=false
