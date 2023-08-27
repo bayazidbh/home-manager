@@ -26,7 +26,7 @@
     # Standalone home-manager configuration entrypoint
     homeConfigurations = {
     # declare a "username" or "username@hostname" specific configuration
-      "fenglengshun@ostree-pc" = home-manager.lib.homeManagerConfiguration {
+      "fenglengshun@bbh-pc" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
