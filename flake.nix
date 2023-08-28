@@ -35,7 +35,7 @@
           ./default/env.nix # env-var for all devices
           ./default/alias.nix # aliases for all devices
           ./default/files.nix # file creation for all devices
-          ./default/themes.nix # file creation for all devices
+          # ./default/themes.nix # file creation for all devices
           ./default/autostart.nix # autostart with systemctl
           ./pc/by-device.nix # device specific configs
           # ./pc/autostart.nix # device specific autostart

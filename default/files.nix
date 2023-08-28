@@ -61,7 +61,7 @@ home.file."installt-whitesur" = {
     /tmp/whitesur/Monterey-kde/install.sh
      /tmp/whitesur/Monterey-kde/sddm/install.sh
   '';
-}
+};
 
 home.file."restart-plasma" = {
   enable = true;
