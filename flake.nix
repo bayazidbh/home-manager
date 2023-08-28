@@ -36,9 +36,9 @@
           ./default/alias.nix # aliases for all devices
           ./default/files.nix # file creation for all devices
           ./default/gtk.nix # file creation for all devices
-          # ./default/autostart.nix # autostart with systemctl
+          ./default/autostart.nix # autostart with systemctl
           ./pc/by-device.nix # device specific configs
-          ./pc/autostart.nix # device specific autostart
+          # ./pc/autostart.nix # device specific autostart
           ./pc/flatpak.nix # separate list for flatpak
           ./pc/chaotic.nix # separate list for chaotic.nix package
           ./pc/nixgl.nix # separate list for nixgl.nix package
