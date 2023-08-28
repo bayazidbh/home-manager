@@ -55,9 +55,8 @@ in
     rsync zsync # web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons # breeze dependencies
-    sassc whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
-    scanmem # gamescope other gaming tools
-    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
+    sassc whitesur-gtk-theme whitesur-kde whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
+    scanmem # other gaming tools
   ];
 
   # enable fcitx5 as input method, with mozc for Japanese IME

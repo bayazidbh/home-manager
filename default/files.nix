@@ -34,6 +34,35 @@ home.file."resilio.conf" = {
     '';
 };
 
+home.file."installt-whitesur" = {
+  enable = true;
+  target = ".local/bin/install-whitesur";
+  executable = true;
+  text = ''
+    #! /bin/bash
+
+    mkdir -p /tmp/whitesur/whitesur
+
+    git clone https://github.com/vinceliuice/WhiteSur-gtk-theme /tmp/whitesur/WhiteSur-gtk-theme
+    /tmp/whitesur/WhiteSur-gtk-theme/install.sh -m -i -l standard -b default
+    /tmp/whitesur/WhiteSur-gtk-theme/tweaks.sh -F
+
+    git clone https://github.com/vinceliuice/WhiteSur-icon-theme /tmp/whitesur/WhiteSur-icon-theme
+    /tmp/whitesur/WhiteSur-icon-theme/install.sh
+
+    git clone https://github.com/vinceliuice/WhiteSur-kde /tmp/whitesur/WhiteSur-kde
+    /tmp/whitesur/WhiteSur-kde/install.sh
+    /tmp/whitesur/WhiteSur-kde/sddm/install.sh
+
+    git clone https://github.com/vinceliuice/WhiteSur-cursors /tmp/whitesur/WhiteSur-cursors
+    /tmp/whitesur/WhiteSur-cursors/install.sh
+
+    git clone https://github.com/vinceliuice/Monterey-kde /tmp/whitesur/Monterey-kde
+    /tmp/whitesur/Monterey-kde/install.sh
+     /tmp/whitesur/Monterey-kde/sddm/install.sh
+  '';
+}
+
 home.file."restart-plasma" = {
   enable = true;
   target = ".local/bin/restart-plasma";

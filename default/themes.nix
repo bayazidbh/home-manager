@@ -1,7 +1,16 @@
 { config, pkgs, ... }:
 {
-  gtk = {
-    enable = false;
+qt = {
+    enable = true;
+    platformTheme = "kde";
+    style = {
+    package = pkgs.whitesur-kde;
+    name = WhiteSur-dark;
+    };
+};
+
+gtk = {
+    enable = true;
 
     font = {
       enable = true;

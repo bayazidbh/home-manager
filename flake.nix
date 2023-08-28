@@ -35,7 +35,7 @@
           ./default/env.nix # env-var for all devices
           ./default/alias.nix # aliases for all devices
           ./default/files.nix # file creation for all devices
-          ./default/gtk.nix # file creation for all devices
+          ./default/themes.nix # file creation for all devices
           ./default/autostart.nix # autostart with systemctl
           ./pc/by-device.nix # device specific configs
           # ./pc/autostart.nix # device specific autostart
@@ -55,6 +55,7 @@
           ./default/env.nix # env-var for all devices
           ./default/alias.nix # aliases for all devices
           ./default/files.nix # file creation for all devices
+          # ./default/themes.nix # file creation for all devices
           ./default/autostart.nix # autostart with systemctl
           ./laptop/by-device.nix # device specific configs
           ./laptop/autostart.nix # device specific autostart
@@ -62,12 +63,13 @@
           flatpaks.homeManagerModules.default # import declarative-flatpak module
         ];
       };
-      # "root" = home-manager.lib.homeManagerConfiguration {
-      #   pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-      #   modules = [
-      #     ./root/home.nix # default home.nix
-      #   ];
-      # };
+      "root" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        modules = [
+          ./root/home.nix # default home.nix
+          ./default/shell.nix # shell config for all devices
+        ];
+      };
     };
   };
 }
