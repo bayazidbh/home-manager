@@ -24,7 +24,18 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     # source p10k theme at ZSH_CUSTOM in XDG_DATA_HOME
-    initExtra = "[[ ! -f ${config.xdg.configHome}/zsh/p10k.zsh ]] || source ${config.xdg.configHome}/zsh/p10k.zsh";
+    initExtra = ''
+      [[ ! -f ${config.xdg.configHome}/zsh/p10k.zsh ]] || source ${config.xdg.configHome}/zsh/p10k.zsh
+      bindkey '^[[3~' delete-char # Delete
+      bindkey '^[[3;5~' kill-word # Ctrl + Delete
+      bindkey '^H' backward-kill-word # Ctrl + Backspace
+      bindkey '^[[1;5C' forward-word # Ctrl + Right
+      bindkey '^[[1;5D' backward-word # Ctrl + Left
+      bindkey '^[[H' beginning-of-line # Home
+      bindkey '^[[F' end-of-line # End
+      bindkey '^[[5~' beginning-of-buffer-or-history # Page Up
+      bindkey '^[[6~' end-of-buffer-or-history # Page Down
+      '';
     plugins = [
       {name = "zsh-autosuggestions";src = pkgs.zsh-autosuggestions;}
       {name = "zsh-history-substring-search";src = pkgs.zsh-history-substring-search;}
