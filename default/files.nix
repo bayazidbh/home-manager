@@ -34,6 +34,12 @@ home.file."resilio.conf" = {
     '';
 };
 
+home.file."MangoHud.conf" = {
+  enable = true;
+  target = ".config/MangoHud/MangoHud.conf";
+  text = "horizontal\nlegacy_layout=0\nhud_no_margin\nfont_size=25\ntable_columns=28\nbackground_alpha=0.5\ntime=1\ntime_format=%I:%M %p\ngpu_stats\ngpu_temp\ncpu_stats\ncpu_temp\nram\nvram\nfps\nframe_timing\nframetime\ntoggle_hud=F8\nresolution\nwine\nvulkan_driver\n";
+};
+
 home.file."installt-whitesur" = {
   enable = true;
   target = ".local/bin/install-whitesur";

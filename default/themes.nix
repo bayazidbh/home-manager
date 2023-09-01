@@ -15,7 +15,7 @@ gtk = {
     font = {
       enable = true;
       package = pkgs.ibm-plex;
-      name = "IBM Plex Sans";
+     #  name = "IBM Plex Sans";
       size = 9;
     };
 
