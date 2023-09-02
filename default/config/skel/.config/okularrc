@@ -1,0 +1,34 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+2 screens: Window-Maximized=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAADIAAAD6vwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgEAAAAuAAAD6gAAAQ0BAAACAAAGtwAAA+oAAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgIAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_14.pdf
+File10[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_1.cbz
+File2[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_15.pdf
+File3[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_16.pdf
+File4[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_17.pdf
+File5[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_19.pdf
+File6[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_20.pdf
+File7[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_21.pdf
+File8[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_22.pdf
+File9[$e]=$HOME/Documents/Media/Manga/Asumi-chan_is_interested_in_Lesbian_Brothels!/chapter_23.pdf
+Name1[$e]=chapter_14.pdf
+Name10[$e]=chapter_1.cbz
+Name2[$e]=chapter_15.pdf
+Name3[$e]=chapter_16.pdf
+Name4[$e]=chapter_17.pdf
+Name5[$e]=chapter_19.pdf
+Name6[$e]=chapter_20.pdf
+Name7[$e]=chapter_21.pdf
+Name8[$e]=chapter_22.pdf
+Name9[$e]=chapter_23.pdf

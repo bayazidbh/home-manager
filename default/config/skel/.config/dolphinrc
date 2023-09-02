@@ -1,0 +1,50 @@
+MenuBar=Disabled
+
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+
+[DetailsMode]
+DirectorySizeCount=false
+PreviewSize=16
+UsePermissionsFormat=CombinedFormat
+
+[FileDialogSize]
+1920x1080 screen: Height=1048
+1920x1080 screen: Width=1102
+
+[General]
+CloseActiveSplitView=false
+ShowFullPath=true
+ShowToolTips=true
+UseTabForSwitchingSplitView=true
+Version=202
+ViewPropsTimestamp=2023,4,24,0,20,17.916
+
+[IconsMode]
+PreviewSize=128
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+Recent Files[$e]=upscayl.png,file:$HOME/.local/bin/upscayl/upscayl.png
+Recent URLs[$e]=file:$HOME/.local/bin/,file:$HOME/,file:$HOME/.local/bin/upscayl/
+detailViewIconSize=16
+
+[KPropertiesDialog]
+1920x1080 screen: Height=1048
+1920x1080 screen: Width=1102
+2 screens: Height=529
+2 screens: Width=607
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PreviewSettings]
+Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly

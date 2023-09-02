@@ -2,6 +2,7 @@
 {
 
 systemd.user.tmpfiles.rules = [
+  "C+ ${config.xdg.configHome} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
   "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/opensnitchd"
   "L ${config.xdg.userDirs.documents}/Downloads - - - - ${config.xdg.userDirs.download}"

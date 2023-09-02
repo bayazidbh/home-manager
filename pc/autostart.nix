@@ -1,79 +1,22 @@
 { config, pkgs, ... }:
 {
 systemd.user.services = {
-  "autostart-flatpak-wps" = {
+  "autostart-conty-wavebox" = {
     Unit = {
-      Description = "Autostart WPS Flatpak App";
+      Description = "Autostart Wavebox Flatpak App";
       PartOf = "graphical-session.target";
       After = "graphical-session.target";
     };
     Service = {
-      Type = "simple";
+      Type = "forking";
       Restart = "no";
-      ExecStartPre = "/bin/sleep 15";
+      ExecStartPre = "/bin/sleep 10";
       ExecStart = [
-        "/usr/bin/bash -c \"/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office\""
+        "/usr/bin/bash -c \"${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode\""
       ];
     };
     Install = {
       WantedBy = [ "graphical-session.target" ];
     };
-  };
-
-  "autostart-win11-vm-console" = {
-    Unit = {
-      Description = "Autostart Win11 virt-manager console";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-      };
-    Service = {
-      Type = "forking";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 20";
-      ExecStart = "/usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
-      };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-      };
-    };
-
-  #  "autostart-containers-portainer" = {
-  #    Unit = {
-  #      Description = "Autostart Containers with Portainer";
-  #      PartOf = "graphical-session.target";
-  #      After = "graphical-session.target";
-  #    };
-  #    Service = {
-  #      Type = "simple";
-  #      Restart = "no";
-  #      ExecStartPre = "/bin/sleep 10";
-  #      ExecStart = [
-  #        "/usr/bin/bash -c \"${config.home.homeDirectory}/.nix-profile/bin/podman start portainer\""
-  #      ];
-  #    };
-  #    Install = {
-  #      WantedBy = [ "graphical-session.target" ];
-  #    };
-  #  };
-
-  #  "autostart-containers-freshrss" = {
-  #    Unit = {
-  #      Description = "Autostart Containers with FreshRSS";
-  #      PartOf = "graphical-session.target";
-  #      After = "graphical-session.target";
-  #    };
-  #    Service = {
-  #      Type = "simple";
-  #      Restart = "no";
-  #      ExecStartPre = "/bin/sleep 10";
-  #      ExecStart = [
-  #        "/usr/bin/bash -c \"${config.home.homeDirectory}/.nix-profile/bin/podman start freshrss\""
-  #      ];
-  #    };
-  #    Install = {
-  #      WantedBy = [ "graphical-session.target" ];
-  #    };
-  #  };
-
   };
 }

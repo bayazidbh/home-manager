@@ -1,0 +1,6 @@
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+browserhistoryEnabled=false
+browsertabsEnabled=false

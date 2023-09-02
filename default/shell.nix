@@ -35,6 +35,8 @@
       bindkey '^[[F' end-of-line # End
       bindkey '^[[5~' beginning-of-buffer-or-history # Page Up
       bindkey '^[[6~' end-of-buffer-or-history # Page Down
+      export WORDCHARS=${WORDCHARS:s,/}
+
       '';
     plugins = [
       {name = "zsh-autosuggestions";src = pkgs.zsh-autosuggestions;}
@@ -47,7 +49,7 @@
   home.file."p10k.zsh" = {
     enable = true;
     target = ".config/zsh/p10k.zsh";
-    source = "${./config/p10k.zsh}";
+    source = "${./config/skel/.config/zsh/p10k.zsh}";
   };
 
   # Install fish and allows home-manager to manage fish configs

@@ -1,0 +1,54 @@
+[$Version]
+update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBackgroundMode_Update,gwenview.upd:DeleteThumbnailSetting_Rename
+
+[General]
+LastUsedVersion=210800
+SideBarPage=operations
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+Recent Files[$e]=file:$HOME/Pictures/Archive/Screenshots/Laptop/2023-06/Screenshot_20230610_092310-01.webp,file:$HOME/Pictures/Archive/Screenshots/Laptop/2023-06/Screenshot_20230610_092310-01.webp
+Recent URLs[$e]=file:$HOME/Pictures/Archive/Screenshots/Laptop/2023-06/
+detailViewIconSize=16
+
+[MainWindow]
+1920x1080 screen: Height=1048
+1920x1080 screen: Width=1920
+1920x1080 screen: Window-Maximized=true
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=32
+2 screens: Height=759
+2 screens: Width=650
+2 screens: Window-Maximized=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABVYAAALJAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP=eDP
+
+[Recent Files]
+File1[$e]=$HOME/Picture1_upscayl_4x_ultrasharp.png
+File10[$e]=$HOME/Pictures/Archive/Screenshots/PC/2023-06/Screenshot_20230620_193429-01.jpg
+File2[$e]=$HOME/Picture1_upscayl_4x_ultramix_balanced.png
+File3[$e]=admin:///usr/share/plymouth/themes/breeze-text/preview.png
+File4[$e]=$HOME/.local/share/kplymouththemeinstaller/linux-penguin.zip.png
+File5[$e]=$HOME/Pictures/Archive/Screenshots/Laptop/2023-06/Screenshot_20230610_092310-01.jpg
+File6[$e]=$HOME/Downloads/bavarder-15-Jun-2023-stablediffusion.png
+File7[$e]=$HOME/Downloads/3622478070490640213.jpg
+File8[$e]=$HOME/Downloads/3622668770693279184.jpg
+File9[$e]=$HOME/Pictures/Archive/Screenshots/Laptop/2023-06/Screenshot_20230617_183132-01.jpg
+Name1[$e]=Picture1_upscayl_4x_ultrasharp.png
+Name10[$e]=Screenshot_20230620_193429-01.jpg
+Name2[$e]=Picture1_upscayl_4x_ultramix_balanced.png
+Name3[$e]=preview.png
+Name4[$e]=linux-penguin.zip.png
+Name5[$e]=Screenshot_20230610_092310-01.jpg
+Name6[$e]=bavarder-15-Jun-2023-stablediffusion.png
+Name7[$e]=3622478070490640213.jpg
+Name8[$e]=3622668770693279184.jpg
+Name9[$e]=Screenshot_20230617_183132-01.jpg
+
+[SideBar]
+InformationSplitterSizes=219,256
+IsVisible ViewMode=true
+SideBarSplitterSizes=251,1114

@@ -6,6 +6,7 @@
 
     my_alias="bat -p -n --paging=never --style=header-filename ${config.xdg.configHome}/home-manager/default/alias.nix";
     update_desktop_files ="update-desktop-database ${config.xdg.dataHome}/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+    wget=wget --hsts-file="${config.xdg.dataHome}/wget-hsts";
 
     force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
     force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";

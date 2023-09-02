@@ -94,7 +94,7 @@ in
   };
   programs.fzf.enable = true; # Install and enable fzf - a command-line fuzzy finder.
   programs.hstr.enable = true; # Install and enable hstr Bash And Zsh shell history suggest box
-  programs.mangohud.enable = true; # Install and enable mangohud
+  # programs.mangohud.enable = true; # Install and enable mangohud
   services.mpd-discord-rpc.enable = true; # Install service for sharing current music info to discord
   programs.ripgrep.enable = true; # Install and enable ripgrep - rust rebuild of grep
   programs.boxxy = {

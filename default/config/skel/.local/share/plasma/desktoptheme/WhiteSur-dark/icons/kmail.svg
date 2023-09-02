@@ -1,0 +1,41 @@
+<svg width="22" height="22" version="1.1" viewBox="0 0 22 22">
+ <defs>
+  <style id="current-color-scheme" type="text/css">.ColorScheme-Text {
+        color:#31363b;
+      }
+      .ColorScheme-Background {
+        color:#eff0f1;
+      }
+      .ColorScheme-Highlight {
+        color:#3daee9;
+      }
+      .ColorScheme-ViewText {
+        color:#31363b;
+      }
+      .ColorScheme-ViewBackground {
+        color:#fcfcfc;
+      }
+      .ColorScheme-ViewHover {
+        color:#93cee9;
+      }
+      .ColorScheme-ViewFocus{
+        color:#3daee9;
+      }
+      .ColorScheme-ButtonText {
+        color:#31363b;
+      }
+      .ColorScheme-ButtonBackground {
+        color:#eff0f1;
+      }
+      .ColorScheme-ButtonHover {
+        color:#93cee9;
+      }
+      .ColorScheme-ButtonFocus{
+        color:#3daee9;
+      }</style>
+ </defs>
+ <g id="kmail">
+  <rect width="22" height="22" fill="none"/>
+  <path class="ColorScheme-Text" d="m4 3c-1.662 0-3 1.338-3 3v10c0 1.662 1.338 3 3 3h14c1.662 0 3-1.338 3-3v-10c0-1.662-1.338-3-3-3zm0 2h14c0.42758 0 0.78813 0.26662 0.93164 0.64258l-7.5312 5.5273c-0.23641 0.17348-0.56438 0.17534-0.80078 2e-3l-7.5332-5.5273c0.14292-0.37715 0.50516-0.64453 0.93359-0.64453zm-1 3.0176 4.0645 2.9824-4.0645 2.9824zm16 0v5.9648l-4.0625-2.9824zm-10.285 4.1934 0.23438 0.17187c1.1224 0.82367 2.9811 0.82367 4.1035 0l0.23242-0.16992 5.6465 4.1445c-0.14351 0.37596-0.50406 0.64258-0.93164 0.64258h-14c-0.42844 0-0.79067-0.26738-0.93359-0.64453z" fill="currentColor"/>
+ </g>
+</svg>

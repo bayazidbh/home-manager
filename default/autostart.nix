@@ -15,25 +15,6 @@ home.file."resilio" = {
   };
 
 systemd.user.services = {
-  "autostart-flatpak-wavebox" = {
-    Unit = {
-      Description = "Autostart Wavebox Flatpak App";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 10";
-      ExecStart = [
-        "/usr/bin/bash -c \"/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode\""
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
-
   "autostart-flatpak-joplin" = {
     Unit = {
       Description = "Autostart Joplin Flatpak App";
@@ -115,8 +96,8 @@ systemd.user.services = {
       After = "graphical-session.target";
     };
     Service = {
-      Type = "notify";
-      Restart = "no";
+      Type = "forking";
+      Restart = "yes";
       Environment = "HOME_DIR=${config.xdg.userDirs.documents}/container/conty";
       ExecStartPre = "/bin/sleep 3";
       ExecStart = [
@@ -135,7 +116,7 @@ systemd.user.services = {
       After = "graphical-session.target";
     };
     Service = {
-      Type = "simple";
+      Type = "forking";
       Restart = "no";
       ExecStartPre = "/bin/sleep 15";
       ExecStart = [
