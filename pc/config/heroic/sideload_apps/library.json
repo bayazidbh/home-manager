@@ -1,0 +1,20 @@
+{
+	"games": [
+		{
+			"runner": "sideload",
+			"app_name": "h7b8DuxUNxnPmmTMfDqGDQ",
+			"title": "My Klutzy Cupid",
+			"install": {
+				"executable": "/home/fenglengshun/Documents/Media/Games/Unlocked/VN/My Klutzy Cupid/Cupid.exe",
+				"platform": "Windows",
+				"is_dlc": false
+			},
+			"folder_name": "/home/fenglengshun/Documents/Media/Games/Unlocked/VN/My Klutzy Cupid",
+			"art_cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2370540/library_600x900_2x.jpg?t=1682435784",
+			"is_installed": true,
+			"art_square": "https://cdn.cloudflare.steamstatic.com/steam/apps/2370540/library_600x900_2x.jpg?t=1682435784",
+			"canRunOffline": true,
+			"browserUrl": ""
+		}
+	]
+}

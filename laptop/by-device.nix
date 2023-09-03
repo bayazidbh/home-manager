@@ -5,13 +5,6 @@ home.sessionVariables = {
   HOSTNAME="bbh-laptop";
   };
 
-systemd.user.tmpfiles.rules = [
-  "L ${config.home.homeDirectory}/Documents/Downloads - - - - ${config.home.homeDirectory}/Downloads"
-  "L ${config.home.homeDirectory}/Documents/Music - - - - ${config.home.homeDirectory}/Music"
-  "L ${config.home.homeDirectory}/Documents/Pictures - - - - ${config.home.homeDirectory}/Pictures"
-  "L ${config.home.homeDirectory}/Documents/Videos - - - - ${config.home.homeDirectory}/Videos"
-  ];
-
 home.file."autostart.sh" = {
   enable = true;
   target = ".local/bin/autostart.sh";
