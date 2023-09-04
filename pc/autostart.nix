@@ -17,6 +17,7 @@ systemd.user.services = {
     };
     Install = {
       WantedBy = [ "graphical-session.target" ];
+      };
     };
   };
 }
