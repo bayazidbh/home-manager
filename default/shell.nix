@@ -6,6 +6,11 @@
     enableCompletion = true;
     initExtra = ''
       export PS1="\\[\\033[01;32m\\]\\u@\\h:\\w\\[\\033[00m\\]\\$ "
+      # auto pull when cd to git folder
+      function cd() {
+          builtin cd "$@" && git -C "$(pwd)" rev-parse 2>/dev/null &&
+          git -C "$(pwd)" pull origin $(git symbolic-ref --short HEAD)
+          }
       '';
     historyFile = "${config.xdg.configHome}/bash_history";
   };
@@ -35,7 +40,15 @@
       bindkey '^[[F' end-of-line # End
       bindkey '^[[5~' beginning-of-buffer-or-history # Page Up
       bindkey '^[[6~' end-of-buffer-or-history # Page Down
-      export WORDCHARS=${WORDCHARS:s,/}
+      export WORDCHARS=${WORDCHARS:s,/} # Stop Ctrl + W word delete at wordchars
+      # auto pull when cd to git folder
+      chpwd() {
+          if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) = "true" ]]; then
+              # Run your desired command when entering a Git folder
+              echo "You have entered a Git folder."
+              git pull origin
+          fi
+          }
 
       '';
     plugins = [
