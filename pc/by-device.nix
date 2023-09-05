@@ -44,7 +44,7 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.userDirs.documents}/container/conty/.config/PCSX2 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/PCSX2/config"
   "L ${config.xdg.userDirs.documents}/container/conty/.config/rpcs3 - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/rpcs3/config"
   "L ${config.xdg.userDirs.documents}/container/conty/.config/ppsspp - - - - ${config.home.homeDirectory}/Games/Emulation/Sony/emu/ppsspp/config"
-  "L ${config.xdg.configHome}/home-manager/pc/config/input-remapper-2 - - - - ${config.xdg.configHome}/input-remapper-2"
+  "L ${config.xdg.configHome}/input-remapper-2 - - - - ${config.xdg.configHome}/home-manager/pc/config/input-remapper-2"
   "L ${config.xdg.configHome}/heroic/sideload_apps - - - - ${config.xdg.configHome}/home-manager/pc/config/heroic/sideload_apps"
   "L ${config.xdg.configHome}/heroic/store - - - - ${config.xdg.configHome}/home-manager/pc/config/heroic/store"
   ];

@@ -1,0 +1,55 @@
+{
+	"general-logs": {
+		"currentLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-08-23T14_38_15.029Z.log",
+		"lastLogFile": "",
+		"legendaryLogFile": "/home/fenglengshun/.config/heroic/logs/legendary-2023-08-23T14_38_15.029Z.log",
+		"gogdlLogFile": "/home/fenglengshun/.config/heroic/logs/gogdl-2023-08-23T14_38_15.029Z.log",
+		"nileLogFile": "/home/fenglengshun/.config/heroic/logs/nile-2023-08-23T14_38_15.029Z.log"
+	},
+	"settings": {
+		"checkUpdatesInterval": 10,
+		"enableUpdates": false,
+		"addDesktopShortcuts": false,
+		"addStartMenuShortcuts": false,
+		"autoInstallDxvk": true,
+		"autoInstallVkd3d": true,
+		"addSteamShortcuts": false,
+		"preferSystemLibs": false,
+		"checkForUpdatesOnStartup": true,
+		"autoUpdateGames": false,
+		"customWinePaths": [],
+		"defaultInstallPath": "/home/fenglengshun/Games/Heroic",
+		"libraryTopSection": "disabled",
+		"defaultSteamPath": "/home/fenglengshun/.steam/steam",
+		"defaultWinePrefix": "/home/fenglengshun/Games/Heroic/Prefixes/default",
+		"hideChangelogsOnStartup": false,
+		"language": "en",
+		"maxWorkers": 0,
+		"minimizeOnLaunch": false,
+		"nvidiaPrime": false,
+		"enviromentOptions": [],
+		"wrapperOptions": [],
+		"showFps": false,
+		"useGameMode": false,
+		"userInfo": {
+			"name": "fenglengshun"
+		},
+		"wineCrossoverBottle": "Heroic",
+		"winePrefix": "/home/fenglengshun/Games/Heroic/Prefixes/default",
+		"wineVersion": {
+			"bin": "/bin/wine",
+			"name": "Wine Default - wine-ge-8.0 (Staging)",
+			"type": "wine",
+			"wineserver": "/bin/wineserver"
+		},
+		"enableEsync": true,
+		"enableFsync": true
+	},
+	"userHome": "/home/fenglengshun",
+	"language": "en",
+	"userInfo": {
+		"account_id": "8598883db2614d6eb1cf464858b535f4",
+		"displayName": "Feng Lengshun",
+		"user": "fenglengshun"
+	}
+}

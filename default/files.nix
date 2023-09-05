@@ -2,6 +2,8 @@
 {
 
 systemd.user.tmpfiles.rules = [
+  "d ${config.home.homeDirectory}/Storage"
+  "d ${config.home.homeDirectory}/Storage/Data"
   "C+ ${config.xdg.configHome} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
   "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/opensnitchd"
