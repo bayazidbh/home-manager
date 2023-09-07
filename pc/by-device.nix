@@ -6,7 +6,7 @@ home.sessionVariables = {
   };
 
 home.packages = with pkgs; [
-    distrobox podman-compose # podman # containers stuff
+    distrobox podman-compose podman-desktop # podman # containers stuff
     # downonspot spotify-qt # media viewers
     mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
     wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages

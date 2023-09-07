@@ -5,6 +5,10 @@ home.sessionVariables = {
   HOSTNAME="bbh-laptop";
   };
 
+home.packages = with pkgs; [
+  podman podman-compose podman-desktop distrobox # containers stuff
+  ];
+
 systemd.user.tmpfiles.rules = [
   "d ${config.xdg.userDirs.pictures}/Archive"
   "d ${config.xdg.userDirs.pictures}/DCIM"
