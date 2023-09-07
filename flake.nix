@@ -39,10 +39,10 @@
           ./pc/by-device.nix # device specific configs
           ./pc/autostart.nix # device specific autostart
           ./pc/flatpak.nix # separate list for flatpak
-          ./pc/chaotic.nix # separate list for chaotic.nix package
+          # ./pc/chaotic.nix # separate list for chaotic.nix package
           ./pc/nixgl.nix # separate list for nixgl.nix package
           flatpaks.homeManagerModules.default # declarative-flatpak HM module
-          chaotic.homeManagerModules.default # chaotic nyx HM module
+          # chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
       "fenglengshun@bbh-laptop" = home-manager.lib.homeManagerConfiguration {
