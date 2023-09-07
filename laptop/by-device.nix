@@ -19,7 +19,7 @@ systemd.user.tmpfiles.rules = [
   "d ${config.xdg.configHome}/heroic"
   "L ${config.xdg.configHome}/heroic/sideload_apps - - - - ${config.xdg.configHome}/home-manager/laptop/config/heroic/sideload_apps"
   "L ${config.xdg.configHome}/heroic/store - - - - ${config.xdg.configHome}/home-manager/laptop/config/heroic/store"
-  ];Home}
+  ];
 
 home.file."resilio" = {
   enable = true;

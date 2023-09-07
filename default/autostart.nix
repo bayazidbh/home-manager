@@ -61,6 +61,7 @@ systemd.user.services = {
     };
     Service = {
       Type = "forking";
+      Restart = "yes";
       ExecStart = [
         "${config.home.sessionVariables.XDG_BIN_HOME}/resilio"
       ];
@@ -96,7 +97,7 @@ systemd.user.services = {
       After = "graphical-session.target";
     };
     Service = {
-      Type = "forking";
+      Type = "exec";
       Restart = "yes";
       Environment = "HOME_DIR=${config.xdg.userDirs.documents}/container/conty";
       ExecStartPre = "/bin/sleep 3";
@@ -116,8 +117,8 @@ systemd.user.services = {
       After = "graphical-session.target";
     };
     Service = {
-      Type = "forking";
-      Restart = "no";
+      Type = "exec";
+      Restart = "yes";
       ExecStartPre = "/bin/sleep 15";
       ExecStart = [
         "/usr/bin/bash -c \"${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam-runtime -nochatui -nofriendsui -silent\""
