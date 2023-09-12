@@ -99,10 +99,10 @@ systemd.user.services = {
     Service = {
       Type = "exec";
       Restart = "yes";
-      Environment = "HOME_DIR=${config.xdg.userDirs.documents}/container/conty";
+      Environment =  ["HOME_DIR=${config.xdg.userDirs.documents}/container/conty" "WINEPREFIX=${config.xdg.dataHome}/wineconty" ];
       ExecStartPre = "/bin/sleep 3";
       ExecStart = [
-        "/usr/bin/bash -c \"env HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads\""
+        "/usr/bin/bash -c \"env HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads\""
       ];
     };
     Install = {
@@ -119,9 +119,10 @@ systemd.user.services = {
     Service = {
       Type = "exec";
       Restart = "yes";
+      Environment = "WINEPREFIX=${config.xdg.dataHome}/wineconty";
       ExecStartPre = "/bin/sleep 15";
       ExecStart = [
-        "/usr/bin/bash -c \"${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam-runtime -nochatui -nofriendsui -silent\""
+        "conty.sh steam-runtime -nochatui -nofriendsui -silent"
       ];
     };
     Install = {
@@ -143,6 +144,56 @@ systemd.user.services = {
       };
     Install = {
       WantedBy = [ "graphical-session.target" ];
+      };
+    };
+
+  # https://github.com/containers/podman/blob/main/docs/tutorials/socket_activation.md
+
+  "podman.socket" = {
+    Unit = {
+      Description = "Podman API Socket";
+      Documentation = "man:podman-system-service(1)";
+      };
+    Socket = {
+      ListenStream = "%t/podman/podman.sock";
+      SocketMode = "0660";
+      };
+    Install = {
+      WantedBy = [ "sockets.target" ];
+      };
+    };
+
+  "echo.container" = {
+    Unit = {
+      Description = "Example echo service";
+      Requires = "echo.socket";
+      After = "echo.socket";
+      };
+    Container = {
+      Image = "ghcr.io/eriksjolund/socket-activate-echo";
+      Network = "none";
+      };
+    Install = {
+      WantedBy = [ "default.target" ];
+      };
+    };
+
+  "echo.socket" = {
+    Unit = {
+      Description = "Example echo socket";
+      };
+    Socket = {
+      ListenStream = "127.0.0.1:3000";
+      ListenDatagram = "127.0.0.1:3000";
+      ListenStream = "[::1]:3000";
+      ListenDatagram = "[::1]:3000";
+      ListenStream = "%h/echo_stream_sock";
+      # VMADDR_CID_ANY (-1U) = 2^32 -1 = 4294967295
+      # See "man vsock"
+      ListenStream="vsock:4294967295:3000";
+      };
+    Install = {
+      WantedBy = [ "sockets.target" ];
       };
     };
 
@@ -183,6 +234,14 @@ systemd.user.services = {
   #      WantedBy = [ "graphical-session.target" ];
   #    };
   #  };
+
+home.activation = {
+  pullSocketActivateEcho = {
+    after = [ "writeBoundary" "createXdgUserDirectories" ];
+    before = [ ];
+    data = "/usr/bin/command podman pull ghcr.io/eriksjolund/socket-activate-echo";
+    };
+  };
 
   };
 }

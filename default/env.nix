@@ -20,7 +20,17 @@ home.sessionVariables = {
   WINEPREFIX="${config.xdg.dataHome}/wine";
   GTK_THEME="WhiteSur-Dark-solid";
   GTK_THEME_VARIANT="dark";
-    };
+  DOCKER_HOST="unix://${config.xdg.runtimeDir}/podman/podman.sock";
+  };
 
 home.sessionPath = [ "${config.home.sessionVariables.XDG_BIN_HOME}" ];
+
+home.activation = {
+  enableLinger = {
+    after = [ "writeBoundary" "createXdgUserDirectories" ];
+    before = [ ];
+    data = "/usr/bin/loginctl enable-linger \$USER";
+    };
+  };
+
 }
