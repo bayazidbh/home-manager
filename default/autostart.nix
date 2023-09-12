@@ -183,14 +183,8 @@ systemd.user.services = {
       Description = "Example echo socket";
       };
     Socket = {
-      ListenStream = "127.0.0.1:3000";
-      ListenDatagram = "127.0.0.1:3000";
-      ListenStream = "[::1]:3000";
-      ListenDatagram = "[::1]:3000";
-      ListenStream = "%h/echo_stream_sock";
-      # VMADDR_CID_ANY (-1U) = 2^32 -1 = 4294967295
-      # See "man vsock"
-      ListenStream="vsock:4294967295:3000";
+      ListenStream = [ "127.0.0.1:3000" "%h/echo_stream_sock" "[::1]:3000" "vsock:4294967295:3000" ];
+      ListenDatagram = [ "127.0.0.1:3000" "[::1]:3000" ];
       };
     Install = {
       WantedBy = [ "sockets.target" ];
@@ -235,13 +229,13 @@ systemd.user.services = {
   #    };
   #  };
 
-home.activation = {
-  pullSocketActivateEcho = {
-    after = [ "writeBoundary" "createXdgUserDirectories" ];
-    before = [ ];
-    data = "/usr/bin/command podman pull ghcr.io/eriksjolund/socket-activate-echo";
-    };
-  };
+#  home.activation = {
+#    pullSocketActivateEcho = {
+#      after = [ "writeBoundary" ];
+#      before = [ ];
+#      data = "/usr/bin/command podman pull ghcr.io/eriksjolund/socket-activate-echo";
+#      };
+#    };
 
   };
 }

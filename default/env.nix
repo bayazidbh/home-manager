@@ -20,7 +20,7 @@ home.sessionVariables = {
   WINEPREFIX="${config.xdg.dataHome}/wine";
   GTK_THEME="WhiteSur-Dark-solid";
   GTK_THEME_VARIANT="dark";
-  DOCKER_HOST="unix://${config.xdg.runtimeDir}/podman/podman.sock";
+  DOCKER_HOST="unix://\$XDG_RUNTIME_DIR/podman/podman.sock";
   };
 
 home.sessionPath = [ "${config.home.sessionVariables.XDG_BIN_HOME}" ];

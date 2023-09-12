@@ -87,7 +87,7 @@ in
 
   programs.aria2.enable = true; # Install and enable aria2
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
-  programs.exa = {
+  programs.eza = {
     enable = true; # Install and enable exa, a rust-replacement for ls
     enableAliases = true; # Enable recommended exa aliases (ls, ll…)
     icons = true; # Display icons next to file names in exa (--icons argument).
