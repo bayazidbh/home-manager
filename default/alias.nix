@@ -7,6 +7,7 @@
     my_alias="bat -p -n --paging=never --style=header-filename ${config.xdg.configHome}/home-manager/default/alias.nix";
     update_desktop_files ="update-desktop-database ${config.xdg.dataHome}/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
     wget="wget --hsts-file=\"${config.xdg.dataHome}/wget-hsts\"";
+    exa="eza";
 
     force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
     force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";
@@ -38,7 +39,7 @@
                     rmtrash -v ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh && \
                     cat ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh_part01 ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh_part02 > ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh ; \
                     chmod +x ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh ; \
-                    rmtrash -rfv ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh_part* ; exa -al ${config.home.sessionVariables.XDG_BIN_HOME}";
+                    rmtrash -rfv ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh_part* ; eza -al ${config.home.sessionVariables.XDG_BIN_HOME}";
 
     conty="HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads";
 

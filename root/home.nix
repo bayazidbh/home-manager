@@ -67,9 +67,9 @@ in
 
   programs.aria2.enable = true; # Install and enable aria2
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
-  programs.exa = {
-    enable = true; # Install and enable exa, a rust-replacement for ls
-    enableAliases = true; # Enable recommended exa aliases (ls, ll…)
+  programs.ez a = {
+    enable = true; # Install and enable eza, a rust-replacement for ls
+    enableAliases = true; # Enable recommended eza aliases (ls, ll…)
     icons = true; # Display icons next to file names in exa (--icons argument).
   };
   programs.fzf.enable = true; # Install and enable fzf - a command-line fuzzy finder.
