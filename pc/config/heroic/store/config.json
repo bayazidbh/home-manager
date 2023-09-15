@@ -1,10 +1,10 @@
 {
 	"general-logs": {
-		"currentLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-09-06T14_31_17.136Z.log",
-		"lastLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-09-03T17_11_52.088Z.log",
-		"legendaryLogFile": "/home/fenglengshun/.config/heroic/logs/legendary-2023-09-06T14_31_17.136Z.log",
-		"gogdlLogFile": "/home/fenglengshun/.config/heroic/logs/gogdl-2023-09-06T14_31_17.136Z.log",
-		"nileLogFile": "/home/fenglengshun/.config/heroic/logs/nile-2023-09-06T14_31_17.136Z.log"
+		"currentLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-09-09T02_41_48.744Z.log",
+		"lastLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-09-08T14_51_18.090Z.log",
+		"legendaryLogFile": "/home/fenglengshun/.config/heroic/logs/legendary-2023-09-09T02_41_48.744Z.log",
+		"gogdlLogFile": "/home/fenglengshun/.config/heroic/logs/gogdl-2023-09-09T02_41_48.744Z.log",
+		"nileLogFile": "/home/fenglengshun/.config/heroic/logs/nile-2023-09-09T02_41_48.744Z.log"
 	},
 	"settings": {
 		"checkUpdatesInterval": 10,
@@ -51,7 +51,7 @@
 		"x": 0,
 		"y": 26,
 		"width": 1920,
-		"height": 1024
+		"height": 1054
 	},
 	"games": {
 		"recent": [
