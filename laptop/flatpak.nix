@@ -21,9 +21,16 @@
      "flathub:page.codeberg.Imaginer.Imaginer/x86_64/stable"
      "flathub:io.github.Bavarder.Bavarder/x86_64/stable"
      "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
-     "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/22.08"
+     "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
      "flathub:com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"
-     "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/22.08"
+     "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08"
+     "flathub:com.obsproject.Studio/x86_64/stable"
+     "flathub:org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/23.08"
+     "flathub:com.obsproject.Studio.Plugin.OBSVkCapture/x86_64/stable"
+     "flathub:com.obsproject.Studio.Plugin.Gstreamer/x86_64/stable"
+     "flathub:com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable"
+     "flathub:com.obsproject.Studio.Plugin.DroidCam/x86_64/stable"
+     "flathub:com.obsproject.Studio.Plugin.BackgroundRemoval/x86_64/stable"
     ];
     postInitCommand = "/usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/";
   };

@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
-Name=Wavebox (Wayland) (Conty-Restricted)
+Name=Wavebox (Wayland) (Conty-Unrestricted)
 GenericName=Web Browser
 Comment=The next generation of web-desktop communication
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode %U
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode %U
 StartupNotify=true
 Terminal=false
 Icon=wavebox
@@ -14,8 +14,8 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode
 
 [Desktop Action new-private-window]
 Name=New Incognito Window
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /opt/wavebox.io/wavebox/wavebox-launcher --incognito --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --Incognito --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode
