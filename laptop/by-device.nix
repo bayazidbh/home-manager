@@ -10,6 +10,7 @@ home.packages = with pkgs; [
   ];
 
 systemd.user.tmpfiles.rules = [
+  "C+ ${config.xdg.configHome} - - - - ${config.xdg.configHome}/home-manager/laptop/config/config"
   "d ${config.xdg.userDirs.pictures}/Archive"
   "d ${config.xdg.userDirs.pictures}/DCIM"
   "d ${config.home.homeDirectory}/Applications"
@@ -20,20 +21,6 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.configHome}/heroic/sideload_apps - - - - ${config.xdg.configHome}/home-manager/laptop/config/heroic/sideload_apps"
   "L ${config.xdg.configHome}/heroic/store - - - - ${config.xdg.configHome}/home-manager/laptop/config/heroic/store"
   ];
-
-home.file."resilio" = {
-  enable = true;
-  target = ".local/bin/resilio";
-  executable = true;
-  text = ''
-    #!/usr/bin/bash
-
-    # Get the resolved path of autostart.sh
-    rslsync_config=$(readlink -f ${config.xdg.configHome}/rslsync/rslsync.conf)
-    # Run rslsync with the resolved path as config
-    ${config.home.homeDirectory}/.nix-profile/bin/rslsync --config $rslsync_config
-    '';
-  };
 
 home.file."win11" = {
   enable = true;

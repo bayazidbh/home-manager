@@ -1,0 +1,134 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[1]
+Description=Application settings for net.code-industry.masterpdfeditor5
+acceptfocus=true
+acceptfocusrule=2
+clientmachine=localhost
+desktops=88e240e7-a6f3-4113-a2fe-51eb6ec23a08
+fsplevelrule=2
+ignoregeometry=true
+title=win11 on QEMU/KVM
+wmclass=\snet.code-industry.masterpdfeditor5
+wmclasscomplete=true
+wmclassmatch=1
+
+[2]
+Description=Window settings for virt-manager
+clientmachine=localhost
+desktops=88e240e7-a6f3-4113-a2fe-51eb6ec23a08
+desktopsrule=3
+ignoregeometry=true
+title=win11 on QEMU/KVM
+titlematch=1
+types=1
+wmclass=virt-manager
+wmclassmatch=1
+
+[2872115a-7f8f-429b-9382-b8c6493a03f4]
+Description=Application settings for net.code-industry.masterpdfeditor5
+acceptfocus=true
+acceptfocusrule=2
+fsplevelrule=2
+wmclass=\snet.code-industry.masterpdfeditor5
+wmclasscomplete=true
+wmclassmatch=1
+
+[3]
+Description=Application settings for wpsoffice
+clientmachine=localhost
+desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
+desktopsrule=3
+ignoregeometry=true
+title=Sync - Wavebox
+wmclass=wps wpsoffice
+wmclasscomplete=true
+wmclassmatch=1
+
+[3282d8a1-24e4-4736-bea0-d393d7e7fe0a]
+Description=Window settings for org.kde.dolphin
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297,ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+noborder=true
+noborderrule=3
+placement=9
+placementrule=2
+title=home-manager — Dolphin
+types=1
+wmclass=dolphin org.kde.dolphin
+wmclasscomplete=true
+wmclassmatch=1
+
+[3955097c-cf5b-4997-b84b-29f35759a999]
+Description=Window settings for fsearch
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+placementrule=2
+title=FSearch
+types=1
+wmclass=.fsearch-wrapped fsearch
+wmclasscomplete=true
+wmclassmatch=1
+
+[4]
+Description=Window settings for wavebox
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+ignoregeometry=true
+title=Sync - Wavebox
+types=1
+wmclass=\swavebox
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
+Description=Window settings for fsearch
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+placementrule=2
+title=FSearch
+types=1
+wmclass=.fsearch-wrapped fsearch
+wmclasscomplete=true
+wmclassmatch=1
+
+[65f16785-eeb3-41d3-a8ef-5df70f87b10c]
+Description=Window settings for virt-manager
+clientmachine=localhost
+desktops=88e240e7-a6f3-4113-a2fe-51eb6ec23a08
+desktopsrule=3
+title=win11 on QEMU/KVM
+titlematch=1
+types=1
+wmclass=virt-manager
+wmclassmatch=1
+
+[7bd38cbc-e004-42fd-b10c-ae1a3fb9a37b]
+Description=Window settings for wavebox
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+title=Sync - Wavebox
+types=1
+wmclass=\swavebox
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=6
+rules=3282d8a1-24e4-4736-bea0-d393d7e7fe0a,1,2,3,4,5
+
+[e48d8065-6fbd-4902-9cef-bd47e6796036]
+Description=Application settings for wpsoffice
+clientmachine=localhost
+desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
+desktopsrule=3
+wmclass=wps wpsoffice
+wmclasscomplete=true
+wmclassmatch=1

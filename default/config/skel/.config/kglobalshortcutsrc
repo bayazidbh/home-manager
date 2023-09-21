@@ -2,6 +2,7 @@
 _k_friendly_name=Activity Manager
 switch-to-activity-296322e8-6518-47f8-91e5-b3182d780f4a=none,none,Switch to activity "Default"
 switch-to-activity-3744cde8-b873-4503-912e-bb142981c5bc=none,none,Switch to activity "Default"
+switch-to-activity-53ec01f6-3a95-4bc1-aa91-b30012cc2e1c=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -207,11 +208,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,none,Media volume down
-mediavolumeup=none,none,Media volume up
+mediavolumedown=none,,Media volume down
+mediavolumeup=none,,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,none,Play media playback
+playmedia=none,,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
@@ -283,7 +284,8 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
-activate widget 32=Meta+A,none,Activate System Tray Widget
+activate widget 32=none,none,Activate System Tray Widget
+activate widget 39=Meta+A,none,Activate System Tray Widget
 activate widget 4=none,none,Activate Application Launcher Widget
 activate widget 40=Meta+N,none,Activate Notifications Widget
 activate widget 57=none,none,Activate Resources Monitor (fork) Widget

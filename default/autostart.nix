@@ -14,6 +14,19 @@ home.file."resilio" = {
     '';
   };
 
+home.file."steam-silent" = {
+  enable = true;
+  target = ".local/bin/steam-silent";
+  executable = true;
+  text = ''
+    #!/usr/bin/bash
+
+    # Get the resolved path of autostart.sh
+    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent
+    '';
+  };
+
+
 systemd.user.services = {
   "autostart-flatpak-joplin" = {
     Unit = {
@@ -90,39 +103,17 @@ systemd.user.services = {
     };
   };
 
-  "autostart-conty-fdm" = {
-    Unit = {
-      Description = "Autostart Conty with Free Download Manager";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "exec";
-      Restart = "yes";
-      Environment =  ["HOME_DIR=${config.xdg.userDirs.documents}/container/conty" "WINEPREFIX=${config.xdg.dataHome}/wineconty" ];
-      ExecStartPre = "/bin/sleep 3";
-      ExecStart = [
-        "/usr/bin/bash -c \"env HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads\""
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
-
   "autostart-conty-steam" = {
     Unit = {
-      Description = "Autostart Conty with Steam Runtime";
+      Description = "Autostart Resilio Sync Nix App";
       PartOf = "graphical-session.target";
       After = "graphical-session.target";
     };
     Service = {
-      Type = "exec";
+      Type = "forking";
       Restart = "yes";
-      Environment = "WINEPREFIX=${config.xdg.dataHome}/wineconty";
-      ExecStartPre = "/bin/sleep 15";
       ExecStart = [
-        "conty.sh steam-runtime -nochatui -nofriendsui -silent"
+        "${config.home.sessionVariables.XDG_BIN_HOME}/steam-silent"
       ];
     };
     Install = {
