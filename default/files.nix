@@ -37,6 +37,17 @@ home.file."resilio.conf" = {
     '';
 };
 
+home.file."wavebox-wayland" = {
+  enable = true;
+  target = ".local/bin/wavebox-wayland";
+  executable = true;
+  text = ''
+    #!/usr/bin/bash
+
+    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode %U
+    '';
+  };
+
 home.file."installt-whitesur" = {
   enable = true;
   target = ".local/bin/install-whitesur";

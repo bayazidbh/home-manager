@@ -1,23 +1,22 @@
 { config, pkgs, ... }:
 {
 systemd.user.services = {
-  "autostart-conty-wavebox" = {
+  "autostart-conty-steam" = {
     Unit = {
-      Description = "Autostart Wavebox Flatpak App";
+      Description = "Autostart Resilio Sync Nix App";
       PartOf = "graphical-session.target";
       After = "graphical-session.target";
     };
     Service = {
       Type = "forking";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 10";
+      Restart = "yes";
       ExecStart = [
-        "/usr/bin/bash -c \"${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode\""
+        "${config.home.sessionVariables.XDG_BIN_HOME}/wavebox-wayland"
       ];
     };
     Install = {
       WantedBy = [ "graphical-session.target" ];
-      };
     };
   };
+};
 }

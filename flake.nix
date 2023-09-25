@@ -57,8 +57,8 @@
           ./default/autostart.nix # autostart with systemctl
           ./laptop/by-device.nix # device specific configs
           ./laptop/autostart.nix # device specific autostart
-          ./laptop/flatpak.nix # separate list for flatpak
-          flatpaks.homeManagerModules.default # import declarative-flatpak module
+          # ./laptop/flatpak.nix # separate list for flatpak
+          # flatpaks.homeManagerModules.default # import declarative-flatpak module
         ];
       };
       "root" = home-manager.lib.homeManagerConfiguration {

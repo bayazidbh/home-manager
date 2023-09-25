@@ -10,7 +10,7 @@ home.packages = with pkgs; [
   ];
 
 systemd.user.tmpfiles.rules = [
-  "C+ ${config.xdg.configHome} - - - - ${config.xdg.configHome}/home-manager/laptop/config/config"
+  "L ${config.xdg.configHome}/kwinrulesrc - - - - ${config.xdg.configHome}/home-manager/laptop/config/kwinrulesrc"
   "d ${config.xdg.userDirs.pictures}/Archive"
   "d ${config.xdg.userDirs.pictures}/DCIM"
   "d ${config.home.homeDirectory}/Applications"

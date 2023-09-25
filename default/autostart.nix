@@ -21,11 +21,9 @@ home.file."steam-silent" = {
   text = ''
     #!/usr/bin/bash
 
-    # Get the resolved path of autostart.sh
     ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent
     '';
   };
-
 
 systemd.user.services = {
   "autostart-flatpak-joplin" = {
