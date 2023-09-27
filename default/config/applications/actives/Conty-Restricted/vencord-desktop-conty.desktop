@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Vesktop (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads vencord-desktop
+Terminal=false
+Type=Application
+Icon=vencord-desktop
+StartupWMClass=Vesktop
+GenericName=Internet Messenger
+Categories=Network;
+Keywords=discord;vencord;electron;chat;
+WMClass=VencordDesktop

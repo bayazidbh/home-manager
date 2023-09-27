@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Vesktop (Conty-Unrestricted)
+Exec="/home/fenglengshun/.local/bin/conty.sh" vencord-desktop
+Terminal=false
+Type=Application
+Icon=vencord-desktop
+StartupWMClass=Vesktop
+GenericName=Internet Messenger
+Categories=Network;
+Keywords=discord;vencord;electron;chat;
+WMClass=VencordDesktop

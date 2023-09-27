@@ -1,10 +1,10 @@
 {
 	"general-logs": {
-		"currentLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-08-23T14_38_15.029Z.log",
-		"lastLogFile": "",
-		"legendaryLogFile": "/home/fenglengshun/.config/heroic/logs/legendary-2023-08-23T14_38_15.029Z.log",
-		"gogdlLogFile": "/home/fenglengshun/.config/heroic/logs/gogdl-2023-08-23T14_38_15.029Z.log",
-		"nileLogFile": "/home/fenglengshun/.config/heroic/logs/nile-2023-08-23T14_38_15.029Z.log"
+		"currentLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-09-27T03_23_51.034Z.log",
+		"lastLogFile": "/home/fenglengshun/.config/heroic/logs/heroic-2023-09-26T10_39_04.007Z.log",
+		"legendaryLogFile": "/home/fenglengshun/.config/heroic/logs/legendary-2023-09-27T03_23_51.034Z.log",
+		"gogdlLogFile": "/home/fenglengshun/.config/heroic/logs/gogdl-2023-09-27T03_23_51.034Z.log",
+		"nileLogFile": "/home/fenglengshun/.config/heroic/logs/nile-2023-09-27T03_23_51.034Z.log"
 	},
 	"settings": {
 		"checkUpdatesInterval": 10,
@@ -47,6 +47,13 @@
 	},
 	"userHome": "/home/fenglengshun",
 	"language": "en",
+	"window-props": {
+		"x": 8,
+		"y": 98,
+		"width": 1200,
+		"height": 690,
+		"maximized": false
+	},
 	"userInfo": {
 		"account_id": "8598883db2614d6eb1cf464858b535f4",
 		"displayName": "Feng Lengshun",

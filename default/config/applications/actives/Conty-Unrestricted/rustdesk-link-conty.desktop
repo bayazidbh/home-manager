@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=RustDeskURL Scheme Handler (Conty-Unrestricted)
+NoDisplay=true
+MimeType=x-scheme-handler/rustdesk;
+Exec="/home/fenglengshun/.local/bin/conty.sh" rustdesk %u
+Icon=rustdesk
+Terminal=false
+Type=Application
+StartupNotify=false

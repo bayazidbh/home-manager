@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=RustDesk (Conty-Unrestricted)
+GenericName=Remote Desktop
+Comment=Remote Desktop
+Exec="/home/fenglengshun/.local/bin/conty.sh" rustdesk %u
+Icon=rustdesk
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Network;RemoteAccess;GTK;
+Keywords=internet;
+Actions=new-window;
+
+X-Desktop-File-Install-Version=0.23
+
+[Desktop Action new-window]
+Name=Open a New Window (Conty-Unrestricted)
+Exec="/home/fenglengshun/.local/bin/conty.sh" rustdesk %u

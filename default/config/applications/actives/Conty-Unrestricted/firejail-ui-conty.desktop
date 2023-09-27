@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Firejail Configuration Wizard (Conty-Unrestricted)
+Comment=Firejail configuration wizard
+Exec="/home/fenglengshun/.local/bin/conty.sh" firejail-ui
+Icon=firejail-ui
+Terminal=false
+Type=Application
+Categories=Qt;Utility;Security;
+Keywords=jail;security;seccomp;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Motrix (Conty-Restricted)
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /opt/Motrix/motrix %U
+Terminal=false
+Type=Application
+Icon=motrix
+StartupWMClass=Motrix
+Comment=A full-featured download manager
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;application/x-bittorrent;x-scheme-handler/mo;x-scheme-handler/motrix;x-scheme-handler/magnet;x-scheme-handler/thunder;application/x-bittorrent;x-scheme-handler/mo;x-scheme-handler/motrix;x-scheme-handler/magnet;x-scheme-handler/thunder;application/x-bittorrent;x-scheme-handler/mo;x-scheme-handler/motrix;x-scheme-handler/magnet;x-scheme-handler/thunder;application/x-bittorrent;x-scheme-handler/mo;x-scheme-handler/motrix;x-scheme-handler/magnet;x-scheme-handler/thunder;application/x-bittorrent;x-scheme-handler/mo;x-scheme-handler/motrix;x-scheme-handler/magnet;x-scheme-handler/thunder;
+Categories=Network;
