@@ -6,8 +6,11 @@
 
     my_alias="bat -p -n --paging=never --style=header-filename ${config.xdg.configHome}/home-manager/default/alias.nix";
     update_desktop_files ="update-desktop-database ${config.xdg.dataHome}/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+
     wget="wget --hsts-file=\"${config.xdg.dataHome}/wget-hsts\"";
+
     exa="eza";
+    bottom="btm";
 
     force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
     force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";
@@ -43,16 +46,17 @@
 
     conty="HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads";
 
-    conty-export="rmtrash -rfv ~/.local/share/applications/Conty* ; \
-      HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads && \
-      mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Restricted && \
-      ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d && \
-      mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Unrestricted && \
-      find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; \
-      find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} + ; \
-      find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} + ; \
-      find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} +
-    ";
+    conty-export=''
+    rmtrash -rfv ~/.local/share/applications/Conty* ; \
+    HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads && \
+    mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Restricted && \
+    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d && \
+    mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Unrestricted && \
+    find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; \
+    find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} + ; \
+    find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} + ; \
+    find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} +
+    '';
 
     contywine="WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh wine";
     contywinejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh wine";

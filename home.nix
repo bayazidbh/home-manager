@@ -43,7 +43,7 @@ in
 
   # Ensure that the following packages are installed
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = _: true;
+  nixpkgs.config.allowUnfreePredicate = _: true; # needed for flakes
 
   #allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
@@ -51,28 +51,30 @@ in
   ];
 
   home.packages = with pkgs; [
-    git gh github-desktop git-lfs cosign cachix subversion # build tools
+    git github-desktop git-lfs cosign cachix subversion # gh # build tools
+    wl-clipboard wl-clipboard-x11 # for wayland copy-paste
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
-    erdtree delta grex fd # ripgrep-all bottom # rust CLIs
+    erdtree delta grex fd bottom   (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
     duperemove rsync zsync resilio-sync  # file management
-    freshrss # rustdesk
-    libdbusmenu libsForQt5.libdbusmenu # for global menu
-    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons libsForQt5.applet-window-buttons # breeze dependencies
-    whitesur-gtk-theme whitesur-icon-theme gnome.adwaita-icon-theme # sassc # whitesur and adwaita dependencies
+    libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
+    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
+    whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur and
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl adl mangal mov-cli # CLI-based media downloader
     fsearch junction krename imagemagick # extra file management tools
-    podman-compose # distrobox podman # containers stuff
-    # downonspot spotify-qt # media viewers
-    # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
-    # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
-    # gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
-    # gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
-    gamemode protonup-ng ludusavi scanmem # gamescope other gaming tools
-    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
+    # distrobox podman podman-compose # containers stuff
+    # rustdesk downonspot spotify-qt # media viewers
+    gamemode protonup-ng ludusavi scanmem # gamescope # other gaming tools
+    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps # currently not working https://github.com/NixOS/nixpkgs/issues/210018 231394 226086
   ];
+
+  # Overlays for overwriting settings:
+  # nixpkgs.overlays = [ (final: prev:
+  #   (ripgrep-all.overrideAttrs (old: {
+  #     doInstallCheck = false; # skip install checks for rga due to https://github.com/NixOS/nixpkgs/issues/250306
+  #       }))) ];
 
   # enable fcitx5 as input method, with mozc for Japanese IME
   i18n.inputMethod = {
@@ -82,8 +84,8 @@ in
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
-  # programs.gh.enable = true; # Install and enable GitHub CLI tool
-  # programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
+  programs.gh.enable = true; # Install and enable GitHub CLI tool
+  programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
 
   programs.aria2.enable = true; # Install and enable aria2
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
