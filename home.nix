@@ -55,8 +55,8 @@ in
     wl-clipboard wl-clipboard-x11 # for wayland copy-paste
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
-    erdtree delta grex fd bottom   (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
-    duperemove rsync zsync resilio-sync  # file management
+    erdtree delta grex fd bottom (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
+    duperemove rsync zsync resilio-sync # file management
     libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
     whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur and

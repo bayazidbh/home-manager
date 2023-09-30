@@ -19,8 +19,8 @@ in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "root";
-  home.homeDirectory = "/root";
+  home.username = "fenglengshun";
+  home.homeDirectory = "/home/fenglengshun";
   xdg.enable = true;
   home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
 
@@ -51,19 +51,10 @@ in
 
   home.packages = with pkgs; [
     git inxi neofetch grc highlight rmtrash # clipboard-jh # CLI utils
-    erdtree delta grex fd bottom (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
-    rsync zsync # web-ui tools
-    libdbusmenu libsForQt5.libdbusmenu # for global menu
-    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons # breeze dependencies
-    sassc whitesur-gtk-theme whitesur-kde whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
-    scanmem # other gaming tools
+    erdtree ripgrep-all delta grex fd bottom # rust CLIs
+    resilio-sync rsync zsync # file-management tools
+    podman podman-compose
   ];
-
-  # enable fcitx5 as input method, with mozc for Japanese IME
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
-  };
 
   programs.aria2.enable = true; # Install and enable aria2
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
