@@ -7,6 +7,7 @@ home.sessionVariables = {
 
 home.packages = with pkgs; [
   podman podman-compose podman-desktop distrobox # containers stuff
+  protonup-ng ludusavi scanmem # gamescope gamemode # other gaming tools
   ];
 
 systemd.user.tmpfiles.rules = [

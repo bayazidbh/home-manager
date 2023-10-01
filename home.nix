@@ -51,7 +51,7 @@ in
   ];
 
   home.packages = with pkgs; [
-    git github-desktop git-lfs cosign cachix subversion # gh # build tools
+    git gh github-desktop git-lfs cosign cachix subversion # build tools
     wl-clipboard wl-clipboard-x11 # for wayland copy-paste
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
@@ -63,10 +63,9 @@ in
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl adl mangal mov-cli # CLI-based media downloader
-    fsearch junction krename imagemagick # extra file management tools
+    mediawriter fsearch junction krename imagemagick # extra file management tools
     # distrobox podman podman-compose # containers stuff
     # rustdesk downonspot spotify-qt # media viewers
-    gamemode protonup-ng ludusavi scanmem # gamescope # other gaming tools
     # steamtinkerlaunch gawk yad # steamtinkerlaunch deps # currently not working https://github.com/NixOS/nixpkgs/issues/210018 231394 226086
   ];
 
@@ -84,7 +83,7 @@ in
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
-  programs.gh.enable = true; # Install and enable GitHub CLI tool
+  # programs.gh.enable = true; # Install and enable GitHub CLI tool
   programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
 
   programs.aria2.enable = true; # Install and enable aria2

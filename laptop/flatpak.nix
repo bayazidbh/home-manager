@@ -20,6 +20,8 @@
      "flathub:org.videolan.VLC/x86_64/stable"
      "flathub:page.codeberg.Imaginer.Imaginer/x86_64/stable"
      "flathub:io.github.Bavarder.Bavarder/x86_64/stable"
+     "flathub:io.github.Foldex.AdwSteamGtk/x86_64/stable"
+     "flathub:io.github.giantpinkrobots.bootqt/x86_64/stable"
      "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
      "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
      "flathub:com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"

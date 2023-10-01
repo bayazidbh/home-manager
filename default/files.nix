@@ -99,6 +99,10 @@ home.file."setup-distrobox-all" = {
   text = ''
     #! /bin/bash
 
+    podman image pull quay.io/toolbx-images/archlinux-toolbox:latest
+    podman image pull quay.io/toolbx-images/ubuntu-toolbox:latest
+    podman image pull -y registry.fedoraproject.org/fedora-toolbox:latest
+
     ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-ubuntu
     ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-fedora
     ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-arch
@@ -113,7 +117,7 @@ home.file."setup-distrobox-ubuntu" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/bash distrobox create --image ubuntu:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
+    env SHELL=/bin/bash distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
     distrobox start ubuntu-latest
 
   '';
@@ -126,7 +130,7 @@ home.file."setup-distrobox-fedora" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/zsh distrobox create --image fedora:latest --name fedora --home ~/Documents/container/fedora
+    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:latest --name fedora --home ~/Documents/container/fedora
     distrobox enter fedora -- sudo dnf install -y dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
   '';
@@ -138,7 +142,7 @@ home.file."setup-distrobox-arch" = {
   text = ''
   #! /bin/bash
 
-  env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox --name arch --home ~/Documents/container/arch ; \
+  env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox:latest --name arch --home ~/Documents/container/arch ; \
   distrobox enter arch -- sudo pacman -Su --noconfirm nano ; \
   distrobox enter arch -- sudo pacman-key --init ; \
   distrobox enter arch -- sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com ; \

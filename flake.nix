@@ -67,6 +67,8 @@
           ./server/home.nix # default home.nix
           ./default/shell.nix # shell config for all devices
           ./default/alias.nix # aliases for all devices
+        ];
+      };
       "root" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         modules = [
