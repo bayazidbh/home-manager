@@ -150,7 +150,8 @@ home.file."setup-distrobox-arch" = {
   distrobox enter arch -- sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' ; \
   distrobox enter arch -- sh -c "echo -e '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf" ; \
   distrobox enter arch -- sh -c "echo -e '\nen_SG.UTF-8 UTF-8\nen_US.UTF-8 UTF-8\nja_JP.UTF-8 UTF-8\nid_ID.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen"
-  distrobox enter arch -- sudo pacman -Syu --noconfirm glibc base-devel paru pipewire-jack pipewire-pulse pipewire-alsa
+  distrobox enter arch -- sudo pacman -Syu --noconfirm glibc base-devel paru pipewire-jack pipewire-pulse pipewire-alsa wireplumber
+  distrobox enter arch -- paru -Syyu --noconfirm --skipreview archisteamfarm-bin
 
   '';
 };
