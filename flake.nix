@@ -7,7 +7,7 @@
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, still WIP
     nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it}
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it
     # Add other inputs if needed
   };
 
@@ -47,7 +47,6 @@
       };
       "fenglengshun@bbh-laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        # extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
           ./home.nix # default home.nix
           ./default/shell.nix # shell config for all devices

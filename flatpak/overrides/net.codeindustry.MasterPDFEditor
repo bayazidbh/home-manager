@@ -1,2 +1,2 @@
 [Context]
-filesystems=home
+filesystems=xdg-documents:rw;xdg-download:rw;xdg-pictures:rw
