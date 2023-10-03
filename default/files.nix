@@ -4,7 +4,10 @@
 systemd.user.tmpfiles.rules = [
   "d ${config.home.homeDirectory}/Storage"
   "d ${config.home.homeDirectory}/Storage/Data"
+  "d ${config.home.homeDirectory}/.icons"
   "C+ ${config.xdg.configHome} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
+  "C+ ${config.xdg.dataHome}/icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
+  "C+ ${config.home.homeDirectory}/.icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
   "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/opensnitchd"
   "L ${config.xdg.userDirs.documents}/Downloads - - - - ${config.xdg.userDirs.download}"

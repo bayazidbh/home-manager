@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Wavebox (Conty-Unrestricted)
+Name=Wavebox (X11) (Conty-Unrestricted)
 GenericName=Web Browser
 Comment=The next generation of web-desktop communication
 Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode --force-dark-mode %U
@@ -13,8 +13,8 @@ MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xht
 Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
-Name=New Window (Conty-Unrestricted)
+Name=New Window (X11) (Conty-Unrestricted)
 Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode --force-dark-mode
 
 [Desktop Action new-private-window]
-Name=New Incognito Window (Conty-Unrestricted)
+Name=New Incognito Window (X11) (Conty-Unrestricted)
