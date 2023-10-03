@@ -57,6 +57,7 @@ in
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons # breeze dependencies
     sassc whitesur-gtk-theme whitesur-kde whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
     scanmem # other gaming tools
+    auto-cpufreq # for battery management
   ];
 
   # enable fcitx5 as input method, with mozc for Japanese IME
