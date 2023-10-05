@@ -109,7 +109,6 @@ systemd.user.services = {
     };
     Service = {
       Type = "forking";
-      Restart = "yes";
       ExecStart = [
         "${config.home.sessionVariables.XDG_BIN_HOME}/steam-silent"
       ];

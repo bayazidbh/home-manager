@@ -69,5 +69,14 @@
     nw="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/nw";
     nw72="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
 
+    wine-setup="contywine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/Setup.exe ; \
+    contywine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe ; \
+    contywine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe ; \
+    WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh winetricks -q dxvk vkd3d corefonts cjkfonts \
+    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/Setup.exe ; \
+    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe ; \
+    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe ; \
+    winetricks -q dxvk vkd3d corefonts cjkfonts";
+
   };
 }

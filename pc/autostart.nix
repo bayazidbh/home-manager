@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
 systemd.user.services = {
-  "autostart-conty-steam" = {
+  "autostart-conty-wavebox" = {
     Unit = {
       Description = "Autostart Resilio Sync Nix App";
       PartOf = "graphical-session.target";
@@ -18,5 +18,4 @@ systemd.user.services = {
       WantedBy = [ "graphical-session.target" ];
     };
   };
-};
 }

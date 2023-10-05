@@ -1,0 +1,170 @@
+[1]
+Description=Window settings for steam
+below=true
+clientmachine=localhost
+desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+maximizehoriz=true
+maximizevert=true
+placement=9
+placementrule=2
+position=0,30
+size=858,640
+skippager=true
+skipswitcher=true
+skiptaskbar=true
+title=Steam
+types=1
+windowrole=browser
+wmclass=steamwebhelper steam
+wmclasscomplete=true
+wmclassmatch=1
+
+[2]
+Description=Window settings for wavebox
+below=true
+clientmachine=localhost
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+placement=9
+placementrule=2
+position=0,30
+positionrule=3
+screenrule=3
+size=858,640
+skippager=true
+skipswitcher=true
+skiptaskbar=true
+title=(2) Discord | #gaming | Vanilla OS - Wavebox
+types=1
+windowrole=browser
+windowrolematch=1
+wmclass=wavebox
+wmclassmatch=1
+
+[3]
+Description=Window settings for fsearch
+below=true
+clientmachine=localhost
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+placementrule=2
+position=2174,79
+positionrule=3
+screen=1
+screenrule=4
+size=858,640
+sizerule=3
+skippager=true
+skipswitcher=true
+skiptaskbar=true
+title=FSearch
+types=1
+wmclass=.fsearch-wrapped fsearch
+wmclasscomplete=true
+wmclassmatch=1
+
+[4]
+Description=Window settings for xwaylandvideobridge
+below=true
+belowrule=3
+clientmachine=localhost
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Wayland to X Recording bridge — Xwayland Video Bridge
+titlematch=1
+types=1
+wmclass=xwaylandvideobridge
+wmclassmatch=1
+
+[70f167e3-8c03-4523-8bf4-234e7a7ebc40]
+Description=Window settings for wavebox
+clientmachine=localhost
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+placement=9
+placementrule=2
+position=0,30
+positionrule=3
+screenrule=3
+title=(2) Discord | #gaming | Vanilla OS - Wavebox
+types=1
+windowrole=browser
+windowrolematch=1
+wmclass=wavebox
+wmclassmatch=1
+
+[784de27c-a072-46b8-828d-28d18022281f]
+Description=Window settings for steam
+clientmachine=localhost
+desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+placement=9
+placementrule=2
+title=Steam
+types=1
+wmclass=steamwebhelper steam
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=4
+rules=1,2,3,4
+
+[ad3686fb-6cb0-4756-af94-9bed06dc141f]
+Description=Window settings for fsearch
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+placementrule=2
+position=2174,79
+positionrule=3
+screen=2
+screenrule=4
+size=858,640
+sizerule=3
+title=FSearch
+types=1
+wmclass=.fsearch-wrapped fsearch
+wmclasscomplete=true
+wmclassmatch=1
+
+[e26293ee-6033-4796-b327-631bde22b1c0]
+Description=Window settings for xwaylandvideobridge
+below=true
+belowrule=3
+clientmachine=localhost
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Wayland to X Recording bridge — Xwayland Video Bridge
+titlematch=1
+types=1
+wmclass=xwaylandvideobridge
+wmclassmatch=1
