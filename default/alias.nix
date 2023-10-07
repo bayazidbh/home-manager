@@ -63,7 +63,8 @@
     contygamescope="WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland -- ";
 
     # Games
-    steam-silent="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent";
+    steam-silent="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent -pipewire";
+    gameconqueror="sudo gameconqueror";
     gamescope_run="/bin/gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland --";
     winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
     nw="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/nw";

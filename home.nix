@@ -56,24 +56,24 @@ in
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
-    duperemove rsync zsync resilio-sync # file management
+    duperemove rsync grsync czkawka metadata-cleaner zsync resilio-sync # file management
     libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
     whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur and
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl adl mangal mov-cli # CLI-based media downloader
-    mediawriter fsearch junction krename imagemagick # extra file management tools
-    # distrobox podman podman-compose # containers stuff
+    gimp-with-plugins normcap mcomix soundconverter # media tools
+    steam-rom-manager protonup-ng protontricks # steam tools
+    bottles-unwrapped heroic-unwrapped # game runner
+    ludusavi scanmem # gamescope gamemode # other gaming tools
+    bitwarden authy # security tools
+    mediawriter ventoy-full # image writer
+    fsearch junction krename imagemagick # extra file management tools
+    libva1 brave transmission-qt sqlitebrowser # wavebox
     # rustdesk downonspot spotify-qt # media viewers
-    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps # currently not working https://github.com/NixOS/nixpkgs/issues/210018 231394 226086
-  ];
 
-  # Overlays for overwriting settings:
-  # nixpkgs.overlays = [ (final: prev:
-  #   (ripgrep-all.overrideAttrs (old: {
-  #     doInstallCheck = false; # skip install checks for rga due to https://github.com/NixOS/nixpkgs/issues/250306
-  #       }))) ];
+  ];
 
   # enable fcitx5 as input method, with mozc for Japanese IME
   i18n.inputMethod = {

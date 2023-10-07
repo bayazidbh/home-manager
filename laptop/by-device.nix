@@ -7,11 +7,13 @@ home.sessionVariables = {
 
 home.packages = with pkgs; [
   podman podman-compose podman-desktop distrobox # containers stuff
-  protonup-ng ludusavi scanmem # gamescope gamemode # other gaming tools
+  # gamescope gamemode # other gaming tools
+  # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
 
 systemd.user.tmpfiles.rules = [
   "L ${config.xdg.configHome}/kwinrulesrc - - - - ${config.xdg.configHome}/home-manager/laptop/config/kwinrulesrc"
+  "L ${config.xdg.configHome}/plasma-org.kde.plasma.desktop-appletsrc - - - - ${config.xdg.configHome}/home-manager/laptop/config/plasma-org.kde.plasma.desktop-appletsrc"
   "d ${config.xdg.userDirs.pictures}/Archive"
   "d ${config.xdg.userDirs.pictures}/DCIM"
   "d ${config.home.homeDirectory}/Applications"

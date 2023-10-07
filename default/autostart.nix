@@ -21,7 +21,7 @@ home.file."steam-silent" = {
   text = ''
     #!/usr/bin/bash
 
-    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent
+    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent -pipewire
     '';
   };
 
