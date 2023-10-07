@@ -125,7 +125,7 @@ home.file."setup-distrobox-ubuntu" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/bash distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
+    env SHELL=/bin/bash distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:latest --name ubuntu-latest --home ${config.xdg.userDirs.documents}/container/ubuntu-latest
     distrobox start ubuntu-latest
 
   '';
@@ -138,7 +138,7 @@ home.file."setup-distrobox-fedora" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:latest --name fedora --home ~/Documents/container/fedora
+    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:latest --name fedora --home ${config.xdg.userDirs.documents}/container/fedora
     distrobox enter fedora -- sudo dnf install -y dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
   '';
@@ -150,7 +150,7 @@ home.file."setup-distrobox-arch" = {
   text = ''
   #! /bin/bash
 
-  env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox:latest --name arch --home ~/Documents/container/arch ; \
+  env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox:latest --name arch --home ${config.xdg.userDirs.documents}/container/arch ; \
   distrobox enter arch -- sudo pacman -Su --noconfirm nano ; \
   distrobox enter arch -- sudo pacman-key --init ; \
   distrobox enter arch -- sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com ; \
@@ -164,6 +164,7 @@ home.file."setup-distrobox-arch" = {
   cd /tmp/gazou-git
   sed -i 's/-DGUI=ON/-DGUI=OFF/' /tmp/gazou-git/PKGBUILD
   distrobox enter arch -- makepkg -si --noconfirm
+  distrobox enter arch -- env HOME=/home/fenglengshun distrobox-export --bin /usr/sbin/gazou
 
   '';
 };

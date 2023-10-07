@@ -29,6 +29,9 @@
     append_images="echo 'appends the images vertically\nconvert -append in-*.jpg out.jpg\nappends the images horizontally\nconvert in-1.jpg in-5.jpg in-N.jpg +append out.jpg'";
     convert_to_pdf="echo 'soffice --headless --norestore --convert-to pdf --outdir {OUT_DIR} {FILE}\nlibreoffice --headless --convert-to pdf *.xlsx\nflatpak run org.libreoffice.LibreOffice --headless --convert-to pdf *.docx'";
 
+    gazou-jpn="distrobox enter arch -- gazou -l jpn";
+    gazou-jpn-vert="distrobox enter arch -- gazou -v -l jpn";
+
     # Nix Package Manager shortcuts
 
     clean-nix="nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d ; nix-store --optimise";
