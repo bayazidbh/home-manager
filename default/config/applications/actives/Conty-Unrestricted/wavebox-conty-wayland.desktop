@@ -3,7 +3,7 @@ Version=1.0
 Name=Wavebox (Wayland) (Conty-Unrestricted)
 GenericName=Web Browser
 Comment=The next generation of web-desktop communication
-Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode %U
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode %U
 StartupNotify=true
 Terminal=false
 Icon=wavebox
@@ -14,7 +14,7 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window (Wayland) (Conty-Unrestricted)
-Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode
 
 [Desktop Action new-private-window]
 Name=New Incognito Window (Wayland) (Conty-Unrestricted)

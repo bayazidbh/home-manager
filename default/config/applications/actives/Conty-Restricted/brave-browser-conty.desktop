@@ -107,7 +107,7 @@ Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
 StartupNotify=true
 StartupWMClass=brave-browser
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads brave --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode %U
 Terminal=false
 Icon=brave-desktop
 Type=Application
@@ -167,7 +167,7 @@ Name[uk]=Нове вікно (Conty-Restricted)
 Name[vi]=Cửa sổ Mới (Conty-Restricted)
 Name[zh_CN]=新建窗口 (Conty-Restricted)
 Name[zh_TW]=開新視窗 (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads brave --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode
 
 [Desktop Action new-private-window]
 Name=New Incognito Window
@@ -219,5 +219,5 @@ Name[uk]=Нове вікно в режимі анонімного перегля
 Name[vi]=Cửa sổ ẩn danh mới (Conty-Restricted)
 Name[zh_CN]=新建隐身窗口 (Conty-Restricted)
 Name[zh_TW]=新增無痕式視窗 (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads brave --incognito --extension-mime-request-handling=always-prompt-for-install --enable-features=WebUIDarkMode --force-dark-mode
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads brave --incognito --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode
 MimeType=x-scheme-handler/unknown;x-scheme-handler/about;text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;

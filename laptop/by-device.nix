@@ -7,8 +7,13 @@ home.sessionVariables = {
 
 home.packages = with pkgs; [
   podman podman-compose podman-desktop distrobox # containers stuff
-  # gamescope gamemode # other gaming tools
-  # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
+    # downonspot spotify-qt # media viewers
+    # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
+    # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
+    # gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
+    # gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
+    # gamescope gamemode # other gaming tools
+    # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
 
 systemd.user.tmpfiles.rules = [
@@ -34,5 +39,58 @@ home.file."win11" = {
 
     /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11
     '';
+  };
+
+xdg.desktopEntries = {
+  "brave-nix-wl" = {
+    name="Brave (Nix) (Wayland)";
+    genericName="Web Browser";
+    comment="Access the Internet";
+    startupNotify=true;
+    exec="brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode %U";
+    terminal=false;
+    icon="brave-desktop";
+    type="Application";
+    categories=[ "Network" "WebBrowser" ];
+    mimeType=[ "application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https" "x-scheme-handler/ipfs" "x-scheme-handler/ipns" ];
+    settings={
+      StartupWMClass ="brave-browser";
+      };
+    actions={
+      "new-window" = {
+        name="New Window";
+        exec="brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode";
+        };
+      "new-private-window" = {
+        name="New Incognito Window";
+        exec="brave --incognito --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode";
+        };
+      };
+    };
+    "brave-nix-x11" = {
+    name="Brave (Nix) (x11)";
+    genericName="Web Browser";
+    comment="Access the Internet";
+    startupNotify=true;
+    exec="brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode %U";
+    terminal=false;
+    icon="brave-desktop";
+    type="Application";
+    categories=[ "Network" "WebBrowser" ];
+    mimeType=[ "application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https" "x-scheme-handler/ipfs" "x-scheme-handler/ipns" ];
+    settings={
+      StartupWMClass ="brave-browser";
+      };
+    actions={
+      "new-window" = {
+        name="New Window";
+        exec="brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
+        };
+      "new-private-window" = {
+        name="New Incognito Window";
+        exec="brave --incognito --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
+        };
+      };
+    };
   };
 }

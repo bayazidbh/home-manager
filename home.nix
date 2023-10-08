@@ -70,7 +70,8 @@ in
     bitwarden authy # security tools
     mediawriter ventoy-full # image writer
     fsearch junction krename imagemagick # extra file management tools
-    libva1 brave transmission-qt sqlitebrowser # wavebox
+    libva1 libva-utils libvpx # codecs
+    brave transmission-qt sqlitebrowser # wavebox
     # rustdesk downonspot spotify-qt # media viewers
 
   ];

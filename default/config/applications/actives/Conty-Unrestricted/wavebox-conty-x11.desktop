@@ -3,7 +3,7 @@ Version=1.0
 Name=Wavebox (X11) (Conty-Unrestricted)
 GenericName=Web Browser
 Comment=The next generation of web-desktop communication
-Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode --force-dark-mode %U
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode %U
 StartupNotify=true
 Terminal=false
 Icon=wavebox
@@ -14,7 +14,7 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window (X11) (Conty-Unrestricted)
-Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode --force-dark-mode
+Exec="/home/fenglengshun/.local/bin/conty.sh" /opt/wavebox.io/wavebox/wavebox-launcher --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode
 
 [Desktop Action new-private-window]
 Name=New Incognito Window (X11) (Conty-Unrestricted)
