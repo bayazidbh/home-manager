@@ -205,4 +205,48 @@ home.file."nix.conf" = {
     trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=
   '';
 };
+
+home.file."renpy" = {
+  enable = true;
+  target = ".local/bin/renpy";
+  executable = true;
+  text = ''
+    #!/bin/bash
+
+    # Specify the RenPy version you want to use
+    version="8.1.3"
+
+    # Define the paths
+    renpy_dir="~/.local/bin/renpy-bin"
+    renpy_script="$renpy_dir/renpy-$version-sdk/renpy.sh"
+    download_command="aria2c https://www.renpy.org/dl/$version/renpy-$version-sdk.tar.bz2 -d ~/Downloads && tar -xjf ~/Downloads/renpy-$version-sdk.tar.bz2 -C $renpy_dir"
+
+    # Check if the RenPy directory exists, and if not, create it
+    if [ ! -d "$renpy_dir" ]; then
+        echo "Creating RenPy directory: $renpy_dir"
+        mkdir -p "$renpy_dir"
+    fi
+
+    # Check if the RenPy script exists and is executable
+    if [ -x "$renpy_script" ]; then
+        # If it exists and is executable, execute it
+        "$renpy_script"
+    else
+        # If it doesn't exist or is not executable, download and extract RenPy
+        if [ ! -f "$renpy_script" ]; then
+            # Download and extract RenPy
+            echo "RenPy script not found. Downloading and extracting..."
+            eval $download_command
+        fi
+
+        # Make the script executable
+        chmod +x "$renpy_script"
+
+        # Execute the script
+        "$renpy_script"
+    fi
+
+  '';
+};
+
 }

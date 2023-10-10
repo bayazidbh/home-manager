@@ -59,7 +59,7 @@ in
     duperemove rsync grsync czkawka metadata-cleaner zsync resilio-sync # file management
     libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
-    whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur and
+    whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl adl mangal mov-cli # CLI-based media downloader
@@ -73,7 +73,6 @@ in
     libva1 libva-utils libvpx # codecs
     brave transmission-qt sqlitebrowser # wavebox
     # rustdesk downonspot spotify-qt # media viewers
-
   ];
 
   # enable fcitx5 as input method, with mozc for Japanese IME
