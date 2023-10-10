@@ -5,7 +5,8 @@
     # Environment shortcuts
 
     my_alias="bat -p -n --paging=never --style=header-filename ${config.xdg.configHome}/home-manager/default/alias.nix";
-    update_desktop_files ="update-desktop-database ${config.xdg.dataHome}/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+    update_desktop_files ="sudo update-desktop-database ${config.xdg.dataHome}/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+    kate-bak-rmtrash="find ~/ -type f -name \"*.kate-bak\" -exec rmtrash -v {} \\;";
 
     wget="wget --hsts-file=\"${config.xdg.dataHome}/wget-hsts\"";
 
@@ -39,7 +40,7 @@
 
     # Conty Shortcuts https://github.com/Kron4ek/Conty
 
-    conty-download="rm -rfv ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh_part* ;
+    conty-download="rm -rfv ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh_part* ; \
                     aria2c -d ${config.home.sessionVariables.XDG_BIN_HOME} https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part01 && \
                     aria2c -d ${config.home.sessionVariables.XDG_BIN_HOME} https://github.com/bayazidbh/Conty/releases/download/continuous/conty.sh_part02 && \
                     rmtrash -v ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh && \

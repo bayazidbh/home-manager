@@ -52,7 +52,7 @@ in
 
   home.packages = with pkgs; [
     git gh github-desktop git-lfs cosign cachix subversion # build tools
-    wl-clipboard wl-clipboard-x11 # for wayland copy-paste
+    qt6.qtwayland libsForQt5.qt5.qtwayland wl-clipboard wl-clipboard-x11 # for wayland copy-paste
     ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
