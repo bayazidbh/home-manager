@@ -14,6 +14,7 @@
      "flathub:io.github.Foldex.AdwSteamGtk/x86_64/stable"
      "flathub:io.github.aandrew_me.ytdn/x86_64/stable"
      "flathub:io.wavebox.Wavebox/x86_64/stable"
+     "flathub:com.github.dynobo.normcap/x86_64/stable"
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
      "flathub:net.cozic.joplin_desktop/x86_64/stable"
      "flathub:org.upscayl.Upscayl/x86_64/stable"

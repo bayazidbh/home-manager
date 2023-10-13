@@ -21,6 +21,7 @@ home.sessionVariables = {
   GTK_THEME="WhiteSur-Dark-solid";
   GTK_THEME_VARIANT="dark";
   DOCKER_HOST="unix://\$XDG_RUNTIME_DIR/podman/podman.sock";
+  RENPY_PATH_TO_SAVES="${config.xdg.dataHome}/renpy";
   };
 
 home.sessionPath = [ "${config.home.sessionVariables.XDG_BIN_HOME}" ];

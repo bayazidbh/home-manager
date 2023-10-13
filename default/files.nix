@@ -217,9 +217,25 @@ home.file."renpy" = {
     version="8.1.3"
 
     # Define the paths
-    renpy_dir="~/.local/bin/renpy-bin"
+    renpy_dir="${config.home.sessionVariables.XDG_BIN_HOME}/renpy-bin"
     renpy_script="$renpy_dir/renpy-$version-sdk/renpy.sh"
     download_command="aria2c https://www.renpy.org/dl/$version/renpy-$version-sdk.tar.bz2 -d ~/Downloads && tar -xjf ~/Downloads/renpy-$version-sdk.tar.bz2 -C $renpy_dir"
+    project_dir="${config.home.homeDirectory}/Applications/renpy"
+
+    # Check if the RenPy directory exists for your projects
+
+    if [ ! -d "$project_dir" ]; then
+        echo "Creating project directory: $project_dir"
+        mkdir -p "$project_dir"
+        git clone git@github.com:bayazidbh/renpy-cold-tea.git "$project_dir/cold_tea"
+    else
+        for dir in "$project_dir"/*; do
+            if [ -d "$dir/.git" ]; then
+                echo "Updating Git repository in $dir"
+                git -C "$dir" pull
+            fi
+        done
+    fi
 
     # Check if the RenPy directory exists, and if not, create it
     if [ ! -d "$renpy_dir" ]; then
@@ -249,4 +265,19 @@ home.file."renpy" = {
   '';
 };
 
+xdg.desktopEntries = {
+  "RenPy" = {
+    name="Ren\'Py";
+    comment="Visual Novel Engine";
+    startupNotify=true;
+    exec="${config.home.sessionVariables.XDG_BIN_HOME}/renpy";
+    terminal=false;
+    icon="${config.xdg.dataHome}/icons/renpy.ico";
+    type="Application";
+    categories=[ "Development" "Game" ];
+    settings={
+      Keywords="renpy;";
+      };
+    };
+  };
 }
