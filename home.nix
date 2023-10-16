@@ -71,7 +71,7 @@ in
     mediawriter ventoy-full # image writer
     fsearch junction krename imagemagick # extra file management tools
     libva1 libva-utils libvpx # codecs
-    brave transmission-qt sqlitebrowser # wavebox
+    vesktop brave transmission-qt sqlitebrowser # wavebox
     # rustdesk downonspot spotify-qt # media viewers
   ];
 
