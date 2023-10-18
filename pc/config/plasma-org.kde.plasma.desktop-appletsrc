@@ -93,7 +93,7 @@ DialogWidth=720
 
 [Containments][29][Applets][33][Configuration][General]
 favoritesPortedToKAstats=true
-icon=fedora-logo-icon
+icon=/usr/share/pixmaps/pika-logo-dark.png
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][29][Applets][34]
@@ -122,7 +122,6 @@ DialogWidth=720
 
 [Containments][29][Applets][35][Configuration][General]
 containmentType=Plasma
-filterActivityInfo=false
 filterByScreen=true
 lengthPolicy=Maximum
 maximumLength=204
@@ -137,7 +136,7 @@ immutability=1
 plugin=org.kde.plasma.uswitcher
 
 [Containments][29][Applets][37][Configuration]
-PreloadWeight=75
+PreloadWeight=90
 
 [Containments][29][Applets][37][Configuration][ConfigDialog]
 DialogHeight=540
@@ -199,7 +198,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][29][Applets][64][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][29][Applets][64][Configuration][ConfigDialog]
 DialogHeight=540
@@ -215,7 +214,7 @@ DialogHeight=84
 DialogWidth=1366
 
 [Containments][29][General]
-AppletOrder=33;34;36;58;60;59;38;64;37
+AppletOrder=33;34;35;36;58;60;59;38;64;37
 
 [Containments][3]
 activityId=
@@ -283,7 +282,6 @@ DialogWidth=720
 
 [Containments][3][Applets][32][Configuration][General]
 containmentType=Plasma
-filterActivityInfo=false
 filterByScreen=true
 lengthPolicy=Maximum
 maximumLength=282
@@ -316,7 +314,7 @@ global=Alt+F1
 
 [Containments][3][Applets][4][Configuration][General]
 favoritesPortedToKAstats=true
-icon=fedora-logo-icon
+icon=/usr/share/pixmaps/pika-logo-dark.png
 systemApplications=systemsettings.desktop\\,org.kde.kinfocenter.desktop
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
@@ -387,7 +385,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][3][Applets][63][Configuration]
-PreloadWeight=60
+PreloadWeight=75
 
 [Containments][3][Applets][63][Configuration][ConfigDialog]
 DialogHeight=540
@@ -422,7 +420,7 @@ DialogWidth=1920
 PreloadWeight=0
 
 [Containments][3][General]
-AppletOrder=4;31;5;6;57;56;7;63;30
+AppletOrder=4;31;32;5;6;57;56;7;63;30
 
 [Containments][39]
 activityId=
@@ -473,6 +471,9 @@ plugin=org.kde.plasma.manage-inputmethod
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][39][Applets][47][Configuration]
+PreloadWeight=80
+
 [Containments][39][Applets][48]
 immutability=1
 plugin=org.kde.plasma.printmanager
@@ -484,6 +485,9 @@ plugin=org.kde.plasma.vault
 [Containments][39][Applets][50]
 immutability=1
 plugin=org.kde.plasma.volume
+
+[Containments][39][Applets][50][Configuration]
+PreloadWeight=55
 
 [Containments][39][Applets][50][Configuration][General]
 migrated=true
@@ -525,7 +529,7 @@ immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][39][Applets][67][Configuration]
-PreloadWeight=34
+PreloadWeight=18
 
 [Containments][39][ConfigDialog]
 DialogHeight=540
@@ -533,7 +537,7 @@ DialogWidth=720
 
 [Containments][39][General]
 extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.ktp-contactlist,org.kde.kupapplet
-hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager
+hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager,chrome_status_icon_1,chrome_status_icon_35,org.kde.plasma.keyboardlayout,Fcitx,org.kde.plasma.notifications
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.ktp-contactlist,org.kde.kupapplet
 
 [Containments][65]
@@ -664,7 +668,7 @@ immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][8][Applets][68][Configuration]
-PreloadWeight=39
+PreloadWeight=23
 
 [Containments][8][Applets][9]
 immutability=1

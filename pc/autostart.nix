@@ -18,4 +18,5 @@ systemd.user.services = {
       WantedBy = [ "graphical-session.target" ];
     };
   };
+};
 }

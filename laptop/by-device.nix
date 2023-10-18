@@ -20,6 +20,7 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.configHome}/kwinrulesrc - - - - ${config.xdg.configHome}/home-manager/laptop/config/kwinrulesrc"
   "C ${config.xdg.configHome}/spectaclerc - - - - ${config.xdg.configHome}/home-manager/laptop/config/spectaclerc"
   "L ${config.xdg.configHome}/plasma-org.kde.plasma.desktop-appletsrc - - - - ${config.xdg.configHome}/home-manager/laptop/config/plasma-org.kde.plasma.desktop-appletsrc"
+  "L ${config.xdg.configHome}/spectaclerc - - - - ${config.xdg.configHome}/home-manager/pc/config/spectaclerc"
   "d ${config.xdg.userDirs.pictures}/Archive"
   "d ${config.xdg.userDirs.pictures}/DCIM"
   "d ${config.home.homeDirectory}/Applications"

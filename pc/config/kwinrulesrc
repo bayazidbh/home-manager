@@ -1,20 +1,12 @@
 [1]
 Description=Window settings for steam
-below=true
 clientmachine=localhost
 desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
 desktopsrule=3
 ignoregeometry=true
 ignoregeometryrule=2
-maximizehoriz=true
-maximizevert=true
 placement=9
 placementrule=2
-position=0,30
-size=858,640
-skippager=true
-skipswitcher=true
-skiptaskbar=true
 title=Steam
 types=1
 windowrole=browser
@@ -23,34 +15,6 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [2]
-Description=Window settings for wavebox
-below=true
-clientmachine=localhost
-desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
-desktopsrule=3
-ignoregeometry=true
-ignoregeometryrule=2
-maximizehoriz=true
-maximizehorizrule=3
-maximizevert=true
-maximizevertrule=3
-placement=9
-placementrule=2
-position=0,30
-positionrule=3
-screenrule=3
-size=858,640
-skippager=true
-skipswitcher=true
-skiptaskbar=true
-title=(2) Discord | #gaming | Vanilla OS - Wavebox
-types=1
-windowrole=browser
-windowrolematch=1
-wmclass=wavebox
-wmclassmatch=1
-
-[3]
 Description=Window settings for fsearch
 below=true
 clientmachine=localhost
@@ -58,6 +22,8 @@ desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
 desktopsrule=3
 ignoregeometry=true
 ignoregeometryrule=2
+maximizehoriz=true
+maximizevert=true
 placementrule=2
 position=2174,79
 positionrule=3
@@ -70,11 +36,66 @@ skipswitcher=true
 skiptaskbar=true
 title=FSearch
 types=1
+windowrole=browser
 wmclass=.fsearch-wrapped fsearch
 wmclasscomplete=true
 wmclassmatch=1
 
+[3]
+Description=Window settings for xwaylandvideobridge
+below=true
+belowrule=3
+clientmachine=localhost
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+ignoregeometry=true
+position=2174,79
+screen=1
+size=858,640
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Wayland to X Recording bridge — Xwayland Video Bridge
+titlematch=1
+types=1
+wmclass=xwaylandvideobridge
+wmclassmatch=1
+
 [4]
+Description=Window settings for xwaylandvideobridge
+below=true
+belowrule=3
+clientmachine=localhost
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+ignoregeometry=true
+position=2174,79
+screen=1
+size=858,640
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Wayland to X Recording bridge — Xwayland Video Bridge
+titlematch=1
+types=1
+wmclass=xwaylandvideobridge
+wmclassmatch=1
+
+[45479974-e225-44f2-b70b-b9c00ef018a3]
+Description=Window settings for wavebox
+above=true
+aboverule=3
+title=ExHentai.org - Wavebox
+types=1
+wmclass=\swavebox
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
 Description=Window settings for xwaylandvideobridge
 below=true
 belowrule=3
@@ -130,8 +151,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=4
-rules=1,2,3,4
+count=3
+rules=1,2,3
 
 [ad3686fb-6cb0-4756-af94-9bed06dc141f]
 Description=Window settings for fsearch
