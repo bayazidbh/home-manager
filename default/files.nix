@@ -6,7 +6,7 @@ systemd.user.tmpfiles.rules = [
   "d ${config.home.homeDirectory}/Storage/Data"
   "d ${config.home.homeDirectory}/.icons"
   "d ${config.xdg.configHome}/heroic"
-  "C+ ${config.xdg.configHome} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
+  # "C+ ${config.home.homeDirectory} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
   "C+ ${config.home.homeDirectory}/.fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
   "C+ ${config.xdg.dataHome}/fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
   "C+ ${config.xdg.dataHome}/fontconfig - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fontconfig"

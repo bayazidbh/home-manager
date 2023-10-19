@@ -26,4 +26,5 @@ detailViewIconSize=16
 [Save]
 defaultSaveImageFormat=JPG
 defaultSaveLocation=file:///home/fenglengshun/Pictures/Archive/Screenshots/PC
+lastSaveLocation=file:///home/fenglengshun/Pictures/Archive/Screenshots/PC/2023-10/Screenshot_20231019_232922-01.jpg
 saveFilenameFormat=%Y-%M/Screenshot_%Y%M%D_%H%m%S_%T-%2d
