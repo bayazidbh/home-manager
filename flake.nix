@@ -5,13 +5,14 @@
       url = "github:nix-community/home-manager"; # home-manager unstable url
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
-    flatpaks.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, still WIP
+    flatpaks.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, old-stable branch
+    flatpaks-dev.url = "github:GermanBread/declarative-flatpak/dev"; # dev branch
     nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it
     # Add other inputs if needed
   };
 
-  outputs = { self, nixpkgs, home-manager, flatpaks, nixgl, chaotic }:
+  outputs = { self, nixpkgs, home-manager, flatpaks, flatpaks-dev, nixgl, chaotic }:
   let
 
     # System types to support.  [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
@@ -59,7 +60,7 @@
           ./laptop/autostart.nix # device specific autostart
           ./laptop/flatpak.nix # separate list for flatpak
           ./pc/nixgl.nix # separate list for nixgl.nix package
-          flatpaks.homeManagerModules.default # import declarative-flatpak module
+          flatpaks-dev.homeManagerModules.default # import declarative-flatpak module
         ];
       };
       "fenglengshun@bbh-server" = home-manager.lib.homeManagerConfiguration {

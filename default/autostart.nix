@@ -72,7 +72,8 @@ systemd.user.services = {
     };
     Service = {
       Type = "forking";
-      Restart = "yes";
+      Restart = "always";
+      RestartSec = "3";
       ExecStart = [
         "${config.home.sessionVariables.XDG_BIN_HOME}/resilio"
       ];
@@ -103,12 +104,15 @@ systemd.user.services = {
 
   "autostart-conty-steam" = {
     Unit = {
-      Description = "Autostart Resilio Sync Nix App";
+      Description = "Autostart Conty Steam App";
       PartOf = "graphical-session.target";
       After = "graphical-session.target";
     };
     Service = {
       Type = "forking";
+      Restart = "always";
+      RestartSec = "3";
+      ExecStartPre = "/bin/sleep 5";
       ExecStart = [
         "${config.home.sessionVariables.XDG_BIN_HOME}/steam-silent"
       ];

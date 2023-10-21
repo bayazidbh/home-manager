@@ -1,0 +1,20 @@
+[KFileDialog Settings]
+Recent Files[$e]=surfshark-id-ovpn_udp.ovpn,file:$HOME/.local/bin/resilio,file:$HOME/.local/bin/autostart.sh,file:$HOME/Pictures/DCIM/Avatars/feng-vn-company.png,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-us-nyc-ovpn_udp.ovpn,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-sg-ovpn_udp.ovpn,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-nl-ovpn_udp.ovpn,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-jp-ovpn_udp.ovpn,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-ie-ovpn_udp.ovpn,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-id-wg.conf,file:$HOME/Documents/Private/Apps/VPN/surfshark/surfshark-id-ovpn_udp.ovpn
+Recent URLs[$e]=file:$HOME/.local/bin/,file:$HOME/Documents/Private/Apps/VPN/surfshark/,file:$HOME/Documents/Private/,file:$HOME/,file:///var/home/fenglengshun/,file:$HOME/Pictures/DCIM/Avatars/
+detailViewIconSize=16
+
+[KPropertiesDialog]
+1920x1080 screen: Height=520
+1920x1080 screen: Width=396
+
+[MainWindow]
+1536x864 screen: Height=700
+1536x864 screen: Width=1020
+1536x864 screen: Window-Maximized=true
+1920x1080 screen: Window-Maximized=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAQaAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+welcome=false

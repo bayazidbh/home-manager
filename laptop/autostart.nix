@@ -56,6 +56,26 @@ systemd.user.services = {
       };
     };
 
+    "sunshine" = {
+    Unit = {
+      Description = "Sunshine self-hosted game stream host for Moonlight.";
+      StartLimitIntervalSec = "500";
+      StartLimitBurst = "5";
+      };
+    Service = {
+      Restart = "on-failure";
+      RestartSec = "5s";
+      # root install
+      # ExecStart = "/usr/bin/sunshine";
+      # Flatpak Install
+      ExecStart = "flatpak run dev.lizardbyte.sunshine";
+      ExecStop = "flatpak kill dev.lizardbyte.sunshine";
+      };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+      };
+    };
+
   #  "autostart-containers-portainer" = {
   #    Unit = {
   #      Description = "Autostart Containers with Portainer";

@@ -1,0 +1,35 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+1920x1080 screen: Window-Maximized=true
+2 screens: Window-Maximized=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAADIAAADvvwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgEAAABcAAADvgAAAQ0BAAACAAAGtwAAA74AAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgIAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Documents/Work/PTNW-TBG/SIM/SIM_451743_SIM_TBG_P_7_2023_ BULUCINDEA PANINCONG PHASE_4C_2489_SSL_TANETE.pdf
+File10[$e]=$HOME/Documents/Work/PTNW-IBS/22-IBC-IBS-OTH-53-001/BAST/TOLIKARA/ONGOING/DUNDU/PAP3626_DUNDU - 04 - WTCR_dan_Balap_On_Air - Nexwave_IBS_BAKTI_Papua.pdf
+File2[$e]=$HOME/Documents/Work/PTNW-TBG/SIM/SIM_451745_SIM_TBG_P_7_2023_ MARITENGNGAE_SIDRAP BAPANGI.pdf
+File3[$e]=$HOME/Downloads/Form PIM pemokong.pdf
+File4[$e]=$HOME/.config/home-manager/README.md
+File5[$e]=$HOME/Documents/Work/BoQ - DAS - Implementasi DAS Site Capital Place (1).pdf
+File6[$e]=$HOME/Applications/git/Conty/README.md
+File7[$e]=$HOME/Documents/Media/.H/(COMIC1☆10) [SUZUYA (Ryohka)] Boku Dake ga xx na Machi (Boku Dake ga Inai Machi) [English] [Tenshi-Nyow Translations].cbz
+File8[$e]=$HOME/Documents/Work/PTNW-IBS/22-IBC-IBS-OTH-53-001/BAST/TOLIKARA/ONGOING/LIGIMBAK/PAP3621_LIGIMBAK - 02 - BAUT_ATP - Nexwave_IBS_BAKTI_Papua.pdf
+File9[$e]=$HOME/Documents/Work/PTNW-IBS/22-IBC-IBS-OTH-53-001/RetWall/PO/PO 6300000367 Addwork Retaining Wall Site Dundu (PAP3626) Area Tolikara (PT Nexwave).pdf
+Name1[$e]=SIM_451743_SIM_TBG_P_7_2023_ BULUCINDEA PANINCONG PHASE_4C_2489_SSL_TANETE.pdf
+Name10[$e]=PAP3626_DUNDU - 04 - WTCR_dan_Balap_On_Air - Nexwave_IBS_BAKTI_Papua.pdf
+Name2[$e]=SIM_451745_SIM_TBG_P_7_2023_ MARITENGNGAE_SIDRAP BAPANGI.pdf
+Name3[$e]=Form PIM pemokong.pdf
+Name4[$e]=README.md
+Name5[$e]=BoQ - DAS - Implementasi DAS Site Capital Place (1).pdf
+Name6[$e]=README.md
+Name7[$e]=(COMIC1☆10) [SUZUYA (Ryohka)] Boku Dake ga xx na Machi (Boku Dake ga Inai Machi) [English] [Tenshi-Nyow Translations].cbz
+Name8[$e]=PAP3621_LIGIMBAK - 02 - BAUT_ATP - Nexwave_IBS_BAKTI_Papua.pdf
+Name9[$e]=PO 6300000367 Addwork Retaining Wall Site Dundu (PAP3626) Area Tolikara (PT Nexwave).pdf
