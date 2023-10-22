@@ -24,7 +24,7 @@ DialogWidth=720
 
 [Containments][27][Applets][61][Configuration][General]
 groupedTaskVisualization=2
-launchers=preferred://filemanager
+launchers=preferred://filemanager,applications:io.wavebox.Wavebox.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 sortingStrategy=3
@@ -209,12 +209,20 @@ clockTimeFormat1=hh:mm:ss
 v71Migration=true
 v72Migration=true
 
+[Containments][29][Applets][69]
+immutability=1
+plugin=org.kde.plasma.icon
+
+[Containments][29][Applets][69][Configuration]
+localPath=/home/fenglengshun/.local/share/plasma_icons/org.kde.spectacle.desktop
+url=file:///usr/share/applications/org.kde.spectacle.desktop
+
 [Containments][29][ConfigDialog]
 DialogHeight=84
 DialogWidth=1366
 
 [Containments][29][General]
-AppletOrder=33;34;35;36;58;60;59;38;64;37
+AppletOrder=33;34;35;36;58;60;59;69;38;64;37
 
 [Containments][3]
 activityId=
@@ -385,7 +393,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][3][Applets][63][Configuration]
-PreloadWeight=75
+PreloadWeight=85
 
 [Containments][3][Applets][63][Configuration][ConfigDialog]
 DialogHeight=540
@@ -412,6 +420,14 @@ immutability=1
 [Containments][3][Applets][7][Configuration][Configuration]
 PreloadWeight=100
 
+[Containments][3][Applets][70]
+immutability=1
+plugin=org.kde.plasma.icon
+
+[Containments][3][Applets][70][Configuration]
+localPath=/home/fenglengshun/.local/share/plasma_icons/org.kde.spectacle (1).desktop
+url=file:///usr/share/applications/org.kde.spectacle.desktop
+
 [Containments][3][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
@@ -420,7 +436,7 @@ DialogWidth=1920
 PreloadWeight=0
 
 [Containments][3][General]
-AppletOrder=4;31;32;5;6;57;56;7;63;30
+AppletOrder=4;31;32;5;6;57;56;70;7;63;30
 
 [Containments][39]
 activityId=
@@ -487,9 +503,10 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][39][Applets][50][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][39][Applets][50][Configuration][General]
+currentTab=streams
 migrated=true
 
 [Containments][39][Applets][51]

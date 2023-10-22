@@ -39,7 +39,6 @@ home.file."resilio.conf" = {
       {
         "listen" : "0.0.0.0:8888" // remove field to disable WebUI
       }
-
     }
 
     '';
@@ -52,7 +51,53 @@ home.file."wavebox-wayland" = {
   text = ''
     #!/usr/bin/bash
 
-    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh /opt/wavebox.io/wavebox/wavebox-launcher --extension-mime-request-handling=always-prompt-for-install --enable-features=WebRTCPipeWireCapturer,WebUIDarkMode,UseOzonePlatform,WaylandWindowDecoration --ozone-platform=wayland --force-dark-mode %U
+    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode
+    '';
+  };
+
+home.file."wavebox-dark-x11" = {
+  enable = true;
+  target = ".local/bin/wavebox-dark-x11";
+  executable = true;
+  text = ''
+    #!/usr/bin/bash
+
+    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode
+    '';
+  };
+
+home.file."spotify-adblock" = {
+  enable = true;
+  target = ".local/bin/spotify-adblock";
+  executable = true;
+  text = ''
+    #!/bin/bash
+
+    # Define the paths
+    adblock_so_file="${config.home.sessionVariables.XDG_BIN_HOME}/spotify-adblock.so"
+    spotify_adblock_so_url="https://github.com/abba23/spotify-adblock/releases/download/v1.0.3/spotify-adblock.so"
+    spotify_flatpak_command="flatpak run --command=sh com.spotify.Client -c 'eval \"\$(sed s#LD_PRELOAD=#LD_PRELOAD=${config.home.sessionVariables.XDG_BIN_HOME}/spotify-adblock.so:#g /app/bin/spotify)\"'"
+
+    # Check if the spotify-adblock.so file exists in ~/.local/bin
+    if [ -f "$adblock_so_file" ]; then
+        # If it exists, run Spotify with adblock
+        echo "Running Spotify with adblock..."
+        eval "$spotify_flatpak_command"
+    else
+        # If it doesn't exist, download it with aria2c
+        echo "Spotify adblock file not found. Downloading..."
+        aria2c -d ${config.home.sessionVariables.XDG_BIN_HOME} -o "spotify-adblock.so" $spotify_adblock_so_url
+
+        # Check if the download was successful
+        if [ -f "$adblock_so_file" ]; then
+            # Run Spotify with adblock
+            echo "Running Spotify with adblock..."
+            eval "$spotify_flatpak_command"
+        else
+            echo "Failed to download Spotify adblock file."
+        fi
+    fi
+
     '';
   };
 
@@ -267,16 +312,29 @@ home.file."renpy" = {
 
 xdg.desktopEntries = {
   "RenPy" = {
-    name="Ren\'Py";
-    comment="Visual Novel Engine";
-    startupNotify=true;
-    exec="${config.home.sessionVariables.XDG_BIN_HOME}/renpy";
+    name = "Ren\'Py";
+    comment = "Visual Novel Engine";
+    startupNotify = true;
+    exec = "${config.home.sessionVariables.XDG_BIN_HOME}/renpy";
+    terminal = false;
+    icon = "${config.xdg.dataHome}/icons/renpy.ico";
+    type = "Application";
+    categories = [ "Development" "Game" ];
+    settings = {
+      Keywords = "renpy;";
+      };
+    };
+  "spotify-adblock" = {
+    type = "Application";
+    name = "Spotify (adblock)";
+    genericName = "Music Player";
+    icon= "com.spotify.Client";
+    exec="${config.home.sessionVariables.XDG_BIN_HOME}/spotify-adblock";
     terminal=false;
-    icon="${config.xdg.dataHome}/icons/renpy.ico";
-    type="Application";
-    categories=[ "Development" "Game" ];
+    mimeType = [ "x-scheme-handler/spotify" ];
+    categories = [ "Audio" "Music" "Player" "AudioVideo" ];
     settings={
-      Keywords="renpy;";
+      StartupWMClass="spotify";
       };
     };
   };

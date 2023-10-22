@@ -42,7 +42,6 @@ home.file."win11" = {
     /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11
     '';
   };
-
 xdg.desktopEntries = {
   "brave-nix-wl" = {
     name="Brave (Nix) (Wayland)";
