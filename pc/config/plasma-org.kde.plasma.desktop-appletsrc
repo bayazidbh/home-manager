@@ -23,6 +23,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][27][Applets][61][Configuration][General]
+fill=false
 groupedTaskVisualization=2
 launchers=preferred://filemanager,applications:io.wavebox.Wavebox.desktop
 middleClickAction=Close
@@ -55,6 +56,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][28][Applets][62][Configuration][General]
+fill=false
 groupedTaskVisualization=2
 launchers=preferred://filemanager,applications:io.wavebox.Wavebox.desktop
 middleClickAction=Close
@@ -643,7 +645,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][19][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][8][Applets][19][Configuration][General]
 currentTab=streams
