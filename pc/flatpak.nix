@@ -26,6 +26,7 @@
      "flathub:net.fasterland.converseen/x86_64/stable"
      "flathub:de.shorsh.discord-screenaudio/x86_64/stable"
      "flathub:io.github.trigg.discover_overlay/x86_64/stable"
+     "flathub:dev.lizardbyte.app.Sunshine/x86_64/stable"
      "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
      "flathub:com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"
      "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08"

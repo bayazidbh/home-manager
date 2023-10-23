@@ -68,8 +68,8 @@ systemd.user.services = {
       # root install
       # ExecStart = "/usr/bin/sunshine";
       # Flatpak Install
-      ExecStart = "flatpak run dev.lizardbyte.sunshine";
-      ExecStop = "flatpak kill dev.lizardbyte.sunshine";
+      ExecStart = "flatpak run dev.lizardbyte.app.Sunshine";
+      ExecStop = "flatpak kill dev.lizardbyte.app.Sunshine";
       };
     Install = {
       WantedBy = [ "graphical-session.target" ];
