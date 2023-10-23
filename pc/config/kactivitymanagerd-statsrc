@@ -1,0 +1,17 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-33-54053bd9-a8e9-484d-b395-c7d9096758ab]
+ordering=applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.krename.desktop,applications:com.stremio.Stremio.desktop,applications:com.github.dynobo.normcap.desktop,applications:custom-applications-flatpaks-io.wavebox.Wavebox-wayland.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-33-global]
+ordering=applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.krename.desktop,applications:com.stremio.Stremio.desktop,applications:com.github.dynobo.normcap.desktop,applications:custom-applications-flatpaks-io.wavebox.Wavebox-wayland.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-4-54053bd9-a8e9-484d-b395-c7d9096758ab]
+ordering=applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.krename.desktop,applications:com.stremio.Stremio.desktop,applications:com.github.dynobo.normcap.desktop,applications:custom-applications-flatpaks-io.wavebox.Wavebox-wayland.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-4-global]
+ordering=applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.krename.desktop,applications:com.stremio.Stremio.desktop,applications:com.github.dynobo.normcap.desktop,applications:custom-applications-flatpaks-io.wavebox.Wavebox-wayland.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-93-54053bd9-a8e9-484d-b395-c7d9096758ab]
+ordering=preferred://browser,org.kde.discover.desktop,systemsettings.desktop,org.kde.plasma-systemmonitor.desktop,org.kde.dolphin.desktop,org.kde.konsole.desktop,org.kde.kate.desktop,org.kde.kontact.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-93-global]
+ordering=preferred://browser,org.kde.discover.desktop,systemsettings.desktop,org.kde.plasma-systemmonitor.desktop,org.kde.dolphin.desktop,org.kde.konsole.desktop,org.kde.kate.desktop,org.kde.kontact.desktop

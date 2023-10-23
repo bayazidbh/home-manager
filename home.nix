@@ -47,7 +47,8 @@ in
 
   #allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1v"
+    "electron-24.8.6"
+    # "openssl-1.1.1v"
   ];
 
   home.packages = with pkgs; [
@@ -69,9 +70,9 @@ in
     ludusavi scanmem # gamescope gamemode # other gaming tools
     bitwarden authy # security tools
     mediawriter ventoy-full # image writer
-    fsearch junction krename imagemagick # extra file management tools
+    qdirstat fsearch junction krename imagemagick transmission-qt # extra file management tools
     libva1 libva-utils libvpx # codecs
-    vesktop brave transmission-qt sqlitebrowser # wavebox
+    vesktop brave sqlitebrowser # wavebox # browsers
     # rustdesk downonspot spotify-qt # media viewers
   ];
 

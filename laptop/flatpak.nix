@@ -28,10 +28,10 @@
      "flathub:de.shorsh.discord-screenaudio/x86_64/stable"
      "flathub:io.github.trigg.discover_overlay/x86_64/stable"
      "flathub:dev.lizardbyte.app.Sunshine/x86_64/stable"
+     "flathub:app/com.spotify.Client/x86_64/stable"
      "flathub:com.valvesoftware.Steam/x86_64/stable"
      "flathub:com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
      "flathub:com.valvesoftware.Steam.Utility.thcrap_steam_proton_wrapper/x86_64/stable"
-     "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
      "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
      "flathub:com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"
      "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08"
@@ -42,6 +42,7 @@
      "flathub:com.obsproject.Studio.Plugin.GStreamerVaapi/x86_64/stable"
      "flathub:com.obsproject.Studio.Plugin.DroidCam/x86_64/stable"
      "flathub:com.obsproject.Studio.Plugin.BackgroundRemoval/x86_64/stable"
+     "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
     ];
     postInitCommand = "/usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/";
   };
