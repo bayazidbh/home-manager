@@ -24,6 +24,7 @@ CommandActiveTitlebar2=Shade
 CommandAllWheel=Change Opacity
 CommandInactiveTitlebar2=Shade
 CommandTitlebarWheel=Previous/Next Desktop
+CommandWindow2=Activate and raise
 
 [NightColor]
 Active=true
@@ -66,7 +67,6 @@ AutoRaise=true
 AutoRaiseInterval=1500
 DelayFocusInterval=500
 ElectricBorders=1
-FocusPolicy=FocusFollowsMouse
 RollOverDesktops=true
 
 [Xwayland]

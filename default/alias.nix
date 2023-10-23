@@ -5,7 +5,8 @@
     # Environment shortcuts
 
     my_alias="bat -p -n --paging=never --style=header-filename ${config.xdg.configHome}/home-manager/default/alias.nix";
-    update_desktop_files ="sudo update-desktop-database ${config.xdg.dataHome}/applications ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+    update_desktop_files ="sudo update-desktop-database ${config.xdg.dataHome}/applications ${config.xdg.dataHome}/applications/custom-applications/ ${config.xdg.dataHome}/applications/custom-applications/* ${config.home.homeDirectory}/.nix-profile/share/applications /usr/local/share/applications /usr/share/applications -v " ;
+
     kate-bak-rmtrash="find ~/ -type f -name \"*.kate-bak\" -exec rmtrash -v {} \\;";
 
     wget="wget --hsts-file=\"${config.xdg.dataHome}/wget-hsts\"";
@@ -67,7 +68,6 @@
     contygamescope="WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland -- ";
 
     # Games
-    steam-silent="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent -pipewire";
     gameconqueror="sudo gameconqueror";
     gamescope_run="/bin/gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland --";
     winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
