@@ -66,7 +66,7 @@ in
     gallery-dl adl mangal mov-cli # CLI-based media downloader
     gimp-with-plugins mcomix soundconverter # media tools
     steam-rom-manager protonup-ng protontricks # steam tools
-    bottles-unwrapped heroic-unwrapped # game runner
+    # bottles-unwrapped heroic-unwrapped # game runner
     ludusavi scanmem # gamescope gamemode # other gaming tools
     bitwarden authy # security tools
     mediawriter ventoy-full # image writer

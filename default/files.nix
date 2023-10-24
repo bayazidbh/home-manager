@@ -144,6 +144,51 @@ home.file."restart-plasma" = {
   '';
 };
 
+# use nix-shell to provide certain packages
+
+home.file."bottles" = {
+  enable = true;
+  target = ".local/bin/bottles";
+  executable = true;
+  text = ''
+    #!/bin/bash
+
+    binary="~/.nix-profile/bin/bottles"
+
+    # Check if `~/.nix-profile/bin/bottles` exists and is executable
+    if [ -x "$binary" ]; then
+        # If it exists and is executable, execute it
+        "$binary"
+    else
+        # If it doesn't exist, run `nix-shell -p bottles-unwrapped`
+        echo "bottles not found in ~/.nix-profile/bin. Running nix-shell..."
+        nix-shell -p bottles-unwrapped
+    fi
+
+    '';
+  };
+
+home.file."heroic" = {
+  enable = true;
+  target = ".local/bin/heroic";
+  executable = true;
+  text = ''
+    #!/bin/bash
+
+    binary="~/.nix-profile/bin/heroic"
+
+    # Check if `~/.nix-profile/bin/bottles` exists and is executable
+    if [ -x "$binary" ]; then
+        # If it exists and is executable, execute it
+        "$binary"
+    else
+        # If it doesn't exist, run `nix-shell -p bottles-unwrapped`
+        echo "bottles not found in ~/.nix-profile/bin. Running nix-shell..."
+        nix-shell -p heroic-unwrapped
+    fi
+
+    '';
+  };
 
 home.file."setup-distrobox-all" = {
   enable = true;

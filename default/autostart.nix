@@ -22,6 +22,7 @@ home.file."steam-silent" = {
     #!/usr/bin/bash
 
     ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh steam -nochatui -nofriendsui -silent
+
     '';
   };
 
@@ -102,9 +103,9 @@ systemd.user.services = {
     };
   };
 
-  "autostart-conty-steam" = {
+  "autostart-flatpak-steam" = {
     Unit = {
-      Description = "Autostart Conty Steam App";
+      Description = "Autostart Flatpak Steam App";
       PartOf = "graphical-session.target";
       After = "graphical-session.target";
     };
@@ -114,7 +115,7 @@ systemd.user.services = {
       RestartSec = "3";
       ExecStartPre = "/bin/sleep 5";
       ExecStart = [
-        "${config.home.sessionVariables.XDG_BIN_HOME}/steam-silent"
+        "/usr/bin/bash -c \"/usr/bin/flatpak run com.valvesoftware.Steam -nochatui -nofriendsui -silent\""
       ];
     };
     Install = {
