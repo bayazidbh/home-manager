@@ -206,7 +206,11 @@ immutability=1
 plugin=com.github.zren.kdeconnectdevice
 
 [Containments][29][Applets][68][Configuration]
-PreloadWeight=55
+PreloadWeight=70
+
+[Containments][29][Applets][68][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][29][Applets][68][Configuration][General]
 deviceIcon=smartphone
@@ -235,7 +239,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][39][Applets][40][Configuration]
-PreloadWeight=85
+PreloadWeight=100
 
 [Containments][39][Applets][41]
 immutability=1
