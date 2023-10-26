@@ -63,7 +63,7 @@ in
     whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
-    gallery-dl adl mangal mov-cli # CLI-based media downloader
+    gallery-dl mangal mov-cli # adl # CLI-based media downloader
     gimp-with-plugins mcomix soundconverter # media tools
     steam-rom-manager protonup-ng protontricks # steam tools
     # bottles-unwrapped heroic-unwrapped # game runner

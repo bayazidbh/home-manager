@@ -201,12 +201,23 @@ plugin=org.kde.plasma.icon
 localPath=/home/fenglengshun/.local/share/plasma_icons/org.kde.spectacle.desktop
 url=desktop:/org.kde.spectacle.desktop
 
+[Containments][29][Applets][68]
+immutability=1
+plugin=com.github.zren.kdeconnectdevice
+
+[Containments][29][Applets][68][Configuration]
+PreloadWeight=55
+
+[Containments][29][Applets][68][Configuration][General]
+deviceIcon=smartphone
+deviceId=16bd723b7b567eed
+
 [Containments][29][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
 
 [Containments][29][General]
-AppletOrder=33;34;35;36;58;60;59;67;38;64;37
+AppletOrder=33;34;35;36;58;60;59;67;68;38;64;37
 
 [Containments][39]
 activityId=
@@ -299,7 +310,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][39][Applets][52][Configuration]
-PreloadWeight=61
+PreloadWeight=66
 
 [Containments][39][Applets][52][Configuration][General]
 showPercentage=true
@@ -316,7 +327,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=43
+PreloadWeight=58
 
 [Containments][39][Applets][55]
 immutability=1

@@ -111,7 +111,7 @@ systemd.user.services = {
     };
     Service = {
       Type = "forking";
-      Restart = "always";
+      Restart = "on-failure";
       RestartSec = "3";
       ExecStartPre = "/bin/sleep 5";
       ExecStart = [
