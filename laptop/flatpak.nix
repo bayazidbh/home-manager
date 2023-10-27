@@ -9,6 +9,7 @@
      "flathub:com.github.tchx84.Flatseal/x86_64/stable"
      "flathub:com.steamgriddb.SGDBoop/x86_64/stable"
      "flathub:com.stremio.Stremio/x86_64/stable"
+     "flathub:net.lutris.Lutris/x86_64/stable"
      "flathub:com.usebottles.bottles/x86_64/stable"
      "flathub:com.wps.Office/x86_64/stable"
      "flathub:io.github.Foldex.AdwSteamGtk/x86_64/stable"

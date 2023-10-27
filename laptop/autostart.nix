@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 {
+systemd.user.tmpfiles.rules = [
+  "L ${config.xdg.configHome}/autostart/com.valvesoftware.Steam.desktop - - - - ${config.xdg.configHome}/home-manager/laptop/autostart/com.valvesoftware.Steam.desktop"
+  ];
+
 systemd.user.services = {
   "autostart-flatpak-wavebox" = {
     Unit = {
