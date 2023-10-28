@@ -48,7 +48,6 @@ in
   #allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
     "electron-24.8.6"
-    # "openssl-1.1.1v"
   ];
 
   home.packages = with pkgs; [
@@ -65,7 +64,7 @@ in
     du-dust nix-du graphviz # disk usage management tools
     gallery-dl mangal mov-cli # adl # CLI-based media downloader
     gimp-with-plugins mcomix soundconverter # media tools
-    steam-rom-manager protonup-ng protontricks # steam tools
+    protonup-ng # steam-rom-manager protontricks # steam tools
     # bottles-unwrapped heroic-unwrapped # game runner
     ludusavi scanmem # gamescope gamemode # other gaming tools
     bitwarden authy # security tools
