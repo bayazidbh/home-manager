@@ -15,6 +15,7 @@
      "flathub:info.smplayer.SMPlayer/x86_64/stable"
      "flathub:org.videolan.VLC/x86_64/stable"
      "flathub:io.github.aandrew_me.ytdn/x86_64/stable"
+     "flathub:org.qbittorrent.qBittorrent/x86_64/stable"
 
      "flathub:com.wps.Office/x86_64/stable"
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"

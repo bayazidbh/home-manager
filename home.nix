@@ -69,7 +69,7 @@ in
     ludusavi scanmem # gamescope gamemode # other gaming tools
     bitwarden authy # security tools
     mediawriter ventoy-full # image writer
-    qdirstat fsearch junction krename imagemagick transmission-qt # extra file management tools
+    qdirstat fsearch junction krename imagemagick # transmission-qt # extra file management tools
     libva1 libva-utils libvpx # codecs
     vesktop brave sqlitebrowser # wavebox # browsers
     # activitywatch aw-qt aw-watcher-window aw-watcher-afk

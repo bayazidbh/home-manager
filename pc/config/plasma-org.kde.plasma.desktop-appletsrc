@@ -673,7 +673,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][25][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 
 [Containments][8][Applets][26]
 immutability=1
@@ -701,6 +701,9 @@ DialogWidth=720
 extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.bluetooth,dev.jhyub.supergfxctl,org.kde.ktp-contactlist,org.kde.kupapplet
 hiddenItems=org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,AnyDesk,Free Download Manager,aw-qt,virt-manager
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.ktp-contactlist,org.kde.kupapplet
+
+[Containments][8][Shortcuts]
+global=Meta+A
 
 [ScreenMapping]
 itemsOnDisabledScreens=
