@@ -1,12 +1,14 @@
 MenuBar=Disabled
 
 [$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
+
+[ContentDisplay]
+DirectorySizeCount=false
+UsePermissionsFormat=CombinedFormat
 
 [DetailsMode]
-DirectorySizeCount=false
 PreviewSize=16
-UsePermissionsFormat=CombinedFormat
 
 [FileDialogSize]
 1920x1080 screen: Height=1048

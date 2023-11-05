@@ -137,7 +137,7 @@ ForegroundVisited=120,120,120
 
 [DirSelect Dialog]
 DirSelectDialog Size=980,600
-History Items[$e]=file:$HOME/Storage/Data/Media/SteamLibrary,file:$HOME/Storage/Data/Pictures/Archive/Screenshots/Games,file:$HOME/Games/Unlocked/_bottles,file:$HOME/Storage/Data/Media/SteamLibrary,file:$HOME/Storage/Data/Pictures/Archive,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
+History Items[$e]=file:$HOME/Games/Lutris,file:$HOME/Pictures,file:$HOME/Pictures,file:$HOME/Storage/Data/Media/SteamLibrary,file:$HOME/Storage/Data/Pictures/Archive/Screenshots/Games,file:$HOME/Games/Unlocked/_bottles,file:$HOME/Storage/Data/Media/SteamLibrary,file:$HOME/Storage/Data/Pictures/Archive,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
 
 [General]
 BrowserApplication=re.sonny.Junction.desktop

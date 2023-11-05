@@ -138,7 +138,7 @@ immutability=1
 plugin=org.kde.plasma.uswitcher
 
 [Containments][29][Applets][37][Configuration]
-PreloadWeight=90
+PreloadWeight=100
 
 [Containments][29][Applets][37][Configuration][ConfigDialog]
 DialogHeight=540
@@ -395,7 +395,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][3][Applets][63][Configuration]
-PreloadWeight=85
+PreloadWeight=90
 
 [Containments][3][Applets][63][Configuration][ConfigDialog]
 DialogHeight=540
@@ -505,7 +505,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][39][Applets][50][Configuration]
-PreloadWeight=60
+PreloadWeight=70
 
 [Containments][39][Applets][50][Configuration][General]
 currentTab=streams
@@ -543,12 +543,22 @@ PreloadWeight=0
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
+[Containments][39][Applets][55][Configuration]
+PreloadWeight=42
+
 [Containments][39][Applets][67]
 immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][39][Applets][67][Configuration]
-PreloadWeight=18
+PreloadWeight=2
+
+[Containments][39][Applets][72]
+immutability=1
+plugin=dev.jhyub.supergfxctl
+
+[Containments][39][Applets][72][Configuration]
+PreloadWeight=47
 
 [Containments][39][ConfigDialog]
 DialogHeight=540
@@ -556,10 +566,11 @@ DialogWidth=720
 
 [Containments][39][General]
 extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.ktp-contactlist,org.kde.kupapplet
-hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager,chrome_status_icon_1,chrome_status_icon_35,org.kde.plasma.keyboardlayout,Fcitx,org.kde.plasma.notifications
+hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager,chrome_status_icon_1,chrome_status_icon_35,org.kde.plasma.keyboardlayout,Fcitx,org.kde.plasma.notifications
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,dev.jhyub.supergfxctl,org.kde.ktp-contactlist,org.kde.kupapplet
 
 [Containments][65]
+ItemGeometries-1366x768=
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=54053bd9-a8e9-484d-b395-c7d9096758ab
@@ -576,6 +587,7 @@ ToolBoxButtonX=463
 ToolBoxButtonY=30
 
 [Containments][66]
+ItemGeometries-1024x768=
 ItemGeometries-1366x768=
 ItemGeometriesHorizontal=
 activityId=54053bd9-a8e9-484d-b395-c7d9096758ab
@@ -645,10 +657,9 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][19][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][8][Applets][19][Configuration][General]
-currentTab=streams
 migrated=true
 
 [Containments][8][Applets][22][Configuration]
@@ -673,7 +684,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][25][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][8][Applets][26]
 immutability=1
@@ -687,7 +698,18 @@ immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][8][Applets][68][Configuration]
-PreloadWeight=23
+PreloadWeight=0
+
+[Containments][8][Applets][71]
+immutability=1
+plugin=dev.jhyub.supergfxctl
+
+[Containments][8][Applets][71][Configuration]
+PreloadWeight=47
+
+[Containments][8][Applets][71][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][8][Applets][9]
 immutability=1

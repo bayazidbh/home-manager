@@ -40,7 +40,9 @@
       bindkey '^[[F' end-of-line # End
       bindkey '^[[5~' beginning-of-buffer-or-history # Page Up
       bindkey '^[[6~' end-of-buffer-or-history # Page Down
-      export WORDCHARS=${WORDCHARS:s,/} # Stop Ctrl + W word delete at wordchars
+
+      export WORDCHARS=${WORDCHARS:s,/,}
+
       # auto pull when cd to git folder
       chpwd() {
           if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) = "true" ]]; then

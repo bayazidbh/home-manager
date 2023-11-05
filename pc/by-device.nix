@@ -3,6 +3,7 @@
 home.sessionVariables = {
   HOST="bbh-pc";
   HOSTNAME="bbh-pc";
+  LD_LIBRARY_PATH=" ";
   };
 
 home.packages = with pkgs; [
