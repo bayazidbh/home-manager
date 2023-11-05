@@ -13,6 +13,7 @@
 
     exa="eza";
     bottom="btm";
+    bcat="bat --style=plain,header-filename --paging=never";
 
     force-x11="export QT_QPA_PLATFORM=xcb ; export GDK_BACKEND=x11";
     force-portal="export GDK_DEBUG=portals ; export GTK_USE_PORTAL=1";
@@ -52,36 +53,29 @@
     conty="HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads";
 
     conty-export=''
-    rmtrash -rfv ~/.local/share/applications/Conty* ; \
-    HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads && \
-    mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Restricted && \
-    ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d && \
-    mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Unrestricted && \
-    find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; \
-    find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} + ; \
-    find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} + ; \
-    find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} +
+      rmtrash -rfv ~/.local/share/applications/Conty* ; \
+      HOME_DIR=${config.xdg.userDirs.documents}/container/conty WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d --bind ${config.home.homeDirectory}/Games ~/Games --bind ${config.home.homeDirectory}/Storage ~/Storage --bind ${config.xdg.userDirs.documents} ~/Documents --bind ${config.xdg.userDirs.download} ~/Downloads && \
+      mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Restricted && \
+      ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh -d && \
+      mv -f ${config.xdg.dataHome}/applications/Conty ${config.xdg.dataHome}/applications/Conty-Unrestricted && \
+      find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -exec sed -i 's/(Conty)/\(Conty-Restricted\)/g' {} + ; \
+      find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -exec sed -i 's/(Conty)/\(Conty-Unrestricted\)/g' {} + ; \
+      find ${config.xdg.dataHome}/applications/Conty-Restricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} + ; \
+      find ${config.xdg.dataHome}/applications/Conty-Unrestricted -type f -name "*.desktop" -exec sed -i 's#/var/home/fenglengshun#/home/fenglengshun#g' {} +
     '';
 
+
+    # Games
     contywine="WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh wine";
     contywinejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh wine";
     contygamescope="WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland -- ";
 
-    # Games
     gameconqueror="sudo gameconqueror";
     gamescope_run="/bin/gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland --";
+
     winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
+
     nw="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/nw";
     nw72="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
-
-    wine-setup="contywine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/Setup.exe ; \
-    contywine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe ; \
-    contywine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe ; \
-    WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh winetricks -q dxvk vkd3d corefonts cjkfonts \
-    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/Setup.exe ; \
-    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe ; \
-    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe ; \
-    winetricks -q dxvk vkd3d corefonts cjkfonts";
-
   };
 }

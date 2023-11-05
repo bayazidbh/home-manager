@@ -144,6 +144,23 @@ home.file."restart-plasma" = {
   '';
 };
 
+home.file."wine-setup" = {
+  enable = true;
+  target = ".local/bin/wine-setup";
+  executable = true;
+  text = ''
+    WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh winetricks -q dxvk vkd3d corefonts cjkfonts
+    WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/Setup.exe
+    WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe
+    WINEPREFIX=${config.xdg.dataHome}/wineconty ${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe
+
+    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/Setup.exe
+    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe
+    wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe
+    winetricks -q dxvk vkd3d corefonts cjkfonts
+    '';
+  };
+
 # use nix-shell to provide certain packages
 
 home.file."bottles" = {
