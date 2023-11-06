@@ -5,9 +5,6 @@ iconViewIconSize=64
 1920x1080 screen: Height=529
 1920x1080 screen: Width=462
 
-[PlasmaTransientsConfig]
-PreloadWeight=42
-
 [PlasmaViews][Panel 28]
 alignment=132
 floating=1
