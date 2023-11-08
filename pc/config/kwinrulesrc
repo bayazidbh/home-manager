@@ -11,13 +11,36 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [1]
+Description=Window settings for wavebox
+clientmachine=localhost
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+ignoregeometry=true
+placement=9
+title=Seiso Kanojo, Ochiru || The Pure Girlfriend’s Fall » nhentai: hentai doujinshi and manga - Wavebox
+types=1
+windowrole=browser
+wmclass=\swavebox
+wmclasscomplete=true
+wmclassmatch=1
+
+[2]
 Description=Window settings for MComix
+below=true
 clientmachine=localhost
 desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
 ignoregeometry=true
 ignoregeometryrule=2
+maximizehoriz=true
+maximizevert=true
 placement=9
 placementrule=2
+position=2174,79
+screen=1
+size=858,640
+skippager=true
+skipswitcher=true
+skiptaskbar=true
 title=[2 / 48] [Maguro Coffee (Aburi Salmon Maru)] Incubus ka Shita Ore ga JK Aite ni Gyakushuu Seikatsu!- [English].cbz
 types=1
 windowrole=browser
@@ -25,7 +48,7 @@ wmclass=python3.11 MComix
 wmclasscomplete=true
 wmclassmatch=1
 
-[2]
+[3]
 Description=Window settings for steam
 below=true
 clientmachine=localhost
@@ -33,8 +56,6 @@ desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
 desktopsrule=3
 ignoregeometry=true
 ignoregeometryrule=2
-maximizehoriz=true
-maximizevert=true
 placement=9
 placementrule=2
 position=2174,79
@@ -50,7 +71,7 @@ wmclass=steamwebhelper steam
 wmclasscomplete=true
 wmclassmatch=1
 
-[3]
+[4]
 Description=Window settings for fsearch
 below=true
 clientmachine=localhost
@@ -73,28 +94,6 @@ types=1
 windowrole=browser
 wmclass=.fsearch-wrapped fsearch
 wmclasscomplete=true
-wmclassmatch=1
-
-[4]
-Description=Window settings for xwaylandvideobridge
-below=true
-belowrule=3
-clientmachine=localhost
-desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
-ignoregeometry=true
-position=2174,79
-screen=1
-size=858,640
-skippager=true
-skippagerrule=3
-skipswitcher=true
-skipswitcherrule=3
-skiptaskbar=true
-skiptaskbarrule=3
-title=Wayland to X Recording bridge — Xwayland Video Bridge
-titlematch=1
-types=1
-wmclass=xwaylandvideobridge
 wmclassmatch=1
 
 [45479974-e225-44f2-b70b-b9c00ef018a3]
@@ -162,9 +161,19 @@ wmclass=steamwebhelper steam
 wmclasscomplete=true
 wmclassmatch=1
 
+[8c887c85-c4b2-4a68-84ca-745090a9d5e8]
+Description=Window settings for wavebox
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+title=Seiso Kanojo, Ochiru || The Pure Girlfriend’s Fall » nhentai: hentai doujinshi and manga - Wavebox
+types=1
+wmclass=\swavebox
+wmclasscomplete=true
+wmclassmatch=1
+
 [General]
-count=4
-rules=1,2,3,4
+count=5
+rules=1,2,3,4,5
 
 [ad3686fb-6cb0-4756-af94-9bed06dc141f]
 Description=Window settings for fsearch

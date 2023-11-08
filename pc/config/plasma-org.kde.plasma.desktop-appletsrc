@@ -438,7 +438,7 @@ DialogWidth=1920
 PreloadWeight=0
 
 [Containments][3][General]
-AppletOrder=4;31;32;5;6;57;;56;70;7;63;30
+AppletOrder=4;31;32;5;6;57;56;70;7;63;30
 
 [Containments][39]
 activityId=
@@ -551,7 +551,7 @@ immutability=1
 plugin=org.kde.ktp-contactlist
 
 [Containments][39][Applets][67][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][39][Applets][72]
 immutability=1
@@ -684,7 +684,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][25][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][8][Applets][26]
 immutability=1
