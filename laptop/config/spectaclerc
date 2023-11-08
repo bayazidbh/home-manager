@@ -2,7 +2,7 @@
 update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
 
 [Annotations]
-annotationToolType=4
+annotationToolType=5
 arrowStrokeWidth=7
 ellipseStrokeColor=255,0,4
 rectangleStrokeColor=255,0,0
@@ -26,4 +26,5 @@ detailViewIconSize=16
 [Save]
 defaultSaveImageFormat=JPG
 defaultSaveLocation=file:///home/fenglengshun/Pictures/Archive/Screenshots/Laptop
+lastSaveLocation=file:///home/fenglengshun/Pictures/Archive/Screenshots/Laptop/2023-11/Screenshot_20231106_103138_Stremio - Freedom to Stream-01.jpg
 saveFilenameFormat=%Y-%M/Screenshot_%Y%M%D_%H%m%S_%T-%2d

@@ -1,0 +1,4 @@
+[Context]
+devices=dri
+features=per-app-dev-shm;canbus
+filesystems=~/Games:rw

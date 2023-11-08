@@ -271,7 +271,7 @@ immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][39][Applets][48][Configuration]
-PreloadWeight=55
+PreloadWeight=85
 
 [Containments][39][Applets][49]
 immutability=1
@@ -299,7 +299,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][39][Applets][52][Configuration]
-PreloadWeight=71
+PreloadWeight=63
 
 [Containments][39][Applets][52][Configuration][General]
 showPercentage=true
@@ -316,7 +316,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=63
+PreloadWeight=47
 
 [Containments][39][Applets][55]
 immutability=1
@@ -331,7 +331,7 @@ DialogWidth=720
 
 [Containments][39][General]
 extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
-hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager,steam,TeamViewer,tray-icon tray app,Joplin1,tray-id
+hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager,steam,TeamViewer,tray-icon tray app,Joplin1,tray-id,Discover Notifier_org.kde.DiscoverNotifier
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
 shownItems=Portal
 
