@@ -41,11 +41,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1699549606,
-        "narHash": "sha256-9pRiSGbfa6ZnRLvKBsIsC0Ch8aXoStgAoD7LkbeHJdc=",
+        "lastModified": 1699602439,
+        "narHash": "sha256-KvcGTOPqF+vpxwOZQBtmcNsHfDIXIIFRcM07jbHdfnw=",
         "owner": "GermanBread",
         "repo": "declarative-flatpak",
-        "rev": "415398fb0c778d6d125ee6e1433a91dadd09724a",
+        "rev": "7eb608216d7b3b73f659a2100b667f8f81808bde",
         "type": "github"
       },
       "original": {
@@ -112,11 +112,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1697777081,
-        "narHash": "sha256-n2vQARhKevRGyeo+LAa8g+CdUQsdH/caNk8jnylcPhY=",
+        "lastModified": 1699291058,
+        "narHash": "sha256-5ggduoaAMPHUy4riL+OrlAZE14Kh7JWX4oLEs22ZqfU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "679cadfdfed2b90311a247b2d6ef6dfd3d6cab73",
+        "rev": "41de143fda10e33be0f47eab2bfe08a50f234267",
         "type": "github"
       },
       "original": {

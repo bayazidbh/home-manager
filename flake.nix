@@ -50,6 +50,8 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
+          flatpaks-dev.homeManagerModules.default # import declarative-flatpak module
+          ./laptop/flatpaks-dev.nix # separate list for flatpak
           ./home.nix # default home.nix
           ./default/shell.nix # shell config for all devices
           ./default/env.nix # env-var for all devices
@@ -58,9 +60,7 @@
           ./default/autostart.nix # autostart with systemctl
           ./laptop/by-device.nix # device specific configs
           ./laptop/autostart.nix # device specific autostart
-          ./laptop/flatpaks-dev.nix # separate list for flatpak
           ./pc/nixgl.nix # separate list for nixgl.nix package
-          flatpaks-dev.homeManagerModules.default # import declarative-flatpak module
         ];
       };
       "fenglengshun@bbh-server" = home-manager.lib.homeManagerConfiguration {
