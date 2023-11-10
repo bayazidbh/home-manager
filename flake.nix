@@ -58,9 +58,9 @@
           ./default/autostart.nix # autostart with systemctl
           ./laptop/by-device.nix # device specific configs
           ./laptop/autostart.nix # device specific autostart
-          ./laptop/flatpak.nix # separate list for flatpak
+          ./laptop/flatpaks-dev.nix # separate list for flatpak
           ./pc/nixgl.nix # separate list for nixgl.nix package
-          flatpaks.homeManagerModules.default # import declarative-flatpak module
+          flatpaks-dev.homeManagerModules.default # import declarative-flatpak module
         ];
       };
       "fenglengshun@bbh-server" = home-manager.lib.homeManagerConfiguration {
