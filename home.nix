@@ -62,7 +62,7 @@ in
     whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
     fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
-    gallery-dl mangal mov-cli # adl # CLI-based media downloader
+    adl gallery-dl mangal mov-cli # # CLI-based media downloader
     gimp-with-plugins mcomix soundconverter # media tools
     protonup-ng # steam-rom-manager protontricks # steam tools
     # bottles-unwrapped heroic-unwrapped # game runner
@@ -71,7 +71,8 @@ in
     mediawriter ventoy-full # image writer
     qdirstat fsearch junction krename imagemagick sqlitebrowser # transmission-qt # extra file management tools
     libva1 libva-utils libvpx # codecs
-    vesktop arrpc discord brave motrix # wavebox # browsers
+    vesktop arrpc discord premid # discord
+    brave motrix # wavebox # browsers
     # activitywatch aw-qt aw-watcher-window aw-watcher-afk
     # rustdesk downonspot spotify-qt # media viewers
   ];
