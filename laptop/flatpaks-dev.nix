@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
-services.flatpak.flatpak = {
+config.services.flatpak.flatpak = {
+    enableModule = true;
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
       "launcher-moe" = "https://gol.launcher.moe/gol.launcher.moe.flatpakrepo";

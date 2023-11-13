@@ -39,7 +39,7 @@
           ./default/autostart.nix # autostart with systemctl
           ./pc/by-device.nix # device specific configs
           ./pc/autostart.nix # device specific autostart
-          ./pc/flatpak.nix # separate list for flatpak
+          ./pc/flatpaks.nix # separate list for flatpak
           # ./pc/chaotic.nix # separate list for chaotic.nix package
           ./pc/nixgl.nix # separate list for nixgl.nix package
           flatpaks.homeManagerModules.default # declarative-flatpak HM module
@@ -50,8 +50,8 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
-          flatpaks-dev.homeManagerModules.default # import declarative-flatpak module
-          ./laptop/flatpaks-dev.nix # separate list for flatpak
+          flatpaks.homeManagerModules.default # import declarative-flatpak module
+          ./laptop/flatpaks.nix # separate list for flatpak
           ./home.nix # default home.nix
           ./default/shell.nix # shell config for all devices
           ./default/env.nix # env-var for all devices

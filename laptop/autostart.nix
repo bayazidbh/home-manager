@@ -118,5 +118,48 @@ systemd.user.services = {
   #    };
   #  };
 
+  # https://github.com/containers/podman/blob/main/docs/tutorials/socket_activation.md
+
+  #   "podman.socket" = {
+  #     Unit = {
+  #       Description = "Podman API Socket";
+  #       Documentation = "man:podman-system-service(1)";
+  #       };
+  #     Socket = {
+  #       ListenStream = "%t/podman/podman.sock";
+  #       SocketMode = "0660";
+  #       };
+  #     Install = {
+  #       WantedBy = [ "sockets.target" ];
+  #       };
+  #     };
+  #
+  #   "echo.container" = {
+  #     Unit = {
+  #       Description = "Example echo service";
+  #       Requires = "echo.socket";
+  #       After = "echo.socket";
+  #       };
+  #     Container = {
+  #       Image = "ghcr.io/eriksjolund/socket-activate-echo";
+  #       Network = "none";
+  #       };
+  #     Install = {
+  #       WantedBy = [ "default.target" ];
+  #       };
+  #     };
+  #
+  #   "echo.socket" = {
+  #     Unit = {
+  #       Description = "Example echo socket";
+  #       };
+  #     Socket = {
+  #       ListenStream = [ "127.0.0.1:3000" "%h/echo_stream_sock" "[::1]:3000" "vsock:4294967295:3000" ];
+  #       ListenDatagram = [ "127.0.0.1:3000" "[::1]:3000" ];
+  #       };
+  #     Install = {
+  #       WantedBy = [ "sockets.target" ];
+  #       };
+  #     };
   };
 }
