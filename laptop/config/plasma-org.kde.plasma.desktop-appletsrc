@@ -201,12 +201,20 @@ plugin=org.kde.plasma.icon
 localPath=/home/fenglengshun/.local/share/plasma_icons/org.kde.spectacle.desktop
 url=desktop:/org.kde.spectacle.desktop
 
+[Containments][29][Applets][68]
+immutability=1
+plugin=toggle-exquisite
+
+[Containments][29][Applets][68][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][29][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
 
 [Containments][29][General]
-AppletOrder=33;34;35;36;58;60;59;67;38;64;37
+AppletOrder=33;34;68;35;36;58;60;59;67;38;64;37
 
 [Containments][39]
 activityId=
@@ -316,7 +324,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=23
+PreloadWeight=15
 
 [Containments][39][Applets][55]
 immutability=1

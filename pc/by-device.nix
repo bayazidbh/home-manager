@@ -90,30 +90,30 @@ xdg.desktopEntries = {
         };
       };
     };
-    "brave-nix-x11" = {
-    name="Brave (Nix) (x11)";
-    genericName="Web Browser";
-    comment="Access the Internet";
-    startupNotify=true;
-    exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode %U";
-    terminal=false;
-    icon="brave-desktop";
-    type="Application";
-    categories=[ "Network" "WebBrowser" ];
-    mimeType=[ "application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https" "x-scheme-handler/ipfs" "x-scheme-handler/ipns" ];
-    settings={
-      StartupWMClass ="brave-browser";
-      };
-    actions={
-      "new-window" = {
-        name="New Window";
-        exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
-        };
-      "new-private-window" = {
-        name="New Incognito Window";
-        exec="nixGLIntel brave --incognito --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
-        };
-      };
-    };
+  #    "brave-nix-x11" = {
+  #      name="Brave (Nix) (x11)";
+  #      genericName="Web Browser";
+  #      comment="Access the Internet";
+  #      startupNotify=true;
+  #      exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode %U";
+  #      terminal=false;
+  #      icon="brave-desktop";
+  #      type="Application";
+  #      categories=[ "Network" "WebBrowser" ];
+  #      mimeType=[ "application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https" "x-scheme-handler/ipfs" "x-scheme-handler/ipns" ];
+  #      settings={
+  #        StartupWMClass ="brave-browser";
+  #        };
+  #      actions={
+  #        "new-window" = {
+  #          name="New Window";
+  #          exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
+  #          };
+  #        "new-private-window" = {
+  #          name="New Incognito Window";
+  #          exec="nixGLIntel brave --incognito --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
+  #          };
+  #        };
+  #      };
   };
 }

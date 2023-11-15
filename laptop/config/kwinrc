@@ -48,7 +48,7 @@ PopupHideDelay=300
 LayoutName=thumbnail_grid
 
 [Tiling]
-padding=4
+padding=2
 
 [Tiling][4656e9c7-29d2-5198-aef7-e64495a298e9]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -57,16 +57,16 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][bd455426-91b5-5aa4-b78c-9e21c3c810ab]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5614583333333333},{"width":0.4385416666666663}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5916666666666665},{"width":0.4083333333333331}]}
 
 [Tiling][fd933285-4952-5b50-8afc-d0c8e74b2faf]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Windows]
-AutoRaise=true
 AutoRaiseInterval=1500
 DelayFocusInterval=500
 ElectricBorders=1
+FocusPolicy=FocusFollowsMouse
 RollOverDesktops=true
 
 [Xwayland]
