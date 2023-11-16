@@ -72,6 +72,7 @@ in
     qdirstat fsearch junction krename imagemagick sqlitebrowser # transmission-qt # extra file management tools
     libva1 libva-utils libvpx # codecs
     vesktop arrpc discord premid # discord
+    adguardhome # network
     brave motrix # wavebox # browsers
     # activitywatch aw-qt aw-watcher-window aw-watcher-afk
     # rustdesk downonspot spotify-qt # media viewers
