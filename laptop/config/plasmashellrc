@@ -1,6 +1,9 @@
 [KFileDialog Settings]
+Recent Files[$e]=nine_4.jpg,file:$HOME/Pictures/Archive/Wallpapers/anime/steins-gate-BG04A2.png,file:$HOME/Pictures/Archive/Wallpapers/hololive/Ninomae_Inanis-Animated_Outro_Card.webp,file:$HOME/Pictures/Archive/Wallpapers/9-nine-/nine_4.jpg
+Recent URLs[$e]=file:$HOME/Pictures/Archive/Wallpapers/9-nine-/,file:$HOME/Pictures/Archive/Wallpapers/hololive/,file:$HOME/Pictures/Archive/Wallpapers/anime/
 detailViewIconSize=16
 iconViewIconSize=64
+listViewIconSize=64
 
 [KPropertiesDialog]
 1920x1080 screen: Height=529

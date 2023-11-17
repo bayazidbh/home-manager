@@ -324,7 +324,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=20
+PreloadWeight=12
 
 [Containments][39][Applets][55]
 immutability=1
@@ -356,7 +356,11 @@ immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
+wallpaperplugin=a2n.blur
+
+[Containments][65][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][65][General]
 ToolBoxButtonState=topcenter
@@ -364,6 +368,18 @@ ToolBoxButtonX=463
 ToolBoxButtonY=30
 positions={"1920x1080":[]}
 sortMode=-1
+
+[Containments][65][Wallpaper][a2n.blur][General]
+BlurRadius=50
+Image=/home/fenglengshun/Pictures/Archive/Wallpapers/anime/steins-gate-BG04A2.png
+SlidePaths=/home/fenglengshun/.local/share/wallpapers/,/nix/var/nix/profiles/default/share/wallpapers/,/home/fenglengshun/.nix-profile/share/wallpapers/,/usr/share/wallpapers/
+
+[Containments][65][Wallpaper][com.darkeye.animatedImage][General]
+FillMode=2
+Image=file:///home/fenglengshun/Pictures/Archive/Wallpapers/hololive/Ninomae_Inanis-Animated_Outro_Card.webp
+
+[Containments][65][Wallpaper][org.kde.potd][General]
+FillMode=2
 
 [Containments][66]
 activityId=53ec01f6-3a95-4bc1-aa91-b30012cc2e1c

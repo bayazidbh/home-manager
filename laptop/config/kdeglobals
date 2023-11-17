@@ -137,7 +137,7 @@ ForegroundVisited=120,120,120
 
 [DirSelect Dialog]
 DirSelectDialog Size=980,599
-History Items[$e]=file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
+History Items[$e]=file:///var/home/fenglengshun/Downloads,file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
 
 [General]
 BrowserApplication=re.sonny.Junction.desktop
@@ -163,7 +163,7 @@ SingleClick=false
 Allow Expansion=false
 Automatically select filename extension=true
 Breadcrumb Navigation=true
-Decoration position=2
+Decoration position=0
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
 Show Bookmarks=false
@@ -177,7 +177,7 @@ Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=136
-View Style=Detail
+View Style=Simple
 
 [KShortcutsDialog Settings]
 Dialog Size=1920,1048
