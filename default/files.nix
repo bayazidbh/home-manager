@@ -6,6 +6,7 @@ systemd.user.tmpfiles.rules = [
   "d ${config.home.homeDirectory}/Storage/Data"
   "d ${config.home.homeDirectory}/.icons"
   "d ${config.xdg.configHome}/heroic"
+  "d ${config.xdg.dataHome}/flatpak/"
   # "C+ ${config.home.homeDirectory} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
   "C+ ${config.home.homeDirectory}/.fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
   "C+ ${config.xdg.dataHome}/fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
@@ -14,6 +15,7 @@ systemd.user.tmpfiles.rules = [
   "C+ ${config.xdg.dataHome}/icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
   "C+ ${config.home.homeDirectory}/.icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
+  "L ${config.xdg.dataHome}/flatpak/overrides - - - - ${config.xdg.configHome}/home-manager/flatpak/overrides"
   "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/opensnitchd"
   "L ${config.xdg.userDirs.documents}/Downloads - - - - ${config.xdg.userDirs.download}"
   "L ${config.xdg.userDirs.documents}/Music - - - - ${config.xdg.userDirs.music}"
@@ -130,6 +132,96 @@ home.file."installt-whitesur" = {
   '';
 };
 
+home.file."spotify-adblock-config" = {
+  enable = true;
+  target = ".config/spotify-adblock/config.toml";
+  text = ''
+    allowlist = [
+        'localhost', # local proxies
+        'audio-sp-.*\.pscdn\.co', # audio
+        'audio-fa\.scdn\.co', # audio
+        'audio4-fa\.scdn\.co', # audio
+        'charts-images\.scdn\.co', # charts images
+        'daily-mix\.scdn\.co', # daily mix images
+        'dailymix-images\.scdn\.co', # daily mix images
+        'heads-fa\.scdn\.co', # audio (heads)
+        'i\.scdn\.co', # cover art
+        'lineup-images\.scdn\.co', # playlists lineup images
+        'merch-img\.scdn\.co', # merch images
+        'misc\.scdn\.co', # miscellaneous images
+        'mosaic\.scdn\.co', # playlist mosaic images
+        'newjams-images\.scdn\.co', # release radar images
+        'o\.scdn\.co', # cover art
+        'pl\.scdn\.co', # playlist images
+        'profile-images\.scdn\.co', # artist profile images
+        'seeded-session-images\.scdn\.co', # radio images
+        't\.scdn\.co', # background images
+        'thisis-images\.scdn\.co', # 'this is' playlists images
+        'video-fa\.scdn\.co', # videos
+        '.*\.acast\.com', # podcasts
+        'content\.production\.cdn\.art19\.com', # podcasts
+        'rss\.art19\.com', # podcasts
+        '.*\.buzzsprout\.com', # podcasts
+        'chtbl\.com', # podcasts
+        'platform-lookaside\.fbsbx\.com', # Facebook profile images
+        'genius\.com', # lyrics (genius-spicetify)
+        '.*\.googlevideo\.com', # YouTube videos (Spicetify Reddit app)
+        '.*\.gvt1\.com', # Widevine download
+        'content\.libsyn\.com', # podcasts
+        'hwcdn\.libsyn\.com', # podcasts
+        'traffic\.libsyn\.com', # podcasts
+        'api.*-desktop\.musixmatch\.com', # lyrics (genius-spicetify)
+        '.*\.podbean\.com', # podcasts
+        'cdn\.podigee\.com', # podcasts
+        'dts\.podtrac\.com', # podcasts
+        'www\.podtrac\.com', # podcasts
+        'www\.reddit\.com', # Reddit (Spicetify Reddit app)
+        'audio\.simplecast\.com', # podcasts
+        'media\.simplecast\.com', # podcasts
+        'ap\.spotify\.com', # audio (access point)
+        '.*\.ap\.spotify\.com', # access points
+        'ap-.*\.spotify\.com', # access points
+        'api\.spotify\.com', # client APIs
+        'api-partner\.spotify\.com', # album/artist pages
+        'xpui\.app\.spotify\.com', # user interface
+        'apresolve\.spotify\.com', # access point resolving
+        'clienttoken\.spotify\.com', # login
+        '.*dealer\.spotify\.com', # websocket connections
+        'image-upload.*\.spotify\.com', # image uploading
+        'login.*\.spotify\.com', # login
+        '.*-spclient\.spotify\.com', # client APIs
+        'spclient\.wg\.spotify\.com', # client APIs, ads/tracking (blocked in blacklist)
+        'audio-fa\.spotifycdn\.com', # audio
+        'mixed-media-images\.spotifycdn\.com', # mix images
+        'seed-mix-image\.spotifycdn\.com', # mix images
+        'api\.spreaker\.com', # podcasts
+        'download\.ted\.com', # podcasts
+        'www\.youtube\.com', # YouTube (Spicetify Reddit app)
+        'i\.ytimg\.com', # YouTube images (Spicetify Reddit app)
+        'chrt\.fm', # podcasts
+        'dcs.*\.megaphone\.fm', # podcasts
+        'traffic\.megaphone\.fm', # podcasts
+        'pdst\.fm', # podcasts
+        'audio-ak-spotify-com\.akamaized\.net', # audio
+        'audio-akp-spotify-com\.akamaized\.net', # audio
+        'audio4-ak-spotify-com\.akamaized\.net', # audio
+        'heads4-ak-spotify-com\.akamaized\.net', # audio (heads)
+        '.*\.cloudfront\.net', # podcasts
+        'audio4-ak\.spotify\.com\.edgesuite\.net', # audio
+        'scontent.*\.fbcdn\.net', # Facebook profile images
+        'audio-sp-.*\.spotifycdn\.net', # audio
+        'dovetail\.prxu\.org', # podcasts
+        'dovetail-cdn\.prxu\.org', # podcasts
+    ]
+
+    denylist = [
+        'https://spclient\.wg\.spotify\.com/ads/.*', # ads
+        'https://spclient\.wg\.spotify\.com/ad-logic/.*', # ads
+        'https://spclient\.wg\.spotify\.com/gabo-receiver-service/.*', # tracking
+    ]
+  '';
+};
+
 home.file."restart-plasma" = {
   enable = true;
   target = ".local/bin/restart-plasma";
@@ -170,15 +262,15 @@ home.file."bottles" = {
   text = ''
     #!/bin/bash
 
-    binary="~/.nix-profile/bin/bottles"
+    binary="${config.home.homeDirectory}/.nix-profile/bin/bottles"
 
-    # Check if `~/.nix-profile/bin/bottles` exists and is executable
+    # Check if `${config.home.homeDirectory}/.nix-profile/bin/bottles` exists and is executable
     if [ -x "$binary" ]; then
         # If it exists and is executable, execute it
         "$binary"
     else
         # If it doesn't exist, run `nix-shell -p bottles-unwrapped`
-        echo "bottles not found in ~/.nix-profile/bin. Running nix-shell..."
+        echo "bottles not found in ${config.home.homeDirectory}/.nix-profile/bin. Running nix-shell..."
         nix-shell -p bottles-unwrapped
     fi
 
@@ -192,15 +284,15 @@ home.file."heroic" = {
   text = ''
     #!/bin/bash
 
-    binary="~/.nix-profile/bin/heroic"
+    binary="${config.home.homeDirectory}/.nix-profile/bin/heroic"
 
-    # Check if `~/.nix-profile/bin/bottles` exists and is executable
+    # Check if `${config.home.homeDirectory}/.nix-profile/bin/bottles` exists and is executable
     if [ -x "$binary" ]; then
         # If it exists and is executable, execute it
         "$binary"
     else
         # If it doesn't exist, run `nix-shell -p bottles-unwrapped`
-        echo "bottles not found in ~/.nix-profile/bin. Running nix-shell..."
+        echo "bottles not found in ${config.home.homeDirectory}/.nix-profile/bin. Running nix-shell..."
         nix-shell -p heroic-unwrapped
     fi
 
@@ -276,13 +368,31 @@ home.file."setup-distrobox-arch" = {
   '';
 };
 
-home.file."no-root-virt-manager" = {
+home.file."setup-no-root-virt-manager" = {
   enable = true;
-  target = ".local/bin/no-root-virt-manager";
+  target = ".local/bin/setup-no-root-virt-manager";
   executable = true;
   text = ''
     sudo usermod -a -G kvm ${config.home.username}
     sudo usermod -a -G libvirt ${config.home.username}
+  '';
+};
+
+home.file."setup-adguardhome" = {
+  enable = true;
+  target = ".local/bin/setup-adguardhome";
+  executable = true;
+  text = ''
+    #! /bin/bash
+    sudo lsof -i :53
+    sudo mkdir -p /etc/systemd/resolved.conf.d
+    sudo touch /etc/systemd/resolved.conf.d/adguardhome.conf
+    echo -e "[Resolve]\nDNS=127.0.0.1\nDNSStubListener=no" | sudo tee /etc/systemd/resolved.conf.d/adguardhome.conf
+    sudo mv /etc/resolv.conf /etc/resolv.conf.backup
+    sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+    sudo systemctl reload-or-restart systemd-resolved
+    sudo lsof -i :53
+    sudo ${config.home.homeDirectory}/.nix-profile/bin/adguardhome
   '';
 };
 
@@ -326,7 +436,7 @@ home.file."renpy" = {
     # Define the paths
     renpy_dir="${config.home.sessionVariables.XDG_BIN_HOME}/renpy-bin"
     renpy_script="$renpy_dir/renpy-$version-sdk/renpy.sh"
-    download_command="aria2c https://www.renpy.org/dl/$version/renpy-$version-sdk.tar.bz2 -d ~/Downloads && tar -xjf ~/Downloads/renpy-$version-sdk.tar.bz2 -C $renpy_dir"
+    download_command="aria2c https://www.renpy.org/dl/$version/renpy-$version-sdk.tar.bz2 -d ${config.home.homeDirectory}/Downloads && tar -xjf ${config.home.homeDirectory}/Downloads/renpy-$version-sdk.tar.bz2 -C $renpy_dir"
     project_dir="${config.home.homeDirectory}/Applications/renpy"
 
     # Check if the RenPy directory exists for your projects
