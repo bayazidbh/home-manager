@@ -43,6 +43,7 @@ Tabbar Tab Limit=0
 Recent Files[$e]=org.kde.spectacle.desktop,file:$HOME/Documents/bumalome,file:$HOME/.local/share/plasma_icons/org.kde.spectacle.desktop
 Recent URLs[$e]=file:$HOME/.local/share/plasma_icons/,file:$HOME/Downloads/,file:///var/home/fenglengshun/,file:$HOME/Documents/
 detailViewIconSize=16
+listViewIconSize=64
 
 [KTextEditor Document]
 Allow End of Line Detection=true

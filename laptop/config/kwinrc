@@ -62,6 +62,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5916666666666665},{"wi
 [Tiling][fd933285-4952-5b50-8afc-d0c8e74b2faf]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Wayland]
+InputMethod[$e]=/nix/var/nix/profiles/default/share/applications/org.fcitx.Fcitx5.desktop
+
 [Windows]
 AutoRaiseInterval=1500
 DelayFocusInterval=500

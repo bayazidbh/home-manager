@@ -10,6 +10,7 @@ services.flatpak.flatpak = {
      "flathub:app/com.github.tchx84.Flatseal/x86_64/stable"
 
      "flathub:app/io.wavebox.Wavebox/x86_64/stable"
+     "flathub:app/org.kde.gwenview/x86_64/stable"
 
      "flathub:app/com.spotify.Client/x86_64/stable"
      "flathub:app/com.stremio.Stremio/x86_64/stable"

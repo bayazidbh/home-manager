@@ -9,6 +9,7 @@
      "flathub:com.github.tchx84.Flatseal/x86_64/stable"
 
      "flathub:io.wavebox.Wavebox/x86_64/stable"
+     "flathub:org.kde.gwenview/x86_64/stable"
 
      "flathub:com.spotify.Client/x86_64/stable"
      "flathub:com.stremio.Stremio/x86_64/stable"
