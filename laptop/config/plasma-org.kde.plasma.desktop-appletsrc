@@ -307,7 +307,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][39][Applets][52][Configuration]
-PreloadWeight=88
+PreloadWeight=93
 
 [Containments][39][Applets][52][Configuration][General]
 showPercentage=true
@@ -324,7 +324,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=12
+PreloadWeight=4
 
 [Containments][39][Applets][55]
 immutability=1

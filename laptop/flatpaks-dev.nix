@@ -8,9 +8,13 @@ config.services.flatpak.flatpak = {
     };
     packages = [
      "flathub:app/com.github.tchx84.Flatseal/x86_64/stable"
+     "flathub:app/io.github.flattool.Warehouse/x86_64/stable"
 
      "flathub:app/io.wavebox.Wavebox/x86_64/stable"
+     "flathub:app/com.github.micahflee.torbrowser-launcher/x86_64/stable"
+
      "flathub:app/org.kde.gwenview/x86_64/stable"
+     "flathub:app/org.kde.kcalc/x86_64/stable"
 
      "flathub:app/com.spotify.Client/x86_64/stable"
      "flathub:app/com.stremio.Stremio/x86_64/stable"
