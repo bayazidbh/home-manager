@@ -9,65 +9,19 @@ git clone git@github.com:bayazidbh/home-manager.git && cd ${${_%%.git*}##*/}
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
-nix run github:nix-community/home-manager -- switch --flake github:bayazidbh/home-manager
-```
 
-```
-echo "trusted-users = root fenglengshun" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
-echo "substituters = https://cache.nixos.org https://nix-gaming.cachix.org https://chaotic-nyx.cachix.org https://ezkea.cachix.org \ntrusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" > ~/.config/nix/nix.conf
+echo -e "trusted-users = root fenglengshun" | sudo tee -a /etc/nix/nix.conf && sudo pkill nix-daemon
+echo -e "substituters = https://cache.nixos.org https://nix-gaming.cachix.org https://chaotic-nyx.cachix.org https://ezkea.cachix.org \ntrusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= nyx.chaotic.cx-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" > ~/.config/nix/nix.conf
 
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
-nix-shell '<home-manager>' -A install
+nix-shell '<home-manager>' -A install -b bak
 
-EDITOR=kwrite home-manager edit
-nix-shell -p cachix --run "cachix use ezkea"
-cachix use nix-gaming
-home-manager switch -b bak
-
-nix-env --delete-generations old ; nix-store --gc ; nix-collect-garbage -d
-nix-du -s=500MB | dot -Tpng > ~/Downloads/nix-store.png
 ```
 
 ## Setup Scripts
 
-### All
-
-<details><summary>All</summary><p>
-
-#### create container home folders
-
-```
-mkdir -p ~/Documents/container/conty
-mkdir -p ~/Documents/container/arch
-ln -sifv $HOME/Documents/Private/Apps/Linux/config/ArchiSteamFarm-config ~/Documents/container/arch/
-```
-
-#### link emulator paths to default xdg paths
-
-```
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/config $HOME/.config/yuzu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/data $HOME/.local/share/yuzu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config $HOME/.config/Ryujinx
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/config $HOME/.config/citra-emu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/data $HOME/.local/share/citra-emu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config $HOME/.config/dolphin-emu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data $HOME/.local/share/dolphin-emu
-ln -sifv $HOME/Games/Emulation/Sony/emu/PCSX2/config $HOME/.config/PCSX2
-ln -sifv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/.config/rpcs3
-ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/.config/ppsspp
-
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/config $HOME/Documents/container/conty/.config/yuzu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/yuzu/data $HOME/Documents/container/conty/.local/share/yuzu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/Ryujinx/config $HOME/Documents/container/conty/.config/Ryujinx
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/config $HOME/Documents/container/conty/.config/citra-emu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/citra-emu/data $HOME/Documents/container/conty/.local/share/citra-emu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/config $HOME/Documents/container/conty/.config/dolphin-emu
-ln -sifv $HOME/Games/Emulation/Nintendo/emu/dolphin-emu/data $HOME/Documents/container/conty/.local/share/dolphin-emu
-ln -sifv $HOME/Games/Emulation/Sony/emu/PCSX2/config $HOME/Documents/container/conty/.config/PCSX2
-ln -sifv $HOME/Games/Emulation/Sony/emu/rpcs3/config $HOME/Documents/container/conty/.config/rpcs3
-ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/Documents/container/conty/.config/ppsspp
 ```
 
 #### Import gpg
@@ -76,67 +30,11 @@ ln -sifv $HOME/Games/Emulation/Sony/emu/ppsspp/config $HOME/Documents/container/
 gpg --import ~/Storage/Data/Documents/bayazidbh-gpg.gpg
 ```
 
-#### Make resilio-sync config
-
-```
-mkdir -p $HOME/.config/rslsync
-cp -v ~/Documents/Private/Apps/Linux/config/rslsync.conf $HOME/.config/rslsync
-sed -i 's/"device_name": "[^"]*"/"device_name": "'$(hostname)'"/g' $HOME/.config/rslsync/rslsync.conf
-```
-
 #### block MiHoYo telemetry in /etc/hosts
 
 ```
 echo -e "# block mihoyo telemetry\n\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n0.0.0.0 dump.gamesafe.qq.com\n0.0.0.0 public-data-api.mihoyo.com\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
 ```
-
-#### create horizontal mangohud bar
-
-```
-mkdir -p /home/fenglengshun/.config/MangoHud/ && echo -e "horizontal\nlegacy_layout=0\nhud_no_margin\nfont_size=25\ntable_columns=28\nbackground_alpha=0.5\ntime=1\ntime_format=%I:%M %p\ngpu_stats\ngpu_temp\ncpu_stats\ncpu_temp\nram\nvram\nfps\nframe_timing\nframetime\ntoggle_hud=F8\nresolution\nwine\nvulkan_driver" | tee ~/.config/MangoHud/MangoHud.conf
-```
-
-#### create plasma-restarter
-
-```
-mkdir -p ~/.local/bin/ && echo '#! /bin/bash\n\nkillall plasmashell & kwin --replace & kstart plasmashell & exit' | tee ~/.local/bin/restart-plasma && chmod +x ~/.local/bin/restart-plasma
-```
-
-</p></details>
-
-### PC
-
-<details><summary>PC</summary><p>
-
-#### Link HDD to SSD
-
-```
-ln -sifv ~/Storage/Data/Applications ~/Applications
-ln -sifv ~/Storage/Data/Media/Games ~/Games
-ln -sifv ~/Storage/Data/Documents ~/Documents/Storage
-ln -sifv ~/Storage/Data/Downloads ~/Downloads/Storage
-ln -sifv ~/Storage/Data/Media ~/Documents/Media
-ln -sifv ~/Storage/Data/Pictures/Archive ~/Pictures/Storage
-ln -sifv ~/Storage/Data/Pictures/DCIM ~/Pictures/DCIM
-ln -sifv ~/Storage/Data/Music/ ~/Music/Storage
-ln -sifv ~/Storage/Data/Videos/ ~/Videos/Storage
-```
-
-#### Copy backed up Documents
-
-```
-cp -rfpv ~/Storage/Data/Documents/Work ~/Documents/Work
-cp -rfpv ~/Storage/Data/Documents/Private ~/Documents/Private
-```
-
-#### restore input-remapper settings
-
-```
-mkdir -p ~/.config/
-cp -rfpv ~/Storage/Data/Documents/Private/Linux/config/input-remapper-2 ~/.config/
-```
-
-</p></details>
 
 ### Laptop
 
@@ -201,32 +99,6 @@ gaming: noisetorch fancontrol-gui input-remapper droidcam steamtinkerlaunch mang
 </p></details>
 
 ## Other Setups
-
-<details><summary>Distrobox</summary><p>
-
-### Distrobox
-
-```
-env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox --name arch --home ~/Documents/container/arch
-tide configure
-
-pacman-key --init && pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com && pacman-key --lsign-key 3056513887B78AEB && pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' && echo '[chaotic-aur]' >> /etc/pacman.conf && echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf && echo 'en_SG.UTF-8 UTF-8' >> /etc/locale.gen && echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && echo 'ja_JP.UTF-8 UTF-8' >> /etc/locale.gen && echo 'id_ID.UTF-8 UTF-8' >> /etc/locale.gen && pacman -Syu --noconfirm glibc base-devel nano paru pipewire-jack pipewire-pulse pipewire-alsa
-
-paru -Syu --skipreview --noconfirm nwjs-bin nwjs-ffmpeg-codecs-bin archisteamfarm-bin
-
----
-
-env SHELL=/bin/bash distrobox create --image ubuntu:latest --name ubuntu-latest --home ~/Documents/container/ubuntu-latest
-
-env SHELL=/home/fenglengshun/.nix-profile/bin/zsh distrobox create --image fedora:latest --name fedora --home ~/Documents/container/fedora
-sudo dnf install dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name tumbleweed --home $XDG_DATA_HOME/distrobox/tumbleweed
-https://github.com/89luca89/distrobox/blob/main/docs/posts/run_libvirt_in_distrobox.md
-```
-
-</p></details>
-
 
 <details><summary>Fish-ified ZSH</summary><p>
 

@@ -21,6 +21,8 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.userDirs.documents}/Music - - - - ${config.xdg.userDirs.music}"
   "L ${config.xdg.userDirs.documents}/Pictures - - - - ${config.xdg.userDirs.pictures}"
   "L ${config.xdg.userDirs.documents}/Videos - - - - ${config.xdg.userDirs.videos}"
+  "L ${config.xdg.dataHome}/flatpak/app/com.valvesoftware.Steam/current/active/export/share/applications/com.valvesoftware.Steam.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/com.valvesoftware.Steam.desktop"
+  "L ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/org.winehq.Wine.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/org.winehq.Wine.desktop"
 
 ];
 
@@ -308,7 +310,8 @@ home.file."setup-distrobox-all" = {
 
     podman image pull quay.io/toolbx-images/archlinux-toolbox:latest
     podman image pull quay.io/toolbx-images/ubuntu-toolbox:latest
-    podman image pull -y registry.fedoraproject.org/fedora-toolbox:latest
+    podman image pull -y registry.fedoraproject.org/fedora-toolbox:39
+    podman image pull -y registry.opensuse.org/opensuse/tumbleweed:latest
 
     ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-ubuntu
     ${config.home.sessionVariables.XDG_BIN_HOME}/setup-distrobox-fedora
@@ -325,7 +328,7 @@ home.file."setup-distrobox-ubuntu" = {
     #! /bin/bash
 
     env SHELL=/bin/bash distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:latest --name ubuntu-latest --home ${config.xdg.userDirs.documents}/container/ubuntu-latest
-    distrobox start ubuntu-latest
+    distrobox enter ubuntu-latest -- sudo apt upgrade -y
 
   '';
 };
@@ -337,11 +340,12 @@ home.file."setup-distrobox-fedora" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:latest --name fedora --home ${config.xdg.userDirs.documents}/container/fedora
+    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:39 --name fedora --home ${config.xdg.userDirs.documents}/container/fedora
     distrobox enter fedora -- sudo dnf install -y dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
   '';
 };
+
 home.file."setup-distrobox-arch" = {
   enable = true;
   target = ".local/bin/setup-distrobox-arch";
@@ -364,6 +368,19 @@ home.file."setup-distrobox-arch" = {
   sed -i 's/-DGUI=ON/-DGUI=OFF/' /tmp/gazou-git/PKGBUILD
   distrobox enter arch -- makepkg -si --noconfirm
   distrobox enter arch -- env HOME=/home/fenglengshun distrobox-export --bin /usr/sbin/gazou
+
+  '';
+};
+
+home.file."setup-distrobox-opensuse-systemd" = {
+  enable = true;
+  target = ".local/bin/setup-distrobox-opensuse-systemd";
+  executable = true;
+  text = ''
+  #! /bin/bash
+
+  distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name opensuse-tumbleweed --home ${config.xdg.userDirs.documents}/container/opensuse  --additional-packages "systemd"
+  distrobox enter --root opensuse-tumbleweed -- sudo zypper install -y virt-manager libvirt qemu-hw-display-qxl qemu-hw-usb-redirect qemu-hw-usb-host qemu-hw-display-virtio-gpu qemu-hw-display-virtio-gpu-pci virtiofsd
 
   '';
 };

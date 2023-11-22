@@ -24,6 +24,7 @@ home.sessionVariables = {
   RENPY_PATH_TO_SAVES="${config.xdg.dataHome}/renpy";
   ANDROID_HOME="${config.xdg.dataHome}/android";
   _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${config.xdg.dataHome}/java";
+  XMODIFIERS="@im=fcitx";
   };
 
 home.sessionPath = [ "${config.home.sessionVariables.XDG_BIN_HOME}" ];

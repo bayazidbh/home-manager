@@ -52,7 +52,7 @@ in
   home.packages = with pkgs; [
     git inxi neofetch grc highlight rmtrash # clipboard-jh # CLI utils
     erdtree delta grex fd bottom (ripgrep-all.overrideAttrs { doInstallCheck = false; }) # rust CLIs
-    rsync zsync # web-ui tools
+    adguardhome rsync zsync # web-ui tools
     libdbusmenu libsForQt5.libdbusmenu # for global menu
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons # breeze dependencies
     sassc whitesur-gtk-theme whitesur-kde whitesur-icon-theme gnome.adwaita-icon-theme # whitesur and adwaita dependencies
@@ -61,10 +61,10 @@ in
   ];
 
   # enable fcitx5 as input method, with mozc for Japanese IME
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
-  };
+  # i18n.inputMethod = {
+  #   enabled = "fcitx5";
+  #   fcitx5.addons = with pkgs; [ fcitx5-mozc ];
+  # };
 
   programs.aria2.enable = true; # Install and enable aria2
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
