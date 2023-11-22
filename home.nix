@@ -63,7 +63,7 @@ in
     # fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     adl gallery-dl mangal mov-cli # CLI-based media downloader
-    gimp-with-plugins mcomix soundconverter # media tools
+    gimp-with-plugins # media tools
     protonup-ng # steam-rom-manager protontricks # steam tools
     # bottles-unwrapped heroic-unwrapped # game runner
     ludusavi scanmem # gamescope gamemode # other gaming tools
@@ -72,7 +72,7 @@ in
     qdirstat fsearch junction krename imagemagick sqlitebrowser # transmission-qt # extra file management tools
     libva1 libva-utils libvpx # codecs
     vesktop arrpc discord premid # discord
-    adguardhome # network
+    # network
     brave motrix # wavebox # browsers
     # activitywatch aw-qt aw-watcher-window aw-watcher-afk
     # rustdesk downonspot spotify-qt # media viewers
@@ -86,7 +86,7 @@ in
 
   # services.kdeconnect.enable = true; # Install and enable kdeconnect
   # services.kdeconnect.indicator = true; # Enable kdeconnect indicator
-  # programs.gh.enable = true; # Install and enable GitHub CLI tool
+
   programs.git-credential-oauth.enable = true; # enable Git authentication handler for OAuth.
 
   programs.aria2.enable = true; # Install and enable aria2

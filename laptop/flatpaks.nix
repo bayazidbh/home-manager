@@ -14,13 +14,7 @@
 
      "flathub:org.kde.gwenview/x86_64/stable"
      "flathub:org.kde.kcalc/x86_64/stable"
-
-     "flathub:com.spotify.Client/x86_64/stable"
-     "flathub:com.stremio.Stremio/x86_64/stable"
-     "flathub:info.smplayer.SMPlayer/x86_64/stable"
-     "flathub:org.videolan.VLC/x86_64/stable"
-     "flathub:io.github.aandrew_me.ytdn/x86_64/stable"
-     "flathub:org.qbittorrent.qBittorrent/x86_64/stable"
+     "flathub:net.sourceforge.mcomix/x86_64/stable"
 
      "flathub:com.wps.Office/x86_64/stable"
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
@@ -28,11 +22,21 @@
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
      "flathub:net.cozic.joplin_desktop/x86_64/stable"
 
+     "flathub:com.spotify.Client/x86_64/stable"
+     "flathub:org.soundconverter.SoundConverter/x86_64/stable"
+
+     "flathub:org.qbittorrent.qBittorrent/x86_64/stable"
+     "flathub:com.stremio.Stremio/x86_64/stable"
+     "flathub:info.smplayer.SMPlayer/x86_64/stable"
+     "flathub:org.videolan.VLC/x86_64/stable"
+     "flathub:io.github.aandrew_me.ytdn/x86_64/stable"
+
      "flathub:org.upscayl.Upscayl/x86_64/stable"
      "flathub:page.codeberg.Imaginer.Imaginer/x86_64/stable"
-     "flathub:io.github.Bavarder.Bavarder/x86_64/stable"
      "flathub:com.github.huluti.Curtail/x86_64/stable"
      "flathub:net.fasterland.converseen/x86_64/stable"
+
+     "flathub:io.github.Bavarder.Bavarder/x86_64/stable"
 
      "flathub:io.github.giantpinkrobots.bootqt/x86_64/stable"
 
