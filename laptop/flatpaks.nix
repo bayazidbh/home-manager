@@ -73,6 +73,11 @@
 
      "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
     ];
-    postInitCommand = "/usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/";
+    postInitCommand = ''
+      /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
+      /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+      /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/com.valvesoftware.Steam.desktop ${config.xdg.dataHome}/flatpak/app/com.valvesoftware.Steam/current/active/export/share/applications/
+      /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
+    '';
   };
 }
