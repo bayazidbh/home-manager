@@ -88,12 +88,11 @@ systemd.user.services = {
     Unit = {
       Description = "Autostart arrpc daemon";
       PartOf = "graphical-session.target";
-      After = "graphical-session.target";
     };
     Service = {
-      Type = "notify";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 5";
+      Type = "simple";
+      Restart = "always";
+      ExecStartPre = "/bin/sleep 3";
       ExecStart = [
         "${config.home.homeDirectory}/.nix-profile/bin/arrpc"
       ];
@@ -151,7 +150,7 @@ systemd.user.services = {
     Service = {
       Type = "simple";
       Restart = "no";
-      ExecStartPre = "/bin/sleep 10";
+      ExecStartPre = "/bin/sleep 5";
       ExecStart = "/usr/bin/dolphin";
       };
     Install = {

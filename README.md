@@ -22,12 +22,12 @@ nix-shell '<home-manager>' -A install -b bak
 
 ## Setup Scripts
 
-```
+<details><summary>All Setups</summary><p>
 
 #### Import gpg
 
 ```
-gpg --import ~/Storage/Data/Documents/bayazidbh-gpg.gpg
+gpg --import ~/Documents/Private/bayazidbh-gpg.gpg
 ```
 
 #### block MiHoYo telemetry in /etc/hosts
@@ -35,6 +35,8 @@ gpg --import ~/Storage/Data/Documents/bayazidbh-gpg.gpg
 ```
 echo -e "# block mihoyo telemetry\n\n0.0.0.0 overseauspider.yuanshen.com\n0.0.0.0 log-upload-os.hoyoverse.com\n0.0.0.0 dump.gamesafe.qq.com\n0.0.0.0 public-data-api.mihoyo.com\n0.0.0.0 log-upload.mihoyo.com\n0.0.0.0 uspider.yuanshen.com\n0.0.0.0 sg-public-data-api.hoyoverse.com\n\n0.0.0.0 prd-lender.cdp.internal.unity3d.com\n0.0.0.0 thind-prd-knob.data.ie.unity3d.com\n0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com\n0.0.0.0 cdp.cloud.unity3d.com\n0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com" | sudo tee -a /etc/hosts
 ```
+
+</p></details>
 
 ### Laptop
 
