@@ -1,4 +1,5 @@
 [Context]
 sockets=wayland
+devices=dri
 features=bluetooth
 filesystems=home

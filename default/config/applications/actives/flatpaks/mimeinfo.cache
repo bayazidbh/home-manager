@@ -2,9 +2,6 @@
 application/pdf=io.wavebox.Wavebox-wayland.desktop;
 application/rdf+xml=io.wavebox.Wavebox-wayland.desktop;
 application/rss+xml=io.wavebox.Wavebox-wayland.desktop;
-application/x-ms-dos-executable=org.winehq.Wine.desktop;
-application/x-ms-shortcut=org.winehq.Wine.desktop;
-application/x-msi=org.winehq.Wine.desktop;
 application/xhtml+xml=io.wavebox.Wavebox-wayland.desktop;
 application/xhtml_xml=io.wavebox.Wavebox-wayland.desktop;
 application/xml=io.wavebox.Wavebox-wayland.desktop;

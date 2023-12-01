@@ -65,6 +65,42 @@ favoritesPortedToKAstats=true
 icon=fedora-logo-icon
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
+[Containments][29][Applets][34]
+immutability=1
+plugin=org.kde.windowbuttons
+
+[Containments][29][Applets][34][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][29][Applets][34][Configuration][General]
+buttonSizePercentage=65
+buttons=5|3|4|10|2|9
+containmentType=Plasma
+inactiveStateEnabled=true
+useDecorationMetrics=false
+visibility=ActiveWindow
+
+[Containments][29][Applets][35]
+immutability=1
+plugin=org.kde.windowtitle
+
+[Containments][29][Applets][35][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][29][Applets][35][Configuration][General]
+containmentType=Plasma
+filterActivityInfo=false
+filterByScreen=true
+lengthPolicy=Maximum
+maximumLength=204
+placeHolder=ublue-os
+
+[Containments][29][Applets][36]
+immutability=1
+plugin=org.kde.plasma.appmenu
+
 [Containments][29][Applets][37]
 immutability=1
 plugin=org.kde.plasma.uswitcher
@@ -173,49 +209,12 @@ plugin=toggle-exquisite
 DialogHeight=540
 DialogWidth=720
 
-[Containments][29][Applets][69]
-immutability=1
-plugin=org.kde.windowbuttons
-
-[Containments][29][Applets][69][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][29][Applets][69][Configuration][General]
-buttonSizePercentage=70
-buttons=5|3|4|10|2|9
-containmentType=Plasma
-inactiveStateEnabled=true
-lengthFirstMargin=2
-lengthLastMargin=2
-useDecorationMetrics=false
-
-[Containments][29][Applets][70]
-immutability=1
-plugin=org.kde.windowtitle
-
-[Containments][29][Applets][70][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][29][Applets][70][Configuration][General]
-containmentType=Plasma
-filterActivityInfo=false
-filterByScreen=true
-lengthFirstMargin=1
-lengthLastMargin=1
-placeHolder=ublue-os
-
-[Containments][29][Applets][71]
-immutability=1
-plugin=org.kde.plasma.appmenu
-
 [Containments][29][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
 
 [Containments][29][General]
-AppletOrder=33;69;68;70;71;58;60;59;67;38;64;37
+AppletOrder=33;34;68;35;36;58;60;59;67;38;64;37
 
 [Containments][39]
 activityId=
@@ -308,7 +307,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][39][Applets][52][Configuration]
-PreloadWeight=98
+PreloadWeight=93
 
 [Containments][39][Applets][52][Configuration][General]
 showPercentage=true
@@ -360,8 +359,8 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=a2n.blur
 
 [Containments][65][ConfigDialog]
-DialogHeight=1002
-DialogWidth=1920
+DialogHeight=540
+DialogWidth=720
 
 [Containments][65][General]
 ToolBoxButtonState=topcenter
@@ -372,7 +371,7 @@ sortMode=-1
 
 [Containments][65][Wallpaper][a2n.blur][General]
 BlurRadius=50
-Image=/home/fenglengshun/Pictures/Archive/Wallpapers/game/trails-of-cold-steel-ii-rean-civil-war-bike-back.jpg
+Image=/home/fenglengshun/Pictures/Archive/Wallpapers/anime/steins-gate-BG04A2.png
 SlidePaths=/home/fenglengshun/.local/share/wallpapers/,/nix/var/nix/profiles/default/share/wallpapers/,/home/fenglengshun/.nix-profile/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][65][Wallpaper][com.darkeye.animatedImage][General]

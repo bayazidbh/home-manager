@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 {
   services.flatpak = {
-    preInitCommand = ''
-      /usr/bin/flatpak config  --user --set languages 'en;ja'
-    '';
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
       "launcher-moe" = "https://gol.launcher.moe/gol.launcher.moe.flatpakrepo";
