@@ -2,6 +2,9 @@
 {
 services.flatpak.flatpak = {
     # enable = true;
+    preInitCommand = ''
+      /usr/bin/flatpak config  --user --set languages 'en;ja'
+    '';
     remotes = {
       "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
       "launcher-moe" = "https://gol.launcher.moe/gol.launcher.moe.flatpakrepo";
@@ -42,6 +45,7 @@ services.flatpak.flatpak = {
      "flathub:app/io.github.giantpinkrobots.bootqt/x86_64/stable"
 
      "flathub:app/de.shorsh.discord-screenaudio/x86_64/stable"
+     "flathub:app/com.discordapp.Discord/x86_64/stable"
      "flathub:app/io.github.trigg.discover_overlay/x86_64/stable"
 
      "flathub:app/dev.lizardbyte.app.Sunshine/x86_64/stable"

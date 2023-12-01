@@ -2,9 +2,29 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
+Description=Window settings for org.kde.kate
+acceptfocus=true
+clientmachine=localhost
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+ignoregeometry=true
+ignoregeometryrule=2
+noborder=true
+placement=9
+position=834,30
+positionrule=4
+size=1086,917
+sizerule=4
+title=Untitled * — Kate
+types=1
+wmclass=kate org.kde.kate
+wmclasscomplete=true
+wmclassmatch=1
+
+[2]
 Description=Window settings for org.kde.dolphin
 acceptfocus=true
 clientmachine=localhost
+desktopfile=net.codeindustry.MasterPDFEditor
 desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
 desktopsrule=3
 ignoregeometry=true
@@ -19,21 +39,6 @@ wmclass=dolphin org.kde.dolphin
 wmclasscomplete=true
 wmclassmatch=1
 
-[2]
-Description=Application settings for net.code-industry.masterpdfeditor5
-acceptfocus=true
-acceptfocusrule=2
-clientmachine=localhost
-desktopfile=net.codeindustry.MasterPDFEditor
-desktopfilerule=3
-desktops=88e240e7-a6f3-4113-a2fe-51eb6ec23a08
-fsplevelrule=2
-ignoregeometry=true
-title=win11 on QEMU/KVM
-wmclass=\snet.code-industry.masterpdfeditor5
-wmclasscomplete=true
-wmclassmatch=1
-
 [2872115a-7f8f-429b-9382-b8c6493a03f4]
 Description=Application settings for net.code-industry.masterpdfeditor5
 acceptfocus=true
@@ -44,15 +49,18 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [3]
-Description=Window settings for virt-manager
+Description=Application settings for net.code-industry.masterpdfeditor5
+acceptfocus=true
+acceptfocusrule=2
 clientmachine=localhost
+desktopfile=net.codeindustry.MasterPDFEditor
+desktopfilerule=3
 desktops=fd74dfab-4b73-4669-a993-da75245c8891
-desktopsrule=3
+fsplevelrule=2
 ignoregeometry=true
 title=win11 on QEMU/KVM
-titlematch=1
-types=1
-wmclass=virt-manager
+wmclass=\snet.code-industry.masterpdfeditor5
+wmclasscomplete=true
 wmclassmatch=1
 
 [3282d8a1-24e4-4736-bea0-d393d7e7fe0a]
@@ -85,6 +93,18 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [4]
+Description=Window settings for virt-manager
+clientmachine=localhost
+desktops=fd74dfab-4b73-4669-a993-da75245c8891
+desktopsrule=3
+ignoregeometry=true
+title=win11 on QEMU/KVM
+titlematch=1
+types=1
+wmclass=virt-manager
+wmclassmatch=1
+
+[5]
 Description=Application settings for wpsoffice
 clientmachine=localhost
 desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
@@ -95,7 +115,7 @@ wmclass=wps wpsoffice
 wmclasscomplete=true
 wmclassmatch=1
 
-[5]
+[6]
 Description=Window settings for wavebox
 desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
 desktopsrule=3
@@ -103,19 +123,6 @@ ignoregeometry=true
 title=Sync - Wavebox
 types=1
 wmclass=\swavebox
-wmclasscomplete=true
-wmclassmatch=1
-
-[6]
-Description=Window settings for fsearch
-desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
-desktopsrule=3
-ignoregeometry=true
-ignoregeometryrule=2
-placementrule=2
-title=FSearch
-types=1
-wmclass=.fsearch-wrapped fsearch
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -130,6 +137,33 @@ types=1
 wmclass=virt-manager
 wmclassmatch=1
 
+[7]
+Description=Window settings for fsearch
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+placementrule=2
+title=FSearch
+types=1
+wmclass=.fsearch-wrapped fsearch
+wmclasscomplete=true
+wmclassmatch=1
+
+[7702de45-eac6-4e7f-ac67-80fc399e5826]
+Description=Window settings for org.kde.kate
+ignoregeometry=true
+ignoregeometryrule=2
+position=300,150
+positionrule=4
+size=960,1050
+sizerule=4
+title=Untitled * — Kate
+types=1
+wmclass=kate org.kde.kate
+wmclasscomplete=true
+wmclassmatch=1
+
 [7bd38cbc-e004-42fd-b10c-ae1a3fb9a37b]
 Description=Window settings for wavebox
 desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
@@ -141,8 +175,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=6
-rules=1,2,3,4,5,6
+count=7
+rules=1,2,3,4,5,6,7
 
 [e48d8065-6fbd-4902-9cef-bd47e6796036]
 Description=Application settings for wpsoffice

@@ -1,3 +1,5 @@
 [Context]
-devices=dri
 filesystems=xdg-pictures/Archive/Screenshots/Games/:rw
+
+[Environment]
+MANGOHUD=1
