@@ -56,7 +56,7 @@ in
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom ripgrep-all # rust CLIs
     rsync grsync czkawka metadata-cleaner zsync resilio-sync # duperemove # file management
-    libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
+    # libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
     libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
     whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
     du-dust nix-du graphviz # disk usage management tools
