@@ -1,8 +1,9 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; # use nixpkgs-unstable as main nixpkgs source
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # use nixos stable 23.11 as main nixpkgs source
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; # use nixpkgs-unstable as main nixpkgs source
     home-manager = {
-      url = "github:nix-community/home-manager"; # home-manager unstable url
+      url = "github:nix-community/home-manager/release-23.11"; # home-manager unstable url
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, old-stable branch
