@@ -1,5 +1,2 @@
 [Context]
 filesystems=xdg-pictures/Archive/Screenshots/Games/:rw
-
-[Environment]
-MANGOHUD=1

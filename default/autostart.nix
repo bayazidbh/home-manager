@@ -88,6 +88,7 @@ systemd.user.services = {
     Unit = {
       Description = "Autostart arrpc daemon";
       PartOf = "graphical-session.target";
+      After = "graphical-session.target";
     };
     Service = {
       Type = "simple";
@@ -120,26 +121,6 @@ systemd.user.services = {
       WantedBy = [ "graphical-session.target" ];
     };
   };
-
-  # "autostart-flatpak-steam" = {
-  #   Unit = {
-  #     Description = "Autostart Flatpak Steam App";
-  #     PartOf = "graphical-session.target";
-  #     After = "graphical-session.target";
-  #   };
-  #   Service = {
-  #     Type = "forking";
-  #     Restart = "on-failure";
-  #     RestartSec = "3";
-  #     ExecStartPre = "/bin/sleep 5";
-  #     ExecStart = [
-  #       "/usr/bin/bash -c \"/usr/bin/flatpak run com.valvesoftware.Steam -nochatui -nofriendsui -silent\""
-  #     ];
-  #   };
-  #   Install = {
-  #     WantedBy = [ "graphical-session.target" ];
-  #   };
-  # };
 
   "autostart-dolphin" = {
     Unit = {

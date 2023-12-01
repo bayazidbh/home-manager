@@ -17,7 +17,7 @@ systemd.user.tmpfiles.rules = [
   "C+ ${config.home.homeDirectory}/.icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
   "L ${config.xdg.dataHome}/flatpak/overrides - - - - ${config.xdg.configHome}/home-manager/flatpak/overrides"
-  "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/opensnitchd"
+  "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.config/opensnitchd"
   "L ${config.xdg.userDirs.documents}/Downloads - - - - ${config.xdg.userDirs.download}"
   "L ${config.xdg.userDirs.documents}/Music - - - - ${config.xdg.userDirs.music}"
   "L ${config.xdg.userDirs.documents}/Pictures - - - - ${config.xdg.userDirs.pictures}"
@@ -252,52 +252,6 @@ home.file."wine-setup" = {
     wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RGSS-RTP Standard.exe
     wine ${config.xdg.userDirs.documents}/Private/Apps/Windows/RTP100/RPGVX_RTP/Setup.exe
     winetricks -q dxvk vkd3d corefonts cjkfonts
-    '';
-  };
-
-# use nix-shell to provide certain packages
-
-home.file."bottles" = {
-  enable = true;
-  target = ".local/bin/bottles";
-  executable = true;
-  text = ''
-    #!/bin/bash
-
-    binary="${config.home.homeDirectory}/.nix-profile/bin/bottles"
-
-    # Check if `${config.home.homeDirectory}/.nix-profile/bin/bottles` exists and is executable
-    if [ -x "$binary" ]; then
-        # If it exists and is executable, execute it
-        "$binary"
-    else
-        # If it doesn't exist, run `nix-shell -p bottles-unwrapped`
-        echo "bottles not found in ${config.home.homeDirectory}/.nix-profile/bin. Running nix-shell..."
-        nix-shell -p bottles-unwrapped
-    fi
-
-    '';
-  };
-
-home.file."heroic" = {
-  enable = true;
-  target = ".local/bin/heroic";
-  executable = true;
-  text = ''
-    #!/bin/bash
-
-    binary="${config.home.homeDirectory}/.nix-profile/bin/heroic"
-
-    # Check if `${config.home.homeDirectory}/.nix-profile/bin/bottles` exists and is executable
-    if [ -x "$binary" ]; then
-        # If it exists and is executable, execute it
-        "$binary"
-    else
-        # If it doesn't exist, run `nix-shell -p bottles-unwrapped`
-        echo "bottles not found in ${config.home.homeDirectory}/.nix-profile/bin. Running nix-shell..."
-        nix-shell -p heroic-unwrapped
-    fi
-
     '';
   };
 
