@@ -53,27 +53,27 @@ in
   home.packages = with pkgs; [
     git gh github-desktop git-lfs cosign cachix subversion # build tools
     qt6.qtwayland libsForQt5.qt5.qtwayland wl-clipboard wl-clipboard-x11 # for wayland copy-paste
+    # ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom ripgrep-all # rust CLIs
     rsync grsync czkawka metadata-cleaner zsync resilio-sync # duperemove # file management
-    libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
-    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
-    whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
+    # libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
+    # libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
+    # whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
+    # fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
     du-dust nix-du graphviz # disk usage management tools
     adl gallery-dl mangal mov-cli # CLI-based media downloader
     gimp-with-plugins # media tools
     protonup-ng # steam-rom-manager protontricks # steam tools
+    # bottles-unwrapped heroic-unwrapped # game runner
     ludusavi scanmem # gamescope gamemode # other gaming tools
     bitwarden authy # security tools
     mediawriter ventoy-full # image writer
     qdirstat fsearch junction krename imagemagick sqlitebrowser # transmission-qt # extra file management tools
     libva1 libva-utils libvpx # codecs
     vesktop arrpc discord premid # discord
+    # network
     brave motrix # wavebox # browsers
-    # ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
-    # adguardhome # network
-    # fcitx5-gtk libsForQt5.fcitx5-qt # fcitx5 input method gui
-    # bottles-unwrapped heroic-unwrapped # game runner
     # activitywatch aw-qt aw-watcher-window aw-watcher-afk
     # rustdesk downonspot spotify-qt # media viewers
   ];

@@ -6,7 +6,6 @@ systemd.user.tmpfiles.rules = [
   "d ${config.home.homeDirectory}/Storage/Data"
   "d ${config.home.homeDirectory}/.icons"
   "d ${config.xdg.configHome}/heroic"
-  "d ${config.home.homeDirectory}/.var/app/com.heroicgameslauncher.hgl/config/heroic"
   "d ${config.xdg.dataHome}/flatpak/"
   # "C+ ${config.home.homeDirectory} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
   "C+ ${config.home.homeDirectory}/.fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
@@ -24,6 +23,7 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.userDirs.documents}/Videos - - - - ${config.xdg.userDirs.videos}"
   "L ${config.xdg.dataHome}/flatpak/app/com.valvesoftware.Steam/current/active/export/share/applications/com.valvesoftware.Steam.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/com.valvesoftware.Steam.desktop"
   "L ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/org.winehq.Wine.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/org.winehq.Wine.desktop"
+
 ];
 
 home.file."resilio.conf" = {

@@ -52,8 +52,6 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.configHome}/spectaclerc - - - - ${config.xdg.configHome}/home-manager/pc/config/spectaclerc"
   "L ${config.xdg.configHome}/heroic/sideload_apps - - - - ${config.xdg.configHome}/home-manager/pc/config/heroic/sideload_apps"
   "L ${config.xdg.configHome}/heroic/store - - - - ${config.xdg.configHome}/home-manager/pc/config/heroic/store"
-  "L ${config.home.homeDirectory}/.var/app/com.heroicgameslauncher.hgl/config/heroic/sideload_apps - - - - ${config.xdg.configHome}/home-manager/pc/config/flatpak/com.heroicgameslauncher.hgl/sideload_apps"
-  "L ${config.home.homeDirectory}/.var/app/com.heroicgameslauncher.hgl/config/heroic/store - - - - ${config.xdg.configHome}/home-manager/pc/config/flatpak/com.heroicgameslauncher.hgl/store"
   ];
 
 home.file."win11" = {
