@@ -25,6 +25,7 @@ config.services.flatpak.flatpak = {
      "flathub:app/com.github.dynobo.normcap/x86_64/stable"
      "flathub:app/net.codeindustry.MasterPDFEditor/x86_64/stable"
      "flathub:app/net.cozic.joplin_desktop/x86_64/stable"
+     "flathub:app/io.github.btpf.alexandria/x86_64/stable"
 
      "flathub:app/com.spotify.Client/x86_64/stable"
      "flathub:app/org.soundconverter.SoundConverter/x86_64/stable"

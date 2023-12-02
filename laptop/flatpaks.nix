@@ -24,6 +24,7 @@
      "flathub:com.github.dynobo.normcap/x86_64/stable"
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
      "flathub:net.cozic.joplin_desktop/x86_64/stable"
+     "flathub:io.github.btpf.alexandria/x86_64/stable"
 
      "flathub:com.spotify.Client/x86_64/stable"
      "flathub:org.soundconverter.SoundConverter/x86_64/stable"

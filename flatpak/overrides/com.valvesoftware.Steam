@@ -1,2 +1,5 @@
 [Context]
-filesystems=xdg-pictures/Archive/Screenshots/Games/:rw
+filesystems=/media;xdg-pictures/Archive/Screenshots/Games;/run/media;xdg-data/flatpak:ro;
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=talk

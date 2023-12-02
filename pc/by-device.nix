@@ -3,7 +3,7 @@
 home.sessionVariables = {
   HOST="bbh-pc";
   HOSTNAME="bbh-pc";
-  LD_LIBRARY_PATH=" ";
+  # LD_LIBRARY_PATH=" ";
   };
 
 home.packages = with pkgs; [
@@ -13,6 +13,7 @@ home.packages = with pkgs; [
     wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
     gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
     gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
+    activitywatch aw-qt aw-watcher-window aw-watcher-afk # for monitoring playtime
     # gamescope gamemode # other gaming tools
     # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
   ];
@@ -72,7 +73,7 @@ xdg.desktopEntries = {
     genericName="Web Browser";
     comment="Access the Internet";
     startupNotify=true;
-    exec="nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode %U";
+    exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-gpu --ozone-platform-hint=auto --force-dark-mode %U";
     terminal=false;
     icon="brave-desktop";
     type="Application";
@@ -84,11 +85,11 @@ xdg.desktopEntries = {
     actions={
       "new-window" = {
         name="New Window";
-        exec="nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode";
+        exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-gpu --ozone-platform-hint=auto --force-dark-mode";
         };
       "new-private-window" = {
         name="New Incognito Window";
-        exec="nixGLIntel brave --incognito --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode";
+        exec="nixVulkanIntel nixGLIntel brave --incognito --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-gpu --ozone-platform-hint=auto --force-dark-mode";
         };
       };
     };
@@ -117,5 +118,26 @@ xdg.desktopEntries = {
   #          };
   #        };
   #      };
+  };
+
+systemd.user.services = {
+  "autostart-nix-premid" = {
+    Unit = {
+      Description = "Autostart premid daemon";
+      PartOf = "graphical-session.target";
+      After = "graphical-session.target";
+      };
+    Service = {
+      Type = "simple";
+      Restart = "always";
+      ExecStartPre = "/bin/sleep 3";
+      ExecStart = [
+        "${config.home.homeDirectory}/.nix-profile/bin/nixGLIntel premid"
+        ];
+      };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+      };
+    };
   };
 }

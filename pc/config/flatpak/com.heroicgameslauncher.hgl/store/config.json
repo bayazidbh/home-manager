@@ -1,10 +1,10 @@
 {
 	"general-logs": {
-		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-11-22T14_36_31-heroic.log",
-		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-11-22T14_35_11-heroic.log",
-		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-11-22T14_36_31-legendary.log",
-		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-11-22T14_36_31-gogdl.log",
-		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-11-22T14_36_31-nile.log"
+		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-heroic.log",
+		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T17_50_30-heroic.log",
+		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-legendary.log",
+		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-gogdl.log",
+		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-nile.log"
 	},
 	"settings": {
 		"checkUpdatesInterval": 10,
@@ -71,11 +71,6 @@
 	},
 	"userHome": "/home/fenglengshun",
 	"language": "en",
-	"userInfo": {
-		"account_id": "8598883db2614d6eb1cf464858b535f4",
-		"displayName": "Feng Lengshun",
-		"user": "fenglengshun"
-	},
 	"window-props": {
 		"x": 1920,
 		"y": 30,
@@ -83,5 +78,25 @@
 		"height": 738,
 		"maximized": true
 	},
-	"theme": "nord-dark"
+	"theme": "nord-dark",
+	"games": {
+		"recent": [
+			{
+				"appName": "bigzBSayhQyHPQScBwgYRb",
+				"title": "Aiyoku no Eustia"
+			},
+			{
+				"appName": "cEqrsLrBcSfGh7XpzZEq4X",
+				"title": "My Beloved Wife Aina Had Even Her Heart "
+			},
+			{
+				"appName": "4pkSUP7cXQgNbviGULCszn",
+				"title": "Amatsutsumi"
+			},
+			{
+				"appName": "kYLBo4rkLefLXzQ1kqdisR",
+				"title": "Tsujidou-san no Junai Road"
+			}
+		]
+	}
 }

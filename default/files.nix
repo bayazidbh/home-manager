@@ -22,7 +22,6 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.userDirs.documents}/Music - - - - ${config.xdg.userDirs.music}"
   "L ${config.xdg.userDirs.documents}/Pictures - - - - ${config.xdg.userDirs.pictures}"
   "L ${config.xdg.userDirs.documents}/Videos - - - - ${config.xdg.userDirs.videos}"
-  "L ${config.xdg.dataHome}/flatpak/app/com.valvesoftware.Steam/current/active/export/share/applications/com.valvesoftware.Steam.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/com.valvesoftware.Steam.desktop"
   "L ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/org.winehq.Wine.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/org.winehq.Wine.desktop"
 ];
 

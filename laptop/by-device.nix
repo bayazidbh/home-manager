@@ -48,7 +48,7 @@ xdg.desktopEntries = {
     genericName="Web Browser";
     comment="Access the Internet";
     startupNotify=true;
-    exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode %U";
+    exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode %U";
     terminal=false;
     icon="brave-desktop";
     type="Application";
@@ -60,11 +60,11 @@ xdg.desktopEntries = {
     actions={
       "new-window" = {
         name="New Window";
-        exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode";
+        exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode";
         };
       "new-private-window" = {
         name="New Incognito Window";
-        exec="nixVulkanIntel nixGLIntel brave --incognito --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode";
+        exec="nixVulkanIntel nixGLIntel brave --incognito --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install ozone-platform-hint=auto --force-dark-mode";
         };
       };
     };
