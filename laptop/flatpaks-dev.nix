@@ -15,26 +15,26 @@ config.services.flatpak.flatpak = {
 
      "flathub:app/io.wavebox.Wavebox/x86_64/stable"
      "flathub:app/com.github.micahflee.torbrowser-launcher/x86_64/stable"
+     "flathub:app/org.qbittorrent.qBittorrent/x86_64/stable"
 
      "flathub:app/org.kde.gwenview/x86_64/stable"
      "flathub:app/org.kde.kcalc/x86_64/stable"
      "flathub:app/net.sourceforge.mcomix/x86_64/stable"
 
      "flathub:app/com.wps.Office/x86_64/stable"
-     "flathub:app/net.codeindustry.MasterPDFEditor/x86_64/stable"
+     "flathub:app/net.cozic.joplin_desktop/x86_64/stable"
      "flathub:app/com.github.dynobo.normcap/x86_64/stable"
      "flathub:app/net.codeindustry.MasterPDFEditor/x86_64/stable"
-     "flathub:app/net.cozic.joplin_desktop/x86_64/stable"
      "flathub:app/io.github.btpf.alexandria/x86_64/stable"
 
      "flathub:app/com.spotify.Client/x86_64/stable"
      "flathub:app/org.soundconverter.SoundConverter/x86_64/stable"
 
-     "flathub:app/org.qbittorrent.qBittorrent/x86_64/stable"
      "flathub:app/com.stremio.Stremio/x86_64/stable"
      "flathub:app/info.smplayer.SMPlayer/x86_64/stable"
      "flathub:app/org.videolan.VLC/x86_64/stable"
      "flathub:app/io.github.aandrew_me.ytdn/x86_64/stable"
+     "flathub:app/no.mifi.losslesscut/x86_64/stable"
 
      "flathub:app/org.upscayl.Upscayl/x86_64/stable"
      "flathub:app/page.codeberg.Imaginer.Imaginer/x86_64/stable"
@@ -79,8 +79,8 @@ config.services.flatpak.flatpak = {
     postInitCommand = ''
       /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
       /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
-      /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/com.valvesoftware.Steam.desktop ${config.xdg.dataHome}/flatpak/app/com.valvesoftware.Steam/current/active/export/share/applications/
       /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
+      /usr/bin/ln -sifv ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
     '';
   };
 
