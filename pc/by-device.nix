@@ -67,6 +67,7 @@ home.file."win11" = {
     /usr/bin/virt-manager --connect qemu:///system --show-domain-console win11
     '';
   };
+
 xdg.desktopEntries = {
   "brave-nix-wl" = {
     name="Brave (Nix) (Wayland)";
@@ -118,26 +119,5 @@ xdg.desktopEntries = {
   #          };
   #        };
   #      };
-  };
-
-systemd.user.services = {
-  "autostart-nix-premid" = {
-    Unit = {
-      Description = "Autostart premid daemon";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-      };
-    Service = {
-      Type = "simple";
-      Restart = "always";
-      ExecStartPre = "/bin/sleep 3";
-      ExecStart = [
-        "${config.home.homeDirectory}/.nix-profile/bin/nixGLIntel premid"
-        ];
-      };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-      };
-    };
   };
 }

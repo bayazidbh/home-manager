@@ -16,7 +16,7 @@ systemd.user.services = {
       Restart = "no";
       ExecStartPre = "/bin/sleep 10";
       ExecStart = [
-        "/usr/bin/bash -c \"flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,WaylandWindowDecoration,VaapiVideoEncoder,UseSkiaRenderer,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --ozone-platform=wayland --force-dark-mode\""
+        "${config.home.sessionVariables.XDG_BIN_HOME}/wavebox-wayland"
       ];
     };
     Install = {
@@ -54,26 +54,6 @@ systemd.user.services = {
       Restart = "no";
       ExecStartPre = "/bin/sleep 20";
       ExecStart = "/usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
-      };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-      };
-    };
-
-    "sunshine" = {
-    Unit = {
-      Description = "Sunshine self-hosted game stream host for Moonlight.";
-      StartLimitIntervalSec = "500";
-      StartLimitBurst = "5";
-      };
-    Service = {
-      Restart = "on-failure";
-      RestartSec = "5s";
-      # root install
-      # ExecStart = "/usr/bin/sunshine";
-      # Flatpak Install
-      ExecStart = "flatpak run dev.lizardbyte.app.Sunshine";
-      ExecStop = "flatpak kill dev.lizardbyte.app.Sunshine";
       };
     Install = {
       WantedBy = [ "graphical-session.target" ];

@@ -57,7 +57,7 @@ services.flatpak.flatpak = {
      "flathub:app/org.winehq.Wine/x86_64/stable-23.08"
 
      "flathub:app/com.valvesoftware.Steam/x86_64/stable"
-     "flathub:runtime/com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
+     # "flathub:runtime/com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
      "flathub:runtime/com.valvesoftware.Steam.Utility.steamtinkerlaunch/x86_64/stable"
      "flathub:runtime/com.valvesoftware.Steam.Utility.thcrap_steam_proton_wrapper/x86_64/stable"
      "flathub:runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"

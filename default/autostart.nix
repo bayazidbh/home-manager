@@ -122,6 +122,27 @@ systemd.user.services = {
     };
   };
 
+  "autostart-sunshine" = {
+    Unit = {
+      Description = "Sunshine self-hosted game stream host for Moonlight.";
+      StartLimitIntervalSec = "500";
+      StartLimitBurst = "5";
+      };
+    Service = {
+      Restart = "on-failure";
+      RestartSec = "5s";
+      # root install
+      # ExecStart = "/usr/bin/sunshine";
+      # Flatpak Install
+      ExecStart = "flatpak run dev.lizardbyte.app.Sunshine";
+      ExecStop = "flatpak kill dev.lizardbyte.app.Sunshine";
+      };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+      };
+    };
+
+
   "autostart-dolphin" = {
     Unit = {
       Description = "Autostart KDE Dolphin File Manager";
