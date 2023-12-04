@@ -14,26 +14,26 @@
 
      "flathub:io.wavebox.Wavebox/x86_64/stable"
      "flathub:com.github.micahflee.torbrowser-launcher/x86_64/stable"
+     "flathub:org.qbittorrent.qBittorrent/x86_64/stable"
 
      "flathub:org.kde.gwenview/x86_64/stable"
      "flathub:org.kde.kcalc/x86_64/stable"
      "flathub:net.sourceforge.mcomix/x86_64/stable"
 
      "flathub:com.wps.Office/x86_64/stable"
-     "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
+     "flathub:net.cozic.joplin_desktop/x86_64/stable"
      "flathub:com.github.dynobo.normcap/x86_64/stable"
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
-     "flathub:net.cozic.joplin_desktop/x86_64/stable"
      "flathub:io.github.btpf.alexandria/x86_64/stable"
 
      "flathub:com.spotify.Client/x86_64/stable"
      "flathub:org.soundconverter.SoundConverter/x86_64/stable"
 
-     "flathub:org.qbittorrent.qBittorrent/x86_64/stable"
      "flathub:com.stremio.Stremio/x86_64/stable"
      "flathub:info.smplayer.SMPlayer/x86_64/stable"
      "flathub:org.videolan.VLC/x86_64/stable"
      "flathub:io.github.aandrew_me.ytdn/x86_64/stable"
+     "flathub:no.mifi.losslesscut/x86_64/stable"
 
      "flathub:org.upscayl.Upscayl/x86_64/stable"
      "flathub:page.codeberg.Imaginer.Imaginer/x86_64/stable"
@@ -90,8 +90,8 @@
     postInitCommand = ''
       /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
       /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
-      /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/com.valvesoftware.Steam.desktop ${config.xdg.dataHome}/flatpak/app/com.valvesoftware.Steam/current/active/export/share/applications/
       /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
+      /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
     '';
   };
 

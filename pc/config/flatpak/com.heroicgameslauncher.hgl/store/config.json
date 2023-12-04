@@ -1,10 +1,10 @@
 {
 	"general-logs": {
-		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-heroic.log",
-		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T17_50_30-heroic.log",
-		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-legendary.log",
-		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-gogdl.log",
-		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-02T18_18_04-nile.log"
+		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-03T12_23_17-heroic.log",
+		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-03T12_12_43-heroic.log",
+		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-03T12_23_17-legendary.log",
+		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-03T12_23_17-gogdl.log",
+		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-03T12_23_17-nile.log"
 	},
 	"settings": {
 		"checkUpdatesInterval": 10,
@@ -82,16 +82,16 @@
 	"games": {
 		"recent": [
 			{
+				"appName": "4pkSUP7cXQgNbviGULCszn",
+				"title": "Amatsutsumi"
+			},
+			{
 				"appName": "bigzBSayhQyHPQScBwgYRb",
 				"title": "Aiyoku no Eustia"
 			},
 			{
 				"appName": "cEqrsLrBcSfGh7XpzZEq4X",
 				"title": "My Beloved Wife Aina Had Even Her Heart "
-			},
-			{
-				"appName": "4pkSUP7cXQgNbviGULCszn",
-				"title": "Amatsutsumi"
 			},
 			{
 				"appName": "kYLBo4rkLefLXzQ1kqdisR",
