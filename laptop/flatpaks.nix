@@ -47,12 +47,7 @@
      "flathub:de.shorsh.discord-screenaudio/x86_64/stable"
      "flathub:io.github.trigg.discover_overlay/x86_64/stable"
 
-     "flathub:dev.lizardbyte.app.Sunshine/x86_64/stable"
-
-     "flathub:com.heroicgameslauncher.hgl/x86_64/stable"
-     "flathub:net.lutris.Lutris/x86_64/stable"
      "flathub:com.usebottles.bottles/x86_64/stable"
-     "flathub:org.winehq.Wine/x86_64/stable-23.08"
 
      "flathub:com.valvesoftware.Steam/x86_64/stable"
      # "flathub:com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"

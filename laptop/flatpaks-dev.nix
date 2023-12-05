@@ -46,12 +46,7 @@ config.services.flatpak.flatpak = {
      "flathub:app/de.shorsh.discord-screenaudio/x86_64/stable"
      "flathub:app/io.github.trigg.discover_overlay/x86_64/stable"
 
-     "flathub:app/dev.lizardbyte.app.Sunshine/x86_64/stable"
-
-     "flathub:app/com.heroicgameslauncher.hgl/x86_64/stable"
-     "flathub:app/net.lutris.Lutris/x86_64/stable"
      "flathub:app/com.usebottles.bottles/x86_64/stable"
-     "flathub:app/org.winehq.Wine/x86_64/stable-23.08"
 
      "flathub:app/com.valvesoftware.Steam/x86_64/stable"
      # "flathub:runtime/com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
