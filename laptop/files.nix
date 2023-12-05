@@ -1,21 +1,5 @@
 { config, pkgs, ... }:
 {
-home.sessionVariables = {
-  HOST="bbh-laptop";
-  HOSTNAME="bbh-laptop";
-  };
-
-home.packages = with pkgs; [
-  podman podman-compose podman-desktop distrobox # containers stuff
-  # downonspot spotify-qt # media viewers
-  # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
-  # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
-  # gst_all_1.gstreamer gst_all_1.gst-vaapi gst_all_1.gst-libav gst_all_1.gstreamermm gst_all_1.gst-plugins-rs # gstreamer
-  # gst_all_1.gst-plugins-base gst_all_1.gst-plugins-good gst_all_1.gst-plugins-bad gst_all_1.gst-plugins-ugly # gstreamer-plugins
-  # gamescope gamemode # other gaming tools
-  # steamtinkerlaunch gawk yad # steamtinkerlaunch deps
-  ];
-
 systemd.user.tmpfiles.rules = [
   "d ${config.xdg.userDirs.pictures}/Archive"
   "d ${config.xdg.userDirs.pictures}/DCIM"
@@ -42,13 +26,24 @@ home.file."win11" = {
     '';
   };
 
+home.file."brave-wayland" = {
+  enable = true;
+  target = ".local/bin/brave-wayland";
+  executable = true;
+  text = ''
+    #!/usr/bin/bash
+
+    brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode
+    '';
+  };
+
 xdg.desktopEntries = {
   "brave-nix-wl" = {
     name="Brave (Nix) (Wayland)";
     genericName="Web Browser";
     comment="Access the Internet";
     startupNotify=true;
-    exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode %U";
+    exec="brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode %U";
     terminal=false;
     icon="brave-desktop";
     type="Application";
@@ -60,11 +55,11 @@ xdg.desktopEntries = {
     actions={
       "new-window" = {
         name="New Window";
-        exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode";
+        exec="brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode";
         };
       "new-private-window" = {
         name="New Incognito Window";
-        exec="nixVulkanIntel nixGLIntel brave --incognito --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install ozone-platform-hint=auto --force-dark-mode";
+        exec="brave --incognito --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install ozone-platform-hint=auto --force-dark-mode";
         };
       };
     };

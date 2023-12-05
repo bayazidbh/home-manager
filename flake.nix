@@ -32,18 +32,20 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
-          ./home.nix # default home.nix
-          ./default/shell.nix # shell config for all devices
-          ./default/env.nix # env-var for all devices
+          flatpaks.homeManagerModules.default # declarative-flatpak HM module
+          ./home.nix # pkgs and options for all devices
           ./default/alias.nix # aliases for all devices
-          ./default/files.nix # file creation for all devices
+          ./default/shell.nix # shell config for all devices
           ./default/autostart.nix # autostart with systemctl
-          ./pc/by-device.nix # device specific configs
+          ./default/env.nix # env-var for all devices
+          ./default/files.nix # file creation for all devices
+          ./pc/home.nix # device specific packages
+          ./pc/env.nix # device specific env-var
+          ./pc/files.nix # device specific file creation
           ./pc/autostart.nix # device specific autostart
           ./pc/flatpaks.nix # separate list for flatpak
-          # ./pc/chaotic.nix # separate list for chaotic.nix package
           ./pc/nixgl.nix # separate list for nixgl.nix package
-          flatpaks.homeManagerModules.default # declarative-flatpak HM module
+          # ./pc/chaotic.nix # separate list for chaotic.nix package
           # chaotic.homeManagerModules.default # chaotic nyx HM module
         ];
       };
@@ -51,17 +53,19 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
-          flatpaks.homeManagerModules.default # import declarative-flatpak module
-          ./laptop/flatpaks.nix # separate list for flatpak
-          ./home.nix # default home.nix
-          ./default/shell.nix # shell config for all devices
-          ./default/env.nix # env-var for all devices
+          flatpaks.homeManagerModules.default # declarative-flatpak HM module
+          ./home.nix # pkgs and options for all devices
           ./default/alias.nix # aliases for all devices
-          ./default/files.nix # file creation for all devices
+          ./default/shell.nix # shell config for all devices
           ./default/autostart.nix # autostart with systemctl
-          ./laptop/by-device.nix # device specific configs
+          ./default/env.nix # env-var for all devices
+          ./default/files.nix # file creation for all devices
+          ./laptop/home.nix # device specific packages
+          ./laptop/env.nix # device specific env-var
+          ./laptop/files.nix # device specific file creation
           ./laptop/autostart.nix # device specific autostart
-          ./pc/nixgl.nix # separate list for nixgl.nix package
+          ./laptop/flatpaks.nix # separate list for flatpak
+          ./laptop/nixgl.nix # separate list for nixgl.nix package
         ];
       };
       "fenglengshun@bbh-server" = home-manager.lib.homeManagerConfiguration {

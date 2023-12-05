@@ -25,7 +25,7 @@ DialogWidth=720
 [Containments][28][Applets][62][Configuration][General]
 fill=false
 groupedTaskVisualization=2
-launchers=preferred://filemanager,applications:io.github.cboxdoerfer.FSearch.desktop,applications:org.kde.konsole.desktop
+launchers=preferred://filemanager,applications:io.github.cboxdoerfer.FSearch.desktop,applications:org.kde.konsole.desktop,applications:io.wavebox.Wavebox.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 sortingStrategy=3
@@ -308,7 +308,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][39][Applets][52][Configuration]
-PreloadWeight=98
+PreloadWeight=100
 
 [Containments][39][Applets][52][Configuration][General]
 showPercentage=true

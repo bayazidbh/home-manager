@@ -14,9 +14,28 @@ systemd.user.services = {
     Service = {
       Type = "simple";
       Restart = "no";
-      ExecStartPre = "/bin/sleep 10";
+      ExecStartPre = "/bin/sleep 5";
       ExecStart = [
         "${config.home.sessionVariables.XDG_BIN_HOME}/wavebox-wayland"
+      ];
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+  };
+
+  "autostart-nix-brave" = {
+    Unit = {
+      Description = "Autostart Brave Nix App";
+      PartOf = "graphical-session.target";
+      After = "graphical-session.target";
+    };
+    Service = {
+      Type = "simple";
+      Restart = "no";
+      ExecStartPre = "/bin/sleep 12";
+      ExecStart = [
+        "${config.home.sessionVariables.XDG_BIN_HOME}/brave-wayland"
       ];
     };
     Install = {
