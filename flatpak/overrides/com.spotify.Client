@@ -1,2 +1,2 @@
 [Context]
-filesystems=xdg-run/discord-ipc-0:create;xdg-run/app/com.discordapp.Discord:create;~/.local/bin/spotify-adblock.so;~/.config/spotify-adblock/config.toml
+filesystems=xdg-music;xdg-run/app/com.discordapp.Discord:create;~/.local/bin/spotify-adblock.so;~/.config/spotify-adblock/config.toml;xdg-

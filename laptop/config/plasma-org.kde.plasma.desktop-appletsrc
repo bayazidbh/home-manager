@@ -5,39 +5,6 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][28]
-activityId=
-formfactor=2
-immutability=1
-lastScreen=0
-location=4
-plugin=org.kde.panel
-wallpaperplugin=org.kde.image
-
-[Containments][28][Applets][62]
-immutability=1
-plugin=org.kde.plasma.icontasks
-
-[Containments][28][Applets][62][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][28][Applets][62][Configuration][General]
-fill=false
-groupedTaskVisualization=2
-launchers=preferred://filemanager,applications:io.github.cboxdoerfer.FSearch.desktop,applications:org.kde.konsole.desktop,applications:io.wavebox.Wavebox.desktop
-middleClickAction=Close
-showOnlyCurrentDesktop=false
-sortingStrategy=3
-unhideOnAttention=false
-
-[Containments][28][ConfigDialog]
-DialogHeight=84
-DialogWidth=1920
-
-[Containments][28][General]
-AppletOrder=62
-
 [Containments][29]
 activityId=
 formfactor=2
@@ -88,10 +55,6 @@ plugin=org.kde.plasma.systemtray
 [Containments][29][Applets][38][Configuration]
 PreloadWeight=100
 SystrayContainmentId=39
-
-[Containments][29][Applets][58]
-immutability=1
-plugin=org.kde.plasma.panelspacer
 
 [Containments][29][Applets][59]
 immutability=1
@@ -186,8 +149,9 @@ buttonSizePercentage=70
 buttons=5|3|4|10|2|9
 containmentType=Plasma
 inactiveStateEnabled=true
-lengthFirstMargin=2
+lengthFirstMargin=10
 lengthLastMargin=2
+lengthMarginsLock=false
 useDecorationMetrics=false
 
 [Containments][29][Applets][70]
@@ -210,12 +174,23 @@ placeHolder=ublue-os
 immutability=1
 plugin=org.kde.plasma.appmenu
 
+[Containments][29][Applets][79]
+immutability=1
+plugin=luisbocanegra.panelspacer.extended
+
+[Containments][29][Applets][79][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][29][Applets][79][Configuration][General]
+showTooltip=false
+
 [Containments][29][ConfigDialog]
 DialogHeight=84
 DialogWidth=1920
 
 [Containments][29][General]
-AppletOrder=33;69;68;70;71;58;60;59;67;38;64;37
+AppletOrder=33;69;68;70;71;79;60;59;67;38;64;37
 
 [Containments][39]
 activityId=
@@ -320,6 +295,9 @@ plugin=org.kde.plasma.mediacontroller
 [Containments][39][Applets][53][Configuration]
 PreloadWeight=0
 
+[Containments][39][Applets][53][Shortcuts]
+global=
+
 [Containments][39][Applets][54]
 immutability=1
 plugin=org.kde.plasma.bluetooth
@@ -366,7 +344,7 @@ DialogWidth=1920
 [Containments][65][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=463
-ToolBoxButtonY=30
+ToolBoxButtonY=36
 positions={"1920x1080":[]}
 sortMode=-1
 
@@ -390,6 +368,55 @@ lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][75]
+activityId=
+formfactor=3
+immutability=1
+lastScreen=0
+location=5
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][75][Applets][77]
+immutability=1
+plugin=org.kde.plasma.icontasks
+
+[Containments][75][Applets][77][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][75][Applets][77][Configuration][General]
+groupedTaskVisualization=2
+launchers=applications:systemsettings.desktop,preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:spotify-adblock.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop
+middleClickAction=Close
+showOnlyCurrentDesktop=false
+sortingStrategy=3
+
+[Containments][75][Applets][78]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][75][Applets][78][Configuration]
+PreloadWeight=100
+popupHeight=510
+popupWidth=663
+
+[Containments][75][Applets][78][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][75][Applets][78][Configuration][General]
+favoritesPortedToKAstats=true
+icon=fedora-logo-icon
+systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+
+[Containments][75][ConfigDialog]
+DialogHeight=1080
+DialogWidth=162
+
+[Containments][75][General]
+AppletOrder=78;77
 
 [Containments][8]
 activityId=

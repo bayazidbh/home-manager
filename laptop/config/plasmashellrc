@@ -14,25 +14,60 @@ listViewIconSize=64
 1920x1080 screen: Width=412
 
 [PlasmaTransientsConfig]
-PreloadWeight=26
+PreloadWeight=0
+
+[PlasmaTransientsConfig][ConfigDialog]
+DialogHeight=84
+DialogWidth=1920
 
 [PlasmaViews][Panel 28]
-alignment=132
-floating=1
-panelVisibility=2
+alignment=2
+floating=0
+panelVisibility=0
 
 [PlasmaViews][Panel 28][Defaults]
-maxLength=1142
-minLength=1036
+maxLength=1079
+minLength=1060
 thickness=40
 
 [PlasmaViews][Panel 28][Horizontal1920]
-maxLength=1142
-minLength=116
+maxLength=1920
+minLength=1920
 
 [PlasmaViews][Panel 28][Vertical1080]
+maxLength=1079
+minLength=1060
+
+[PlasmaViews][Panel 29][Defaults]
+thickness=36
+
+[PlasmaViews][Panel 72]
+alignment=1
+panelOpacity=0
+
+[PlasmaViews][Panel 72][Defaults]
 maxLength=1080
-minLength=1036
+minLength=1065
+thickness=36
+
+[PlasmaViews][Panel 72][Vertical1080]
+maxLength=1080
+minLength=1065
+
+[PlasmaViews][Panel 73][Defaults]
+thickness=27
+
+[PlasmaViews][Panel 75]
+alignment=2
+
+[PlasmaViews][Panel 75][Defaults]
+maxLength=1080
+minLength=1080
+thickness=36
+
+[PlasmaViews][Panel 75][Vertical1080]
+maxLength=1080
+minLength=1080
 
 [Updates]
 performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/00-start-here-2.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_migrate_font_settings.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_rename_timezonedisplay_key.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/keyboardlayout_migrateiconsetting.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/keyboardlayout_remove_shortcut.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/klipper_clear_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/mediaframe_migrate_useBackground_setting.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/no_middle_click_paste_on_panels.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/folderview_fix_recursive_screenmapping.js

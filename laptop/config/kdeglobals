@@ -137,7 +137,7 @@ ForegroundVisited=120,120,120
 
 [DirSelect Dialog]
 DirSelectDialog Size=980,599
-History Items[$e]=file:///var/home/fenglengshun/Downloads,file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
+History Items[$e]=file:///var/home/fenglengshun/Music,file:///var/home/fenglengshun/Downloads,file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
 
 [General]
 BrowserApplication=re.sonny.Junction.desktop
