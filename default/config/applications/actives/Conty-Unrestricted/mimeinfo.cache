@@ -97,6 +97,4 @@ x-scheme-handler/geo=google-maps-geo-handler-conty.desktop;
 x-scheme-handler/lutris=net.lutris.Lutris-conty.desktop;
 x-scheme-handler/rustdesk=rustdesk-link-conty.desktop;
 x-scheme-handler/sgdb=com.steamgriddb.SGDBoop-conty.desktop;
-x-scheme-handler/steam=steam-conty.desktop;steam-native-conty.desktop;steam-quiet-conty.desktop;
-x-scheme-handler/steamlink=steam-conty.desktop;steam-native-conty.desktop;steam-quiet-conty.desktop;
 x-scheme-handler/x-junction=re.sonny.Junction-conty.desktop;
