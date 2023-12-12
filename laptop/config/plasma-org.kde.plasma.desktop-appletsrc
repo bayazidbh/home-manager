@@ -255,7 +255,7 @@ immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][39][Applets][48][Configuration]
-PreloadWeight=85
+PreloadWeight=90
 
 [Containments][39][Applets][49]
 immutability=1
@@ -269,6 +269,7 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][39][Applets][50][Configuration][General]
+currentTab=streams
 migrated=true
 
 [Containments][39][Applets][51]
@@ -303,7 +304,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=0
+PreloadWeight=2
 
 [Containments][39][Applets][55]
 immutability=1
@@ -388,9 +389,10 @@ DialogWidth=720
 
 [Containments][75][Applets][77][Configuration][General]
 groupedTaskVisualization=2
-launchers=applications:systemsettings.desktop,preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:spotify-adblock.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop
+launchers=applications:systemsettings.desktop,preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,file:///var/home/fenglengshun/.local/share/flatpak/exports/share/applications/com.github.dynobo.normcap.desktop,file:///nix/store/0cpv3krlayaqslsnbm2zfghf9vkls60b-home-manager-path/share/applications/spotify-adblock.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
+showToolTips=false
 sortingStrategy=3
 
 [Containments][75][Applets][78]

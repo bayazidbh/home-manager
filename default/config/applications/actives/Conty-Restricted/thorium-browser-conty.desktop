@@ -105,7 +105,7 @@ Comment[vi]=Truy cập Internet
 Comment[zh_CN]=访问互联网
 Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto  --enable-wayland-ime %U
 StartupWMClass=thorium
 Keywords=browser
 StartupNotify=true
@@ -169,7 +169,7 @@ Name[uk]=Нове вікно (Conty-Restricted)
 Name[vi]=Cửa sổ Mới (Conty-Restricted)
 Name[zh_CN]=新建窗口 (Conty-Restricted)
 Name[zh_TW]=開新視窗 (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto  --enable-wayland-ime
 
 [Desktop Action new-private-window]
 Name=New Incognito Window (Conty-Restricted)
@@ -221,7 +221,7 @@ Name[uk]=Нове вікно в режимі анонімного перегля
 Name[vi]=Cửa sổ ẩn danh mới (Conty-Restricted)
 Name[zh_CN]=新建隐身窗口 (Conty-Restricted)
 Name[zh_TW]=新增無痕式視窗 (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --incognito
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --incognito --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto  --enable-wayland-ime
 
 [Desktop Action temp-profile]
 Name=Open New Window with a temporary profile (Conty-Restricted)
@@ -259,11 +259,11 @@ Name[ug]=ۋاقىتلىق سەپلىمە ھۆججەت بىلەن يېڭى كۆز
 Name[vi]=Mở cửa sổ mới với hồ sơ tạm (Conty-Restricted)
 Name[zh_CN]=以临时配置文件打开新窗口 (Conty-Restricted)
 Name[zh_TW]=以暫時性個人身分開啟新視窗 (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --temp-profile
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --temp-profile --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto  --enable-wayland-ime
 
 [Desktop Action content-shell]
 Name=Open Thorium Shell (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-shell %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-shell --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto  --enable-wayland-ime %U
 
 [Desktop Action safe-mode]
 Name=Open in Safe Mode (Conty-Restricted)
@@ -271,4 +271,4 @@ Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fengleng
 
 [Desktop Action dark-mode]
 Name=Open in Dark Mode (Conty-Restricted)
-Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --force-dark-mode %U
+Exec=env HOME_DIR="/home/fenglengshun/Documents/container/conty" "/home/fenglengshun/.local/bin/conty.sh" --bind /home/fenglengshun/Games /home/fenglengshun/Games --bind /home/fenglengshun/Storage /home/fenglengshun/Storage --bind /home/fenglengshun/Documents /home/fenglengshun/Documents --bind /home/fenglengshun/Downloads /home/fenglengshun/Downloads /usr/bin/thorium-browser --force-dark-mode --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto  --enable-wayland-ime %U

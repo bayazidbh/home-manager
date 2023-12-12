@@ -54,7 +54,7 @@ home.file."wavebox-wayland" = {
   text = ''
     #!/usr/bin/bash
 
-    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --ozone-platform-hint=auto --force-dark-mode
+    flatpak run --branch=stable --arch=x86_64 --command=wavebox --file-forwarding io.wavebox.Wavebox --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --ozone-platform-hint=auto --enable-wayland-ime
     '';
   };
 
