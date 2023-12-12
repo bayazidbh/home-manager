@@ -51,12 +51,12 @@ home.file."win11" = {
   };
 
 xdg.desktopEntries = {
-  "brave-nix-wl" = {
-    name="Brave (Nix) (Wayland)";
+  "brave-browser" = {
+    name="Brave Web Browser";
     genericName="Web Browser";
     comment="Access the Internet";
     startupNotify=true;
-    exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-gpu --ozone-platform-hint=auto --force-dark-mode %U";
+    exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode --enable-wayland-ime %U";
     terminal=false;
     icon="brave-desktop";
     type="Application";
@@ -68,11 +68,11 @@ xdg.desktopEntries = {
     actions={
       "new-window" = {
         name="New Window";
-        exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-gpu --ozone-platform-hint=auto --force-dark-mode";
+        exec="nixVulkanIntel nixGLIntel brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --ozone-platform-hint=auto --force-dark-mode --enable-wayland-ime";
         };
       "new-private-window" = {
         name="New Incognito Window";
-        exec="nixVulkanIntel nixGLIntel brave --incognito --enable-features=UseOzonePlatform,Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-gpu --ozone-platform-hint=auto --force-dark-mode";
+        exec="nixVulkanIntel nixGLIntel brave --incognito --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install ozone-platform-hint=auto --force-dark-mode --enable-wayland-ime";
         };
       };
     };
@@ -81,7 +81,7 @@ xdg.desktopEntries = {
   #      genericName="Web Browser";
   #      comment="Access the Internet";
   #      startupNotify=true;
-  #      exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode %U";
+  #      exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode  --enable-wayland-ime %U";
   #      terminal=false;
   #      icon="brave-desktop";
   #      type="Application";
@@ -93,11 +93,11 @@ xdg.desktopEntries = {
   #      actions={
   #        "new-window" = {
   #          name="New Window";
-  #          exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
+  #          exec="nixGLIntel brave --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode  --enable-wayland-ime";
   #          };
   #        "new-private-window" = {
   #          name="New Incognito Window";
-  #          exec="nixGLIntel brave --incognito --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode";
+  #          exec="nixGLIntel brave --incognito --enable-features=Vulkan,WebRTCPipeWireCapturer,VaapiVideoDecoder,VaapiVideoEncoder,WebUIDarkMode --extension-mime-request-handling=always-prompt-for-install --enable-unsafe-webgpu --enable-gpu --force-dark-mode  --enable-wayland-ime";
   #          };
   #        };
   #      };

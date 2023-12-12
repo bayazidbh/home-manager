@@ -2,7 +2,7 @@
 update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
 
 [Annotations]
-annotationToolType=4
+annotationToolType=7
 arrowStrokeWidth=7
 ellipseStrokeColor=255,0,4
 rectangleFillColor=0,0,0,0
