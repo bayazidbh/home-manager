@@ -107,24 +107,6 @@
 			"browserUrl": "",
 			"customUserAgent": "",
 			"launchFullScreen": false
-		},
-		{
-			"runner": "sideload",
-			"app_name": "cEqrsLrBcSfGh7XpzZEq4X",
-			"title": "My Beloved Wife Aina Had Even Her Heart ",
-			"install": {
-				"executable": "/var/home/fenglengshun/Storage/Data/Downloads/NewNewNew/My Beloved Wife Aina Had Even Her Heart Stolen/GAME.exe",
-				"platform": "Windows",
-				"is_dlc": false
-			},
-			"folder_name": "/var/home/fenglengshun/Storage/Data/Downloads/NewNewNew/My Beloved Wife Aina Had Even Her Heart Stolen",
-			"art_cover": "file:///app/bin/heroic/resources/app.asar/build/assets/heroic_card.1b4786a1.jpg",
-			"is_installed": true,
-			"art_square": "file:///app/bin/heroic/resources/app.asar/build/assets/heroic_card.1b4786a1.jpg",
-			"canRunOffline": true,
-			"browserUrl": "",
-			"customUserAgent": "",
-			"launchFullScreen": false
 		}
 	]
 }

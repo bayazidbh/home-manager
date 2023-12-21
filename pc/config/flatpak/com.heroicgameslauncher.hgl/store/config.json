@@ -1,10 +1,10 @@
 {
 	"general-logs": {
-		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-04T12_43_33-heroic.log",
-		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-04T12_00_37-heroic.log",
-		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-04T12_43_33-legendary.log",
-		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-04T12_43_33-gogdl.log",
-		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-04T12_43_33-nile.log"
+		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-heroic.log",
+		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-18T15_08_51-heroic.log",
+		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-legendary.log",
+		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-gogdl.log",
+		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-nile.log"
 	},
 	"settings": {
 		"checkUpdatesInterval": 10,

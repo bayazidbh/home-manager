@@ -12,6 +12,33 @@
 			"isInstalled": true
 		},
 		{
+			"version": "Wine-GE-Proton8-27-LoL",
+			"type": "Wine-GE",
+			"date": "2023-12-14",
+			"disksize": 0,
+			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-27-LoL/wine-lutris-GE-Proton8-27-LoL-x86_64.sha512sum",
+			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-27-LoL/wine-lutris-GE-Proton8-27-LoL-x86_64.tar.xz",
+			"downsize": 223823200
+		},
+		{
+			"version": "Wine-GE-Proton8-26-LoL",
+			"type": "Wine-GE",
+			"date": "2023-12-14",
+			"disksize": 0,
+			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-26-LoL/wine-lutris-GE-Proton8-26-LoL-x86_64.sha512sum",
+			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-26-LoL/wine-lutris-GE-Proton8-26-LoL-x86_64.tar.xz",
+			"downsize": 224801284
+		},
+		{
+			"version": "Wine-GE-Proton8-25-LoL",
+			"type": "Wine-GE",
+			"date": "2023-12-14",
+			"disksize": 0,
+			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-25-LoL/wine-lutris-GE-Proton8-25-LoL-x86_64.sha512sum",
+			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-25-LoL/wine-lutris-GE-Proton8-25-LoL-x86_64.tar.xz",
+			"downsize": 224767332
+		},
+		{
 			"version": "Wine-GE-Proton8-25",
 			"type": "Wine-GE",
 			"date": "2023-12-01",
@@ -433,33 +460,6 @@
 			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.0-GE-5-LoL/wine-lutris-ge-lol-7.0-5-x86_64.sha512sum",
 			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.0-GE-5-LoL/wine-lutris-ge-lol-7.0-5-x86_64.tar.xz",
 			"downsize": 89872696
-		},
-		{
-			"version": "Wine-GE-Proton7-26",
-			"type": "Wine-GE",
-			"date": "2022-08-23",
-			"disksize": 0,
-			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-26/wine-lutris-GE-Proton7-26-x86_64.sha512sum",
-			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-26/wine-lutris-GE-Proton7-26-x86_64.tar.xz",
-			"downsize": 91353728
-		},
-		{
-			"version": "Wine-GE-Proton7-25",
-			"type": "Wine-GE",
-			"date": "2022-08-07",
-			"disksize": 0,
-			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-25/wine-lutris-GE-Proton7-25-x86_64.sha512sum",
-			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-25/wine-lutris-GE-Proton7-25-x86_64.tar.xz",
-			"downsize": 90605984
-		},
-		{
-			"version": "Wine-7.14-GE-1-LoL",
-			"type": "Wine-GE",
-			"date": "2022-08-05",
-			"disksize": 0,
-			"checksum": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.14-GE-1-LoL/wine-lutris-ge-lol-7.14-1-x86_64.sha512sum",
-			"download": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.14-GE-1-LoL/wine-lutris-ge-lol-7.14-1-x86_64.tar.xz",
-			"downsize": 91094968
 		},
 		{
 			"version": "Proton-GE-latest",
