@@ -269,7 +269,6 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][39][Applets][50][Configuration][General]
-currentTab=streams
 migrated=true
 
 [Containments][39][Applets][51]
@@ -304,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=2
+PreloadWeight=5
 
 [Containments][39][Applets][55]
 immutability=1
@@ -389,7 +388,7 @@ DialogWidth=720
 
 [Containments][75][Applets][77][Configuration][General]
 groupedTaskVisualization=2
-launchers=applications:systemsettings.desktop,preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,file:///var/home/fenglengshun/.local/share/flatpak/exports/share/applications/com.github.dynobo.normcap.desktop,file:///nix/store/0cpv3krlayaqslsnbm2zfghf9vkls60b-home-manager-path/share/applications/spotify-adblock.desktop
+launchers=applications:systemsettings.desktop,preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,file:///var/home/fenglengshun/.local/share/flatpak/exports/share/applications/com.github.dynobo.normcap.desktop,file:///nix/store/0cpv3krlayaqslsnbm2zfghf9vkls60b-home-manager-path/share/applications/spotify-adblock.desktop,applications:io.github.cboxdoerfer.FSearch.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 showToolTips=false
