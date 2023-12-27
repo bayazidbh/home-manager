@@ -255,7 +255,7 @@ immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][39][Applets][48][Configuration]
-PreloadWeight=90
+PreloadWeight=95
 
 [Containments][39][Applets][49]
 immutability=1
@@ -303,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][39][Applets][55]
 immutability=1
@@ -401,7 +401,7 @@ plugin=org.kde.plasma.kickoff
 [Containments][75][Applets][78][Configuration]
 PreloadWeight=100
 popupHeight=510
-popupWidth=663
+popupWidth=783
 
 [Containments][75][Applets][78][Configuration][ConfigDialog]
 DialogHeight=540

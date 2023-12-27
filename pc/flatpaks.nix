@@ -55,10 +55,10 @@
      "flathub:com.usebottles.bottles/x86_64/stable"
      "flathub:org.winehq.Wine/x86_64/stable-23.08"
 
-     "flathub:com.valvesoftware.Steam/x86_64/stable"
+     # "flathub:com.valvesoftware.Steam/x86_64/stable"
      # "flathub:com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
-     "flathub:com.valvesoftware.Steam.Utility.steamtinkerlaunch/x86_64/stable"
-     "flathub:com.valvesoftware.Steam.Utility.thcrap_steam_proton_wrapper/x86_64/stable"
+     # "flathub:com.valvesoftware.Steam.Utility.steamtinkerlaunch/x86_64/stable"
+     # "flathub:com.valvesoftware.Steam.Utility.thcrap_steam_proton_wrapper/x86_64/stable"
      "flathub:org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
      "flathub:com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"
      "flathub:org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08"
