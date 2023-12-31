@@ -20,6 +20,7 @@ config.services.flatpak.flatpak = {
      "flathub:app/org.kde.gwenview/x86_64/stable"
      "flathub:app/org.kde.kcalc/x86_64/stable"
      "flathub:app/net.sourceforge.mcomix/x86_64/stable"
+     "flathub:app/info.febvre.Komikku/x86_64/stable"
 
      "flathub:app/com.wps.Office/x86_64/stable"
      "flathub:app/net.cozic.joplin_desktop/x86_64/stable"

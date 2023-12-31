@@ -19,6 +19,7 @@
      "flathub:org.kde.gwenview/x86_64/stable"
      "flathub:org.kde.kcalc/x86_64/stable"
      "flathub:net.sourceforge.mcomix/x86_64/stable"
+     "flathub:info.febvre.Komikku/x86_64/stable"
 
      "flathub:com.wps.Office/x86_64/stable"
      "flathub:net.cozic.joplin_desktop/x86_64/stable"
