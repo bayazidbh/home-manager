@@ -49,6 +49,7 @@
      "flathub:io.github.trigg.discover_overlay/x86_64/stable"
 
      "flathub:com.usebottles.bottles/x86_64/stable"
+     "flathub:org.winehq.Wine/x86_64/stable-23.08"
 
      "flathub:com.valvesoftware.Steam/x86_64/stable"
      # "flathub:com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
@@ -73,11 +74,11 @@
 
      "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
     ];
-    postInitCommand = ''
-      /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
-      /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
-      /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
-      /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
-    '';
+    # postInitCommand = ''
+    #   /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
+    #   /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+    #   /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
+    #   /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
+    # '';
   };
 }

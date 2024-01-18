@@ -100,7 +100,7 @@ monthShowBorder=true
 monthShowWeekNumbers=true
 
 [Containments][29][Applets][64][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=602
 DialogWidth=720
 
 [Containments][29][Applets][64][Configuration][General]
@@ -200,7 +200,7 @@ lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
 popupHeight=432
-popupWidth=543
+popupWidth=560
 wallpaperplugin=org.kde.image
 
 [Containments][39][Applets][40]
@@ -303,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=5
+PreloadWeight=53
 
 [Containments][39][Applets][55]
 immutability=1
@@ -388,7 +388,7 @@ DialogWidth=720
 
 [Containments][75][Applets][77][Configuration][General]
 groupedTaskVisualization=2
-launchers=applications:systemsettings.desktop,preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,file:///var/home/fenglengshun/.local/share/flatpak/exports/share/applications/com.github.dynobo.normcap.desktop,applications:io.github.cboxdoerfer.FSearch.desktop
+launchers=preferred://filemanager,applications:io.wavebox.Wavebox.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,file:///var/home/fenglengshun/.local/share/flatpak/exports/share/applications/com.github.dynobo.normcap.desktop,applications:io.github.cboxdoerfer.FSearch.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 showToolTips=false

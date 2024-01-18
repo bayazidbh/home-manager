@@ -88,12 +88,11 @@
      "launcher-moe:moe.launcher.honkers-launcher/x86_64/master"
      "launcher-moe:moe.launcher.an-anime-borb-launcher/x86_64/master"
     ];
-    postInitCommand = ''
-      /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
-      /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
-      /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
-      /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
-    '';
+    # postInitCommand = ''
+    #   /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
+    #   /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+    #   /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
+    #   /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
+    # '';
   };
-
 }

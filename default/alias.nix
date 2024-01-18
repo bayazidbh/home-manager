@@ -73,9 +73,8 @@
     gameconqueror="sudo gameconqueror";
     gamescope_run="/bin/gamescope -w 1477 -h 831 -W 1920 -H 1080 -r 60 -o 30 -f -F fsr --sharpness 10 --expose-wayland --";
 
-    winejp="LC_ALL=ja_JP.UTF-8 TZ=Asia/Tokyo WINEPREFIX=${config.home.homeDirectory}/Games/Unlocked/_winejp/ WINEARCH=win32 wine";
-
-    protonup="mkdir -p ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/data/Steam/compatibilitytools.d && protonup -d ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/data/Steam/compatibilitytools.d && protonup";
+    protonup-flatpak="mkdir -p ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/data/Steam/compatibilitytools.d && protonup -d ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/data/Steam/compatibilitytools.d && protonup";
+    bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles";
 
     nw="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/nw";
     nw72="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
