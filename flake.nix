@@ -32,7 +32,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
-          flatpaks.homeManagerModules.default # declarative-flatpak HM module
+          flatpaks-dev.homeManagerModules.default # declarative-flatpak HM module
           ./home.nix # pkgs and options for all devices
           ./default/alias.nix # aliases for all devices
           ./default/shell.nix # shell config for all devices
@@ -43,7 +43,7 @@
           ./pc/env.nix # device specific env-var
           ./pc/files.nix # device specific file creation
           ./pc/autostart.nix # device specific autostart
-          ./pc/flatpaks.nix # separate list for flatpak
+          ./pc/flatpaks-dev.nix # separate list for flatpak
           ./pc/nixgl.nix # separate list for nixgl.nix package
           # ./pc/chaotic.nix # separate list for chaotic.nix package
           # chaotic.homeManagerModules.default # chaotic nyx HM module

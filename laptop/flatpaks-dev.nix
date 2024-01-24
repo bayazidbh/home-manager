@@ -71,7 +71,7 @@ config.services.flatpak.flatpak = {
      "flathub:app/com.obsproject.Studio.Plugin.DroidCam/x86_64/stable"
      "flathub:app/com.obsproject.Studio.Plugin.BackgroundRemoval/x86_64/stable"
 
-     "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
+     "launcher-moe:app/moe.launcher.anime-games-launcher/x86_64/master"
     ];
     # postInitCommand = ''
     #   /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides

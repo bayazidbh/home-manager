@@ -83,9 +83,7 @@
      "flathub:com.obsproject.Studio.Plugin.DroidCam/x86_64/stable"
      "flathub:com.obsproject.Studio.Plugin.BackgroundRemoval/x86_64/stable"
 
-     "launcher-moe:moe.launcher.the-honkers-railway-launcher/x86_64/master"
-     "launcher-moe:moe.launcher.an-anime-game-launcher/x86_64/master"
-     "launcher-moe:moe.launcher.honkers-launcher/x86_64/master"
+     "launcher-moe:moe.launcher.anime-games-launcher/x86_64/master"
      "launcher-moe:moe.launcher.an-anime-borb-launcher/x86_64/master"
     ];
     # postInitCommand = ''
