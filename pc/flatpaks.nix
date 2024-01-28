@@ -25,7 +25,7 @@
      "flathub:net.cozic.joplin_desktop/x86_64/stable"
      "flathub:com.github.dynobo.normcap/x86_64/stable"
      "flathub:net.codeindustry.MasterPDFEditor/x86_64/stable"
-     "flathub:io.github.btpf.alexandria/x86_64/stable"
+     "flathub:com.github.johnfactotum.Foliate/x86_64/stable"
 
      "flathub:com.spotify.Client/x86_64/stable"
      "flathub:org.soundconverter.SoundConverter/x86_64/stable"
@@ -42,6 +42,8 @@
      "flathub:net.fasterland.converseen/x86_64/stable"
 
      "flathub:io.github.Bavarder.Bavarder/x86_64/stable"
+
+     "flathub:de.wger.flutter/x86_64/stable"
 
      "flathub:io.github.giantpinkrobots.bootqt/x86_64/stable"
 

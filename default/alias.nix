@@ -78,6 +78,6 @@
 
     nw="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-latest-linux-x64/nw";
     nw72="${config.home.sessionVariables.XDG_BIN_HOME}/conty.sh env LD_PRELOAD=${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/libffmpeg.so ${config.xdg.userDirs.documents}/Private/Linux/bin/nwjs-v0.72.0-linux-x64/nw";
-    Discord-RPC-Extension="${config.xdg.userDirs.documents}/Private/Linux/bin/Discord-RPC-Extension_server_linux_debug"
+    Discord-RPC-Extension="${config.xdg.userDirs.documents}/Private/Linux/bin/Discord-RPC-Extension_server_linux_debug";
   };
 }

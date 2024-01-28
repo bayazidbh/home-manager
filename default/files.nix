@@ -304,7 +304,7 @@ home.file."setup-distrobox-arch" = {
   distrobox enter arch -- sh -c "echo -e '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf" ; \
   distrobox enter arch -- sh -c "echo -e '\nen_SG.UTF-8 UTF-8\nen_US.UTF-8 UTF-8\nja_JP.UTF-8 UTF-8\nid_ID.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen"
   distrobox enter arch -- sudo pacman -Syu --noconfirm glibc base-devel paru pipewire-jack pipewire-pulse pipewire-alsa wireplumber
-  distrobox enter arch -- paru -Syyu --noconfirm --skipreview archisteamfarm-bin
+  distrobox enter arch -- paru -Syyu --noconfirm --skipreview archisteamfarm-bin wl-clipboard wl-clipboard-x11 gamescope-plus
   git clone https://aur.archlinux.org/gazou-git.git /tmp/gazou-git
   cd /tmp/gazou-git
   sed -i 's/-DGUI=ON/-DGUI=OFF/' /tmp/gazou-git/PKGBUILD

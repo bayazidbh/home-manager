@@ -26,7 +26,7 @@ services.flatpak.flatpak = {
      "flathub:app/net.cozic.joplin_desktop/x86_64/stable"
      "flathub:app/com.github.dynobo.normcap/x86_64/stable"
      "flathub:app/net.codeindustry.MasterPDFEditor/x86_64/stable"
-     "flathub:app/io.github.btpf.alexandria/x86_64/stable"
+     "flathub:app/com.github.johnfactotum.Foliate/x86_64/stable"
 
      "flathub:app/com.spotify.Client/x86_64/stable"
      "flathub:app/org.soundconverter.SoundConverter/x86_64/stable"
@@ -43,6 +43,8 @@ services.flatpak.flatpak = {
      "flathub:app/net.fasterland.converseen/x86_64/stable"
 
      "flathub:app/io.github.Bavarder.Bavarder/x86_64/stable"
+
+     "flathub:app/de.wger.flutter/x86_64/stable"
 
      "flathub:app/io.github.giantpinkrobots.bootqt/x86_64/stable"
 
