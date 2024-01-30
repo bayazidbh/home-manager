@@ -7,13 +7,12 @@
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak
-    flatpaks-old.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, old-stable branch
     nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it
     # Add other inputs if needed
   };
 
-  outputs = { self, nixpkgs, home-manager, flatpaks, flatpaks-old, nixgl }:
+  outputs = { self, nixpkgs, home-manager, flatpaks, nixgl }:
   # nixpkgs-unstable chaotic
   let
 
@@ -44,7 +43,7 @@
           ./pc/env.nix # device specific env-var
           ./pc/files.nix # device specific file creation
           ./pc/autostart.nix # device specific autostart
-          ./pc/flatpaks-dev.nix # separate list for flatpak
+          ./pc/flatpaks.nix # separate list for flatpak
           ./pc/nixgl.nix # separate list for nixgl.nix package
           # ./pc/chaotic.nix # separate list for chaotic.nix package
           # chaotic.homeManagerModules.default # chaotic nyx HM module
@@ -65,7 +64,7 @@
           ./laptop/env.nix # device specific env-var
           ./laptop/files.nix # device specific file creation
           ./laptop/autostart.nix # device specific autostart
-          ./laptop/flatpaks-dev.nix # separate list for flatpak
+          ./laptop/flatpaks.nix # separate list for flatpak
           ./laptop/nixgl.nix # separate list for nixgl.nix package
         ];
       };
