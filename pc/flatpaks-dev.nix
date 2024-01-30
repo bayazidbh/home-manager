@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
-services.flatpak.flatpak = {
-    # enable = true;
+services.flatpak = {
+    enableModule = true;
+    deduplicate = true;
     preInitCommand = ''
       /usr/bin/flatpak config  --user --set languages 'en;ja'
     '';
@@ -58,6 +59,7 @@ services.flatpak.flatpak = {
      "flathub:app/net.lutris.Lutris/x86_64/stable"
      "flathub:app/com.usebottles.bottles/x86_64/stable"
      "flathub:app/org.winehq.Wine/x86_64/stable-23.08"
+     "flathub:app/io.github.fastrizwaan.WineZGUI/x86_64/stable"
 
      # "flathub:app/com.valvesoftware.Steam/x86_64/stable"
      # "flathub:runtime/com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"

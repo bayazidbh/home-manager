@@ -1,19 +1,20 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # use nixos stable 23.11 as main nixpkgs source
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; # use nixpkgs-unstable as main nixpkgs source
+    # nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; # use nixpkgs-unstable as main nixpkgs source
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11"; # home-manager unstable url
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
-    flatpaks.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, old-stable branch
-    flatpaks-dev.url = "github:GermanBread/declarative-flatpak/dev"; # dev branch
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak
+    flatpaks-old.url = "github:GermanBread/declarative-flatpak/old-stable"; # declarative-flatpak, old-stable branch
     nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it
     # Add other inputs if needed
   };
 
-  outputs = { self, nixpkgs, home-manager, flatpaks, flatpaks-dev, nixgl }: # chaotic
+  outputs = { self, nixpkgs, home-manager, flatpaks, flatpaks-old, nixgl }:
+  # nixpkgs-unstable chaotic
   let
 
     # System types to support.  [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
@@ -32,7 +33,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
-          flatpaks-dev.homeManagerModules.default # declarative-flatpak HM module
+          flatpaks.homeManagerModules.default # declarative-flatpak HM module
           ./home.nix # pkgs and options for all devices
           ./default/alias.nix # aliases for all devices
           ./default/shell.nix # shell config for all devices
@@ -64,7 +65,7 @@
           ./laptop/env.nix # device specific env-var
           ./laptop/files.nix # device specific file creation
           ./laptop/autostart.nix # device specific autostart
-          ./laptop/flatpaks.nix # separate list for flatpak
+          ./laptop/flatpaks-dev.nix # separate list for flatpak
           ./laptop/nixgl.nix # separate list for nixgl.nix package
         ];
       };

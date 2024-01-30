@@ -71,6 +71,8 @@ AutoRaiseInterval=1500
 DelayFocusInterval=500
 ElectricBorders=1
 FocusPolicy=FocusFollowsMouse
+MaximizeButtonMiddleClickCommand=Maximize (horizontal only)
+MaximizeButtonRightClickCommand=Maximize (vertical only)
 RollOverDesktops=true
 
 [Xwayland]

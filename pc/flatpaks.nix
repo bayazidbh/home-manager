@@ -57,6 +57,7 @@
      "flathub:net.lutris.Lutris/x86_64/stable"
      "flathub:com.usebottles.bottles/x86_64/stable"
      "flathub:org.winehq.Wine/x86_64/stable-23.08"
+     "flathub:io.github.fastrizwaan.WineZGUI/x86_64/stable"
 
      # "flathub:com.valvesoftware.Steam/x86_64/stable"
      # "flathub:com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
@@ -86,7 +87,7 @@
      "flathub:com.obsproject.Studio.Plugin.BackgroundRemoval/x86_64/stable"
 
      "launcher-moe:moe.launcher.anime-games-launcher/x86_64/master"
-     "launcher-moe:moe.launcher.an-anime-borb-launcher/x86_64/master"
+     # "launcher-moe:moe.launcher.an-anime-borb-launcher/x86_64/master"
     ];
     # postInitCommand = ''
     #   /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides

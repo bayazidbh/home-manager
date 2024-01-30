@@ -1,8 +1,9 @@
 { config, pkgs, ... }:
 {
-config.services.flatpak.flatpak = {
+config.services.flatpak = {
     enableModule = true;
-    preInitCommand = ''
+    deduplicate = true;
+    preRemotesCommand = ''
       /usr/bin/flatpak config  --user --set languages 'en;ja'
     '';
     remotes = {
@@ -53,9 +54,9 @@ config.services.flatpak.flatpak = {
 
      "flathub:app/com.usebottles.bottles/x86_64/stable"
      "flathub:app/org.winehq.Wine/x86_64/stable-23.08"
+     "flathub:app/io.github.fastrizwaan.WineZGUI/x86_64/stable"
 
      "flathub:app/com.valvesoftware.Steam/x86_64/stable"
-     # "flathub:runtime/com.valvesoftware.Steam.CompatibilityTool.Proton-GE/x86_64/stable"
      "flathub:runtime/com.valvesoftware.Steam.Utility.steamtinkerlaunch/x86_64/stable"
      "flathub:runtime/com.valvesoftware.Steam.Utility.thcrap_steam_proton_wrapper/x86_64/stable"
      "flathub:runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
@@ -77,11 +78,11 @@ config.services.flatpak.flatpak = {
 
      "launcher-moe:app/moe.launcher.anime-games-launcher/x86_64/master"
     ];
-    # postInitCommand = ''
-    #   /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
-    #   /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+    preSwitchCommand = ''
+      /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
+      /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+    '';
     #   /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
     #   /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
-    # '';
   };
 }
