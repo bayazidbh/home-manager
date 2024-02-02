@@ -14,9 +14,9 @@ home.file."resilio" = {
     '';
   };
 
-home.file."steam-silent" = {
+home.file."steam-conty-silent" = {
   enable = true;
-  target = ".local/bin/steam-silent";
+  target = ".local/bin/steam-conty-silent";
   executable = true;
   text = ''
     #!/usr/bin/bash

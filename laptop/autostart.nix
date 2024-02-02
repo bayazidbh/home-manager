@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
 systemd.user.tmpfiles.rules = [
-  "L ${config.xdg.configHome}/autostart/com.valvesoftware.Steam.desktop - - - - ${config.xdg.configHome}/home-manager/laptop/autostart/com.valvesoftware.Steam.desktop"
+  "L ${config.xdg.configHome}/autostart/steam.desktop - - - - ${config.xdg.configHome}/home-manager/laptop/autostart/steam.desktop"
   ];
 
 systemd.user.services = {
