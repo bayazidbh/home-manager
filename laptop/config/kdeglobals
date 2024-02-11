@@ -142,6 +142,8 @@ History Items[$e]=file:$HOME/Documents/Work/Internal/Pictures/e-sign transparent
 [General]
 BrowserApplication=re.sonny.Junction.desktop
 ColorSchemeHash=26b415ada9e27aeee0bd0a0aa68586d7309232ba
+TerminalApplication=/usr/bin/konsole
+TerminalService=/home/fenglengshun/.local/share/applications/konsole.desktop
 XftHintStyle=hintslight
 XftSubPixel=none
 fixed=MesloLGS NF,10,-1,5,50,0,0,0,0,0

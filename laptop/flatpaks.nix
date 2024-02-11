@@ -79,7 +79,7 @@ config.services.flatpak = {
 
      "launcher-moe:app/moe.launcher.anime-games-launcher/x86_64/master"
     ];
-    preSwitchCommand = ''
+    UNCHECKEDpostEverythingCommand = ''
       /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
       /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
     '';

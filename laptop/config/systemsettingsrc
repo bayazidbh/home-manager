@@ -12,6 +12,7 @@ listViewIconSize=64
 1536x864 screen: Height=700
 1536x864 screen: Width=1020
 1536x864 screen: Window-Maximized=true
+1920x1080 screen: Window-Maximized=true
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAA/wAAAK8AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled

@@ -91,11 +91,11 @@ services.flatpak = {
 
      "launcher-moe:app/moe.launcher.anime-games-launcher/x86_64/master"
     ];
-    # postInitCommand = ''
-    #   /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
-    #   /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+    UNCHECKEDpostEverythingCommand = ''
+      /usr/bin/rm ${config.xdg.dataHome}/flatpak/overrides
+      /usr/bin/ln -sifv ${config.xdg.configHome}/home-manager/flatpak/overrides ${config.xdg.dataHome}/flatpak/
+    '';
     #   /usr/bin/ln -sifv ${config.xdg.configHome}/flatpak/org.winehq.Wine.desktop ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/
     #   /usr/bin/ln -s ${config.home.homeDirectory}/.var/app/com.valvesoftware.Steam/.steam ${config.home.homeDirectory}/.steam
-    # '';
   };
 }
