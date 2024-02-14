@@ -2,6 +2,7 @@
 {
 home.packages = with pkgs; [
   podman podman-compose podman-desktop distrobox # containers stuff
+  onedrive onedriver onedrivegui
   # downonspot spotify-qt # media viewers
   # mesa amdvlk driversi686Linux.amdvlk # wine graphics dependencies
   # wineWowPackages.stagingFull dxvk wineWowPackages.fonts winetricks # wine packages
