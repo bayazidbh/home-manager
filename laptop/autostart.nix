@@ -23,6 +23,25 @@ systemd.user.services = {
     };
   };
 
+  "autostart-nix-onedrivegui" = {
+    Unit = {
+      Description = "Autostart Nix OneDriveGUI";
+      PartOf = "graphical-session.target";
+      After = "graphical-session.target";
+    };
+    Service = {
+      Type = "simple";
+      Restart = "on-failure";
+      RestartSec = "5s";
+      ExecStart = [
+        "${config.home.homeDirectory}/.nix-profile/bin/onedrivegui"
+      ];
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+  };
+
   "autostart-flatpak-wavebox" = {
     Unit = {
       Description = "Autostart Wavebox Flatpak App";
