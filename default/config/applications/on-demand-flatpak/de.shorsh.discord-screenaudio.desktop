@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=discord-screenaudio
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=discord-screenaudio de.shorsh.discord-screenaudio
+Comment=A custom discord client that supports streaming with audio on Linux.
+Icon=de.shorsh.discord-screenaudio
+Categories=Network;InstantMessaging;
+Terminal=true
+X-Flatpak=de.shorsh.discord-screenaudio

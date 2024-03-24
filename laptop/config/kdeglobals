@@ -136,7 +136,7 @@ ForegroundPositive=39,174,96
 ForegroundVisited=120,120,120
 
 [DirSelect Dialog]
-DirSelectDialog Size=1884,1044
+DirSelectDialog Size=1129,694
 History Items[$e]=file:$HOME/Documents/Work/Internal/Pictures/e-sign transparent/New Folder,file:///var/home/fenglengshun/Games/Unlocked/_bottles,file:///var/home/fenglengshun/Music,file:///var/home/fenglengshun/Downloads,file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
 
 [General]

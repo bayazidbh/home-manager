@@ -1,0 +1,34 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name[ar]=ثرثرة
+Name[az]=Bavarder
+Name[cs]=Bavarder
+Name[de]=Bavarder
+Name[es]=Bavarder
+Name[et]=Bavarder
+Name[fa]=باوارده
+Name[fi]=Bavarder
+Name[fr]=Bavarder
+Name[gl]=Bavarder
+Name[hu]=Bavarder
+Name[it]=Bavarder
+Name[nl]=Bavarder
+Name[pl]=Bavarder
+Name[pt]=Bavarder
+Name[ru]=Bavarder
+Name[sv]=Bavarder
+Name[ta]=பவார்டர்
+Name[th]=แบบวาร์เดอร์
+Name[tr]=Bavarder
+Name[uk]=Bavarder
+Name[zh_Hans]=Bavarder
+Name[zh_Hant]=Bavarder
+Name[eu]=Bavarder
+Name=Bavarder
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=bavarder io.github.Bavarder.Bavarder
+Icon=io.github.Bavarder.Bavarder
+Terminal=true
+Type=Application
+Categories=GTK;
+StartupNotify=true
+X-Flatpak=io.github.Bavarder.Bavarder

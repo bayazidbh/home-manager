@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Youtube Downloader Plus
+Comment=Download videos and audios from YouTube and other sites
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=run.sh io.github.aandrew_me.ytdn
+Type=Application
+Icon=io.github.aandrew_me.ytdn
+Categories=Utility;
+X-Flatpak=io.github.aandrew_me.ytdn

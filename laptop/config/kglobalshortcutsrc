@@ -230,6 +230,13 @@ new-tab=none,none,New Tab
 new-window=Ctrl+Alt+T,Ctrl+Alt+T,New Window
 preferences=none,none,Preferences
 
+[org.gnome.Ptyxis.desktop]
+_k_friendly_name=Ptyxis
+_launch=none,none,Ptyxis
+new-tab=none,none,New Tab
+new-window=none,Ctrl+Alt+T,New Window
+preferences=none,none,Preferences
+
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin

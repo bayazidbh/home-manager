@@ -1,0 +1,28 @@
+[Desktop Entry]
+Name[th]=แบบวาร์เดอร์
+Name[sv]=Imaginer
+Name[fa]=باوارده
+Name[fi]=Imaginer
+Name[ru]=Imaginer
+Name[nl]=Imaginer
+Name[es]=Imaginer
+Name[fr]=Imaginer
+Name[pt]=Imaginer
+Name[hu]=Imaginer
+Name[de]=Imaginer
+Name[tr]=Imaginer
+Name[pl]=Imaginer
+Name[oc]=Imaginer
+Name[it]=Imaginer
+Name[zh_Hans]=Imaginer
+Name[az]=Imaginer
+Name[cs]=Imaginer
+Name[uk]=Imaginer
+Name=Imaginer
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=imaginer page.codeberg.Imaginer.Imaginer
+Icon=page.codeberg.Imaginer.Imaginer
+Terminal=true
+Type=Application
+Categories=GTK;
+StartupNotify=true
+X-Flatpak=page.codeberg.Imaginer.Imaginer

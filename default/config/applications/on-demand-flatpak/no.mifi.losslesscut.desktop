@@ -1,0 +1,16 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=LosslessCut
+Comment=simple video editor to trim or cut videos
+Comment[fr]=Un simple éditeur vidéo pour retailler ou couper les vidéos
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/run.sh no.mifi.losslesscut
+MimeType=video/mpeg;video/x-mpeg;video/msvideo;video/quicktime;video/x-anim;video/x-avi;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;video/x-nsv;video/x-flc;video/x-fli;video/x-flv;video/vnd.rn-realvideo;video/mp4;video/mp4v-es;video/mp2t;application/ogg;application/x-ogg;video/x-ogm+ogg;audio/x-vorbis+ogg;application/x-matroska;audio/x-matroska;video/x-matroska;video/webm;
+Icon=no.mifi.losslesscut
+Terminal=true
+Type=Application
+Encoding=UTF-8
+Categories=AudioVideo;AudioVideoEditing;
+Keywords=trim;codec;cut;movie;mpeg;avi;h264;mkv;mp4;
+StartupWMClass=losslesscut
+X-Desktop-File-Install-Version=0.27
+X-Flatpak=no.mifi.losslesscut

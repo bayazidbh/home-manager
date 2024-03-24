@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=bootqt.sh io.github.giantpinkrobots.bootqt
+Icon=io.github.giantpinkrobots.bootqt
+Name=Bootqt
+Comment=Create bootable drives
+Categories=Utility
+X-Flatpak=io.github.giantpinkrobots.bootqt

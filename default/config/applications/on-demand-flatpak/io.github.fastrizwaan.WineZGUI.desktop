@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=WineZGUI
+Type=Application
+Comment=Wine GUI using Zenity
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=winezgui --file-forwarding io.github.fastrizwaan.WineZGUI @@ %F @@
+MimeType=application/x-ms-dos-executable;application/x-winezgui-backup-file;
+Icon=io.github.fastrizwaan.WineZGUI
+StartupNotify=true
+Categories=Game;Emulator
+Keywords=exe;wine;windows
+X-Flatpak=io.github.fastrizwaan.WineZGUI

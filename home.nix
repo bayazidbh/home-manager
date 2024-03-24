@@ -62,7 +62,7 @@ in
     du-dust nix-du graphviz # disk usage management tools
     adl gallery-dl mangal mov-cli # CLI-based media downloader
     protonup-ng # steam-rom-manager protontricks # steam tools
-    ludusavi scanmem # gnome.zenity gamescope gamemode # other gaming tools
+    ludusavi # scanmem gnome.zenity gamescope gamemode # other gaming tools
     bitwarden authy # security tools
     mediawriter ventoy-full # image writer
     qdirstat fsearch junction krename imagemagick # transmission-qt # extra file management tools

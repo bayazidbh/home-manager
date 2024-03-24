@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=wger
+Comment=Fitness/workout, nutrition and weight tracker
+Categories=Education;Utility;Sports;
+Icon=de.wger.flutter
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wger de.wger.flutter
+StartupWMClass=wger
+X-Purism-FormFactor=Workstation;Mobile;
+X-KDE-FormFactors=desktop;tablet;handset;mediacenter;
+X-Flatpak=de.wger.flutter

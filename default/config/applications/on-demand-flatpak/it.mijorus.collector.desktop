@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name[fr]=Collector
+Name[nl]=Collector
+Name[es]=Collector
+Name=Collector
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=collector it.mijorus.collector
+Comment[nl]=Slepen-en-neerzetten krijgt een nieuwe dimensie
+Comment[es]=Arrastrar y soltar a otro nivel
+Comment=Drag and Drop to the next level
+Icon=it.mijorus.collector
+Terminal=true
+Type=Application
+Categories=Utility;
+StartupNotify=true
+X-Flatpak=it.mijorus.collector

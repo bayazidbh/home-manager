@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Discover Overlay
+Comment=Voice chat overlay
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=discover-overlay io.github.trigg.discover_overlay
+Icon=io.github.trigg.discover_overlay
+Terminal=true
+Type=Application
+Categories=Utility;TelephonyTools
+Keywords=Discord
+X-Flatpak=io.github.trigg.discover_overlay
