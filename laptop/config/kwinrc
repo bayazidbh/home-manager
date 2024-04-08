@@ -48,12 +48,15 @@ PopupHideDelay=300
 LayoutName=thumbnail_grid
 
 [Tiling]
-padding=2
+padding=4
 
 [Tiling][4656e9c7-29d2-5198-aef7-e64495a298e9]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6ffc9819-b5ee-5c93-9bb7-4e62e3c4d161]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][b3208a62-91c5-56ec-8ad5-7294ba2b74fe]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][bd455426-91b5-5aa4-b78c-9e21c3c810ab]

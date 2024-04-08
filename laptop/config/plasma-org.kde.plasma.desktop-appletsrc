@@ -235,6 +235,9 @@ PreloadWeight=100
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
+[Containments][39][Applets][44][Configuration]
+PreloadWeight=55
+
 [Containments][39][Applets][45]
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
@@ -283,7 +286,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][39][Applets][52][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][39][Applets][52][Configuration][General]
 showPercentage=true
@@ -303,7 +306,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][39][Applets][54][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][39][Applets][55]
 immutability=1

@@ -2,9 +2,33 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
+Description=Window settings for Picture-in-picture
+above=true
+aboverule=3
+acceptfocus=true
+clientmachine=localhost
+desktops=\\0
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+maximizevert=true
+maxsize=1920,1080
+maxsizerule=2
+noborder=true
+noborderrule=3
+placement=9
+position=1219,36
+size=701,1044
+title=Picture-in-picture
+titlematch=2
+types=1
+wmclassmatch=1
+
+[2]
 Description=Window settings for brave-browser
 acceptfocus=true
 clientmachine=localhost
+desktopfile=net.codeindustry.MasterPDFEditor
 desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
 desktopsrule=3
 ignoregeometry=true
@@ -24,26 +48,6 @@ wmclass=brave brave-browser
 wmclasscomplete=true
 wmclassmatch=1
 
-[2]
-Description=Window settings for org.kde.kate
-acceptfocus=true
-clientmachine=localhost
-desktopfile=net.codeindustry.MasterPDFEditor
-desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
-ignoregeometry=true
-ignoregeometryrule=2
-noborder=true
-placement=9
-position=36,36
-positionrule=4
-size=1884,1044
-sizerule=4
-title=Untitled * — Kate
-types=1
-wmclass=kate org.kde.kate
-wmclasscomplete=true
-wmclassmatch=1
-
 [2872115a-7f8f-429b-9382-b8c6493a03f4]
 Description=Application settings for net.code-industry.masterpdfeditor5
 acceptfocus=true
@@ -53,16 +57,38 @@ wmclass=\snet.code-industry.masterpdfeditor5
 wmclasscomplete=true
 wmclassmatch=1
 
+[2fd6cb13-4eca-4421-af8f-6a800dc80ac5]
+Description=Window settings for Picture-in-picture
+above=true
+aboverule=3
+desktops=\\0
+desktopsrule=3
+ignoregeometry=true
+ignoregeometryrule=2
+maxsize=1920,1080
+maxsizerule=2
+noborder=true
+noborderrule=3
+title=Picture-in-picture
+titlematch=2
+types=1
+wmclassmatch=1
+
 [3]
-Description=Window settings for org.kde.dolphin
+Description=Window settings for org.kde.kate
 acceptfocus=true
 clientmachine=localhost
 desktopfile=net.codeindustry.MasterPDFEditor
 desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
-desktopsrule=3
-title=home-manager — Dolphin
+ignoregeometry=true
+ignoregeometryrule=2
+position=36,36
+positionrule=4
+size=1884,1044
+sizerule=4
+title=Untitled * — Kate
 types=1
-wmclass=dolphin org.kde.dolphin
+wmclass=kate org.kde.kate
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -96,6 +122,20 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [4]
+Description=Window settings for org.kde.dolphin
+acceptfocus=true
+clientmachine=localhost
+desktopfile=net.codeindustry.MasterPDFEditor
+desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
+desktopsrule=3
+ignoregeometry=true
+title=home-manager — Dolphin
+types=1
+wmclass=dolphin org.kde.dolphin
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
 Description=Application settings for net.code-industry.masterpdfeditor5
 acceptfocus=true
 acceptfocusrule=2
@@ -110,7 +150,7 @@ wmclass=\snet.code-industry.masterpdfeditor5
 wmclasscomplete=true
 wmclassmatch=1
 
-[5]
+[6]
 Description=Window settings for virt-manager
 clientmachine=localhost
 desktops=fd74dfab-4b73-4669-a993-da75245c8891
@@ -120,17 +160,6 @@ title=win11 on QEMU/KVM
 titlematch=1
 types=1
 wmclass=virt-manager
-wmclassmatch=1
-
-[6]
-Description=Application settings for wpsoffice
-clientmachine=localhost
-desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
-desktopsrule=3
-ignoregeometry=true
-title=Sync - Wavebox
-wmclass=wps wpsoffice
-wmclasscomplete=true
 wmclassmatch=1
 
 [65f16785-eeb3-41d3-a8ef-5df70f87b10c]
@@ -145,13 +174,13 @@ wmclass=virt-manager
 wmclassmatch=1
 
 [7]
-Description=Window settings for wavebox
-desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+Description=Application settings for wpsoffice
+clientmachine=localhost
+desktops=c002154e-3995-4ad4-b74c-ea5d06d40850
 desktopsrule=3
 ignoregeometry=true
 title=Sync - Wavebox
-types=1
-wmclass=\swavebox
+wmclass=wps wpsoffice
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -180,6 +209,17 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [8]
+Description=Window settings for wavebox
+desktops=41f4eedf-9509-4e8f-a42c-c7aac88ce297
+desktopsrule=3
+ignoregeometry=true
+title=Sync - Wavebox
+types=1
+wmclass=\swavebox
+wmclasscomplete=true
+wmclassmatch=1
+
+[9]
 Description=Window settings for fsearch
 desktops=ac8707f9-2fe9-41b1-9da7-2150a097f7fb
 desktopsrule=3
@@ -213,8 +253,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=8
-rules=1,2,3,4,5,6,7,8
+count=9
+rules=1,2,3,4,5,6,7,8,9
 
 [e48d8065-6fbd-4902-9cef-bd47e6796036]
 Description=Application settings for wpsoffice

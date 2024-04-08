@@ -15,6 +15,7 @@ services.flatpak = {
      "flathub:app/io.github.flattool.Warehouse/x86_64/stable"
 
      "flathub:app/io.wavebox.Wavebox/x86_64/stable"
+     "flathub:app/one.ablaze.floorp/x86_64/stable"
      # "flathub:app/com.github.micahflee.torbrowser-launcher/x86_64/stable"
      "flathub:app/org.qbittorrent.qBittorrent/x86_64/stable"
 
@@ -68,7 +69,6 @@ services.flatpak = {
      # "flathub:runtime/com.valvesoftware.Steam.Utility.steamtinkerlaunch/x86_64/stable"
      # "flathub:runtime/com.valvesoftware.Steam.Utility.thcrap_steam_proton_wrapper/x86_64/stable"
      "flathub:runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08"
-     "flathub:runtime/com.valvesoftware.Steam.Utility.gamescope/x86_64/stable"
      "flathub:runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08"
 
      "flathub:app/io.github.Foldex.AdwSteamGtk/x86_64/stable"
