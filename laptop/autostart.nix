@@ -42,62 +42,62 @@ systemd.user.services = {
     };
   };
 
-  "autostart-flatpak-wavebox" = {
-    Unit = {
-      Description = "Autostart Wavebox Flatpak App";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 5";
-      ExecStart = [
-        "${config.home.sessionVariables.XDG_BIN_HOME}/wavebox-wayland"
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
+  #  "autostart-flatpak-wavebox" = {
+  #    Unit = {
+  #      Description = "Autostart Wavebox Flatpak App";
+  #      PartOf = "graphical-session.target";
+  #      After = "graphical-session.target";
+  #    };
+  #    Service = {
+  #      Type = "simple";
+  #      Restart = "no";
+  #      ExecStartPre = "/bin/sleep 5";
+  #      ExecStart = [
+  #        "${config.home.sessionVariables.XDG_BIN_HOME}/wavebox-wayland"
+  #      ];
+  #    };
+  #    Install = {
+  #      WantedBy = [ "graphical-session.target" ];
+  #    };
+  #  };
 
-  "autostart-nix-brave" = {
-    Unit = {
-      Description = "Autostart Brave Nix App";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 12";
-      ExecStart = [
-        "${config.home.sessionVariables.XDG_BIN_HOME}/brave-wayland"
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
+  #  "autostart-nix-brave" = {
+  #    Unit = {
+  #      Description = "Autostart Brave Nix App";
+  #      PartOf = "graphical-session.target";
+  #      After = "graphical-session.target";
+  #    };
+  #    Service = {
+  #      Type = "simple";
+  #      Restart = "no";
+  #      ExecStartPre = "/bin/sleep 12";
+  #      ExecStart = [
+  #        "${config.home.sessionVariables.XDG_BIN_HOME}/brave-wayland"
+  #      ];
+  #    };
+  #    Install = {
+  #      WantedBy = [ "graphical-session.target" ];
+  #    };
+  #  };
 
-  "autostart-flatpak-wps" = {
-    Unit = {
-      Description = "Autostart WPS Flatpak App";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 15";
-      ExecStart = [
-        "/usr/bin/bash -c \"/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office\""
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
+  #  "autostart-flatpak-wps" = {
+  #    Unit = {
+  #      Description = "Autostart WPS Flatpak App";
+  #      PartOf = "graphical-session.target";
+  #      After = "graphical-session.target";
+  #    };
+  #    Service = {
+  #      Type = "simple";
+  #      Restart = "no";
+  #      ExecStartPre = "/bin/sleep 15";
+  #      ExecStart = [
+  #        "/usr/bin/bash -c \"/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=wps --file-forwarding com.wps.Office\""
+  #      ];
+  #    };
+  #    Install = {
+  #      WantedBy = [ "graphical-session.target" ];
+  #    };
+  #  };
 
   "autostart-win11-vm-console" = {
     Unit = {

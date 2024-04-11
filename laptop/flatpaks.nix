@@ -27,6 +27,7 @@ config.services.flatpak = {
 
      "flathub:app/com.wps.Office/x86_64/stable"
      "flathub:app/net.cozic.joplin_desktop/x86_64/stable"
+     "flathub:app/org.standardnotes.standardnotes/x86_64/stable"
      "flathub:app/com.github.dynobo.normcap/x86_64/stable"
      "flathub:app/net.codeindustry.MasterPDFEditor/x86_64/stable"
      "flathub:app/com.github.johnfactotum.Foliate/x86_64/stable"

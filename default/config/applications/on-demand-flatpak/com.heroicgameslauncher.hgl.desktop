@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Heroic Games Launcher
-Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=heroic-run --file-forwarding com.heroicgameslauncher.hgl @@u %u @@
+Exec=bash -c "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=heroic-run --file-forwarding com.heroicgameslauncher.hgl @@u %u @@ || flatpak install -y com.heroicgameslauncher.hgl && /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=heroic-run --file-forwarding com.heroicgameslauncher.hgl @@u %u @@"
 Terminal=true
 Type=Application
 Icon=com.heroicgameslauncher.hgl

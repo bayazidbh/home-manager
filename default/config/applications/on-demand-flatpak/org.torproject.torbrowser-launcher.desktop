@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Tor Browser
 Name[be]=Tor Browser
@@ -23,7 +24,7 @@ Comment[hu]=Tor böngésző indító
 Comment[pt_BR]=Navegador Tor
 Comment[sv]=Starta Tor Browser
 Comment[tr]=Tor Browser Başlat
-Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=torbrowser-launcher --file-forwarding org.torproject.torbrowser-launcher @@u %u @@
+Exec=bash -c "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=torbrowser-launcher --file-forwarding org.torproject.torbrowser-launcher @@u %u @@ || flatpak install -y org.torproject.torbrowser-launcher && /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=torbrowser-launcher --file-forwarding org.torproject.torbrowser-launcher @@u %u @@"
 Terminal=true
 Type=Application
 Icon=org.torproject.torbrowser-launcher

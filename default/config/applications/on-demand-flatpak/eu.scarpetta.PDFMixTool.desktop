@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+MimeType=application/pdf;application/x-gzpdf;application/x-bzpdf;application/x-wwf;
+Name=PDF Mix Tool
+Name[hr]=PDF mikser
+Comment=Perform common editing operations on PDF files
+Comment[hr]=Izvodi uobičajene operacije uređivanja PDF datoteka
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=pdfmixtool --file-forwarding eu.scarpetta.PDFMixTool @@u %U @@
+Icon=eu.scarpetta.PDFMixTool
+Terminal=false
+Type=Application
+StartupNotify=true
+StartupWMClass=pdfmixtool
+Categories=Office;
+Keywords=pdf;
+X-Flatpak=eu.scarpetta.PDFMixTool
