@@ -27,7 +27,6 @@ CommandTitlebarWheel=Previous/Next Desktop
 CommandWindow2=Activate and raise
 
 [NightColor]
-Active=true
 EveningBeginFixed=1700
 Mode=Times
 NightTemperature=3000
