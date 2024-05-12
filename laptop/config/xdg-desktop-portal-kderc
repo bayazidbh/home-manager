@@ -6,8 +6,8 @@ Autoplay=false
 1920x1080 screen: Width=1129
 
 [KFileDialog Settings]
-Recent Files[$e]=file:$HOME/Documents/Private/Apps/Backups/Browser/bookmarks_12_04_2024.html,file:$HOME/Downloads/vencord-settings-backup.json,file:$HOME/Documents/OneDrive/Documents/LTE/Dismantle_Rorojongrang/Rorojongrang.xlsx,file:$HOME/Documents/Private/Apps/Backups/Browser/AdNauseam_Settings_Export_09.08.2023.19.30.26.json
-Recent URLs[$e]=file:$HOME/Documents/OneDrive/Documents/LTE/DB Sapu Bersih Sangkuriang/archive/,file:///var/home/fenglengshun/,file:$HOME/Documents/Private/Apps/Backups/Browser/,file:$HOME/Downloads/,file:$HOME/Documents/Private/Apps/Backups/Backup Codes/,file:$HOME/Documents/Private/Apps/Backups/,file:$HOME/Documents/OneDrive/Documents/LTE/Dismantle_Rorojongrang/
+Recent Files[$e]=file:$HOME/Documents/Private/Apps/Backups/Browser/bookmarks_12_04_2024.html,file:$HOME/Documents/Downloads/Slum Guides [1.0]/Game_EN.exe,file:$HOME/Documents/Private/Work/CV/NEW_CV - Bayazid Bustami Halim.pdf,file:$HOME/Documents/OneDrive/Cek Region for Dismantle Batch 6 (Implementasi outstanding dismantle 17K PO DELCOM) 2024-04-17.xlsx,file:$HOME/Downloads/vencord-settings-backup.json,file:$HOME/Documents/OneDrive/Documents/LTE/Dismantle_Rorojongrang/Rorojongrang.xlsx,file:$HOME/Documents/Private/Apps/Backups/Browser/AdNauseam_Settings_Export_09.08.2023.19.30.26.json
+Recent URLs[$e]=file:$HOME/Documents/OneDrive/Documents/LTE/DB Sapu Bersih Sangkuriang/archive/,file:///var/home/fenglengshun/,file:$HOME/Documents/Private/Apps/Backups/Browser/,file:$HOME/Downloads/,file:$HOME/Documents/Private/Apps/Backups/Backup Codes/,file:$HOME/Documents/Private/Apps/Backups/,file:$HOME/Documents/OneDrive/Documents/LTE/Dismantle_Rorojongrang/,file:$HOME/Documents/OneDrive/,file:$HOME/Documents/Private/Work/CV/,file:$HOME/Documents/Downloads/Slum Guides [1.0]/
 detailViewIconSize=16
 iconViewIconSize=256
 listViewIconSize=48

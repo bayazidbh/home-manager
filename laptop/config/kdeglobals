@@ -137,7 +137,7 @@ ForegroundVisited=120,120,120
 
 [DirSelect Dialog]
 DirSelectDialog Size=1129,694
-History Items[$e]=file:$HOME/Documents/Work/Internal/Pictures/e-sign transparent/New Folder,file:///var/home/fenglengshun/Games/Unlocked/_bottles,file:///var/home/fenglengshun/Music,file:///var/home/fenglengshun/Downloads,file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
+History Items[$e]=file:///var/home/fenglengshun/Documents/Media/.H/Etc,file:$HOME/Documents/Work/Internal/Pictures/e-sign transparent/New Folder,file:///var/home/fenglengshun/Games/Unlocked/_bottles,file:///var/home/fenglengshun/Music,file:///var/home/fenglengshun/Downloads,file:///var/home/fenglengshun/Pictures/Archive/Screenshots/Games,file:$HOME/Pictures/Archive/Screenshots/Games,file:///var/home/fenglengshun/Videos,file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
 
 [General]
 BrowserApplication=re.sonny.Junction.desktop
@@ -164,7 +164,7 @@ SingleClick=false
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=0
 LocationCombo Completionmode=5
 PathCombo Completionmode=5

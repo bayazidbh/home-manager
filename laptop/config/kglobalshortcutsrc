@@ -6,6 +6,7 @@ switch-to-activity-53ec01f6-3a95-4bc1-aa91-b30012cc2e1c=none,none,Switch to acti
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
+Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
@@ -37,8 +38,10 @@ _k_friendly_name=Custom Shortcuts Service
 _k_friendly_name=Audio Volume
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume
 decrease_volume=Volume Down,Volume Down,Decrease Volume
+decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume
 increase_volume=Volume Up,Volume Up,Increase Volume
+increase_volume_small=Shift+Volume Up,Shift+Volume Up,Increase Volume by 1%
 mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
@@ -47,11 +50,15 @@ Halt Without Confirmation=none,,Halt Without Confirmation
 Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=none,Ctrl+Alt+Del,Log Out
 Log Out Without Confirmation=none,,Log Out Without Confirmation
+Reboot=none,none,Reboot
 Reboot Without Confirmation=none,,Reboot Without Confirmation
+Shut Down=none,none,Shut Down
 _k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
+Cycle Overview=none,none,Cycle through Overview and Grid View
+Cycle Overview Opposite=none,none,Cycle through Grid View and Overview
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
 Edit Tiles=Meta+Shift+T,Meta+T,Toggle Tiles Editor
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
@@ -59,6 +66,7 @@ ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All 
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
 ExposeClassCurrentDesktop=none,none,Toggle Present Windows (Window class on current desktop)
 Exquisite=Ctrl+Alt+D,none,Exquisite
+Grid View=Meta+G,Meta+G,Toggle Grid View
 Increase Opacity=none,,Increase Opacity of Active Window by 5%
 Invert=Meta+Ctrl+I,Meta+Ctrl+I,Toggle Invert Effect
 Invert Screen Colors=none,none,Invert Screen Colors
@@ -223,37 +231,16 @@ playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
-[org.gnome.Prompt.desktop]
-_k_friendly_name=Prompt
-_launch=none,none,Prompt
-new-tab=none,none,New Tab
-new-window=Ctrl+Alt+T,Ctrl+Alt+T,New Window
-preferences=none,none,Preferences
-
 [org.gnome.Ptyxis.desktop]
 _k_friendly_name=Ptyxis
 _launch=none,none,Ptyxis
 new-tab=none,none,New Tab
-new-window=none,Ctrl+Alt+T,New Window
+new-window=Ctrl+Alt+T,Ctrl+Alt+T,New Window
 preferences=none,none,Preferences
 
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin
-
-[org.kde.kate.desktop]
-_k_friendly_name=Kate
-_launch=none,none,Launch Kate
-
-[org.kde.kcalc.desktop]
-_k_friendly_name=KCalc
-_launch=Launch (1),Launch (1),KCalc
-
-[org.kde.konsole.desktop]
-NewTab=none,none,Open a New Tab
-NewWindow=none,none,Open a New Window
-_k_friendly_name=Konsole
-_launch=Meta+T,Ctrl+Alt+T,Konsole
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
@@ -262,34 +249,33 @@ _launch=Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
 
 [org.kde.plasma.emojier.desktop]
 _k_friendly_name=Emoji Selector
-_launch=Meta+.,Meta+.\tMeta+Ctrl+Alt+Shift+Space,Emoji Selector
+_launch=Meta+.\tMeta+Ctrl+Alt+Shift+Space,Meta+.\tMeta+Ctrl+Alt+Shift+Space,Emoji Selector
 
 [org.kde.spectacle.desktop]
 ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
-CurrentMonitorScreenShot=Print,none,Capture Current Monitor
-FullScreenScreenShot=none,Shift+Print,Capture Entire Desktop
-OpenWithoutScreenshot=none,none,Launch Spectacle without capturing
-RectangularRegionScreenShot=Ctrl+Print,Meta+Shift+Print,Capture Rectangular Region
-WindowUnderCursorScreenShot=Shift+Print,Meta+Ctrl+Print,Capture Window Under Cursor
+CurrentMonitorScreenShot=none,none,Capture Current Monitor
+FullScreenScreenShot=Shift+Print,Shift+Print,Capture Entire Desktop
+OpenWithoutScreenshot=none,none,Launch without taking a screenshot
+RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
+WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Capture Window Under Cursor
 _k_friendly_name=Spectacle
-_launch=none,Print,Launch Spectacle
-
-[org.scanmem.gameconqueror.desktop]
-_k_friendly_name=Game Conqueror
-_launch=none,none,Launch Game Conqueror
+_launch=Print,Print,Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
 Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness
+Decrease Screen Brightness Small=Shift+Monitor Brightness Down,Shift+Monitor Brightness Down,Decrease Screen Brightness by 1%
 Hibernate=Hibernate,Hibernate,Hibernate
 Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness
 Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness
+Increase Screen Brightness Small=Shift+Monitor Brightness Up,Shift+Monitor Brightness Up,Increase Screen Brightness by 1%
 PowerDown=Power Down,Power Down,Power Down
 PowerOff=Power Off,Power Off,Power Off
 Sleep=Sleep,Sleep,Suspend
 Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
 Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
+powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
 _k_friendly_name=Plasma
@@ -330,10 +316,6 @@ stop current activity=Meta+S,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=Meta+D,,Toggle do not disturb
-
-[restart-plasma.desktop]
-_k_friendly_name=restart-plasma
-_launch=Ctrl+Alt+Del,none,~/.local/bin/restart-plasma
 
 [systemsettings.desktop]
 _k_friendly_name=System Settings
