@@ -99,22 +99,22 @@ systemd.user.services = {
   #    };
   #  };
 
-  "autostart-win11-vm-console" = {
-    Unit = {
-      Description = "Autostart Win11 virt-manager console";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-      };
-    Service = {
-      Type = "forking";
-      Restart = "no";
-      ExecStartPre = "/bin/sleep 20";
-      ExecStart = "/usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
-      };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-      };
-    };
+  #  "autostart-win11-vm-console" = {
+  #    Unit = {
+  #      Description = "Autostart Win11 virt-manager console";
+  #      PartOf = "graphical-session.target";
+  #      After = "graphical-session.target";
+  #      };
+  #    Service = {
+  #      Type = "forking";
+  #      Restart = "no";
+  #      ExecStartPre = "/bin/sleep 20";
+  #      ExecStart = "/usr/bin/virt-manager --connect qemu:///system --show-domain-console win11";
+  #      };
+  #    Install = {
+  #      WantedBy = [ "graphical-session.target" ];
+  #      };
+  #    };
 
   #  "autostart-containers-portainer" = {
   #    Unit = {
