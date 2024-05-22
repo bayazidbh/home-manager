@@ -206,7 +206,7 @@ immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
 [Containments][39][Applets][44][Configuration]
-PreloadWeight=47
+PreloadWeight=52
 
 [Containments][39][Applets][45]
 immutability=1
