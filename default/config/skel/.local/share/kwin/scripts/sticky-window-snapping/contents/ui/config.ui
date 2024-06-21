@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KWin::StickyWindowSnappingConfigForm</class>
+ <widget class="QWidget" name="KWin::StickyWindowSnappingConfigForm">
+  <property name="windowTitle">
+   <string>Sticky Window Snapping</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_general">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutGeneral">
+       <item>
+        <widget class="QCheckBox" name="kcfg_enabledUsually">
+         <property name="text">
+          <string>enable on startup</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_general">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_opacityOfSnapped">
+           <property name="text">
+            <string>opacity of snapped:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="kcfg_opacityOfSnapped">
+           <property name="suffix">
+            <string> %</string>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>80</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QSlider" name="slider_opacityOfSnapped">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>80</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_opacityOfUnaffected">
+           <property name="text">
+            <string>opacity of unaffected:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="kcfg_opacityOfUnaffected">
+           <property name="suffix">
+            <string> %</string>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QSlider" name="slider_opacityOfUnaffected">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_liveUpdate">
+         <property name="text">
+          <string>live update of snapped windows</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_general">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_general">
+         <property name="text">
+          <string>There are two global keyboard shortcuts: one for enabling/disabling the script permanently, and one for enabling/disabling the script only for the next resize. The shortcuts can be changed via systemsettings: go to global shortcuts and select the component “KWin”. The shortcut’s names are prefixed by “KWin Script: Sticky Window Snapping”.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_general">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_shake">
+      <attribute name="title">
+       <string>Shake Gesture</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutShake">
+       <item>
+        <widget class="QCheckBox" name="kcfg_shakeEnabled">
+         <property name="text">
+          <string>shake to abort sticking</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="formLayout_shake">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_shakeTurns">
+           <property name="text">
+            <string>number of turns for unsticking:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="kcfg_shakeTurns">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_shakeThreshold">
+           <property name="text">
+            <string>minimal distance between turn points:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="kcfg_shakeThreshold">
+           <property name="suffix">
+            <string> px</string>
+           </property>
+           <property name="maximum">
+            <number>9999</number>
+           </property>
+           <property name="value">
+            <number>200</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_shake">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_shake">
+         <property name="text">
+          <string>When “shake to abort sticking” is enabled, move the mouse during resize “number of turns” times at least “minimal distance” back and forth in resize direction to stop other windows from sticking.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_shake">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_filters">
+      <attribute name="title">
+       <string>Filters</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutFilters">
+       <item>
+        <widget class="QCheckBox" name="kcfg_ignoreMinimized">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>ignore minimized windows</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_ignoreMaximized">
+         <property name="text">
+          <string>ignore maximized windows</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_ignoreShaded">
+         <property name="text">
+          <string>ignore shaded windows</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_ignoreNoncurrentDesktops">
+         <property name="text">
+          <string>ignore windows that are not on the current virtual desktop</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_ignoreBorderOfClientArea">
+         <property name="text">
+          <string>ignore window edges that touch an edge of the screen</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_filters">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_fineTuning">
+      <attribute name="title">
+       <string>Fine Tuning</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_fineTuning">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_fineTuning">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_threshold">
+           <property name="text">
+            <string>threshold:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="kcfg_threshold">
+           <property name="suffix">
+            <string> px</string>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QSlider" name="slider_threshold">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_offsetX">
+           <property name="text">
+            <string>offset horizontal:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="kcfg_offsetX">
+           <property name="suffix">
+            <string> px</string>
+           </property>
+           <property name="minimum">
+            <number>-100</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QSlider" name="slider_offsetX">
+           <property name="minimum">
+            <number>-100</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBothSides</enum>
+           </property>
+           <property name="tickInterval">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_offsetY">
+           <property name="text">
+            <string>offset vertical:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="kcfg_offsetY">
+           <property name="suffix">
+            <string> px</string>
+           </property>
+           <property name="minimum">
+            <number>-100</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QSlider" name="slide_offsetY">
+           <property name="minimum">
+            <number>-100</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBothSides</enum>
+           </property>
+           <property name="tickInterval">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_fineTuning">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_fineTuning">
+         <property name="text">
+          <string>The “threshold” allows configuring some tolerance for finding sticking window edges. Only window edges with a distance smaller than or equal to “threshold” are considered for sticking.
+The “offset”s allow to shift the sticking position of opposing edges. The respective offset is subtracted from the edge distance before the threshold is considered. Positive offsets allow for gaps between windows, negative offsets allow for overlapping windows.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_fineTuning">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>In order to finally adopt your changes, you might have to turn the script off and on again, restart KWin, or relogin.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>slider_opacityOfSnapped</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>kcfg_opacityOfSnapped</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_opacityOfSnapped</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_opacityOfSnapped</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_opacityOfUnaffected</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_opacityOfUnaffected</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>slider_opacityOfUnaffected</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>kcfg_opacityOfUnaffected</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_threshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_threshold</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>slider_threshold</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>kcfg_threshold</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_shakeEnabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_shakeTurns</receiver>
+   <slot>setEnabled(bool)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_shakeEnabled</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_shakeThreshold</receiver>
+   <slot>setEnabled(bool)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_offsetX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slider_offsetX</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>slider_offsetX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>kcfg_offsetX</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_offsetY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slide_offsetY</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+  <connection>
+   <sender>slide_offsetY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>kcfg_offsetY</receiver>
+   <slot>setValue(int)</slot>
+  </connection>
+ </connections>
+</ui>

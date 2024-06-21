@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "lipinski.j@pm.me",
+                "Name": "Jakub Lipiński"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Minimal version of User Switcher",
+        "Icon": "preferences-desktop-user",
+        "Id": "com.dv.uswitcher",
+        "Name": "USwitcher",
+        "Version": "2.0.0",
+        "Website": "https://gitlab.com/divinae/uswitch/"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-KDE-ParentApp": ""
+}

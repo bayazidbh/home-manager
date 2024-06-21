@@ -1,6 +1,3 @@
-[$Version]
-update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
-
 [ColorEffects:Disabled]
 ChangeSelectionColor=
 Color=56,56,56
@@ -25,144 +22,104 @@ IntensityEffect=0
 
 [Colors:Button]
 BackgroundAlternate=77,77,77
-BackgroundNormal=101,101,101
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
+BackgroundNormal=36,39,44
+DecorationFocus=52,108,146
+DecorationHover=85,161,205
 ForegroundActive=61,174,233
 ForegroundInactive=189,195,199
 ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=222,222,222
-ForegroundPositive=39,174,96
+ForegroundNeutral=199,130,61
+ForegroundNormal=239,240,241
+ForegroundPositive=126,166,75
 ForegroundVisited=127,140,141
 
 [Colors:Complementary]
-BackgroundAlternate=66,66,66
-BackgroundNormal=51,51,51
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
+BackgroundAlternate=59,64,69
+BackgroundNormal=49,54,59
+DecorationFocus=30,146,255
+DecorationHover=61,174,230
 ForegroundActive=246,116,0
-ForegroundInactive=136,136,136
-ForegroundLink=49,91,239
+ForegroundInactive=175,176,179
+ForegroundLink=61,174,230
 ForegroundNegative=237,21,21
 ForegroundNeutral=201,206,59
-ForegroundNormal=222,222,222
+ForegroundNormal=239,240,241
 ForegroundPositive=17,209,22
-ForegroundVisited=49,91,239
-
-[Colors:Header]
-BackgroundAlternate=66,66,66
-BackgroundNormal=54,54,54
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
-ForegroundActive=246,116,0
-ForegroundInactive=136,136,136
-ForegroundLink=49,91,239
-ForegroundNegative=237,21,21
-ForegroundNeutral=201,206,59
-ForegroundNormal=222,222,222
-ForegroundPositive=17,209,22
-ForegroundVisited=49,91,239
-
-[Colors:Header][Inactive]
-BackgroundAlternate=66,66,66
-BackgroundNormal=51,51,51
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
-ForegroundActive=246,116,0,150
-ForegroundInactive=136,136,136,150
-ForegroundLink=49,91,239
-ForegroundNegative=237,21,21
-ForegroundNeutral=201,206,59
-ForegroundNormal=222,222,222,150
-ForegroundPositive=17,209,22
-ForegroundVisited=49,91,239
+ForegroundVisited=61,174,230
 
 [Colors:Selection]
-BackgroundAlternate=79,127,239
-BackgroundNormal=49,91,239
-DecorationFocus=255,255,255
-DecorationHover=255,255,255
+BackgroundAlternate=29,153,243
+BackgroundNormal=86,159,204
+DecorationFocus=52,108,146
+DecorationHover=85,161,205
 ForegroundActive=252,252,252
-ForegroundInactive=130,156,239
+ForegroundInactive=239,240,241
 ForegroundLink=253,188,75
 ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=255,255,255
-ForegroundPositive=39,174,96
-ForegroundVisited=128,152,239
+ForegroundNeutral=199,130,61
+ForegroundNormal=31,31,38
+ForegroundPositive=126,166,75
+ForegroundVisited=189,195,199
 
 [Colors:Tooltip]
 BackgroundAlternate=77,77,77
-BackgroundNormal=51,51,51
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
-ForegroundActive=49,91,239
+BackgroundNormal=36,39,44
+DecorationFocus=52,108,146
+DecorationHover=85,161,205
+ForegroundActive=61,174,233
 ForegroundInactive=189,195,199
-ForegroundLink=49,91,239
+ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=222,222,222
-ForegroundPositive=39,174,96
+ForegroundNeutral=199,130,61
+ForegroundNormal=239,240,241
+ForegroundPositive=126,166,75
 ForegroundVisited=127,140,141
 
 [Colors:View]
-BackgroundAlternate=48,48,48
-BackgroundNormal=36,36,36
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
-ForegroundActive=49,91,239
-ForegroundInactive=136,136,136
-ForegroundLink=49,91,239
+BackgroundAlternate=26,33,42
+BackgroundNormal=21,28,35
+DecorationFocus=52,108,146
+DecorationHover=85,161,205
+ForegroundActive=61,174,233
+ForegroundInactive=189,195,199
+ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=222,222,222
-ForegroundPositive=39,174,96
-ForegroundVisited=120,120,120
+ForegroundNeutral=199,130,61
+ForegroundNormal=239,240,241
+ForegroundPositive=126,166,75
+ForegroundVisited=127,140,141
 
 [Colors:Window]
-BackgroundAlternate=66,66,66
-BackgroundNormal=54,54,54
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
-ForegroundActive=49,91,239
-ForegroundInactive=136,136,136
-ForegroundLink=49,91,239
+BackgroundAlternate=77,77,77
+BackgroundNormal=36,39,44
+DecorationFocus=52,108,146
+DecorationHover=85,161,205
+ForegroundActive=61,174,233
+ForegroundInactive=189,195,199
+ForegroundLink=41,128,185
 ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=222,222,222
-ForegroundPositive=39,174,96
-ForegroundVisited=120,120,120
+ForegroundNeutral=199,130,61
+ForegroundNormal=241,241,242
+ForegroundPositive=126,166,75
+ForegroundVisited=127,140,141
 
 [DirSelect Dialog]
-DirSelectDialog Size=1102,600
-History Items[$e]=file:$HOME/Downloads,file:///var/home/fenglengshun/Storage/Data,file:$HOME,file:$HOME/Storage,file:$HOME,file:$HOME/Pictures/Archive/Screenshots/Laptop
+DirSelectDialog Size=980,600
+History Items[$e]=file:$HOME/Documents,file:$HOME/Documents/containers/arch,file:$HOME/Pictures
 
 [General]
-BrowserApplication=re.sonny.Junction.desktop
-ColorSchemeHash=26b415ada9e27aeee0bd0a0aa68586d7309232ba
-XftHintStyle=hintslight
-XftSubPixel=none
-fixed=MesloLGS NF,10,-1,5,50,0,0,0,0,0
-font=IBM Plex Sans,10,-1,5,50,0,0,0,0,0
-menuFont=IBM Plex Sans,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=IBM Plex Sans,8,-1,5,50,0,0,0,0,0
-toolBarFont=IBM Plex Sans,10,-1,5,50,0,0,0,0,0
-
-[Icons]
-Theme=WhiteSur-dark
+ColorSchemeHash=465905853f7b01f63a484474722a441d99e2a157
+TerminalApplication=konsole
+TerminalService=org.kde.konsole.desktop
 
 [KDE]
-AnimationDurationFactor=0.35355339059327373
-LookAndFeelPackage=com.github.vinceliuice.Monterey-dark
-ShowDeleteCommand=false
-SingleClick=false
+LookAndFeelPackage=com.github.vinceliuice.MacSonoma-Dark
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=false
+Breadcrumb Navigation=true
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
@@ -176,48 +133,13 @@ Sort by=Name
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
-Speedbar Width=136
+Speedbar Width=140
 View Style=DetailTree
 
-[KShortcutsDialog Settings]
-Dialog Size=1920,1048
-
-[PreviewSettings]
-MaximumRemoteSize=0
-
-[Shortcuts]
-AboutApp=
-AboutKDE=
-Clear=
-Close=Ctrl+W
-ConfigureNotifications=
-ConfigureToolbars=
-Cut=Ctrl+X
-Donate=
-EditBookmarks=
-FitToHeight=
-FitToPage=
-FitToWidth=
-Goto=
-GotoPage=
-Mail=
-OpenRecent=
-PrintPreview=
-ReportBug=
-Revert=
-SaveOptions=
-ShowStatusbar=
-ShowToolbar=
-Spelling=
-SwitchApplicationLanguage=
-TipofDay=
-Zoom=
-
 [WM]
-activeBackground=51,51,51
-activeBlend=171,171,171
-activeFont=IBM Plex Sans,10,-1,5,50,0,0,0,0,0
-activeForeground=222,222,222
-inactiveBackground=66,66,66
-inactiveBlend=85,85,85
-inactiveForeground=120,120,120
+activeBackground=36,39,47
+activeBlend=255,255,255
+activeForeground=239,240,241
+inactiveBackground=36,39,44
+inactiveBlend=74,83,101
+inactiveForeground=127,140,141

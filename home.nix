@@ -52,12 +52,12 @@ in
 
   home.packages = with pkgs; [
     gh github-desktop git-lfs cosign cachix # git subversion # build tools
-    qt6.qtwayland libsForQt5.qt5.qtwayland wl-clipboard wl-clipboard-x11 # for wayland copy-paste
+    qt6.qtwayland wl-clipboard wl-clipboard-x11 # libsForQt5.qt5.qtwayland for wayland copy-paste
     inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom ripgrep-all # rust CLIs
     rsync grsync czkawka metadata-cleaner zsync resilio-sync # duperemove # file management
-    libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
-    libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
+    # libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
+    # libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
     whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
     du-dust nix-du graphviz # disk usage management tools
     adl gallery-dl mangal mov-cli # CLI-based media downloader
@@ -93,7 +93,6 @@ in
   programs.bat.enable = true; # Install and enable bat, a rust-replacement for cat
   programs.eza = {
     enable = true; # Install and enable exa, a rust-replacement for ls
-    enableAliases = true; # Enable recommended exa aliases (ls, ll…)
     icons = true; # Display icons next to file names in exa (--icons argument).
   };
   programs.fzf.enable = true; # Install and enable fzf - a command-line fuzzy finder.

@@ -25,7 +25,7 @@
       expireDuplicatesFirst = true;
     };
     historySubstringSearch.enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     # source p10k theme at ZSH_CUSTOM in XDG_DATA_HOME

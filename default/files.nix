@@ -9,12 +9,12 @@ systemd.user.tmpfiles.rules = [
   "d ${config.home.homeDirectory}/.var/app/com.heroicgameslauncher.hgl/config/heroic"
   "d ${config.xdg.dataHome}/flatpak/"
   # "C+ ${config.home.homeDirectory} - - - - ${config.xdg.configHome}/home-manager/default/config/skel/"
-  "C+ ${config.home.homeDirectory}/.fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
-  "C+ ${config.xdg.dataHome}/fonts - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fonts"
-  "C+ ${config.xdg.dataHome}/fontconfig - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fontconfig"
-  "C+ ${config.xdg.configHome}/fontconfig - - - - ${config.xdg.configHome}/home-manager/default/config/fonts/fontconfig"
-  "C+ ${config.xdg.dataHome}/icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
-  "C+ ${config.home.homeDirectory}/.icons - - - - ${config.xdg.configHome}/home-manager/default/config/icons/"
+  "C+ ${config.home.homeDirectory}/.fonts - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.local/share/fonts"
+  "C+ ${config.xdg.dataHome}/fonts - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.local/share/fonts"
+  "C+ ${config.xdg.dataHome}/fontconfig - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.local/share/fontconfig"
+  "C+ ${config.xdg.configHome}/fontconfig - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.local/share/fontconfig"
+  "C+ ${config.xdg.dataHome}/icons - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.local/share/icons/"
+  "C+ ${config.home.homeDirectory}/.icons - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.local/share/icons/"
   "C+ ${config.xdg.dataHome}/applications/custom-applications - - - -  ${config.xdg.configHome}/home-manager/default/config/applications/actives"
   "L ${config.xdg.dataHome}/flatpak/overrides - - - - ${config.xdg.configHome}/home-manager/flatpak/overrides"
   "L ${config.xdg.configHome}/opensnitchd - - - - ${config.xdg.configHome}/home-manager/default/config/skel/.config/opensnitchd"
@@ -22,7 +22,7 @@ systemd.user.tmpfiles.rules = [
   "L ${config.xdg.userDirs.documents}/Music - - - - ${config.xdg.userDirs.music}"
   "L ${config.xdg.userDirs.documents}/Pictures - - - - ${config.xdg.userDirs.pictures}"
   "L ${config.xdg.userDirs.documents}/Videos - - - - ${config.xdg.userDirs.videos}"
-  "L ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/org.winehq.Wine.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/org.winehq.Wine.desktop"
+  # "L ${config.xdg.dataHome}/flatpak/app/org.winehq.Wine/current/active/export/share/applications/org.winehq.Wine.desktop - - - - ${config.xdg.configHome}/home-manager/flatpak/org.winehq.Wine.desktop"
 ];
 
 home.file."resilio.conf" = {
@@ -103,7 +103,7 @@ home.file."installt-whitesur" = {
     mkdir -p /tmp/whitesur/whitesur
 
     git clone https://github.com/vinceliuice/WhiteSur-gtk-theme /tmp/whitesur/WhiteSur-gtk-theme
-    /tmp/whitesur/WhiteSur-gtk-theme/install.sh -m -i -l standard -b default
+    /tmp/whitesur/WhiteSur-gtk-theme/install.sh -m -i fedora -l -b default
     /tmp/whitesur/WhiteSur-gtk-theme/tweaks.sh -F
 
     git clone https://github.com/vinceliuice/WhiteSur-icon-theme /tmp/whitesur/WhiteSur-icon-theme
@@ -118,7 +118,7 @@ home.file."installt-whitesur" = {
 
     git clone https://github.com/vinceliuice/Monterey-kde /tmp/whitesur/Monterey-kde
     /tmp/whitesur/Monterey-kde/install.sh
-     /tmp/whitesur/Monterey-kde/sddm/install.sh
+    /tmp/whitesur/Monterey-kde/sddm/install.sh
   '';
 };
 
@@ -269,7 +269,7 @@ home.file."setup-distrobox-ubuntu" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/bash distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:latest --name ubuntu-latest --home ${config.xdg.userDirs.documents}/container/ubuntu-latest
+    env SHELL=/bin/bash distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:latest --name ubuntu-latest --home ${config.xdg.userDirs.documents}/containers/ubuntu-latest
     distrobox enter ubuntu-latest -- sudo apt upgrade -y
 
   '';
@@ -282,7 +282,7 @@ home.file."setup-distrobox-fedora" = {
   text = ''
     #! /bin/bash
 
-    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:39 --name fedora --home ${config.xdg.userDirs.documents}/container/fedora
+    env SHELL=/bin/zsh distrobox create --image registry.fedoraproject.org/fedora-toolbox:39 --name fedora --home ${config.xdg.userDirs.documents}/containers/fedora
     distrobox enter fedora -- sudo dnf install -y dnf5 https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
   '';
@@ -295,7 +295,7 @@ home.file."setup-distrobox-arch" = {
   text = ''
   #! /bin/bash
 
-  env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox:latest --name arch --home ${config.xdg.userDirs.documents}/container/arch ; \
+  env SHELL=/bin/fish distrobox create --image quay.io/toolbx-images/archlinux-toolbox:latest --name arch --home ${config.xdg.userDirs.documents}/containers/arch ; \
   distrobox enter arch -- sudo pacman -Su --noconfirm nano ; \
   distrobox enter arch -- sudo pacman-key --init ; \
   distrobox enter arch -- sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com ; \
@@ -333,7 +333,7 @@ home.file."setup-distrobox-opensuse-systemd" = {
   text = ''
   #! /bin/bash
 
-  distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name opensuse-tumbleweed --home ${config.xdg.userDirs.documents}/container/opensuse  --additional-packages "systemd"
+  distrobox create --root --init --image registry.opensuse.org/opensuse/tumbleweed:latest --name opensuse-tumbleweed --home ${config.xdg.userDirs.documents}/containers/opensuse  --additional-packages "systemd"
   distrobox enter --root opensuse-tumbleweed -- sudo zypper install -y virt-manager libvirt qemu-hw-display-qxl qemu-hw-usb-redirect qemu-hw-usb-host qemu-hw-display-virtio-gpu qemu-hw-display-virtio-gpu-pci virtiofsd
 
   '';

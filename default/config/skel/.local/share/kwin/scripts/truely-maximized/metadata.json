@@ -3,7 +3,7 @@
 		"Name": "Truely Maximized",
 		"Description": "Truely maximizes your screen space by hiding the title bars of your windows when they are maximized.",
 		"Icon": "preferences-system-windows",
-		"Version": "1.0.1",
+		"Version": "1.1.0",
 		"Id": "truely-maximized",
 		"License": "GPLv3",
 		"Website": "https://github.com/fin444/truely-maximized",
@@ -15,8 +15,8 @@
 		]
 	},
 	"X-Plasma-API": "javascript",
-	"X-Plasma-MainScript": "code/main.js",
 	"KPackageStructure": "KWin/Script",
+	"X-Plasma-API-Minimum-Version": "6.0",
 	"X-KWin-Border-Activate": true,
 	"X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted"
 }

@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "bstrong@softtechok.com",
+                "Name": "Barry Strong"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Shows System Monitor Information",
+        "Icon": "org.kde.plasma.systemloadviewer",
+        "Id": "com.softtechok.systemmonitorplasmoid",
+        "License": "GPL-3.0+",
+        "Name": "System Monitor Plasmoid",
+        "Version": "2.8",
+        "Website": "https://www.opencode.net/bstrong5280"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

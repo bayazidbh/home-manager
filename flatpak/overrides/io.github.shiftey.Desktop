@@ -1,5 +1,6 @@
 [Context]
 sockets=system-bus;session-bus
+filesystems=xdg-config/home-manager/:create;home;host-etc;host-os
 
 [Session Bus Policy]
 org.kde.*=talk

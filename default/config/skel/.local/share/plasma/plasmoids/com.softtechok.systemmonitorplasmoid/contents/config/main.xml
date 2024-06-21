@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+
+    <group name="Layout">
+        <entry name="showCPU" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="showCores" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="cpuLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showCPUTemp" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="showTempCores" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuTempBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuTempCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuTempPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuTempCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="cpuTempLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showCPUFreq" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="showFreqCores" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuFreqBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="cpuFreqCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuFreqPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuFreqCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="cpuFreqLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showMemory" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="memLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="memBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="memCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="memPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="memoryCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="showGPUUsage" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuUsageBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gpuUsageCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuUsagePlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuUsageCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="gpuUsageLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showGPUMem" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuMemBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gpuMemCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuMemPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuMemCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="gpuMemLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showGPUTemp" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuTempBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gpuTempCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuTempPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuTempCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="gpuTempLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showGPUFreq" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuFreqBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="gpuFreqCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuFreqPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="gpuFreqCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="gpuFreqLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showSwap" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="swapLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="swapBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="swapCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="swapPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="swapCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="showDiskSpace" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="dsBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="dsCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="dsPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="diskSpaceCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="diskSpaceLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showDiskIO" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="dioBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="dioCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="dioPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="diskIOCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="diskIOLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showNetworkIO" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="netBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="netCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="netPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="networkIOCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="networkIOLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="showPower" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="powerBarGraph" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="powerCircularGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="powerPlotterGraph" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="powerCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="powerLabel" type="String">
+            <default></default>
+        </entry>
+        <entry name="useSmoothing" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="showBorders" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="showLabels" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="labelsOnTop" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="showPeaks" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="multiLabels" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="horizontalFlow" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="verticalFlow" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="numRows" type="Int">
+            <default>1</default>
+        </entry>
+        <entry name="numColumns" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="updateInterval" type="Double">
+            <default>20</default>
+        </entry>
+        <entry name="aspect" type="Double">
+            <default>10</default>
+        </entry>
+    </group>
+    <group name="GPU Usage">
+        <entry name="gpuUsageSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="gpuUsageLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="GPU Memory">
+        <entry name="gpuMemorySources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="gpuMemoryLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="GPU Temps">
+        <entry name="gpuTempSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="gpuTempLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="GPU Freq">
+        <entry name="gpuFreqSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="gpuFreqLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="Disk Space">
+        <entry name="dsSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="dsLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="Disk IO">
+        <entry name="dioSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="dioLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="Network">
+        <entry name="netSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="netLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="Power">
+        <entry name="powerSources" type="StringList">
+            <default></default>
+        </entry>
+        <entry name="powerLabels" type="StringList">
+            <default></default>
+        </entry>
+    </group>
+    <group name="Colors">
+        <entry name="customColors" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="cpuSystemColor" type="Color">
+            <default>red</default>
+        </entry>
+        <entry name="cpuUserColor" type="Color">
+            <default>blue</default>
+        </entry>
+        <entry name="cpuIOWaitColor" type="Color">
+            <default>green</default>
+        </entry>
+        <entry name="cpuFreqColor" type="Color">
+            <default>purple</default>
+        </entry>
+        <entry name="cpuTempsColor" type="Color">
+            <default>orange</default>
+        </entry>
+        <entry name="memAppsColor" type="Color">
+            <default>blue</default>
+        </entry>
+        <entry name="memBuffColor" type="Color">
+            <default>yellow</default>
+        </entry>
+        <entry name="memCacheColor" type="Color">
+            <default>cyan</default>
+        </entry>
+        <entry name="swapColor" type="Color">
+            <default>green</default>
+        </entry>
+        <entry name="gpuUsageColor" type="Color">
+            <default>blue</default>
+        </entry>
+        <entry name="gpuMemoryColor" type="Color">
+            <default>green</default>
+        </entry>
+        <entry name="gpuFreqColor" type="Color">
+            <default>purple</default>
+        </entry>
+        <entry name="gpuTempsColor" type="Color">
+            <default>orange</default>
+        </entry>
+<!--        <entry name="cpuNiceColor" type="Color">
+            <default>yellow</default>
+            </entry> -->
+        <entry name="diskIOReadColor" type="Color">
+            <default>dodgerblue</default>
+        </entry>
+        <entry name="diskIOWriteColor" type="Color">
+            <default>lime</default>
+        </entry>
+        <entry name="diskSpaceColor" type="Color">
+            <default>blue</default>
+        </entry>
+        <entry name="networkDownColor" type="Color">
+            <default>dodgerblue</default>
+        </entry>
+        <entry name="networkUpColor" type="Color">
+            <default>lime</default>
+        </entry>
+       <entry name="powerCurrentColor" type="Color">
+            <default>blue</default>
+        </entry>
+        <entry name="powerChargeColor" type="Color">
+            <default>green</default>
+        </entry>
+        <entry name="powerDischargeColor" type="Color">
+            <default>red</default>
+        </entry>
+    </group>
+</kcfg>

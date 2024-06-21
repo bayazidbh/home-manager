@@ -1,9 +1,10 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # use nixos stable 23.11 as main nixpkgs source
-    # nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; # use nixpkgs-unstable as main nixpkgs source
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; # use nixpkgs-unstable as main nixpkgs source
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # use nixos stable 23.11 as main nixpkgs source
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11"; # home-manager unstable url
+      url = "github:nix-community/home-manager/master"; # home-manager unstable url
+      # url = "github:nix-community/home-manager/release-23.11"; # home-manager stable url
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak
@@ -50,6 +51,25 @@
         ];
       };
       "fenglengshun@bbh-laptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
+        modules = [
+          flatpaks.homeManagerModules.default # declarative-flatpak HM module
+          ./home.nix # pkgs and options for all devices
+          ./default/alias.nix # aliases for all devices
+          ./default/shell.nix # shell config for all devices
+          ./default/autostart.nix # autostart with systemctl
+          ./default/env.nix # env-var for all devices
+          ./default/files.nix # file creation for all devices
+          ./laptop/home.nix # device specific packages
+          ./laptop/env.nix # device specific env-var
+          ./laptop/files.nix # device specific file creation
+          ./laptop/autostart.nix # device specific autostart
+          ./laptop/flatpaks.nix # separate list for flatpak
+          ./laptop/nixgl.nix # separate list for nixgl.nix package
+        ];
+      };
+      "fenglengshun@bbhalim-lte" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nixgl; }; # so that home-manager can correctly read nixgl packages
         modules = [
