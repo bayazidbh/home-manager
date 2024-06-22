@@ -1,0 +1,102 @@
+{
+	"general-logs": {
+		"currentLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-heroic.log",
+		"lastLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-18T15_08_51-heroic.log",
+		"legendaryLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-legendary.log",
+		"gogdlLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-gogdl.log",
+		"nileLogFile": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/logs/2023-12-19T13_00_01-nile.log"
+	},
+	"settings": {
+		"checkUpdatesInterval": 10,
+		"enableUpdates": false,
+		"addDesktopShortcuts": true,
+		"addStartMenuShortcuts": true,
+		"autoInstallDxvk": true,
+		"autoInstallVkd3d": true,
+		"autoInstallDxvkNvapi": false,
+		"addSteamShortcuts": true,
+		"preferSystemLibs": false,
+		"checkForUpdatesOnStartup": false,
+		"autoUpdateGames": true,
+		"customWinePaths": [],
+		"defaultInstallPath": "/home/fenglengshun/Games/Heroic",
+		"libraryTopSection": "recently_played",
+		"defaultSteamPath": "/var/home/fenglengshun/.var/app/com.valvesoftware.Steam/data/Steam",
+		"defaultWinePrefix": "/home/fenglengshun/Games/Heroic/Prefixes/default",
+		"hideChangelogsOnStartup": false,
+		"language": "en",
+		"maxWorkers": 0,
+		"minimizeOnLaunch": false,
+		"nvidiaPrime": false,
+		"enviromentOptions": [],
+		"wrapperOptions": [],
+		"showFps": false,
+		"useGameMode": false,
+		"userInfo": {
+			"name": "fenglengshun"
+		},
+		"wineCrossoverBottle": "Heroic",
+		"winePrefix": "/home/fenglengshun/Games/Heroic/Prefixes/default",
+		"wineVersion": {
+			"bin": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/Wine-GE-latest/bin/wine",
+			"name": "Wine - Wine-GE-latest",
+			"type": "wine",
+			"lib": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/Wine-GE-latest/lib64",
+			"lib32": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/Wine-GE-latest/lib",
+			"wineserver": "/home/fenglengshun/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/Wine-GE-latest/bin/wineserver"
+		},
+		"enableEsync": true,
+		"enableFsync": true,
+		"framelessWindow": false,
+		"customThemesPath": "",
+		"discordRPC": true,
+		"maxRecentGames": 10,
+		"enableFSR": false,
+		"gamescope": {
+			"enableUpscaling": true,
+			"enableLimiter": true,
+			"windowType": "fullscreen",
+			"gameWidth": "",
+			"gameHeight": "",
+			"upscaleHeight": "1080",
+			"upscaleWidth": "1920",
+			"upscaleMethod": "fsr",
+			"fpsLimiter": "60",
+			"fpsLimiterNoFocus": "30"
+		},
+		"showMangohud": true,
+		"experimentalFeatures": {
+			"enableNewDesign": true
+		}
+	},
+	"userHome": "/home/fenglengshun",
+	"language": "en",
+	"window-props": {
+		"x": 1920,
+		"y": 30,
+		"width": 1366,
+		"height": 738,
+		"maximized": true
+	},
+	"theme": "nord-dark",
+	"games": {
+		"recent": [
+			{
+				"appName": "bigzBSayhQyHPQScBwgYRb",
+				"title": "Aiyoku no Eustia"
+			},
+			{
+				"appName": "4pkSUP7cXQgNbviGULCszn",
+				"title": "Amatsutsumi"
+			},
+			{
+				"appName": "cEqrsLrBcSfGh7XpzZEq4X",
+				"title": "My Beloved Wife Aina Had Even Her Heart "
+			},
+			{
+				"appName": "kYLBo4rkLefLXzQ1kqdisR",
+				"title": "Tsujidou-san no Junai Road"
+			}
+		]
+	}
+}

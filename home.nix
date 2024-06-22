@@ -67,7 +67,7 @@ in
     mediawriter ventoy-full # image writer
     qdirstat fsearch junction krename imagemagick # transmission-qt # extra file management tools
     vesktop arrpc discord premid # discord
-    brave motrix # wavebox # browsers
+    # brave motrix # wavebox # browsers
     # ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     # libva1 libva-utils libvpx # codecs
     # gimp-with-plugins # media tools

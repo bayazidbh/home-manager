@@ -1,0 +1,52 @@
+{
+    "mapping": {
+        "1,2,1": [
+            "KEY_LEFTCTRL + KEY_PAGEUP",
+            "keyboard"
+        ],
+        "1,3,1": [
+            "KEY_LEFTCTRL + KEY_PAGEDOWN",
+            "keyboard"
+        ],
+        "1,5,1": [
+            "KEY_LEFTCTRL + KEY_TAB",
+            "keyboard"
+        ],
+        "1,6,1": [
+            "KEY_LEFTCTRL + KEY_LEFTSHIFT + KEY_TAB",
+            "keyboard"
+        ],
+        "1,4,1": [
+            "KEY_LEFTCTRL + KEY_W",
+            "keyboard"
+        ],
+        "1,8,1": [
+            "KEY_LEFTALT + KEY_TAB",
+            "keyboard"
+        ],
+        "1,9,1": [
+            "KEY_LEFTALT + KEY_LEFTSHIFT + KEY_TAB",
+            "keyboard"
+        ],
+        "1,11,1": [
+            "KEY_LEFTMETA + KEY_PAGEUP",
+            "keyboard"
+        ],
+        "1,78,1": [
+            "KEY_LEFTMETA + KEY_PAGEDOWN",
+            "keyboard"
+        ],
+        "1,10,1": [
+            "KEY_LEFTALT + KEY_F3",
+            "keyboard"
+        ],
+        "1,74,1": [
+            "KEY_LEFTMETA + KEY_SPACE",
+            "keyboard"
+        ],
+        "1,7,1": [
+            "KEY_LEFTALT + KEY_SPACE",
+            "keyboard"
+        ]
+    }
+}

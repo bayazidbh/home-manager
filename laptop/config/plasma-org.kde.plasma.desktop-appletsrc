@@ -5,6 +5,9 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
+[Containments][1][Configuration]
+PreloadWeight=42
+
 [Containments][29]
 activityId=
 formfactor=2
@@ -12,11 +15,13 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.panel
+transient=true
 wallpaperplugin=org.kde.image
 
 [Containments][29][Applets][33]
 immutability=1
 plugin=org.kde.plasma.kickoff
+transient=true
 
 [Containments][29][Applets][33][Configuration]
 PreloadWeight=100
@@ -35,6 +40,7 @@ systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 [Containments][29][Applets][37]
 immutability=1
 plugin=org.kde.plasma.uswitcher
+transient=true
 
 [Containments][29][Applets][37][Configuration]
 PreloadWeight=92
@@ -51,6 +57,7 @@ showTechnicalInfo=true
 [Containments][29][Applets][38]
 immutability=1
 plugin=org.kde.plasma.systemtray
+transient=true
 
 [Containments][29][Applets][38][Configuration]
 PreloadWeight=100
@@ -59,6 +66,7 @@ SystrayContainmentId=39
 [Containments][29][Applets][59]
 immutability=1
 plugin=org.kde.plasma.pager
+transient=true
 
 [Containments][29][Applets][59][Configuration]
 PreloadWeight=42
@@ -77,6 +85,7 @@ wrapPage=true
 [Containments][29][Applets][60]
 immutability=1
 plugin=org.kde.resourcesMonitor-fork
+transient=true
 
 [Containments][29][Applets][60][Configuration]
 PreloadWeight=42
@@ -97,6 +106,7 @@ showNetMonitor=true
 [Containments][29][Applets][64]
 immutability=1
 plugin=org.kde.plasma.eventcalendar
+transient=true
 
 [Containments][29][Applets][64][Configuration]
 PreloadWeight=100
@@ -131,6 +141,7 @@ openWeatherMapCityId=1642911
 [Containments][29][Applets][67]
 immutability=1
 plugin=org.kde.plasma.icon
+transient=true
 
 [Containments][29][Applets][67][Configuration]
 PreloadWeight=42
@@ -140,6 +151,7 @@ url=desktop:/org.kde.spectacle.desktop
 [Containments][29][Applets][71]
 immutability=1
 plugin=org.kde.plasma.appmenu
+transient=true
 
 [Containments][29][Applets][71][Configuration]
 PreloadWeight=42
@@ -151,6 +163,7 @@ DialogWidth=720
 [Containments][29][Applets][80]
 immutability=1
 plugin=org.kde.plasma.panelspacer
+transient=true
 
 [Containments][29][ConfigDialog]
 DialogHeight=84
@@ -161,6 +174,36 @@ PreloadWeight=42
 
 [Containments][29][General]
 AppletOrder=33;71;80;60;59;67;38;64;37
+
+[Containments][31][Applets][57][Configuration]
+PreloadWeight=92
+
+[Containments][31][Applets][58][Configuration]
+PreloadWeight=42
+
+[Containments][31][Configuration]
+PreloadWeight=42
+
+[Containments][32][Applets][37][Configuration]
+PreloadWeight=42
+
+[Containments][32][Applets][60][Configuration]
+PreloadWeight=72
+
+[Containments][32][Applets][61][Configuration]
+PreloadWeight=42
+
+[Containments][32][Applets][64][Configuration]
+PreloadWeight=42
+
+[Containments][32][Applets][67][Configuration]
+PreloadWeight=42
+
+[Containments][32][Applets][68][Configuration]
+PreloadWeight=52
+
+[Containments][32][Configuration]
+PreloadWeight=42
 
 [Containments][39]
 activityId=
@@ -316,64 +359,13 @@ DialogWidth=720
 PreloadWeight=42
 
 [Containments][39][General]
-extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.nightcolorcontrol
+extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
 hiddenItems=org.kde.plasma.bluetooth,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,aw-qt,Free Download Manager,virt-manager,steam,TeamViewer,tray-icon tray app,Joplin1,tray-id,Discover Notifier_org.kde.DiscoverNotifier
-knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.nightcolorcontrol
+knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
 shownItems=Portal
 
 [Containments][39][Shortcuts]
 global=Meta+A
-
-[Containments][65]
-ItemGeometries-1536x864=
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=53ec01f6-3a95-4bc1-aa91-b30012cc2e1c
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][65][ConfigDialog]
-DialogHeight=510
-DialogWidth=680
-
-[Containments][65][Configuration]
-PreloadWeight=42
-
-[Containments][65][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=463
-ToolBoxButtonY=40
-positions={"1920x1080":[]}
-sortMode=-1
-
-[Containments][65][Wallpaper][a2n.blur][General]
-BlurRadius=50
-Image=/home/fenglengshun/Pictures/Archive/Wallpapers/game/trails-of-cold-steel-ii-rean-civil-war-bike-back.jpg
-SlidePaths=/home/fenglengshun/.local/share/wallpapers/,/nix/var/nix/profiles/default/share/wallpapers/,/home/fenglengshun/.nix-profile/share/wallpapers/,/usr/share/wallpapers/
-
-[Containments][65][Wallpaper][com.darkeye.animatedImage][General]
-FillMode=2
-Image=file:///home/fenglengshun/Pictures/Archive/Wallpapers/hololive/Ninomae_Inanis-Animated_Outro_Card.webp
-
-[Containments][65][Wallpaper][org.kde.image][General]
-Image=/home/fenglengshun/Pictures/Archive/Wallpapers/game/trails-of-cold-steel-ii-rean-civil-war-bike-back.jpg
-SlidePaths=/home/fenglengshun/.local/share/wallpapers/,/nix/var/nix/profiles/default/share/wallpapers/,/home/fenglengshun/.nix-profile/share/wallpapers/,/usr/share/wallpapers/
-
-[Containments][65][Wallpaper][org.kde.potd][General]
-FillMode=2
-
-[Containments][66]
-activityId=53ec01f6-3a95-4bc1-aa91-b30012cc2e1c
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
 
 [Containments][75]
 activityId=
@@ -528,9 +520,52 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][8][General]
-extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.nightcolorcontrol
+extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
 hiddenItems=org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,AnyDesk,Free Download Manager,aw-qt,virt-manager
-knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.nightcolorcontrol
+knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
+
+[Containments][82]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=05ab8f62-551b-4b01-82ec-4513d952e9d8
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][84]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=3
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][84][Applets][85]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][84][Applets][86]
+immutability=1
+plugin=org.kde.windowbuttons
+
+[Containments][84][Applets][87]
+immutability=1
+plugin=org.kde.windowtitle
+
+[Containments][84][Applets][88]
+immutability=1
+plugin=org.kde.plasma.appmenu
+
+[Containments][84][Applets][89]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][84][General]
+AppletOrder=86;87;88;89
 
 [ScreenMapping]
 itemsOnDisabledScreens=
