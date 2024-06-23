@@ -53,20 +53,20 @@ in
   home.packages = with pkgs; [
     gh github-desktop git-lfs cosign cachix # git subversion # build tools
     qt6.qtwayland wl-clipboard wl-clipboard-x11 # libsForQt5.qt5.qtwayland for wayland copy-paste
-    inxi neofetch grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
+    inxi grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom ripgrep-all # rust CLIs
-    rsync grsync czkawka metadata-cleaner zsync resilio-sync # duperemove # file management
+    rsync grsync zsync resilio-sync # duperemove czkawka metadata-cleaner # file management
     # libdbusmenu libsForQt5.libdbusmenu libsForQt5.applet-window-buttons # for unity-ui on KDE
     # libsForQt5.breeze-qt5 libsForQt5.breeze-gtk libsForQt5.breeze-icons gnome.adwaita-icon-theme # breeze & adwaita dependencies
-    whitesur-kde whitesur-gtk-theme whitesur-icon-theme sassc # whitesur theme
+    whitesur-gtk-theme whitesur-icon-theme # whitesur-kde sassc # whitesur theme
     du-dust nix-du graphviz # disk usage management tools
     adl gallery-dl mangal mov-cli # CLI-based media downloader
     protonup-ng # steam-rom-manager protontricks # steam tools
-    ludusavi # scanmem gnome.zenity gamescope gamemode # other gaming tools
+    # ludusavi scanmem gnome.zenity gamescope gamemode # other gaming tools
     bitwarden # authy # security tools
     mediawriter ventoy-full # image writer
-    qdirstat fsearch junction krename imagemagick # transmission-qt # extra file management tools
-    vesktop arrpc discord premid # discord
+    qdirstat fsearch junction imagemagick # transmission-qt # extra file management tools
+    vesktop arrpc premid # discord
     # brave motrix # wavebox # browsers
     # ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     # libva1 libva-utils libvpx # codecs
