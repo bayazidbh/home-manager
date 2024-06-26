@@ -66,7 +66,7 @@ in
     bitwarden # authy # security tools
     mediawriter ventoy-full # image writer
     qdirstat fsearch junction imagemagick # transmission-qt # extra file management tools
-    vesktop arrpc premid # discord
+    vesktop premid # discord
     # brave motrix # wavebox # browsers
     # ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     # libva1 libva-utils libvpx # codecs
@@ -103,6 +103,18 @@ in
   programs.boxxy = {
     enable = true;
   }; # Boxes in badly behaving applications https://github.com/queer/boxxy
+  services.arrpc.enable = true; # arrpc for Vesktop's discord status
+  # services.psd.enable = true; # Profile-sync-daemon for browser
+  # xdg.portal = {
+  #  enable = true; # https://nix-community.github.io/home-manager/options.xhtml#opt-xdg.portal.enable
+  #  config = {
+  #    common = {
+  #      default = [
+  #        "kde"
+  #      ];
+  #    };
+  #  };
+  # };
 
 home.activation = {
     linkDesktopApplications = {

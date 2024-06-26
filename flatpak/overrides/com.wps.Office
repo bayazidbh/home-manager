@@ -1,5 +1,5 @@
 [Context]
-shared=!network
-sockets=cups
-devices=all
-filesystems=xdg-data/fonts:ro;home
+devices=all;
+filesystems=home;
+shared=!network;
+sockets=cups;

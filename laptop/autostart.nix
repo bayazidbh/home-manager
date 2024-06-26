@@ -5,23 +5,23 @@ systemd.user.tmpfiles.rules = [
   ];
 
 systemd.user.services = {
-  "autostart-kde-desktop-grid" = {
-    Unit = {
-      Description = "Autostart to KDE Desktop Grid";
-      PartOf = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "simple";
-      Restart = "no";
-      ExecStart = [
-        "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut ShowDesktopGrid"
-      ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-  };
+  #  "autostart-kde-desktop-grid" = {
+  #    Unit = {
+  #      Description = "Autostart to KDE Desktop Grid";
+  #      PartOf = "graphical-session.target";
+  #      After = "graphical-session.target";
+  #    };
+  #    Service = {
+  #      Type = "simple";
+  #      Restart = "no";
+  #      ExecStart = [
+  #        "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut ShowDesktopGrid"
+  #      ];
+  #    };
+  #    Install = {
+  #      WantedBy = [ "graphical-session.target" ];
+  #    };
+  #  };
 
   "autostart-nix-onedrivegui" = {
     Unit = {
