@@ -38,7 +38,7 @@ home.file."brave-wayland" = {
 
 xdg.desktopEntries = {
   "brave-browser" = {
-    name="Brave Web Browser";
+    name="Brave (Nix)";
     genericName="Web Browser";
     comment="Access the Internet";
     startupNotify=true;
