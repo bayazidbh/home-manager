@@ -17,6 +17,10 @@ config.services.flatpak = {
      # "flathub:app/it.mijorus.gearlever/x86_64/stable"
 
      "flathub:app/com.github.paolostivanin.OTPClient/x86_64/stable"
+     "flathub:app/me.proton.Pass/x86_64/stable"
+     "flathub:app/me.proton.Mail/x86_64/stable"
+     "flathub:app/com.protonvpn.www/x86_64/stable"
+
      # "flathub:app/io.wavebox.Wavebox/x86_64/stable"
      "flathub:app/one.ablaze.floorp/x86_64/stable"
      "flathub:app/com.brave.Browser/x86_64/stable"

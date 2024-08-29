@@ -15,6 +15,10 @@ services.flatpak = {
      "flathub:app/io.github.flattool.Warehouse/x86_64/stable"
 
      "flathub:app/com.github.paolostivanin.OTPClient/x86_64/stable"
+     "flathub:app/me.proton.Pass/x86_64/stable"
+     "flathub:app/me.proton.Mail/x86_64/stable"
+     "flathub:app/com.protonvpn.www/x86_64/stable"
+
      "flathub:app/io.wavebox.Wavebox/x86_64/stable"
      "flathub:app/one.ablaze.floorp/x86_64/stable"
      # "flathub:app/com.github.micahflee.torbrowser-launcher/x86_64/stable"
