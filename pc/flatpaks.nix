@@ -2,7 +2,7 @@
 {
 services.flatpak = {
     enableModule = true;
-    deduplicate = true;
+    # deduplicate = true; # deprecated
     preInitCommand = ''
       /usr/bin/flatpak config  --user --set languages 'en;ja'
     '';
