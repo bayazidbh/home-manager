@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager/release-24.05"; # home-manager stable url
       inputs.nixpkgs.follows = "nixpkgs"; # inherit nixpkgs-unstable as main nixpkgs source
     };
-    flatpaks.url = "github:GermanBread/declarative-flatpak/stable"; # declarative-flatpak
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3"; # declarative-flatpak new stable
     nixgl.url = "github:guibou/nixGL"; # nixGL for running Wine
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # https://github.com/chaotic-cx/nyx#how-to-use-it
     # Add other inputs if needed

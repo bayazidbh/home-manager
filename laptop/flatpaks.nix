@@ -2,7 +2,6 @@
 {
 config.services.flatpak = {
     enableModule = true;
-    # deduplicate = true; # deprecated
     preRemotesCommand = ''
       /usr/bin/flatpak config  --user --set languages 'en;ja'
     '';
