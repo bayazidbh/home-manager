@@ -52,7 +52,7 @@ in
 
   home.packages = with pkgs; [
     gh github-desktop git-lfs cosign cachix # git subversion # build tools
-    qt6.qtwayland wl-clipboard wl-clipboard-x11 # libsForQt5.qt5.qtwayland for wayland copy-paste
+    # qt6.qtwayland wl-clipboard wl-clipboard-x11 # libsForQt5.qt5.qtwayland for wayland copy-paste
     inxi grc highlight rmtrash libwebp unrar xdg-ninja # CLI utils
     erdtree delta grex fd bottom ripgrep-all # rust CLIs
     rsync grsync zsync resilio-sync # duperemove czkawka metadata-cleaner # file management
@@ -63,11 +63,10 @@ in
     adl gallery-dl mangal mov-cli # CLI-based media downloader
     protonup-ng # steam-rom-manager protontricks # steam tools
     # ludusavi scanmem gnome.zenity gamescope gamemode # other gaming tools
-    bitwarden # authy # security tools
     mediawriter ventoy-full # image writer
     qdirstat fsearch junction imagemagick # transmission-qt # extra file management tools
     vesktop premid # discord
-    brave # wavebox motrix # browsers
+    # brave wavebox motrix # browsers
     # ibm-plex meslo-lgs-nf noto-fonts-emoji-blob-bin noto-fonts-cjk-sans noto-fonts-cjk-serif # fonts
     # libva1 libva-utils libvpx # codecs
     # gimp-with-plugins # media tools
