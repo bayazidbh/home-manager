@@ -15,16 +15,22 @@ services.flatpak = {
 
      "flathub:app/com.github.paolostivanin.OTPClient/x86_64/stable"
      "flathub:app/me.proton.Pass/x86_64/stable"
-     "flathub:app/me.proton.Mail/x86_64/stable"
+     # "flathub:app/me.proton.Mail/x86_64/stable"
      "flathub:app/com.protonvpn.www/x86_64/stable"
 
      "flathub:app/io.wavebox.Wavebox/x86_64/stable"
-     "flathub:app/one.ablaze.floorp/x86_64/stable"
+     # "flathub:app/one.ablaze.floorp/x86_64/stable"
+     "flathub:app/com.brave.Browser/x86_64/stable"
      # "flathub:app/com.github.micahflee.torbrowser-launcher/x86_64/stable"
      "flathub:app/org.qbittorrent.qBittorrent/x86_64/stable"
 
      "flathub:app/org.kde.gwenview/x86_64/stable"
      "flathub:app/org.kde.kcalc/x86_64/stable"
+     "flathub:app/org.kde.filelight/x86_64/stable"
+     "flathub:app/org.kde.krename/x86_64/stable"
+     "flathub:app/org.kde.okular/x86_64/stable"
+     "flathub:app/org.gnome.NetworkDisplays/x86_64/stable"
+
 
      "flathub:app/net.sourceforge.mcomix/x86_64/stable"
      "flathub:app/info.febvre.Komikku/x86_64/stable"
