@@ -1,9 +1,3 @@
-# home-manager files and quick device setup
-
-```
-cd ~/.config
-git clone git@github.com:bayazidbh/home-manager.git && cd ${${_%%.git*}##*/}
-```
 
 ## Nix Setup
 
@@ -16,7 +10,10 @@ echo -e "substituters = https://cache.nixos.org https://nix-gaming.cachix.org ht
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
-nix-shell '<home-manager>' -A install -b bak
+nix-shell '<home-manager>' -A install
+
+cd ~/.config
+git clone git@github.com:bayazidbh/home-manager.git && cd ${${_%%.git*}##*/}
 
 ```
 
