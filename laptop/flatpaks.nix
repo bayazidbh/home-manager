@@ -52,6 +52,7 @@ config.services.flatpak = {
      "flathub:app/info.smplayer.SMPlayer/x86_64/stable"
      # "flathub:app/org.videolan.VLC/x86_64/stable"
      # "flathub:app/io.github.aandrew_me.ytdn/x86_64/stable"
+     # "flathub:app/io.github.onionware_github.onionmedia/x86_64/stable"
      # "flathub:app/no.mifi.losslesscut/x86_64/stable"
 
      "flathub:app/org.upscayl.Upscayl/x86_64/stable"
