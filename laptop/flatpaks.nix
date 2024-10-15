@@ -15,7 +15,7 @@ config.services.flatpak = {
      # "flathub:app/io.github.dvlv.boxbuddyrs/x86_64/stable"
      # "flathub:app/it.mijorus.gearlever/x86_64/stable"
 
-     "flathub:app/com.github.paolostivanin.OTPClient/x86_64/stable"
+     "flathub:app/io.ente.auth/x86_64/stable"
      "flathub:app/me.proton.Pass/x86_64/stable"
      # "flathub:app/me.proton.Mail/x86_64/stable"
      "flathub:app/com.protonvpn.www/x86_64/stable"
