@@ -1,40 +1,68 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+  # Home Manager settings
+  programs.home-manager.enable = true;
   home.username = "fenglengshun";
   home.homeDirectory = "/home/fenglengshun";
+  home.stateVersion = "25.11"; # DO NOT CHANGE
+  services.home-manager = {
+    autoUpgrade = {
+      enable = true;
+      useFlake = true;
+      flakeDir = "${config.xdg.configHome}/home-manager";
+      frequency = "*-*-* 00:20:00"; # daily 8PM
+    };
+    autoExpire = {
+      enable = true;
+      frequency = "*-*-* 00:23:00"; # daily 11PM
+      timestamp = "-30 days";
+      store = {
+        cleanup = true;
+        options = "--delete-older-than 30d";
+      };
+    };
+  };
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "25.11"; # Please read the comment before changing.
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
+  # Set up for non-NixOS use
+  targets.genericLinux = {
+    enable = true;
+    gpu.enable = true;
+  };
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+  # Allow unfree
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true; # needed for flakes
 
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
+  # Package lists
+  home.packages = with pkgs; [
+    dust nix-du graphviz cachix # nix tools
+    gh github-desktop git-lfs # build tools
+    grc highlight # text coloring
+    firejail boxxy # sandboxing
+    aria2 rsync zsync # file transfer tools
+    chezmoi sqlitebrowser rmtrash unrar xdg-ninja chkcrontab # CLI utils
+    erdtree delta grex fd bottom ripgrep-all # rust CLIs
+    adl gallery-dl mangal mov-cli # CLI-based media downloader
+    android-tools adbtuifm # android
+
+    kdePackages.filelight kdePackages.kcharselect kdePackages.kcalc kdePackages.kcolorchooser
+    kdePackages.kontrast kdePackages.arianna haruna krename
+
+    fsearch grsync qdirstat czkawka peazip # file management
+    firefox google-chrome microsoft-edge vivaldi vivaldi-ffmpeg-codecs # brave # browser
+    masterpdfeditor4 normcap # wpsoffice # document editing
+    protonvpn-gui proton-pass proton-authenticator # proton
+    qbittorrent resilio-sync rquickshare # file transfer
+    stremio vlc mcomix mangayomi koreader # multimedia
+    distrobox gearlever boxbuddy # app management
+    bottles # gaming
+
   ];
+
+  # Allow insecure packages:
+  nixpkgs.config.permittedInsecurePackages = [ "qtwebengine-5.15.19" ]; # for Stremio
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -70,7 +98,4 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
